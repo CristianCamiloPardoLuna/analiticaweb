@@ -1,0 +1,43 @@
+
+/*
+sass --watch C:\Users\crist\Documents\GitHub\analiticaweb\application\frontend\scss\main.scss C:\Users\crist\Documents\GitHub\analiticaweb\application\frontend\templates\static\css\main.css
+*/
+@keyframes grow{
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.5);
+    }
+}
+
+body{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    nav{
+        font-size: 1.2em;
+    }
+    #portfolio{
+        .card-deck{
+            .card{
+                border: none;
+                .card-header{
+                    padding: 0 !important;
+                }
+            }
+            &:hover{
+                #price_1{
+    
+                }   
+                #price_2{
+                    transition: grow 200 ease-in-out;
+                }
+            }
+        }        
+    }
+    #prices{
+        .btn-link{
+            text-decoration: none;
+            color: black;
+        }
+    }
+}
