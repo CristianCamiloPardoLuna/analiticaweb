@@ -11,6 +11,7 @@
         </div>
     </div>
 </section>
+
 <section id="portfolio" style="height: 100vh;">
   <div class="card-deck mx-auto w-75 h-100">
     <div class="card">
@@ -22,8 +23,8 @@
     </div>
     <div class="card">
       <div class="d-flex flex-column h-100 justify-content-center">
-        <button class="btn d-flex btn-outline-dark btn-block text-left">
-          <div class="d-flex justify-content-center align-items-center mr-3">
+        <button class="btn d-flex align-items-center btn-outline-dark btn-block text-left">
+          <div class="d-flex mr-3">
             <i class="fab fa-angular fa-4x"></i>
           </div>
           <div class="">
@@ -31,8 +32,8 @@
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora, enim.</p>        
           </div>
         </button>
-        <button class="btn d-flex btn-outline-dark btn-block text-left">
-          <div class="d-flex justify-content-center align-items-center mr-3">
+        <button class="btn d-flex align-items-center btn-outline-dark btn-block text-left">
+          <div class="d-flex mr-3">
             <i class="fab fa-angrycreative fa-4x"></i>
           </div>
           <div class="">
@@ -44,12 +45,7 @@
     </div>
   </div>  
 </section>
-<section id="processing">
 
-</section>
-<section id="ourservices">
-
-</section>
 <section id="prices" style="height: 100vh;">
   <div class="card-deck align-items-center h-100 p-5">
     <div class="card align-items-center justify-content-center h-100 w-100" id="price_1">
@@ -62,8 +58,8 @@
           <div class="card">
             <div class="card-header" id="header1">
               <h2 class="mb-0">
-                <button class="btn btn-link btn-block text-left d-flex p-0 collapsed" type="button" data-toggle="collapse" data-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
-                  Desarrollador Backend <div class="text-muted ml-auto mr-3">free</div><span class="badge badge-pill badge-danger"><p class="m-0 lead">$60.523 COP</p></span>
+                <button class="btn btn-link btn-block text-left d-flex justify-content-between p-0 collapsed" type="button" data-toggle="collapse" data-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+                  Desarrollador Backend <span class="badge badge-pill badge-danger"><a href="" class="m-0 lead">$60.523 COP</a></span>
                 </button>
               </h2>
             </div>
@@ -78,7 +74,7 @@
             <div class="card-header" id="header2">
               <h2 class="mb-0">
                 <button class="btn btn-link btn-block text-left d-flex justify-content-between collapsed p-0" type="button" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
-                  Especialista BI <div class="text-muted ml-auto mr-3">free</div><span class="badge badge-pill badge-danger"><p class="m-0 lead">$31.250 COP</p></span>
+                  Especialista BI <span class="badge badge-pill badge-danger"><a href="" class="m-0 lead">$31.250 COP</a></span>
                 </button>
               </h2>
             </div>
@@ -93,7 +89,7 @@
             <div class="card-header" id="header3">
               <h2 class="mb-0">
                 <button class="btn btn-link btn-block text-left d-flex justify-content-between collapsed p-0" type="button" data-toggle="collapse" data-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
-                  Desarrollador Backend <div class="text-muted ml-auto mr-3">free</div><span class="badge badge-pill badge-danger"><p class="m-0 lead">$56.070 COP</p></span>
+                  Científico de datos <span class="badge badge-pill badge-danger"><a class="m-0 lead" href="">$56.070 COP</a></span>
                 </button>
               </h2>
             </div>
@@ -108,7 +104,7 @@
             <div class="card-header" id="header4">
               <h2 class="mb-0">
                 <button class="btn btn-link btn-block text-left d-flex justify-content-between collapsed p-0" type="button" data-toggle="collapse" data-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
-                  Desarrollador Backend <div class="text-muted ml-auto mr-3">free</div><span class="badge badge-pill badge-danger"><p class="m-0 lead">$21.605 COP</p></span>            
+                  Tester <span class="badge badge-pill badge-danger"><a href="" class="m-0 lead">$21.605 COP</a></span>            
                 </button>
               </h2>
             </div>
@@ -123,7 +119,7 @@
             <div class="card-header" id="header5">
               <h2 class="mb-0">
                 <button class="btn btn-link btn-block text-left d-flex justify-content-between collapsed p-0" type="button" data-toggle="collapse" data-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
-                  Desarrollador Backend <div class="text-muted ml-auto mr-3">free</div><span class="badge badge-pill badge-danger"><p class="m-0 lead">$38.650 COP</p></span>
+                  Desarrollador Frontend <span class="badge badge-pill badge-danger"><a href="" class="m-0 lead">$38.650 COP</a></span>
                 </button>
               </h2>
             </div>
@@ -136,8 +132,8 @@
           
         </div>
       </div>
-      <div class="card-footer w-100">
-        sss
+      <div class="card-footer text-center text-light w-100">
+        <h5 class="display-5">Desde $200.000 COP / hora</h5> 
       </div>
     </div>
     <h1>vs.</h1>
@@ -145,15 +141,206 @@
       <div class="card-header text-center">
         Analítica
       </div>
-      <div class="card-body p-0 d-flex align-items-center text-center">
-        <h4 class="display-4 mx-auto">
-          $40.000 COP / Hora
-        </h4>
+      <div class="card-body text-light bg-dark flex-column justify-content-center px-5 d-flex align-items-center text-center">
+        <img class="img-fluid" style="height: 4em;" src="{{ url_for('static', filename='img/analitica-logo-md/rosa.png') }}" alt="">
+        <h4 class="display-5">¡Ahorra más del 80%!</h4>
       </div>
-      <div class="card-footer">
-        cuánto ahorro
+      <div class="card-footer text-center text-light w-100">
+        <h1 class="display-5">$40.000 COP / Hora</h1>
       </div>
     </div>
   </div>
+</section>
+
+<section id="processing">
+</section>
+
+<section id="ourservices">
+
+  <!--workflow-->
+  <div class="card-deck px-5 my-5">
+    <div class="card m-0 justify-content-center">
+      <ul class="list-group-list-group-flush m-0 p-0">
+        <li class="list-group-item text-center">
+          <img class="img-fluid" style="height: 5em;" src="{{ url_for('static', filename='img/flaticon/robotic.svg') }}" alt="">
+          <h3 class="mt-3 display-5">Automatización de procesos</h3>
+          <div class="text-muted">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas, voluptatem!</div>
+        </li>
+      </ul>
+    </div>
+    <div class="card m-0 justify-content-center">
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+          <i class="fas fa-code fa-2x"></i><br>
+          <p class="lead">Sin necesidad de código</p>
+          <p>In the sea of workflow tools, users value our uncomplicated, simple design</p>
+        </li>
+        <li class="list-group-item">
+          <i class="fas fa-user-check fa-2x"></i><br>
+          <p class="lead">Fácil de usar</p>
+          <p>In the sea of workflow tools, users value our uncomplicated, simple design</p>
+        </li>
+      </ul>
+    </div>
+    <div class="card m-0">
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+          <i class="fas fa-project-diagram fa-2x"></i><br>
+          <p class="lead">Variedad de integraciones</p>
+          <p>In the sea of workflow tools, users value our uncomplicated, simple design</p>
+        </li>
+        <li class="list-group-item">
+          <i class="fas fa-cloud fa-2x"></i><br>
+          <p class="lead">Arquitectura expandible</p>
+          <p>In the sea of workflow tools, users value our uncomplicated, simple design</p>
+        </li>
+        <li class="list-group-item">
+          <i class="fas fa-chart-line fa-2x"></i><br>
+          <p class="lead">Analítica en tiempo real</p>
+          <p>In the sea of workflow tools, users value our uncomplicated, simple design</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- analytics -->
+  <div class="card-deck px-5 my-5">
+    <div class="card m-0">
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+          <i class="fas fa-project-diagram fa-2x"></i><br>
+          <p class="lead">Variedad de integraciones</p>
+          <p>In the sea of workflow tools, users value our uncomplicated, simple design</p>
+        </li>
+        <li class="list-group-item">
+          <i class="fas fa-cloud fa-2x"></i><br>
+          <p class="lead">Arquitectura expandible</p>
+          <p>In the sea of workflow tools, users value our uncomplicated, simple design</p>
+        </li>
+        <li class="list-group-item">
+          <i class="fas fa-chart-line fa-2x"></i><br>
+          <p class="lead">Analítica en tiempo real</p>
+          <p>In the sea of workflow tools, users value our uncomplicated, simple design</p>
+        </li>
+      </ul>
+    </div>
+    <div class="card m-0 justify-content-center">
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+          <i class="fas fa-code fa-2x"></i><br>
+          <p class="lead">Sin necesidad de código</p>
+          <p>In the sea of workflow tools, users value our uncomplicated, simple design</p>
+        </li>
+        <li class="list-group-item">
+          <i class="fas fa-user-check fa-2x"></i><br>
+          <p class="lead">Fácil de usar</p>
+          <p>In the sea of workflow tools, users value our uncomplicated, simple design</p>
+        </li>
+      </ul>
+    </div>
+    <div class="card m-0 justify-content-center">
+      <ul class="list-group-list-group-flush m-0 p-0">
+        <li class="list-group-item text-center">
+          <img class="img-fluid" style="height: 5em;" src="{{ url_for('static', filename='img/flaticon/analytics.svg') }}" alt="">
+          <h3 class="mt-3 display-5">Analítica</h3>
+          <div class="text-muted">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas, voluptatem!</div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+</section>
+
+<section id="ourplans">
+  <div class="mx-auto my-5 px-5 card-deck">
+
+    <div class="card text-center">
+        <div class="card-header">
+          Para equipos pequeños iniciando su transformación digital
+        </div>
+        <div class="card-body">
+          <h4 class="card-title font-weight-bold" style="color: green">Básico</h4>
+          <div class="price d-flex justify-content-center align-items-center mb-3"><h4 class="font-weight-bold m-0 ml-1">$840.000 COP </h4><p class="m-0 pl-1"> / año</p></div>
+          <div class="price d-flex justify-content-center align-items-center mb-3"><p class="m-0"> Incluye 5 usuarios normales + 1 admin.</p></div>
+          <a href="#" class="btn btn-outline-success font-weight-bold">¡Quiero Este!</a>
+        </div>
+        <div class="card-footer text-muted">
+            <ul class="list-group p-0 list-group-flush">
+                <li class="list-group-item py-1 m-0">Cras justo odio</li>
+                <li class="list-group-item py-1">Dapibus ac facilisis in</li>
+                <li class="list-group-item py-1">Morbi leo risus</li>
+                <li class="list-group-item py-1">Porta ac consectetur ac</li>
+                <li class="list-group-item py-1">Vestibulum at eros</li>
+              </ul>
+        </div>
+    </div>
+
+    <div class="card text-center">
+    <div class="card-header">
+        Para empresas que quieran una experiencia integral.
+    </div>
+    <div class="card-body">
+        <h4 class="card-title font-weight-bold" style="color: orange">Profesional</h4>
+        <div class="price d-flex justify-content-center align-items-center mb-3"><h4 class="font-weight-bold m-0">$1'800.000 COP </h4><p class="m-0 pl-1"> / año</p></div>
+        <div class="price d-flex justify-content-center align-items-center mb-3"><p class="m-0"> Incluye 10 usuarios normales + 2 admins.</p></div>
+        <a href="#" class="btn btn-outline-success font-weight-bold">¡Quiero Este!</a>
+    </div>
+    <div class="card-footer text-muted">
+        <ul class="list-group p-0 list-group-flush">
+            <li class="list-group-item py-1 m-0">Cras justo odio</li>
+            <li class="list-group-item py-1">Dapibus ac facilisis in</li>
+            <li class="list-group-item py-1">Morbi leo risus</li>
+            <li class="list-group-item py-1">Porta ac consectetur ac</li>
+            <li class="list-group-item py-1">Vestibulum at eros</li>
+            </ul>
+    </div>
+    </div>
+
+    <div class="card text-center">
+        <div class="card-header">
+            Conecte a sus clientes, aliados y proveedores a través de una experiencia completa.
+        </div>
+        <div class="card-body">
+            <h4 class="card-title font-weight-bold" style="color: orangered">Empresa</h4>
+            <div class="price d-flex justify-content-center align-items-center mb-3"><h4 class="font-weight-bold m-0">$3'000.000 COP </h4><p class="m-0 pl-1"> / año</p></div>
+            <div class="price d-flex justify-content-center align-items-center mb-3">Cubrimiento total.*</div>
+            <a href="#" class="btn btn-outline-success font-weight-bold">¡Quiero Este!</a>
+        </div>
+        <div class="card-footer text-muted">
+            <ul class="list-group p-0 list-group-flush">
+                <li class="list-group-item py-1 m-0">Cras justo odio</li>
+                <li class="list-group-item py-1">Dapibus ac facilisis in</li>
+                <li class="list-group-item py-1">Morbi leo risus</li>
+                <li class="list-group-item py-1">Porta ac consectetur ac</li>
+                <li class="list-group-item py-1">Vestibulum at eros</li>
+                </ul>
+        </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="contactus"> <!--cambiar-->
+  <div class="row h-100 align-items-center text-center justify-content-center bg-dark">
+    <div class="col-3">
+      <form action="" class="form p-5">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Correo electrónico" lang="es">
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Tu nombre" lang="es">
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Nombre de tu empresa" lang="es">
+        </div>
+        <div class="form-group">
+          <button class="btn btn-outline-warning">Enviar</button>
+        </div>
+      </form>
+    </div>
+    <div class="col-3 text-left text-light">
+      <h1 class="display-5">Te contáctaremos en los próximos dos días</h1>
+    </div>
+  </div>  
 </section>
 {% endblock %}

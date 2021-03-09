@@ -24,20 +24,77 @@ body{
                     padding: 0 !important;
                 }
             }
-            &:hover{
-                #price_1{
-    
-                }   
-                #price_2{
-                    transition: grow 200 ease-in-out;
-                }
-            }
-        }        
+        }    
     }
     #prices{
+        transition: all 200ms ease-in-out;
         .btn-link{
             text-decoration: none;
             color: black;
+        }
+        .badge a{
+            display: inline-block;
+            pointer-events: none !important;
+            color: lightgray;
+            transition: all 0.25s cubic-bezier(1,0,0.58,0.97);
+        }
+        .badge a:before{
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 3px;
+            top: calc(50% - 1.5px);
+            right: 0;
+            background: black;
+            transition: inherit;
+        }
+        #price_1 .badge a{
+            display: inline-block;
+            color: white;
+            text-decoration: none;
+            transition: all 0.25s cubic-bezier(1,0,0.58,0.97);
+        }
+        #price_1 .badge a:before{
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            top: calc(50% - 1.5px);
+            right: 0;
+            background: white;
+            transition: inherit;
+        }
+    
+        &:hover #price_1 .badge a:before{
+            left: 0;
+            width: 100%;
+        }
+
+        &:hover{
+            #price_1{
+                transform: scale(0.95);
+                transition: all 200ms ease-in-out;
+            }
+            #price_2{
+                transform: scale(1.05);
+                transition: all 200ms ease-in-out;                                
+            }
+        }
+
+        #price_1{
+            .card-footer{
+                background: darkslateblue;
+            }
+        }
+        #price_2{
+            .card-footer{
+                background: darkorchid;
+            }
+        }
+    }
+    #ourservices{
+        .card{
+            border: 0;
         }
     }
 }

@@ -21,12 +21,65 @@ body #portfolio .card-deck .card {
 body #portfolio .card-deck .card .card-header {
   padding: 0 !important;
 }
-body #portfolio .card-deck:hover #price_2 {
-  transition: grow 200 ease-in-out;
+body #prices {
+  transition: all 200ms ease-in-out;
 }
 body #prices .btn-link {
   text-decoration: none;
   color: black;
+}
+body #prices .badge a {
+  display: inline-block;
+  pointer-events: none !important;
+  color: lightgray;
+  transition: all 0.25s cubic-bezier(1, 0, 0.58, 0.97);
+}
+body #prices .badge a:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 3px;
+  top: calc(50% - 1.5px);
+  right: 0;
+  background: black;
+  transition: inherit;
+}
+body #prices #price_1 .badge a {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  transition: all 0.25s cubic-bezier(1, 0, 0.58, 0.97);
+}
+body #prices #price_1 .badge a:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  top: calc(50% - 1.5px);
+  right: 0;
+  background: white;
+  transition: inherit;
+}
+body #prices:hover #price_1 .badge a:before {
+  left: 0;
+  width: 100%;
+}
+body #prices:hover #price_1 {
+  transform: scale(0.95);
+  transition: all 200ms ease-in-out;
+}
+body #prices:hover #price_2 {
+  transform: scale(1.05);
+  transition: all 200ms ease-in-out;
+}
+body #prices #price_1 .card-footer {
+  background: darkslateblue;
+}
+body #prices #price_2 .card-footer {
+  background: darkorchid;
+}
+body #ourservices .card {
+  border: 0;
 }
 
 /*# sourceMappingURL=main.css.map */
