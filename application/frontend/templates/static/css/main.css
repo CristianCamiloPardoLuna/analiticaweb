@@ -15,6 +15,50 @@ body {
 body nav {
   font-size: 1.2em;
 }
+body #processing img {
+  height: 20vh;
+}
+body #processing ol {
+  transform: translateY(-30vh);
+  margin: 0;
+  height: 30vh;
+}
+body #processing ol li {
+  transition: all 200ms ease-in-out;
+  text-align: center;
+  width: 30%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-weight: bolder;
+  text-indent: unset;
+  background: none;
+  color: black;
+}
+body #processing ol li span {
+  color: black !important;
+  width: 2.5em;
+  padding: 0.5em 0.75em 0.5em 0.75em;
+  border-radius: 50%;
+  background: lightsalmon !important;
+}
+body #processing ol li .icon_item {
+  display: none;
+  transform: translateY(20px);
+}
+body #processing ol .active .icon_item {
+  display: block;
+  animation: grow 500ms ease-in-out;
+  animation-fill-mode: forwards;
+}
+@keyframes grow {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-20px);
+  }
+}
 body #portfolio .card-deck .card {
   border: none;
 }
@@ -38,10 +82,10 @@ body #prices .badge a:before {
   content: "";
   position: absolute;
   width: 0;
-  height: 3px;
-  top: calc(50% - 1.5px);
+  height: 2px;
+  top: calc(50%);
   right: 0;
-  background: black;
+  background: white;
   transition: inherit;
 }
 body #prices #price_1 .badge a {
@@ -50,33 +94,49 @@ body #prices #price_1 .badge a {
   text-decoration: none;
   transition: all 0.25s cubic-bezier(1, 0, 0.58, 0.97);
 }
-body #prices #price_1 .badge a:before {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 2px;
-  top: calc(50% - 1.5px);
-  right: 0;
-  background: white;
-  transition: inherit;
-}
 body #prices:hover #price_1 .badge a:before {
   left: 0;
   width: 100%;
 }
 body #prices:hover #price_1 {
-  transform: scale(0.95);
-  transition: all 200ms ease-in-out;
+  transition: all 500ms ease-in-out;
+  transform: scale(0.9);
 }
 body #prices:hover #price_2 {
-  transform: scale(1.05);
-  transition: all 200ms ease-in-out;
+  transition: all 500ms ease-in-out;
+  transform: scale(1.1);
+}
+body #prices #price_1 {
+  border: none;
+}
+body #prices #price_1 .card-header {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  padding: 0.5em;
 }
 body #prices #price_1 .card-footer {
   background: darkslateblue;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+body #prices #price_1 #accordion1 {
+  font-size: 0.9em;
+}
+body #prices #price_1 #accordion1 .card-header {
+  border-radius: 0;
+  background: lightgrey;
+}
+body #prices #price_2 {
+  border: none;
+}
+body #prices #price_2 .card-body {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
 }
 body #prices #price_2 .card-footer {
   background: darkorchid;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
 }
 body #ourservices .card {
   border: 0;
