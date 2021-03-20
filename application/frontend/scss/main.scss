@@ -2,6 +2,15 @@
 /*
 sass --watch C:\Users\crist\Documents\GitHub\analiticaweb\application\frontend\scss\main.scss C:\Users\crist\Documents\GitHub\analiticaweb\application\frontend\templates\static\css\main.css
 */
+
+$sec-font-color: rgb(255, 212, 212);
+$background-main: rgb(245, 156, 156);
+$background-sec: rgb(95, 24, 48, 0.6);
+$glow: rgb(245, 156, 156, 0.7);
+$_background_grad: radial-gradient(circle, rgba(255,218,213,1) 0%, rgba(255,255,255,1) 100%);
+$test_color: rgb(95, 24, 48);
+
+
 @keyframes grow{
     from {
         transform: scale(1);
@@ -13,6 +22,7 @@ sass --watch C:\Users\crist\Documents\GitHub\analiticaweb\application\frontend\s
 
 body{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    overflow-x: hidden;
     nav{
         font-size: 1.2em;
     }
@@ -37,13 +47,16 @@ body{
                 color: black;
                 span{
                     color: black !important;
-                    width: 2.5em;
-                    padding: 0.5em 0.75em 0.5em 0.75em;
+                    width: 3em;
+                    height: 3em;
+                    font-size: larger;
+                    padding: 0.7em 0 0 0;
                     border-radius: 50%;
-                    background: lightsalmon !important;
+                    border: 2px solid black;
+                    background: lightgray !important;
                 }
                 .icon_item{
-                    display: none;
+                    display: none;                
                     transform: translateY(20px);
                 }
             }
@@ -52,6 +65,9 @@ body{
                     display: block;
                     animation: grow 500ms ease-in-out;
                     animation-fill-mode: forwards;
+                }
+                span{
+                    background: $glow !important;
                 }
             }
         }
@@ -63,6 +79,7 @@ body{
     #portfolio{
         .card-deck{
             .card{
+                background: none;
                 border: none;
                 .card-header{
                     padding: 0 !important;
@@ -149,7 +166,14 @@ body{
     }
     #ourservices{
         .card{
-            border: 0;
+            background: none;
+            border: 0;            
+            .list-group{
+                li{
+                    background: none;
+                    border: none;
+                }
+            }
         }
     }
 }

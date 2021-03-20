@@ -11,6 +11,7 @@ sass --watch C:\Users\crist\Documents\GitHub\analiticaweb\application\frontend\s
 }
 body {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  overflow-x: hidden;
 }
 body nav {
   font-size: 1.2em;
@@ -37,10 +38,13 @@ body #processing ol li {
 }
 body #processing ol li span {
   color: black !important;
-  width: 2.5em;
-  padding: 0.5em 0.75em 0.5em 0.75em;
+  width: 3em;
+  height: 3em;
+  font-size: larger;
+  padding: 0.7em 0 0 0;
   border-radius: 50%;
-  background: lightsalmon !important;
+  border: 2px solid black;
+  background: lightgray !important;
 }
 body #processing ol li .icon_item {
   display: none;
@@ -51,6 +55,9 @@ body #processing ol .active .icon_item {
   animation: grow 500ms ease-in-out;
   animation-fill-mode: forwards;
 }
+body #processing ol .active span {
+  background: rgba(245, 156, 156, 0.7) !important;
+}
 @keyframes grow {
   0% {
     transform: translateY(0);
@@ -60,6 +67,7 @@ body #processing ol .active .icon_item {
   }
 }
 body #portfolio .card-deck .card {
+  background: none;
   border: none;
 }
 body #portfolio .card-deck .card .card-header {
@@ -139,7 +147,12 @@ body #prices #price_2 .card-footer {
   border-bottom-right-radius: 15px;
 }
 body #ourservices .card {
+  background: none;
   border: 0;
+}
+body #ourservices .card .list-group li {
+  background: none;
+  border: none;
 }
 
 /*# sourceMappingURL=main.css.map */
