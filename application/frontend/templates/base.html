@@ -8,8 +8,10 @@
   <title>ANALITICA | {% block header %}{% endblock %} </title>
 </head>
 <body class="bg-light">
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-light px-5">
-        <a class="navbar-brand" href="#">Analitica</a>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top px-5" style="background-color: white;">
+        <a class="navbar-brand d-flex" href="{{url_for('index')}}">
+          <img class="img-fluid" src="{{url_for('static', filename='img/analitica-logo-sm/cafe.png')}}" style="width: 7em;" alt="">
+        </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -29,10 +31,10 @@
           </ul>
           <ul class="navbar-nav">
             <li class="nav-item active">
-              <a class="nav-link" href="#">Precios</a>
+              <a class="nav-link" href="{{ url_for('pricing') }}">Precios</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Contacto</a>
+              <a class="nav-link" href="{{ url_for('contact') }}">Contacto</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Portafolio</a>

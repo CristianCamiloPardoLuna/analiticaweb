@@ -10,24 +10,42 @@ sass --watch C:\Users\crist\Documents\GitHub\analiticaweb\application\frontend\s
   }
 }
 body {
+  font-weight: 400 !important;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   overflow-x: hidden;
+}
+body hr {
+  border: 2px solid #53182c;
+  border-radius: 5px;
+}
+body input:focus {
+  border: 1px solid radial-gradient(circle, #8c2649 0%, #4b1326 100%) !important;
+}
+body .btn-outline-warning {
+  color: white;
+  border: 0;
+  background: #53182c !important;
+}
+body .btn-outline-warning:hover {
+  background: #461022 !important;
+  border: 0;
+  color: white;
+}
+body .btn-outline-dark {
+  border: 0 !important;
 }
 body nav {
   font-size: 1.2em;
 }
-body #processing img {
-  height: 20vh;
-}
 body #processing ol {
-  transform: translateY(-30vh);
+  transform: translateY(-50vh);
   margin: 0;
-  height: 30vh;
+  height: 10vh;
 }
 body #processing ol li {
   transition: all 200ms ease-in-out;
   text-align: center;
-  width: 30%;
+  width: 100%;
   height: 100%;
   margin: 0;
   padding: 0;
@@ -38,33 +56,46 @@ body #processing ol li {
 }
 body #processing ol li span {
   color: black !important;
-  width: 3em;
   height: 3em;
-  font-size: larger;
-  padding: 0.7em 0 0 0;
-  border-radius: 50%;
-  border: 2px solid black;
+  z-index: 9999;
+  width: 10vw !important;
+  padding: 0.7em 0.5em 0 0.5em;
+  border-radius: 5px;
   background: lightgray !important;
 }
 body #processing ol li .icon_item {
   display: none;
-  transform: translateY(20px);
 }
 body #processing ol .active .icon_item {
   display: block;
-  animation: grow 500ms ease-in-out;
+  animation: aol 250ms ease-in-out;
   animation-fill-mode: forwards;
 }
-body #processing ol .active span {
-  background: rgba(245, 156, 156, 0.7) !important;
+body #processing ol .active .icon_item img {
+  width: 3em;
+  height: 3em;
 }
-@keyframes grow {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(-20px);
-  }
+body #processing ol .active span {
+  background: #53182c !important;
+  color: white !important;
+}
+body #processing .carousel-inner {
+  transform: translateY(0);
+}
+body #processing .carousel-inner h4 {
+  font-weight: 600 !important;
+  color: #461022;
+}
+body #processing .carousel-inner .carousel-item .card-deck {
+  height: 40vh !important;
+  width: 100% !important;
+}
+body #processing .carousel-inner .carousel-item .card-deck .card {
+  height: 100%;
+}
+body #processing .carousel-inner .carousel-item .card-deck .card .card-body img {
+  height: 100% !important;
+  width: 100% !important;
 }
 body #portfolio .card-deck .card {
   background: none;
@@ -72,6 +103,18 @@ body #portfolio .card-deck .card {
 }
 body #portfolio .card-deck .card .card-header {
   padding: 0 !important;
+}
+body #portfolio .card-deck .card .btn-outline-dark:hover {
+  background: rgba(245, 156, 156, 0.7) !important;
+  color: #343a40;
+}
+body #portfolio .card-deck .card .btn-outline-dark:hover .arrow {
+  animation: side-appear 500ms ease-in-out;
+  animation-fill-mode: forwards;
+}
+body #portfolio .card-deck .card .arrow {
+  transform: scaley(-1);
+  opacity: 0;
 }
 body #prices {
   transition: all 200ms ease-in-out;
@@ -102,10 +145,6 @@ body #prices #price_1 .badge a {
   text-decoration: none;
   transition: all 0.25s cubic-bezier(1, 0, 0.58, 0.97);
 }
-body #prices:hover #price_1 .badge a:before {
-  left: 0;
-  width: 100%;
-}
 body #prices:hover #price_1 {
   transition: all 500ms ease-in-out;
   transform: scale(0.9);
@@ -117,13 +156,16 @@ body #prices:hover #price_2 {
 body #prices #price_1 {
   border: none;
 }
+body #prices #price_1 .card-body {
+  padding: 0.5em;
+}
 body #prices #price_1 .card-header {
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   padding: 0.5em;
 }
 body #prices #price_1 .card-footer {
-  background: darkslateblue;
+  background: #461022;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
 }
@@ -142,7 +184,7 @@ body #prices #price_2 .card-body {
   border-top-right-radius: 15px;
 }
 body #prices #price_2 .card-footer {
-  background: darkorchid;
+  background: radial-gradient(circle, #8c2649 0%, #4b1326 100%);
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
 }
@@ -153,6 +195,73 @@ body #ourservices .card {
 body #ourservices .card .list-group li {
   background: none;
   border: none;
+}
+body #contactus {
+  background: radial-gradient(circle, #8c2649 0%, #4b1326 100%) !important;
+}
+body #contactus ul {
+  font-size: 0.9em;
+  text-align: start !important;
+}
+body #contact {
+  overflow: hidden !important;
+}
+body #contact #contact-form {
+  border-radius: 5px;
+  background: radial-gradient(circle, #8c2649 0%, #4b1326 100%) !important;
+  color: white;
+  animation: upper-show 500ms ease-in-out;
+  animation-fill-mode: forwards;
+}
+body #contact #contact-form label {
+  padding: 0;
+  text-align: end;
+  margin-right: 1em;
+}
+body #contact #contact-form .col {
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes aol {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes upper-show {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-20px);
+  }
+}
+@keyframes side-appear {
+  0% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(-10px);
+  }
+  100% {
+    transform: translateX(2px);
+    opacity: 1;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
