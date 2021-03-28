@@ -36,6 +36,7 @@ body{
     }
     input:focus{
         border: 1px solid $test_color !important;
+        box-shadow: none !important;
     }
     .btn-outline-warning{
         color: white;
@@ -53,6 +54,35 @@ body{
     }
     nav{
         font-size: 1.2em;
+        transition: all 1s ease-in-out;
+        color: white !important;        
+    }
+    #initial-effect{
+        background: linear-gradient(180deg, rgba(221,176,176,1) 0%, rgba(248,249,250,1) 80%) !important;
+        .bg-light{
+            box-shadow: 0 4px 8px 3px rgba(0,0,0,0.2) !important;
+        }
+    }
+    .trans-effect{        
+        background: white !important;
+    }
+    #home{
+        display: flex;
+        #companylogo{
+            animation: upper-show 0.8s ease-in-out;
+            animation-fill-mode: forwards;
+        }
+        #companydesc{
+            animation: upper-show 1s ease-in-out;
+            animation-fill-mode: forwards;
+        }
+        #startnow{
+            animation: upper-show 1.2s ease-in-out;
+            animation-fill-mode: forwards;            
+            input{
+                border: 1px solid $test_color_plain;                
+            }
+        }
     }
     #processing{
         ol{
@@ -72,6 +102,7 @@ body{
                 color: black;
                 span{
                     color: black !important;
+                    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
                     height: 3em;
                     z-index: 9999;
                     width: 10vw !important;
@@ -96,6 +127,7 @@ body{
                 span{
                     background: $test_color_plain !important;
                     color: white !important;
+                    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5);
                 }   
                 
             }
@@ -132,7 +164,12 @@ body{
                 .card-header{
                     padding: 0 !important;
                 }
+                .btn-outline-dark{
+                    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
+                    transition: 0.3s;                
+                }
                 .btn-outline-dark:hover{
+                    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5);
                     background: $glow !important;
                     color: #343a40;
                     .arrow{
@@ -207,7 +244,9 @@ body{
                 border-bottom-right-radius: 15px;
             }
             #accordion1{
-                font-size: 0.9em;                
+                font-size: 0.9em;
+                .show{
+                }        
                 .card-header{
                     border-radius: 0;
                     background: lightgrey;
@@ -237,7 +276,58 @@ body{
                     border: none;
                 }
             }
+            img{
+            }
         }
+    }
+    #service-gd{
+        dat{
+            font-size: xx-large;
+        }
+        .card-deck{
+            height: 70vh;
+            .card{
+                margin-top: 1em;
+                margin-bottom: 1em;
+            }
+            .img1{
+                background: url('../img/photo/expo1.jpg');
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-attachment: fixed;
+
+            }
+            .img2{
+                background: url('../img/photo/computer1.jpg');
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-attachment: fixed;
+            }
+            .img3{
+                background: url('../img/photo/notebook2.jpg');
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-attachment: fixed;
+            }
+            .img4{
+                background: url('../img/photo/developer2.jpg');
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-attachment: fixed;
+            }
+            .img5{
+                background: url('../img/photo/notebook3.jpg');
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-attachment: fixed;
+            }
+        }
+
     }
     #contactus{
         background: $test_color !important;
