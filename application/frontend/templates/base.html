@@ -31,7 +31,7 @@
           </li>
         </ul>
         <ul class="navbar-nav">
-          <li class="nav-item active">
+          <li class="nav-item">
             <a class="nav-link" href="{{ url_for('pricing') }}">Precios</a>
           </li>
           <li class="nav-item">
@@ -51,6 +51,59 @@
   </div>
     {% block content %}
     {% endblock %}
+    <section id="contactus"> <!--cambiar-->
+      <div class="row h-100 align-items-center text-center justify-content-center">
+        <div class="col flex-column">
+          <img class="img-fluid w-50" src="{{url_for('static', filename='img/analitica-logo-md/rosa.png')}}" alt="">
+          <div class="d-flex w-100 my-4 justify-content-center text-light">
+            <i class="fab fa-linkedin fa-2x mx-2"></i>
+            <i class="fab fa-github fa-2x mx-2"></i>
+            <i class="fab fa-stack-overflow fa-2x mx-2"></i>
+          </div>
+          <p class="text-light mt-2">
+            Copyright &copy; 2021 Analítica,<br>
+            Todos los derechos reservados.
+          </p>
+        </div>
+        <div class="col text-center text-light">
+          <div class="d-flex mx-auto justify-content-around">
+            <div class="flex-column col">          
+              <ul class="list-group" style="background: none !important;">            
+                <div class="list-group-item p-1" style="background: none !important; border: none !important;">Seguridad y privacidad: </div>
+                <div class="list-group-item p-1" style="background: none !important; border: none !important;"><a href="">&diams; Términos de servicio</a></div>
+                <div class="list-group-item p-1" style="background: none !important; border: none !important;"><a href="">&diams; Privacidad y protección de datos</a></div>
+              </ul>
+            </div>
+            <div class="flex-column col">
+              <ul class="list-group" style="background: none !important;">
+                <div class="list-group-item p-1" style="background: none !important; border: none !important;">Acerca de Analítica:</div>
+                <div class="list-group-item p-1" style="background: none !important; border: none !important;"><a href="">&diams; Historia</a></div>
+                <div class="list-group-item p-1" style="background: none !important; border: none !important;"><a href="">&diams; FAQ</a></div>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <form action="" class="form py-4 px-5">
+            <div class="form-group">
+              <input type="text" name="name" class="form-control form-control-sm shadow-none" placeholder="Tu nombre" lang="es" required>
+            </div>
+            <div class="form-group">
+              <input type="email" name="email" class="form-control form-control-sm shadow-none" placeholder="Correo electrónico" lang="es" required>
+            </div>
+            <div class="form-group">
+              <input type="text" name="company_name" class="form-control form-control-sm shadow-none" placeholder="Nombre de tu empresa" lang="es" required>
+            </div>
+            <div class="form-group">
+              <input type="tel" name="phone" class="form-control form-control-sm shadow-none" placeholder="Teléfono" lang="es" required>
+            </div>
+            <div class="form-group">
+              <button type="submit" class="btn btn-outline-light btn-sm shadow-none">Enviar</button>
+            </div>
+          </form>
+        </div>
+      </div>  
+    </section>
     </div>
     <script src="{{ url_for('static',filename='js/main.js')}}"></script>    
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -59,24 +112,23 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script>
       document.addEventListener('DOMContentLoaded', function(event){
-        var navbar = document.getElementById('navbar-effect');
-        var c = new CountUp('s', 120, 400);
-        var section = document.getElementById('service-gd');
-        function navbar_trans(){                  
-          let scroll = window.scrollY;
-          console.log(scroll);
+        var navbar = document.getElementById('navbar-effect');        
+        var section = document.getElementById('service-gd');        
+        function navbar_trans(){         
+          let scroll = window.scrollY; 
+          /**
+           * agregar o quitar fondo de navbar
+          */
           if ((scroll>200) && (!navbar.classList.contains('trans-effect'))){
             navbar.classList.add('bg-light');            
-          } else if (scroll>3500) {
-            c.start();
-            navbar.classList.remove('bg-light')
-          } else {            
+          } else {
+            navbar.classList.remove('bg-light');
           }
         }
         document.addEventListener('scroll', function(e){
-          navbar_trans();
-        });
-      })
+            navbar_trans();
+          });
+      });
     </script>
 </body>
 </html>

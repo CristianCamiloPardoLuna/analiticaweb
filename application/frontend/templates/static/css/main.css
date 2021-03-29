@@ -234,6 +234,7 @@ body #ourservices .card .list-group li {
   border: none;
 }
 body #service-gd dat {
+  color: lightpink;
   font-size: xx-large;
 }
 body #service-gd .card-deck {
@@ -305,6 +306,22 @@ body #contact #contact-form .col {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+body #ourplans .card-header {
+  color: whitesmoke !important;
+  font-weight: 600 !important;
+}
+body #ourplans #basic_pck .card-header,
+body #ourplans #basic_pck .card-footer {
+  background: green;
+}
+body #ourplans #pro_pck .card-header,
+body #ourplans #pro_pck .card-footer {
+  background: orange;
+}
+body #ourplans #enter_pck .card-header,
+body #ourplans #enter_pck .card-footer {
+  background: orangered;
 }
 
 @keyframes aol {

@@ -1,11 +1,12 @@
 {% extends "base.html" %}
 {% block content %}
-<section id="ourplans">
-    <div class="mx-auto my-5 px-5 card-deck">
-  
-      <div class="card text-center">
-          <div class="card-header">
-            Para equipos pequeños iniciando su transformación digital
+<section id="ourplans" style="margin-top: 15vh;">
+    <div class="mx-auto px-5 mb-5 card-deck">
+      <div class="card text-center" id="basic_pck">
+          <div class="card-header text-center text-light">
+            <p class="m-0">
+                Para equipos pequeños iniciando su transformación digital
+            </p>
           </div>
           <div class="card-body">
             <h4 class="card-title font-weight-bold" style="color: green">Básico</h4>
@@ -24,7 +25,7 @@
           </div>
       </div>
   
-      <div class="card text-center">
+      <div class="card text-center" id="pro_pck">
       <div class="card-header">
           Para empresas que quieran una experiencia integral.
       </div>
@@ -45,9 +46,9 @@
       </div>
       </div>
   
-      <div class="card text-center">
+      <div class="card text-center" id="enter_pck">
           <div class="card-header">
-              Conecte a sus clientes, aliados y proveedores a través de una experiencia completa.
+              Conecte a sus clientes, aliados y proveedores.
           </div>
           <div class="card-body">
               <h4 class="card-title font-weight-bold" style="color: orangered">Empresa</h4>

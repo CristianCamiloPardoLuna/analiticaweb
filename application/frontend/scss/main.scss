@@ -282,6 +282,7 @@ body{
     }
     #service-gd{
         dat{
+            color: lightpink;
             font-size: xx-large;
         }
         .card-deck{
@@ -357,6 +358,30 @@ body{
             }
         }
 
+    }
+    #ourplans{
+        .card-header{
+            color: whitesmoke !important;
+            font-weight: 600 !important;
+        }        
+        #basic_pck{
+            .card-header,
+            .card-footer{
+                background: green;
+            }
+        }
+        #pro_pck{
+            .card-header,
+            .card-footer{
+                background: orange;
+            }
+        }
+        #enter_pck{
+            .card-header,
+            .card-footer{
+                background: orangered;
+            }
+        }
     }
 }
 
