@@ -1,6 +1,13 @@
 {% extends "base.html" %}
 {% block content %}
-<section id="ourplans" style="margin-top: 15vh;">
+<section id="ourplans" style="margin-top: 10vh;">
+    <div class="row">
+        <img 
+        class="img-fluid mx-auto" 
+        src="{{url_for('static', filename='img/svg/crown.svg')}}" 
+        style="width: 5em; z-index: 2 !important; transform: translateY(4vh) !important;" 
+        alt="">
+    </div>
     <div class="mx-auto px-5 mb-5 card-deck">
       <div class="card text-center" id="basic_pck">
           <div class="card-header text-center text-light">
@@ -9,10 +16,10 @@
             </p>
           </div>
           <div class="card-body">
-            <h4 class="card-title font-weight-bold" style="color: green">Básico</h4>
+            <h4 class="card-title font-weight-bold" >Básico</h4>
             <div class="price d-flex justify-content-center align-items-center mb-3"><h4 class="font-weight-bold m-0 ml-1">$840.000 COP </h4><p class="m-0 pl-1"> / año</p></div>
-            <div class="price d-flex justify-content-center align-items-center mb-3"><p class="m-0"> Incluye 5 usuarios normales + 1 admin.</p></div>
-            <a href="#" class="btn btn-outline-success font-weight-bold">¡Quiero Este!</a>
+            <div class="price d-flex justify-content-center align-items-center mb-3"><p class="m-0"> Incluye hasta 5 usuarios básicos + 1 administrador.</p></div>
+            <a href="{{url_for('plans', _plan = 1)}}" class="btn btn-outline-warning font-weight-bold">¡Quiero Este!</a>
           </div>
           <div class="card-footer text-muted">
               <ul class="list-group p-0 list-group-flush">
@@ -26,24 +33,24 @@
       </div>
   
       <div class="card text-center" id="pro_pck">
-      <div class="card-header">
-          Para empresas que quieran una experiencia integral.
-      </div>
-      <div class="card-body">
-          <h4 class="card-title font-weight-bold" style="color: orange">Profesional</h4>
-          <div class="price d-flex justify-content-center align-items-center mb-3"><h4 class="font-weight-bold m-0">$1'800.000 COP </h4><p class="m-0 pl-1"> / año</p></div>
-          <div class="price d-flex justify-content-center align-items-center mb-3"><p class="m-0"> Incluye 10 usuarios normales + 2 admins.</p></div>
-          <a href="#" class="btn btn-outline-success font-weight-bold">¡Quiero Este!</a>
-      </div>
-      <div class="card-footer text-muted">
-          <ul class="list-group p-0 list-group-flush">
-              <li class="list-group-item py-1 m-0">Cras justo odio</li>
-              <li class="list-group-item py-1">Dapibus ac facilisis in</li>
-              <li class="list-group-item py-1">Morbi leo risus</li>
-              <li class="list-group-item py-1">Porta ac consectetur ac</li>
-              <li class="list-group-item py-1">Vestibulum at eros</li>
-              </ul>
-      </div>
+        <div class="card-header">
+            Para empresas que quieran una experiencia integral.
+        </div>
+        <div class="card-body">
+            <h4 class="card-title font-weight-bold">Profesional</h4>
+            <div class="price d-flex justify-content-center align-items-center mb-3"><h4 class="font-weight-bold m-0">$1'800.000 COP </h4><p class="m-0 pl-1"> / año</p></div>
+            <div class="price d-flex justify-content-center align-items-center mb-3"><p class="m-0"> Incluye hasta 10 usuarios profesionales + 1 administradores.</p></div>
+            <a href="{{url_for('plans', _plan = 2)}}" class="btn btn-outline-warning font-weight-bold">¡Quiero Este!</a>
+        </div>
+        <div class="card-footer text-muted">
+            <ul class="list-group p-0 list-group-flush">
+                <li class="list-group-item py-1 m-0">Cras justo odio</li>
+                <li class="list-group-item py-1">Dapibus ac facilisis in</li>
+                <li class="list-group-item py-1">Morbi leo risus</li>
+                <li class="list-group-item py-1">Porta ac consectetur ac</li>
+                <li class="list-group-item py-1">Vestibulum at eros</li>
+                </ul>
+        </div>
       </div>
   
       <div class="card text-center" id="enter_pck">
@@ -51,22 +58,30 @@
               Conecte a sus clientes, aliados y proveedores.
           </div>
           <div class="card-body">
-              <h4 class="card-title font-weight-bold" style="color: orangered">Empresa</h4>
+              <h4 class="card-title font-weight-bold">Empresa</h4>
               <div class="price d-flex justify-content-center align-items-center mb-3"><h4 class="font-weight-bold m-0">$3'000.000 COP </h4><p class="m-0 pl-1"> / año</p></div>
-              <div class="price d-flex justify-content-center align-items-center mb-3">Cubrimiento total.*</div>
-              <a href="#" class="btn btn-outline-success font-weight-bold">¡Quiero Este!</a>
+              <div class="price d-flex justify-content-center align-items-center mb-3">Cubrimiento total.</div>
+              <a href="{{ url_for('plans', _plan=3) }}" class="btn btn-outline-warning font-weight-bold">¡Quiero Este!</a>
           </div>
           <div class="card-footer text-muted">
-              <ul class="list-group p-0 list-group-flush">
+                <ul class="list-group p-0 list-group-flush">
                   <li class="list-group-item py-1 m-0">Cras justo odio</li>
                   <li class="list-group-item py-1">Dapibus ac facilisis in</li>
                   <li class="list-group-item py-1">Morbi leo risus</li>
                   <li class="list-group-item py-1">Porta ac consectetur ac</li>
                   <li class="list-group-item py-1">Vestibulum at eros</li>
-                  </ul>
+                </ul>
           </div>
       </div>
   
+    </div>
+    <div class="row px-5">
+        <p class="text-muted">
+            <i>
+                *El costo del paquete seleccionado es adicional 
+                al costo de tu proyecto con Analítica.
+            </i>
+        </p>
     </div>
   </section>
 {% endblock %}

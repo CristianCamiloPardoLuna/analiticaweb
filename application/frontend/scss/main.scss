@@ -5,7 +5,7 @@ sass --watch C:\Users\crist\Documents\GitHub\analiticaweb\application\frontend\s
 
 $sec-font-color: rgb(255, 212, 212);
 $background-main: rgb(245, 156, 156);
-$background-sec: rgb(95, 24, 48, 0.6);
+$background-sec: rgb(95, 24, 48, 0.1);
 $glow: rgb(245, 156, 156, 0.7);
 $_background_grad: radial-gradient(circle, rgba(255,218,213,1) 0%, rgba(255,255,255,1) 100%);
 //$test_color: rgb(95, 24, 48);
@@ -55,7 +55,16 @@ body{
     nav{
         font-size: 1.2em;
         transition: all 1s ease-in-out;
-        color: white !important;        
+    }
+    #navbar{
+        .dropdown-menu{
+            .dropdown-item{
+                transition: all 200ms ease-in-out;
+                &:hover{
+                    background: $glow;
+                }
+            }
+        }                
     }
     #initial-effect{
         background: linear-gradient(180deg, rgba(221,176,176,1) 0%, rgba(248,249,250,1) 80%) !important;
@@ -66,8 +75,11 @@ body{
     .trans-effect{        
         background: white !important;
     }
-    #home{
+    #home{        
         display: flex;
+        #slogan{
+            color: $test_color_plain;
+        }
         #companylogo{
             animation: upper-show 0.8s ease-in-out;
             animation-fill-mode: forwards;
@@ -84,7 +96,7 @@ body{
             }
         }
     }
-    #processing{
+    #inicia{
         ol{
             transform: translateY(-50vh);
             margin: 0;
@@ -234,14 +246,14 @@ body{
                 padding: 0.5em ;
             }
             .card-header{
-                border-top-left-radius: 15px;
-                border-top-right-radius: 15px;
+                border-top-left-radius: 5px;
+                border-top-right-radius: 5px;
                 padding: 0.5em;
             }
             .card-footer{
                 background: $test_color_hover;
-                border-bottom-left-radius: 15px;
-                border-bottom-right-radius: 15px;
+                border-bottom-left-radius: 5px;
+                border-bottom-right-radius: 5px;
             }
             #accordion1{
                 font-size: 0.9em;
@@ -256,13 +268,14 @@ body{
         #price_2{
             border: none;
             .card-body{
-                border-top-left-radius: 15px;
-                border-top-right-radius: 15px;
+                border-top-left-radius: 5px !important;
+                border-top-right-radius: 5px !important;
+                background: $background-sec;
             }
             .card-footer{
                 background: $test_color;
-                border-bottom-left-radius: 15px;
-                border-bottom-right-radius: 15px;
+                border-bottom-left-radius: 5px;
+                border-bottom-right-radius: 5px;
             }
         }
     }
@@ -280,16 +293,16 @@ body{
             }
         }
     }
-    #service-gd{
+    #nosotros{
         dat{
             color: lightpink;
             font-size: xx-large;
         }
         .card-deck{
-            height: 70vh;
+            margin-top: 2em !important;
+            margin-bottom: 2em !important;
+            height: 60vh !important;
             .card{
-                margin-top: 1em;
-                margin-bottom: 1em;
             }
             .img1{
                 background: url('../img/photo/expo1.jpg');
@@ -330,25 +343,41 @@ body{
         }
 
     }
-    #contactus{
+    #page-footer{
         background: $test_color !important;
         ul{
             font-size: 0.9em;
             text-align: start !important;
         }
+        a{
+            text-decoration: none;
+            color: lightpink;
+        }
+        a:hover{
+            color: whitesmoke !important;
+        }
     }
     #contact{
         overflow: hidden !important;
+        h1{
+            color: $test_color_plain !important;
+            font-weight: 600 !important;
+        }
+        a{
+            color: $test_color_plain;
+        }
+        a:hover{
+            color: $test_color_hover !important;
+        }
         #contact-form{
-            border-radius: 5px;
-            background: $test_color !important;
-            color: white;
+            color: black;
             animation: upper-show 500ms ease-in-out;
             animation-fill-mode: forwards;
             label{
                 padding: 0;
                 text-align: end;
                 margin-right: 1em;
+                margin-bottom: 0;
             }
             .col{
                 padding: 0;
@@ -363,23 +392,38 @@ body{
         .card-header{
             color: whitesmoke !important;
             font-weight: 600 !important;
+        }
+        ul{
+            li{
+                background: none;
+                color: whitesmoke;
+            }            
         }        
         #basic_pck{
             .card-header,
             .card-footer{
-                background: green;
+                background: radial-gradient(circle, rgba(82,143,40,1) 0%, rgba(52,94,23,1) 100%);
+            }
+            .card-title{
+                color: radial-gradient(circle, rgba(82,143,40,1) 0%, rgba(52,94,23,1) 100%);
             }
         }
         #pro_pck{
             .card-header,
             .card-footer{
-                background: orange;
+                background: $test_color;
+            }
+            .card-title{
+                color: $test_color;
             }
         }
         #enter_pck{
             .card-header,
             .card-footer{
-                background: orangered;
+                background: radial-gradient(circle, rgba(40,52,143,1) 0%, rgba(21,26,71,1) 100%);
+            }
+            .card-title{
+                color: black;
             }
         }
     }
@@ -400,7 +444,7 @@ body{
 @keyframes upper-show{
     0%{
         opacity: 0;
-        transform: translateY(20px);        
+        transform: translateY(0);        
     }
     50%{
         opacity: 1;

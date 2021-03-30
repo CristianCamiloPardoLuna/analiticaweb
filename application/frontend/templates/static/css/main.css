@@ -38,7 +38,12 @@ body .btn-outline-dark {
 body nav {
   font-size: 1.2em;
   transition: all 1s ease-in-out;
-  color: white !important;
+}
+body #navbar .dropdown-menu .dropdown-item {
+  transition: all 200ms ease-in-out;
+}
+body #navbar .dropdown-menu .dropdown-item:hover {
+  background: rgba(245, 156, 156, 0.7);
 }
 body #initial-effect {
   background: linear-gradient(180deg, #ddb0b0 0%, #f8f9fa 80%) !important;
@@ -51,6 +56,9 @@ body .trans-effect {
 }
 body #home {
   display: flex;
+}
+body #home #slogan {
+  color: #53182c;
 }
 body #home #companylogo {
   animation: upper-show 0.8s ease-in-out;
@@ -67,12 +75,12 @@ body #home #startnow {
 body #home #startnow input {
   border: 1px solid #53182c;
 }
-body #processing ol {
+body #inicia ol {
   transform: translateY(-50vh);
   margin: 0;
   height: 10vh;
 }
-body #processing ol li {
+body #inicia ol li {
   transition: all 200ms ease-in-out;
   text-align: center;
   width: 100%;
@@ -84,7 +92,7 @@ body #processing ol li {
   background: none;
   color: black;
 }
-body #processing ol li span {
+body #inicia ol li span {
   color: black !important;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
   height: 3em;
@@ -94,38 +102,38 @@ body #processing ol li span {
   border-radius: 5px;
   background: lightgray !important;
 }
-body #processing ol li .icon_item {
+body #inicia ol li .icon_item {
   display: none;
 }
-body #processing ol .active .icon_item {
+body #inicia ol .active .icon_item {
   display: block;
   animation: aol 250ms ease-in-out;
   animation-fill-mode: forwards;
 }
-body #processing ol .active .icon_item img {
+body #inicia ol .active .icon_item img {
   width: 3em;
   height: 3em;
 }
-body #processing ol .active span {
+body #inicia ol .active span {
   background: #53182c !important;
   color: white !important;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.5);
 }
-body #processing .carousel-inner {
+body #inicia .carousel-inner {
   transform: translateY(0);
 }
-body #processing .carousel-inner h4 {
+body #inicia .carousel-inner h4 {
   font-weight: 600 !important;
   color: #461022;
 }
-body #processing .carousel-inner .carousel-item .card-deck {
+body #inicia .carousel-inner .carousel-item .card-deck {
   height: 40vh !important;
   width: 100% !important;
 }
-body #processing .carousel-inner .carousel-item .card-deck .card {
+body #inicia .carousel-inner .carousel-item .card-deck .card {
   height: 100%;
 }
-body #processing .carousel-inner .carousel-item .card-deck .card .card-body img {
+body #inicia .carousel-inner .carousel-item .card-deck .card .card-body img {
   height: 100% !important;
   width: 100% !important;
 }
@@ -197,14 +205,14 @@ body #prices #price_1 .card-body {
   padding: 0.5em;
 }
 body #prices #price_1 .card-header {
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
   padding: 0.5em;
 }
 body #prices #price_1 .card-footer {
   background: #461022;
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 body #prices #price_1 #accordion1 {
   font-size: 0.9em;
@@ -217,13 +225,14 @@ body #prices #price_2 {
   border: none;
 }
 body #prices #price_2 .card-body {
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
+  border-top-left-radius: 5px !important;
+  border-top-right-radius: 5px !important;
+  background: rgba(95, 24, 48, 0.1);
 }
 body #prices #price_2 .card-footer {
   background: radial-gradient(circle, #8c2649 0%, #4b1326 100%);
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 body #ourservices .card {
   background: none;
@@ -233,66 +242,79 @@ body #ourservices .card .list-group li {
   background: none;
   border: none;
 }
-body #service-gd dat {
+body #nosotros dat {
   color: lightpink;
   font-size: xx-large;
 }
-body #service-gd .card-deck {
-  height: 70vh;
+body #nosotros .card-deck {
+  margin-top: 2em !important;
+  margin-bottom: 2em !important;
+  height: 60vh !important;
 }
-body #service-gd .card-deck .card {
-  margin-top: 1em;
-  margin-bottom: 1em;
-}
-body #service-gd .card-deck .img1 {
+body #nosotros .card-deck .img1 {
   background: url("../img/photo/expo1.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
 }
-body #service-gd .card-deck .img2 {
+body #nosotros .card-deck .img2 {
   background: url("../img/photo/computer1.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
 }
-body #service-gd .card-deck .img3 {
+body #nosotros .card-deck .img3 {
   background: url("../img/photo/notebook2.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
 }
-body #service-gd .card-deck .img4 {
+body #nosotros .card-deck .img4 {
   background: url("../img/photo/developer2.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
 }
-body #service-gd .card-deck .img5 {
+body #nosotros .card-deck .img5 {
   background: url("../img/photo/notebook3.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
 }
-body #contactus {
+body #page-footer {
   background: radial-gradient(circle, #8c2649 0%, #4b1326 100%) !important;
 }
-body #contactus ul {
+body #page-footer ul {
   font-size: 0.9em;
   text-align: start !important;
+}
+body #page-footer a {
+  text-decoration: none;
+  color: lightpink;
+}
+body #page-footer a:hover {
+  color: whitesmoke !important;
 }
 body #contact {
   overflow: hidden !important;
 }
+body #contact h1 {
+  color: #53182c !important;
+  font-weight: 600 !important;
+}
+body #contact a {
+  color: #53182c;
+}
+body #contact a:hover {
+  color: #461022 !important;
+}
 body #contact #contact-form {
-  border-radius: 5px;
-  background: radial-gradient(circle, #8c2649 0%, #4b1326 100%) !important;
-  color: white;
+  color: black;
   animation: upper-show 500ms ease-in-out;
   animation-fill-mode: forwards;
 }
@@ -300,6 +322,7 @@ body #contact #contact-form label {
   padding: 0;
   text-align: end;
   margin-right: 1em;
+  margin-bottom: 0;
 }
 body #contact #contact-form .col {
   padding: 0;
@@ -311,17 +334,30 @@ body #ourplans .card-header {
   color: whitesmoke !important;
   font-weight: 600 !important;
 }
+body #ourplans ul li {
+  background: none;
+  color: whitesmoke;
+}
 body #ourplans #basic_pck .card-header,
 body #ourplans #basic_pck .card-footer {
-  background: green;
+  background: radial-gradient(circle, #528f28 0%, #345e17 100%);
+}
+body #ourplans #basic_pck .card-title {
+  color: radial-gradient(circle, #528f28 0%, #345e17 100%);
 }
 body #ourplans #pro_pck .card-header,
 body #ourplans #pro_pck .card-footer {
-  background: orange;
+  background: radial-gradient(circle, #8c2649 0%, #4b1326 100%);
+}
+body #ourplans #pro_pck .card-title {
+  color: radial-gradient(circle, #8c2649 0%, #4b1326 100%);
 }
 body #ourplans #enter_pck .card-header,
 body #ourplans #enter_pck .card-footer {
-  background: orangered;
+  background: radial-gradient(circle, #28348f 0%, #151a47 100%);
+}
+body #ourplans #enter_pck .card-title {
+  color: black;
 }
 
 @keyframes aol {
@@ -339,7 +375,7 @@ body #ourplans #enter_pck .card-footer {
 @keyframes upper-show {
   0% {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(0);
   }
   50% {
     opacity: 1;
