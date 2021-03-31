@@ -1,5 +1,22 @@
 {% extends "base.html" %}
+{% block header %}
+Expertos en ciencia de datos
+{% endblock %}
 {% block home %}
+
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+<div class="alert ml-3 p-2 alert-danger alert-dismissible fade show" role="alert">
+    <i class="fas fa-bomb fa-2x mr-2"></i>
+    <h6 class="alert-heading mt-2 mb-0"><strong>Hemos encontrado un error.</strong></h6>
+    <p class="m-0">{{ messages[0] }}</p>
+    <button type="button" class="close p-0 m-2" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+{% endif %}
+{% endwith %}
+
 <section id="home" style="height: 100vh;">
     <div class="d-flex h-100 px-5 align-items-center text-center justify-content-center cover" style="width: 60vw;">
         <div style="margin-top: 35vh;">          
@@ -53,7 +70,7 @@
           <img class="mr-3" style="width: 5em;" src="{{url_for('static', filename='img/svg/data-analysis.svg')}}" alt="">
           <div class="d-flex flex-column pr-4">
             <h4 class="display-5">Ciencia de datos</h4>
-            <p class="m-0">Explota al máximo tus datos a través de nuestras avanzadas técnicas de análisis de datos y poderosas.</p>
+            <p class="m-0">Explota al máximo tus datos a través de nuestras avanzadas técnicas de análisis de datos y poderosas visualizaciones.</p>
           </div>
           <div class="flex-column w-25 align-items-center justify-content-center">
             <img class="img-fluid arrow" src="{{url_for('static', filename='img/svg/001-arrow-left.svg')}}" alt="">
@@ -65,6 +82,147 @@
 </section>
 {% endblock %}
 {% block content %}
+
+<section class="text-center" id="inicia" style="height: 100vh; margin-top: 10vh;">
+  <div class="flex-column px-5 h-100 justify-content-center align-items-center text-center">
+    <h5 class="display-5 text-left text-muted" style="font-weight: 600 !important;">Inicia con Analítica</h5>
+    <h2 class="display-5 text-left" style="margin-bottom: 30vh;  font-weight: 600 !important;">Este es nuestro proceso de creación</h2>
+    <div id="carousel1" class="carousel mx-auto w-75 slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carousel1" data-slide-to="0" class="d-flex align-items-end active">
+          <div class="flex-column justify-content-center align-items-center w-100 d-flex">
+            <div class="icon_item"><img src="{{url_for('static', filename='img/svg/009-trust.svg')}}" alt=""></div>
+            <span class="bg-dark text-light">¡Bienvenido!</span>
+          </div>
+        </li>
+        <li data-target="#carousel1" data-slide-to="1" class="d-flex align-items-end">
+          <div class="flex-column justify-content-center align-items-center w-100 d-flex">
+            <div class="icon_item"><img src="{{url_for('static', filename='img/svg/019-purpose.svg')}}" alt=""></div>
+            <span class="bg-dark text-light">Planea</span>
+          </div>
+        </li>
+        <li data-target="#carousel1" data-slide-to="2" class="d-flex align-items-end">
+          <div class="flex-column justify-content-center align-items-center w-100 d-flex">
+            <div class="icon_item"><img src="{{url_for('static', filename='img/svg/006-advice.svg')}}" alt=""></div>
+            <span class="bg-dark text-light">Aprueba</span>
+          </div>
+        </li>
+        <li data-target="#carousel1" data-slide-to="3" class="d-flex align-items-end">
+          <div class="flex-column justify-content-center align-items-center w-100 d-flex">
+            <div class="icon_item"><img src="{{url_for('static', filename='img/svg/012-success.svg')}}" alt=""></div>
+            <span class="bg-dark text-light">Visualiza</span>
+          </div>
+        </li>
+        <li data-target="#carousel1" data-slide-to="4" class="d-flex align-items-end">
+          <div class="flex-column justify-content-center align-items-center w-100 d-flex">
+            <div class="icon_item"><img src="{{url_for('static', filename='img/svg/018-strong.svg')}}" alt=""></div>
+            <span class="bg-dark text-light">Decide</span>
+          </div>
+        </li>
+      </ol>
+      <div class="carousel-inner mx-auto w-100">
+        <div class="carousel-item align-items-center justify-content-center active">
+          <div class="card-deck">
+            <div class="card" style="border: 0 !important; background: none !important;">
+              <div class="card-body p-0 text-right">
+                <h4 class="display-5 p-0">
+                  Analítica y tú se conocen
+                </h4>
+                <p class="text-muted p-0"  style="font-size: larger !important;">
+                  Uno de nuestros agentes comerciales se encargará de ponerse en contacto contigo lo antes posile.
+                </p>
+              </div>
+            </div>
+            <div class="card" style="border: 0 !important; background: none !important;">
+              <div class="card-body p-0">
+                <img class="img-fluid m-0 w-100 h-100 d-block" src="{{ url_for('static', filename='img/svg/team_1.svg') }}" alt="first">
+              </div>
+            </div>
+          </div> 
+        </div>
+        <div class="carousel-item">
+          <div class="card-deck">
+            <div class="card" style="border: 0 !important; background: none !important;">
+              <div class="card-body p-0">
+                <img class="img-fluid m-0 d-block" src="{{ url_for('static', filename='img/svg/plan_1.svg') }}" alt="first">
+              </div>              
+            </div>
+            <div class="card" style="border: 0 !important; background: none !important;">
+              <div class="card-body p-0 text-left">
+                <h4 class="display-5">
+                  Te entregaremos el plan de trabajo
+                </h4>
+                <p class="text-muted" style="font-size: larger !important;">
+                  Después de una rápida sesión de contexto, recibirás un documento
+                  con la cantidad de horas necesarias para llevar a cabo tu proyecto,
+                  ¡recuerda que cada hora es a sólo a $40.000 COP!
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="card-deck">
+            <div class="card" style="border: 0 !important; background: none !important;">
+              <div class="card-body p-0 text-right">
+                <h4 class="display-5">
+                  Esperaremos tu aprobación
+                </h4>
+                <p class="text-muted" style="font-size: larger !important;">
+                  Podrás revisar los últimos detalles del plan de trabajo,
+                  hacer las preguntas y modificaciones que quieras y (una vez aprobado),
+                  ¡pondremos manos a la obra!
+                </p>
+              </div>
+            </div>
+            <div class="card" style="border: 0 !important; background: none !important;">
+              <div class="card-body p-0">
+                <img class="img-fluid m-0 d-block" src="{{ url_for('static', filename='img/svg/approval_1.svg') }}" alt="first">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="card-deck">
+            <div class="card" style="border: 0 !important; background: none !important;">
+              <div class="card-body p-0 align-items-center justify-content-center">
+                <img class="img-fluid m-0 mx-auto d-block"  style="height: 10em;" src="{{ url_for('static', filename='img/svg/analytics_1.svg') }}" alt="first">
+              </div>
+            </div>
+            <div class="card" style="border: 0 !important; background: none !important;">
+              <div class="card-body text-left">
+                <h4 class="display-5">
+                  Podrás ver los resultados de nuestro trabajo.
+                </h4>
+                <p class="lead text-muted">
+                  Durante la ejecución de tu proyecto y sin necesidad culminar este,
+                  podrás empezar a visualizar desde nuestro portal clientes (totalmente gratis)
+                  los resultados de nuestro trabajo.
+                </p>
+              </div>
+            </div>
+          </div>                      
+        </div>
+        <div class="carousel-item">
+          <div class="card-deck">
+            <div class="card" style="border: 0 !important; background: none !important;">
+              <div class="card-body text-right">
+                <h4 class="display-5">Toma las riendas de tu negocio y enfoca a tu equipo en la dirección correcta</h4>
+                <a href="{{url_for('contact')}}" class="btn mt-3 btn-outline-warning shadow-none font-weight-bold">¡Quiero ser parte del proceso!</a>
+              </div>
+            </div>
+            <div class="card" style="border: 0 !important; background: none !important;">
+              <div class="card-body">
+                <img class="img-fluid m-0 d-block" src="{{ url_for('static', filename='img/svg/woman_1.svg') }}" alt="first">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="prices" class="p-5" style="height: 100vh;">
   <div class="card-deck align-items-center h-100 pb-5 px-5 pt-1">
     <div class="card align-items-center justify-content-center h-100 w-100" id="price_1">
@@ -157,140 +315,6 @@
     </div>
   </div>
 </section>
-<section class="text-center" id="inicia" style="height: 100vh; margin-top: 10vh;">
-  <div class="flex-column px-5 h-100 justify-content-center align-items-center text-center">
-    <h5 class="display-5 text-left text-muted" style="font-weight: 600 !important;">Inicia con Analítica</h5>
-    <h2 class="display-5 text-left" style="margin-bottom: 30vh;  font-weight: 600 !important;">Este es nuestro proceso de creación</h2>
-    <div id="carousel1" class="carousel mx-auto w-75 slide" data-ride="carousel">
-      <ol class="carousel-indicators">
-        <li data-target="#carousel1" data-slide-to="0" class="d-flex align-items-end active">
-          <div class="flex-column justify-content-center align-items-center w-100 d-flex">
-            <div class="icon_item"><img src="{{url_for('static', filename='img/svg/009-trust.svg')}}" alt=""></div>
-            <span class="bg-dark text-light">Acuerdo</span>
-          </div>
-        </li>
-        <li data-target="#carousel1" data-slide-to="1" class="d-flex align-items-end">
-          <div class="flex-column justify-content-center align-items-center w-100 d-flex">
-            <div class="icon_item"><img src="{{url_for('static', filename='img/svg/019-purpose.svg')}}" alt=""></div>
-            <span class="bg-dark text-light">Cotización</span>
-          </div>
-        </li>
-        <li data-target="#carousel1" data-slide-to="2" class="d-flex align-items-end">
-          <div class="flex-column justify-content-center align-items-center w-100 d-flex">
-            <div class="icon_item"><img src="{{url_for('static', filename='img/svg/006-advice.svg')}}" alt=""></div>
-            <span class="bg-dark text-light">Aprobación</span>
-          </div>
-        </li>
-        <li data-target="#carousel1" data-slide-to="3" class="d-flex align-items-end">
-          <div class="flex-column justify-content-center align-items-center w-100 d-flex">
-            <div class="icon_item"><img src="{{url_for('static', filename='img/svg/012-success.svg')}}" alt=""></div>
-            <span class="bg-dark text-light">Resultado</span>
-          </div>
-        </li>
-        <li data-target="#carousel1" data-slide-to="4" class="d-flex align-items-end">
-          <div class="flex-column justify-content-center align-items-center w-100 d-flex">
-            <div class="icon_item"><img src="{{url_for('static', filename='img/svg/018-strong.svg')}}" alt=""></div>
-            <span class="bg-dark text-light">Monitoreo</span>
-          </div>
-        </li>
-      </ol>
-      <div class="carousel-inner mx-auto w-100">
-        <div class="carousel-item align-items-center justify-content-center active">
-          <div class="card-deck">
-            <div class="card" style="border: 0 !important; background: none !important;">
-              <div class="card-body p-0 text-right">
-                <h4 class="display-5 p-0">
-                  Analítica y tú se conocen
-                </h4>
-                <p class="text-muted p-0"  style="font-size: larger !important;">
-                  Uno de nuestros agentes comerciales se encargará de ponerse en contacto contigo.
-                </p>
-              </div>
-            </div>
-            <div class="card" style="border: 0 !important; background: none !important;">
-              <div class="card-body p-0">
-                <img class="img-fluid m-0 w-100 h-100 d-block" src="{{ url_for('static', filename='img/svg/team_1.svg') }}" alt="first">
-              </div>
-            </div>
-          </div> 
-        </div>
-        <div class="carousel-item">
-          <div class="card-deck">
-            <div class="card" style="border: 0 !important; background: none !important;">
-              <div class="card-body p-0">
-                <img class="img-fluid m-0 d-block" src="{{ url_for('static', filename='img/svg/plan_1.svg') }}" alt="first">
-              </div>              
-            </div>
-            <div class="card" style="border: 0 !important; background: none !important;">
-              <div class="card-body p-0 text-left">
-                <h4 class="display-5">
-                  Te entregaremos el plan de trabajo
-                </h4>
-                <p class="text-muted" style="font-size: larger !important;">
-                  después de una rápida sesión de contexto, recibirás el costo del proyecto y los térmios y condiciones del servicio.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="card-deck">
-            <div class="card" style="border: 0 !important; background: none !important;">
-              <div class="card-body p-0 text-right">
-                <h4 class="display-5">
-                  Esperaremos tu aprobación
-                </h4>
-                <p class="text-muted" style="font-size: larger !important;">
-                  Podrás revusar los últimos detalles del plan de trabajo y una vez aprobado,
-                  ¡pondremos manos a la obra!
-                </p>
-              </div>
-            </div>
-            <div class="card" style="border: 0 !important; background: none !important;">
-              <div class="card-body p-0">
-                <img class="img-fluid m-0 d-block" src="{{ url_for('static', filename='img/svg/approval_1.svg') }}" alt="first">
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="card-deck">
-            <div class="card" style="border: 0 !important; background: none !important;">
-              <div class="card-body p-0 align-items-center justify-content-center">
-                <img class="img-fluid m-0 mx-auto d-block"  style="height: 10em;" src="{{ url_for('static', filename='img/svg/analytics_1.svg') }}" alt="first">
-              </div>
-            </div>
-            <div class="card" style="border: 0 !important; background: none !important;">
-              <div class="card-body text-left">
-                <h4 class="display-5">
-                  Recibirás el resultado.
-                </h4>
-                <p class="text-muted">
-                  Estarás tan involucrado como quieras durante este proceso.
-                </p>
-              </div>
-            </div>
-          </div>                      
-        </div>
-        <div class="carousel-item">
-          <div class="card-deck">
-            <div class="card" style="border: 0 !important; background: none !important;">
-              <div class="card-body text-right">
-                <h4 class="display-5">Toma las riendas de tu negocio y enfoca a tu equipo en la dirección correcta</h4>
-                <a href="{{url_for('contact')}}" class="btn mt-3 btn-outline-warning font-weight-bold">¡Quiero ser parte del proceso!</a>
-              </div>
-            </div>
-            <div class="card" style="border: 0 !important; background: none !important;">
-              <div class="card-body">
-                <img class="img-fluid m-0 d-block" src="{{ url_for('static', filename='img/svg/woman_1.svg') }}" alt="first">
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
 <section id="ourservices">
   <!--workflow-->
@@ -330,7 +354,7 @@
           <p class="text-muted">Todo nuestros servicios se encuentran desplegados en la nube.</p>
         </li>
         <li class="list-group-item">
-          <img class="img-fluid w-25" src="{{url_for('static', filename='img/svg/016-brain.svg')}}" alt="">
+          <img class="img-fluid w-25" src="{{url_for('static', filename='img/svg/002-search.svg')}}" alt="">
           <p class="lead m-0" style="font-weight: 600; text-transform: uppercase;">Analítica en tiempo real</p>
           <p class="text-muted">Obtén métricas rápidas en tiempo real totalmente gratis.</p>
         </li>
@@ -462,7 +486,7 @@
           </div>
           <div class="flex-column mx-5 d-flex justify-content-center text-left w-50 text-light">
             <h1 class="display-5" style="font-weight: 600;">
-              Los mejores lenguajes de programación.
+              Inteligencia artifical enfocada al servicio al cliente.
             </h1>
             <p class="lead">
             </p>

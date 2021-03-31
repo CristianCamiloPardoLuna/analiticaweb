@@ -1,0 +1,18 @@
+<svg width="32" height="32" xmlns="http://www.w3.org/2000/svg">
+
+ <g>
+  <title>Layer 1</title>
+  <ellipse stroke-width="2" ry="14.84374" rx="14.96874" id="svg_1" cy="15.90625" cx="15.96875" opacity="undefined" stroke="#4D2425" fill="#FFDCEC"/>
+  <rect id="svg_17" height="0" width="0.1875" y="0.56251" x="-10.46873" opacity="undefined" fill-opacity="null" stroke-opacity="null" stroke-dasharray="null" stroke-width="null" stroke="#000" fill="none"/>
+  <rect id="svg_18" height="0.125" width="0.0625" y="15.75" x="36.65623" opacity="undefined" fill-opacity="0" stroke-opacity="null" stroke-dasharray="null" stroke-width="null" stroke="#000" fill="#000000"/>
+  <line stroke-width="2" stroke-linecap="null" stroke-linejoin="null" id="svg_19" y2="21.25001" x2="1.46876" y1="15.43752" x1="8.34376" opacity="undefined" stroke="#4D2425" fill="none"/>
+  <line stroke-width="2" stroke-linecap="null" stroke-linejoin="null" id="svg_20" y2="19.00002" x2="13.09375" y1="11.50003" x1="22.59374" opacity="undefined" fill-opacity="0" stroke="#4D2425" fill="none"/>
+  <line stroke-width="2" stroke-linecap="null" stroke-linejoin="null" id="svg_22" y2="14.81252" x2="26.28124" y1="11.12503" x1="30.78124" opacity="undefined" fill-opacity="0" stroke="#4D2425" fill="none"/>
+  <line stroke-width="2" stroke-linecap="null" stroke-linejoin="null" id="svg_23" y2="19.0625" x2="13.21875" y1="15.4375" x1="8.40626" opacity="undefined" fill-opacity="null" stroke-dasharray="null" stroke="#4D2425" fill="none"/>
+  <line stroke-width="2" stroke-linecap="null" stroke-linejoin="null" id="svg_24" y2="14.8125" x2="26.40624" y1="11.6875" x1="22.34374" opacity="undefined" fill-opacity="null" stroke-dasharray="null" stroke="#4D2425" fill="none"/>
+  <ellipse ry="0.90625" rx="1" id="svg_32" cy="15.53125" cx="8.28126" opacity="undefined" stroke-opacity="null" stroke-dasharray="null" stroke-width="0.5" stroke="#4D2425" fill="#4D2425"/>
+  <ellipse ry="1.125" rx="1.09375" id="svg_33" cy="18.75" cx="13.125" opacity="undefined" stroke-opacity="null" stroke-dasharray="null" stroke-width="0.5" stroke="#4D2425" fill="#4D2425"/>
+  <ellipse ry="1.0625" rx="1.125" id="svg_34" cy="11.6875" cx="22.15625" opacity="undefined" stroke-opacity="null" stroke-dasharray="null" stroke-width="0.5" stroke="#4D2425" fill="#4D2425"/>
+  <ellipse ry="1.15625" rx="1.1875" id="svg_35" cy="14.53125" cx="26.21874" opacity="undefined" stroke-opacity="null" stroke-dasharray="null" stroke-width="0.5" stroke="#4D2425" fill="#4D2425"/>
+ </g>
+</svg>

@@ -10,6 +10,7 @@ APP = Flask(
 
 APP.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db.sqlite'
 APP.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
+APP.config['SECRET_KEY'] = 'xx' ##
 APP.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(APP)

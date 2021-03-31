@@ -1,4 +1,7 @@
 {% extends "base.html" %}
+{% block header %}
+Contáctanos
+{% endblock %}
 {% block content %}
 <section id="contact" style="margin-top: 10vh;">
     <div class="d-flex px-5 mt-3 h-100 align-items-center justify-content-around">
@@ -11,7 +14,7 @@
         <p class="lead" style="font-weight: 600;">¡Nos estaremos comunicando contigo lo antes posible!</p>
       </div>
       <div class="d-flex p-0 mt-5 h-100 align-items-center text-center justify-content-center bg-light col-6">
-          <form method="POST" action="/contact" class="w-100 px-5 py-3" id="contact-form">
+          <form method="POST" action="/contact/contactme" class="w-100 px-5 py-3" id="contact-form">
               <div class="form-group row">
                 <label for="name" class="col-sm-4 col-form-label">Nombre:</label>
                 <div class="col">

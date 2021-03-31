@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block header %}
+¡Estaremos en contacto!
+{% endblock %}
+{% block content %}
+<section style="margin-top: 10vh; height: 90vh;">
+    <div 
+        class="flex-column d-flex h-100 align-items-center justify-content-center  mx-auto px-5 card"
+        style="border: none; background: none; animation: aol 500ms ease-in-out; animation-fill-mode: forwards;">
+        <div 
+            class="card-body d-flex justify-content-center"            
+        >
+            <img
+                style="width: 25%;"
+                class="img-fluid"
+                src="{{ url_for('static', filename='img/svg/robot.svg') }}" 
+                alt=""
+            >
+            <div class="d-flex flex-column align-items-start text-left justify-content-center col-6">
+                <h1 
+                    style="font-weight: 600;"
+                    class="display text-left">¡Recibido!</h1>
+                <p class="lead">
+                    Estaremos en contacto lo antes posible, mientras tanto
+                    puedes seguir conociendo 
+                    <img
+                        class="img-fluid"
+                        style="width: 6em;" 
+                        src="{{url_for('static',filename='img/company/uva-md.png')}}" 
+                        alt=""
+                    >
+                    haciendo <a href="{{url_for('index')}}">click aquí.</a>
+                </p>
+              </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,4 +1,5 @@
-from flask import Response, render_template, jsonify, request
+from flask import Response, render_template, jsonify, request, flash
+from flask_login import current_user
 from datetime import datetime
 from application import APP
 from application.backend.models import Contact, Stage1, db
@@ -12,7 +13,7 @@ def index():
 @APP.route('/startnow', methods=['POST'])
 def startnow():
     email = request.form.get('email')
-    tellusmore = str('¡Quiero iniciar mi primer proyecto con Analítica!')
+    tellusmore = str('¡Quiero iniciar mi primer proyecto con Analítica por $40.000 COP la hora!')
     newContact = Stage1(
         email = email,
         datetime = datetime.now()
@@ -40,8 +41,15 @@ def plans(_plan):
         tellusmore = tellusmore
     )
 
-@APP.route('/contact', methods=['GET','POST'])
+
+@APP.route('/contact')
 def contact():
+    return render_template(
+        'contactus.html'
+    )
+
+@APP.route('/contact/contactme', methods=['POST'])
+def contactme():
     name = request.form.get('name')
     email = request.form.get('email')
     company = request.form.get('company')
@@ -59,11 +67,40 @@ def contact():
 
     db.session.add(newContact)
     db.session.commit()
-
+    
     return render_template(
-        'contactus.html'
+        'thanks.html'
     )
 
+@APP.route('/thanks')
+def thanks():
+    return render_template(
+        'thanks.html'
+    )
+
+@APP.route('/underconstruction')
+def uc():
+    return render_template(
+        'underconstruction.html'
+    )
+
+@APP.route('/packageinfo')
+def packageinfo():
+    return render_template(
+        'packageinfo.html'
+    )
+
+@APP.route('/privacypolicy')
+def privacypolicy():
+    return render_template(
+        'privacy.html'
+    )
+
+@APP.route('/terms')
+def terms():
+    return render_template(
+        'termsconditions.html'
+    )
 
 if __name__ == '__main__':
     APP.debug = True
