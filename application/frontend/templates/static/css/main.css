@@ -42,8 +42,33 @@ body .btn-outline-dark {
   border: 0 !important;
 }
 body nav {
-  font-size: 1.1em;
+  height: 10vh !important;
+  font-size: 1.2em;
   transition: all 1s ease-in-out;
+}
+@media screen and (max-width: 736px) {
+  body nav .navbar-collapse {
+    background: white !important;
+    border-radius: 5px !important;
+    padding-top: 1em !important;
+    font-size: smaller !important;
+    font-weight: 600;
+    padding-left: 1em;
+  }
+  body nav .navbar-collapse .btn {
+    width: 95% !important;
+    margin: 1em 0 1em 0;
+  }
+}
+body nav .navbar-toggler {
+  border: none;
+}
+body nav .navbar-toggler:focus {
+  box-shadow: none !important;
+}
+body nav .navbar-toggler .navbar-toggler-icon {
+  background: url("../img/svg/list.svg") !important;
+  background-size: cover !important;
 }
 body nav .active {
   color: #5e2639;
@@ -70,6 +95,20 @@ body .trans-effect {
 }
 body #home {
   display: flex;
+  height: 100vh;
+}
+@media screen and (max-width: 736px) {
+  body #home {
+    height: 90vh !important;
+  }
+  body #home #col-mt {
+    margin-top: 20vh !important;
+  }
+}
+@media screen and (min-width: 736px) {
+  body #home #col-mt {
+    margin-top: 35vh !important;
+  }
 }
 body #home #slogan {
   color: #5e2639;
@@ -166,6 +205,19 @@ body #portfolio .card-deck .card .btn-outline-dark {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
   transition: 0.3s;
 }
+@media screen and (max-width: 736px) {
+  body #portfolio .card-deck .card .btn-outline-dark {
+    padding: 1.5em;
+  }
+}
+body #portfolio .card-deck .card .btn-outline-dark p {
+  font-size: 1.1em !important;
+}
+@media screen and (min-width: 736px) {
+  body #portfolio .card-deck .card .btn-outline-dark .arrow {
+    padding: 1em;
+  }
+}
 body #portfolio .card-deck .card .btn-outline-dark:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.5);
   background: rgba(245, 156, 156, 0.7) !important;
@@ -179,12 +231,45 @@ body #portfolio .card-deck .card .arrow {
   transform: scaley(-1);
   opacity: 0;
 }
+@media screen and (max-width: 736px) {
+  body #portfolio #dt-btn {
+    margin-top: 2em !important;
+  }
+}
 body #prices {
   transition: all 200ms ease-in-out;
+}
+@media screen and (max-width: 736px) {
+  body #prices {
+    padding: 0;
+    height: auto;
+  }
+}
+@media screen and (min-width: 736px) {
+  body #prices {
+    padding: 1em 5em 5em 5em;
+    height: 100vh;
+  }
+  body #prices .card-deck {
+    height: 85vh !important;
+  }
+}
+@media screen and (max-width: 736px) {
+  body #prices .card-deck #price_1,
+body #prices .card-deck #price_2 {
+    min-height: 60vh !important;
+  }
 }
 body #prices .btn-link {
   text-decoration: none;
   color: black;
+  align-items: center;
+}
+body #prices .badge {
+  height: 2.5em !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 body #prices .badge a {
   display: inline-block;
@@ -208,13 +293,15 @@ body #prices #price_1 .badge a {
   text-decoration: none;
   transition: all 0.25s cubic-bezier(1, 0, 0.58, 0.97);
 }
-body #prices:hover #price_1 {
-  transition: all 500ms ease-in-out;
-  transform: scale(0.9);
-}
-body #prices:hover #price_2 {
-  transition: all 500ms ease-in-out;
-  transform: scale(1.1);
+@media screen and (min-width: 736px) {
+  body #prices:hover #price_1 {
+    transition: all 500ms ease-in-out;
+    transform: scale(0.9);
+  }
+  body #prices:hover #price_2 {
+    transition: all 500ms ease-in-out;
+    transform: scale(1.1);
+  }
 }
 body #prices #price_1 {
   border: none;
@@ -233,7 +320,7 @@ body #prices #price_1 .card-footer {
   border-bottom-right-radius: 5px;
 }
 body #prices #price_1 #accordion1 {
-  font-size: 0.9em;
+  font-size: 1em !important;
 }
 body #prices #price_1 #accordion1 .card-header {
   border-radius: 0;
@@ -260,6 +347,13 @@ body #ourservices .card .list-group li {
   background: none;
   border: none;
 }
+body #ourservices .area {
+  position: absolute;
+  background: #f8f9fa;
+  width: 100%;
+  height: 100%;
+  z-index: -9999;
+}
 body #nosotros dat {
   color: lightpink;
   font-size: xx-large;
@@ -267,37 +361,49 @@ body #nosotros dat {
 body #nosotros .card-deck {
   margin-top: 2em !important;
   margin-bottom: 2em !important;
-  height: 60vh !important;
 }
-body #nosotros .card-deck .img1 {
+@media screen and (min-width: 736px) {
+  body #nosotros .card-deck {
+    height: 60vh !important;
+  }
+}
+@media screen and (max-width: 736px) {
+  body #nosotros .card {
+    height: 70vh !important;
+  }
+  body #nosotros .card hr {
+    margin-bottom: 1em !important;
+  }
+}
+body #nosotros .img1 {
   background: url("../img/photo/expo1.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
 }
-body #nosotros .card-deck .img2 {
+body #nosotros .img2 {
   background: url("../img/photo/computer1.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
 }
-body #nosotros .card-deck .img3 {
+body #nosotros .img3 {
   background: url("../img/photo/notebook2.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
 }
-body #nosotros .card-deck .img4 {
+body #nosotros .img4 {
   background: url("../img/photo/developer2.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
 }
-body #nosotros .card-deck .img5 {
+body #nosotros .img5 {
   background: url("../img/photo/notebook3.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -308,7 +414,7 @@ body #page-footer {
   background: radial-gradient(circle, #8c2649 0%, #4b1326 100%) !important;
 }
 body #page-footer ul {
-  font-size: 0.9em;
+  font-size: 1em;
   text-align: start !important;
 }
 body #page-footer a {
@@ -318,8 +424,107 @@ body #page-footer a {
 body #page-footer a:hover {
   color: whitesmoke !important;
 }
-body #contact {
-  overflow: hidden !important;
+body #contact .area {
+  position: fixed;
+  background: whitesmoke;
+  width: 100%;
+  height: 100vh;
+  z-index: -9999;
+}
+body #contact .circles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+body #contact .circles li {
+  position: fixed;
+  display: block;
+  list-style: none;
+  width: 20px;
+  height: 20px;
+  background: rgba(245, 156, 156, 0.7);
+  animation: animate 10s linear infinite;
+  bottom: -150px;
+}
+body #contact .circles li:nth-child(1) {
+  left: 25%;
+  width: 80px;
+  height: 80px;
+  animation-delay: 0s;
+}
+body #contact .circles li:nth-child(2) {
+  left: 10%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 2s;
+  animation-duration: 12s;
+}
+body #contact .circles li:nth-child(3) {
+  left: 70%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 4s;
+}
+body #contact .circles li:nth-child(4) {
+  left: 40%;
+  width: 60px;
+  height: 60px;
+  animation-delay: 0s;
+  animation-duration: 18s;
+}
+body #contact .circles li:nth-child(5) {
+  left: 65%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 0s;
+}
+body #contact .circles li:nth-child(6) {
+  left: 75%;
+  width: 110px;
+  height: 110px;
+  animation-delay: 3s;
+}
+body #contact .circles li:nth-child(7) {
+  left: 35%;
+  width: 150px;
+  height: 150px;
+  animation-delay: 7s;
+}
+body #contact .circles li:nth-child(8) {
+  left: 50%;
+  width: 25px;
+  height: 25px;
+  animation-delay: 15s;
+  animation-duration: 45s;
+}
+body #contact .circles li:nth-child(9) {
+  left: 20%;
+  width: 15px;
+  height: 15px;
+  animation-delay: 2s;
+  animation-duration: 35s;
+}
+body #contact .circles li:nth-child(10) {
+  left: 85%;
+  width: 150px;
+  height: 150px;
+  animation-delay: 0s;
+  animation-duration: 11s;
+}
+@keyframes animate {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+    border-radius: 0;
+  }
+  100% {
+    transform: translateY(-1000px) rotate(720deg);
+    opacity: 0;
+    border-radius: 50%;
+  }
 }
 body #contact h1 {
   color: #5e2639 !important;
@@ -347,6 +552,13 @@ body #contact #contact-form .col {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+body #ourplans {
+  background: url("../img/bg2-bw.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
 }
 body #ourplans a {
   color: whitesmoke !important;
@@ -392,6 +604,10 @@ body #ourplans #enter_pck .card-footer {
 }
 body #ourplans #enter_pck .card-title {
   color: black;
+}
+body #terms p {
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 @keyframes aol {

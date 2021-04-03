@@ -13,17 +13,18 @@
     {% set var = self._TemplateReference__context.name %}
     {% set var_1 = True if var == 'index.html' else False %}
     {% if var_1 %}
-    <nav class="navbar navbar-expand-lg fixed-top navbar-light px-5" style="height: 10vh !important;" id="navbar-effect">
+    <nav class="navbar navbar-expand-lg w-100 fixed-top navbar-light px-4" id="navbar-effect">
       <a class="navbar-brand d-flex" href="{{url_for('index')}}">
-        <img class="img-fluid" src="{{url_for('static', filename='img/company/uva-sm.png')}}" style="width: 7em;" alt="">
+        <img class="img-fluid d-none d-md-block" src="{{url_for('static', filename='img/company/uva-sm.png')}}" style="height: 1.5em;">
+        <img class="img-fluid d-block d-md-none" src="{{url_for('static', filename='img/company/uva-sm.png')}}" style="height: 1em;" alt="">
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
     
-      <div class="collapse navbar-collapse" id="navbar">
+      <div class="collapse mt-0 navbar-collapse" id="navbar">
         <ul class="nav navbar-nav mr-auto" id="navbar-1-ul">
-          <li class="nav-item dropdown">
+          <li class="nav-item d-none d-md-block dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Servicios
             </a>
@@ -47,17 +48,21 @@
           <li class="nav-item">
             <a class="nav-link" href="{{ url_for('contact') }}">Contacto </a>
           </li>
-          <form class="form-inline my-2 ml-2 my-lg-0">
-            <a class="btn btn-outline-warning my-2 my-sm-0 shadow-none" style="font-weight: 600;">Ingresa</a>
-          </form>
+          <div class="nav-item d-none d-md-block">
+            <a class="nav-link px-3 btn text-light btn-outline-warning shadow-none" style="font-weight: 600;">Ingresa</a>
+          </div>
+          <div class="nav-item d-block d-md-none">
+            <a class="nav-link px-5 text-light btn-outline-warning btn shadow-none" style="font-weight: 600;">Ingresa</a>
+          </div>
         </ul>
       </div>
     </nav>    
     {% else %}
-    <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light px-5" style="height: 10vh !important; box-shadow: 0 4px 8px 3px rgba(0,0,0,0.2) !important;">
+    <nav class="navbar navbar-expand-lg fixed-top w-100 navbar-light bg-light px-4" style="height: 10vh !important; box-shadow: 0 4px 8px 3px rgba(0,0,0,0.2) !important;">
 
       <a class="navbar-brand d-flex" href="{{url_for('index')}}">
-        <img class="img-fluid" src="{{url_for('static', filename='img/company/uva-sm.png')}}" style="width: 7em;" alt="">
+        <img class="img-fluid d-none d-md-block" src="{{url_for('static', filename='img/company/uva-sm.png')}}" style="height: 1.5em;">
+        <img class="img-fluid d-block d-md-none" src="{{url_for('static', filename='img/company/uva-sm.png')}}" style="height: 1em;" alt="">
       </a>
 
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -67,7 +72,7 @@
       <div class="collapse navbar-collapse" id="navbar">
 
         <ul class="nav mr-auto pl-0">
-          <div class="nav-item">
+          <div class="nav-item d-none d-md-block">
             <a class="nav-link" href="{{ url_for('index') }}">
               <i class="fas fa-home fa-sm"></i>
               Inicio
@@ -107,9 +112,9 @@
   </div>
     {% block content %}
     {% endblock %}
-    <section class="mt-5" id="page-footer"> <!--cambiar-->
-      <div class="row pt-5 mb-2 h-100 align-items-start text-center justify-content-around">
-        <div class="col-5 flex-column">
+    <section class="" id="page-footer"> <!--cambiar-->
+      <div class="row pt-5 mb-2 w-100 h-100 align-items-start text-center justify-content-around">
+        <div class="col-md-5 col-sm-10 flex-column">
           <img class="img-fluid w-50" src="{{url_for('static', filename='img/analitica-logo-md/rosa.png')}}" alt="">
           <div class="d-flex w-100 my-4 justify-content-center text-light">
             <a href="#"><i class="fab fa-linkedin fa-2x mx-2"></i></a>
@@ -121,7 +126,7 @@
             Todos los derechos reservados.
           </p>
         </div>
-        <div class="col-5 text-center text-light">
+        <div class="col-5 text-center d-none d-sm-block text-light">
           <div class="d-flex mx-auto justify-content-around">
             <div class="flex-column col">          
               <ul class="list-group" style="background: none !important;">            
@@ -151,7 +156,7 @@
         </div>
       </div>  
       <div class="row text-light text-center">        
-        <p class="lead mx-auto">
+        <p class="lead mx-auto px-5">
           Hecho por Analítica Company S.A.S. con 
           <img class="img-fluid" style ="width: 2em;" src="{{url_for('static', filename='img/svg/colombia.svg')}}" style="width: 3em;" alt=""> 
           desde Colombia.
@@ -185,7 +190,6 @@
     </script>
     <script>
       $('#navbar a, #portfolio a').on('click', function(e){
-        //smooth scrolling
         if(this.hash !== ''){
           e.preventDefault();
           const hash = this.hash;

@@ -3,66 +3,136 @@
 Contáctanos
 {% endblock %}
 {% block content %}
-<section id="contact" style="margin-top: 10vh;">
-    <div class="d-flex px-5 mt-3 h-100 align-items-center justify-content-around">
-      <div class="d-flex flex-column align-items-start text-left justify-content-center col-6">
-        <h1 class="display text-left">Contáctanos</h1>
-        <p class="lead">
-          Estás a un paso de integrar tus fuentes,
-          visualizar tus resultados y tomar las decisiones correctas.
-        </p>
-        <p class="lead" style="font-weight: 600;">¡Nos estaremos comunicando contigo lo antes posible!</p>
-      </div>
-      <div class="d-flex p-0 mt-5 h-100 align-items-center text-center justify-content-center bg-light col-6">
-          <form method="POST" action="/contact/contactme" class="w-100 px-5 py-3" id="contact-form">
-              <div class="form-group row">
-                <label for="name" class="col-sm-4 col-form-label">Nombre:</label>
-                <div class="col">
-                  <input type="text" class="form-control form-control-sm shadow-none" id="text" name="name" required>
-                </div>
+<section id="contact" style="margin-top: 10vh;">  
+    <div class="area w-100" >
+      <ul class="circles w-100 p-0">
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+      </ul>
+    </div>
+    <!-- small screen form -->
+    <div class="d-block d-md-none h-100 align-items-center justify-content-center w-100">
+      <form method="POST" action="/contact/contactme" class="w-100 mt-5 text-left px-5 py-3">
+          <div class="form-group row">
+            <label for="name" class="col-sm-4 col-form-label">Nombre:</label>
+            <div class="col">
+              <input type="text" class="form-control form-control-sm shadow-none" id="text" name="name" required>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="email" class="col-sm-4 col-form-label">Email:</label>
+            <div class="col">
+              <input type="email" class="form-control form-control-sm shadow-none" id="email" name="email" value="{{email}}" required>
+            </div>
+          </div>            
+          <div class="form-group row">
+              <label for="company" class="col-sm-4 col-form-label">Empresa:</label>
+              <div class="col">
+                <input type="text" class="form-control form-control-sm shadow-none" id="company" name="company" required>
               </div>
-              <div class="form-group row">
-                <label for="email" class="col-sm-4 col-form-label">Email:</label>
-                <div class="col">
-                  <input type="email" class="form-control form-control-sm shadow-none" id="email" name="email" value="{{email}}" required>
-                </div>
-              </div>            
-              <div class="form-group row">
-                  <label for="company" class="col-sm-4 col-form-label">Empresa:</label>
+          </div>
+          <div class="form-group row" >
+              <label for="email" class="col-sm-4 col-form-label">Servicio en el que estás interesado:</label>
+              <div class="col">
+                <select class="form-control form-control-sm shadow-none" id="service" name="service" required>
+                    <option value="workflow">Automatización de procesos</option>
+                    <option value="analytics">Ciencia de datos</option>
+                    <option value="analitica">Ambos</option>
+                </select>
+              </div>
+          </div>
+          <div class="form-group row" >
+              <label for="tellusmore" class="col-sm-4 col-form-label">Cuéntanos un poco más:</label>
+              <div class="col">
+                <textarea type="text" class="form-control form-control-sm shadow-none" id="tellusmore" name="tellusmore">{{tellusmore}}</textarea>
+              </div>
+          </div>
+          <div class="form-group row">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="defaultCheck2" required>
+              <label class="form-check-label text-left" for="defaultCheck2">
+                Acepto los <a href="">términos de servicio</a> y <a href="">política de protección de datos</a> de Analítica Company S.A.S.
+              </label>
+            </div>
+          </div>
+          <div class="form-group row">
+              <button class="btn btn-outline-warning btn-block">
+                <i class="fas fa-paper-plane mr-1"></i>Enviar
+              </button>
+          </div>
+        </form>
+    </div>
+    <div class="d-none d-md-block">
+      <div class="d-flex px-md-5 px-0 mt-3 h-100 align-items-center justify-content-around" id="col1">
+        <div class="d-flex flex-column align-items-start text-left justify-content-center col-6">
+          <div class="d-none d-md-block">
+            <h1 class="display text-left">Contáctanos</h1>
+            <p class="lead">
+              Estás a un paso de integrar tus fuentes,
+              visualizar tus resultados y tomar las decisiones correctas.
+            </p>
+            <p class="lead" style="font-weight: 600;">¡Nos estaremos comunicando contigo lo antes posible!</p>
+          </div>
+        </div>
+        <div class="d-flex p-0 mt-5 h-100 align-items-center text-center justify-content-center col-md-6 col">
+            <form method="POST" action="/contact/contactme" class="w-100 px-0 px-md-5 py-3" id="contact-form">
+                <div class="form-group row">
+                  <label for="name" class="col-sm-4 col-form-label">Nombre:</label>
                   <div class="col">
-                    <input type="text" class="form-control form-control-sm shadow-none" id="company" name="company" required>
+                    <input type="text" class="form-control form-control-sm shadow-none" id="text" name="name" required>
                   </div>
-              </div>
-              <div class="form-group row" >
-                  <label for="email" class="col-sm-4 col-form-label">Servicio en el que estás interesado:</label>
-                  <div class="col">
-                    <select class="form-control form-control-sm shadow-none" id="service" name="service" required>
-                        <option value="workflow">Automatización de procesos</option>
-                        <option value="analytics">Ciencia de datos</option>
-                        <option value="analitica">Ambos</option>
-                    </select>
-                  </div>
-              </div>
-              <div class="form-group row" >
-                  <label for="tellusmore" class="col-sm-4 col-form-label">Cuéntanos un poco más:</label>
-                  <div class="col">
-                    <textarea type="text" class="form-control form-control-sm shadow-none" id="tellusmore" name="tellusmore">{{tellusmore}}</textarea>
-                  </div>
-              </div>
-              <div class="form-group row">
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" value="" id="defaultCheck2" required>
-                  <label class="form-check-label text-left" for="defaultCheck2">
-                    Acepto los <a href="">términos de servicio</a> y <a href="">política de protección de datos</a> de Analítica Company S.A.S.
-                  </label>
                 </div>
-              </div>
-              <div class="form-group row">
-                  <button class="btn btn-outline-warning btn-block">
-                    <i class="fas fa-paper-plane mr-1"></i>Enviar
-                  </button>
-              </div>
-            </form>
+                <div class="form-group row">
+                  <label for="email" class="col-sm-4 col-form-label">Email:</label>
+                  <div class="col">
+                    <input type="email" class="form-control form-control-sm shadow-none" id="email" name="email" value="{{email}}" required>
+                  </div>
+                </div>            
+                <div class="form-group row">
+                    <label for="company" class="col-sm-4 col-form-label">Empresa:</label>
+                    <div class="col">
+                      <input type="text" class="form-control form-control-sm shadow-none" id="company" name="company" required>
+                    </div>
+                </div>
+                <div class="form-group row" >
+                    <label for="email" class="col-sm-4 col-form-label">Servicio en el que estás interesado:</label>
+                    <div class="col">
+                      <select class="form-control form-control-sm shadow-none" id="service" name="service" required>
+                          <option value="workflow">Automatización de procesos</option>
+                          <option value="analytics">Ciencia de datos</option>
+                          <option value="analitica">Ambos</option>
+                      </select>
+                    </div>
+                </div>
+                <div class="form-group row" >
+                    <label for="tellusmore" class="col-sm-4 col-form-label">Cuéntanos un poco más:</label>
+                    <div class="col">
+                      <textarea type="text" class="form-control form-control-sm shadow-none" id="tellusmore" name="tellusmore">{{tellusmore}}</textarea>
+                    </div>
+                </div>
+                <div class="form-group row">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck2" required>
+                    <label class="form-check-label text-left" for="defaultCheck2">
+                      Acepto los <a href="">términos de servicio</a> y <a href="">política de protección de datos</a> de Analítica Company S.A.S.
+                    </label>
+                  </div>
+                </div>
+                <div class="form-group row">
+                    <button class="btn btn-outline-warning btn-block">
+                      <i class="fas fa-paper-plane mr-1"></i>Enviar
+                    </button>
+                </div>
+              </form>
+        </div>
       </div>
     </div>
 </section>
