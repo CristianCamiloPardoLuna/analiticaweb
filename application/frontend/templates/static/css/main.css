@@ -74,6 +74,9 @@ body nav .active {
   color: #5e2639;
   font-weight: 600 !important;
 }
+body nav ul li {
+  color: black !important;
+}
 body #navbar .dropdown-menu .dropdown-item {
   transition: all 200ms ease-in-out;
 }
@@ -85,7 +88,8 @@ body #navbar .dropdown-menu .dropdown-item:active {
   background: rgba(245, 156, 156, 0.7) !important;
 }
 body #initial-effect {
-  background: linear-gradient(180deg, #ddb0b0 0%, #f8f9fa 80%) !important;
+  background: #f8f9fa;
+  background: linear-gradient(0deg, #f8f9fa 0%, rgba(177, 99, 144, 0.5914565655) 100%);
 }
 body #initial-effect .bg-light {
   box-shadow: 0 4px 8px 3px rgba(0, 0, 0, 0.2) !important;
@@ -414,7 +418,7 @@ body #page-footer {
   background: radial-gradient(circle, #8c2649 0%, #4b1326 100%) !important;
 }
 body #page-footer ul {
-  font-size: 1em;
+  font-size: 0.9em !important;
   text-align: start !important;
 }
 body #page-footer a {
@@ -560,6 +564,17 @@ body #ourplans {
   background-position: center;
   background-attachment: fixed;
 }
+@media screen and (min-width: 736px) {
+  body #ourplans {
+    height: 100vh !important;
+  }
+}
+@media screen and (max-width: 736px) {
+  body #ourplans {
+    margin-top: 5em !important;
+    height: auto !important;
+  }
+}
 body #ourplans a {
   color: whitesmoke !important;
 }
@@ -571,6 +586,11 @@ body #ourplans ul li {
   background: none;
   color: whitesmoke;
   padding: 0.2em 0 0.2em 0 !important;
+}
+@media screen and (max-width: 736px) {
+  body #ourplans .card-deck .card {
+    margin: 1em 1em 1em 1em !important;
+  }
 }
 body #ourplans #basic_pck {
   animation: aol 500ms ease-in-out;

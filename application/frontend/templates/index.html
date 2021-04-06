@@ -18,13 +18,13 @@ Expertos en ciencia de datos
 {% endwith %}
 
 <section id="home">
-    <div class="d-flex col-md-7 h-100 px-md-5 align-items-center text-center justify-content-center cover">
+    <div class="d-flex col-md-5 h-100 pr-md-0 align-items-center text-center justify-content-center cover">
         <div class="d-flex flex-column" id="col-mt" style="">          
           <div class="mx-auto text-md-left align-items-start flex-column w-75" id="companydesc">
-            <img class="img-fluid col-sm-6" src="{{url_for('static', filename='img/company/uva-md.png')}}" alt="" id="companylogo">
+            <img class="img-fluid col-sm-9 p-0" src="{{url_for('static', filename='img/company/uva-md.png')}}" alt="" id="companylogo">
             <h3 class="display-5" id="slogan" style="font-weight: 600; transform: translateY(-3vh);">Expertos en ciencia de datos.</h3>
           </div>          
-          <div class="col-md-9 p-md-0 mt-md-5 mx-auto form-inline" id="startnow">
+          <div class="col-md-9 p-md-0 mt-md-0 mx-auto form-inline" id="startnow">
             
             <p class="text-md-left text-sm-center m-0 lead">
               Conecta todas tus fuentes, visualiza tus indicadores e impulsa tu negocio.
@@ -34,15 +34,15 @@ Expertos en ciencia de datos
               action="/startnow"
               method="POST">
               <input type="email" class="form-control col-lg my-2" name="email" placeholder="Ingresa tu correo electrónico">
-              <button type="submit" class="btn btn-outline-warning shadow-none ml-md-1 my-2 col-sm col-md-3">Inicia ahora</button>
+              <button type="submit" class="btn btn-outline-warning shadow-none ml-md-1 my-2 col-sm col-md-3">¡Inicia!</button>
             </form>
 
-            <p class="text-muted"><i>Comienza desde $40.000 COP, la hora más barata del mercado.</i></p>
+            <p class="text-left"><i>Comienza desde $40.000 COP, la hora más barata del mercado.</i></p>
           </div>
         </div>
     </div>
-    <div class="d-none d-sm-block h-50 px-5" style="width: 40vw; margin-top: 20vh;">
-      <img class="img-fluid" style="border: 2px solid black;" src="{{url_for('static', filename='img/svg/woman_1.svg')}}" alt="">
+    <div class="d-none px-5 d-sm-block w-100">
+      <img class="img-fluid" style="margin-top: 25vh; border-radius: 5px;" src="{{url_for('static', filename='img/gif/4.gif')}}" alt="">
     </div>
 </section>
 <section id="portfolio" style="height: 100vh;">

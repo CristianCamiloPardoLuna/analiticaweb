@@ -60,7 +60,7 @@ body{
     }
     nav{
         height: 10vh !important;
-        font-size: 1.2em;
+        font-size: 1.2em;        
         transition: all 1s ease-in-out;
         .navbar-collapse{
             @media screen and(max-width: 736px) {
@@ -90,6 +90,11 @@ body{
             color: $test_color_plain;
             font-weight: 600 !important;
         }
+        ul{
+            li{
+                color: black !important;
+            }
+        }
     }
     #navbar{
         .dropdown-menu{
@@ -105,8 +110,9 @@ body{
             }
         }                
     }
-    #initial-effect{        
-        background: linear-gradient(180deg, rgba(221,176,176,1) 0%, rgba(248,249,250,1) 80%) !important;
+    #initial-effect{
+        background: rgb(248,249,250);
+        background: linear-gradient(0deg, rgba(248,249,250,1) 0%, rgba(177,99,144,0.5914565655363708) 100%); 
         .bg-light{
             box-shadow: 0 4px 8px 3px rgba(0,0,0,0.2) !important;
         }
@@ -460,7 +466,7 @@ body{
     #page-footer{
         background: $test_color !important;
         ul{
-            font-size: 1em;
+            font-size: 0.9em !important;
             text-align: start !important;
         }
         a{
@@ -629,6 +635,13 @@ body{
         background-repeat: no-repeat;
         background-position: center;
         background-attachment: fixed;
+        @media screen and(min-width: 736px) {
+            height: 100vh !important;            
+        }
+        @media screen and(max-width: 736px) {
+            margin-top: 5em !important;
+            height: auto !important;
+        }
         a{
             color: whitesmoke !important;
         }
@@ -642,7 +655,14 @@ body{
                 color: whitesmoke;
                 padding: 0.2em 0 0.2em 0 !important;
             }            
-        }        
+        }
+        @media screen and(max-width: 736px) {
+            .card-deck{
+                .card{
+                    margin: 1em 1em 1em 1em !important;         
+                }
+            }            
+        }
         #basic_pck{
             animation: aol 500ms ease-in-out;
             animation-fill-mode: forwards;
