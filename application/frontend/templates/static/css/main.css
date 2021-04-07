@@ -12,7 +12,7 @@ sass --watch C:\Users\crist\Documents\GitHub\analiticaweb\application\frontend\s
 body {
   font-weight: 400 !important;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
-  overflow-x: hidden;
+  overflow-x: hidden !important;
 }
 body hr {
   border: 2px solid #5e2639;
@@ -46,11 +46,15 @@ body nav {
   font-size: 1.2em;
   transition: all 1s ease-in-out;
 }
+body nav .navbar-nav .nav-item .clientes-btn:hover {
+  color: whitesmoke !important;
+}
 @media screen and (max-width: 736px) {
   body nav .navbar-collapse {
     background: white !important;
     border-radius: 5px !important;
     padding-top: 1em !important;
+    margin-top: 1em !important;
     font-size: smaller !important;
     font-weight: 600;
     padding-left: 1em;
@@ -358,10 +362,6 @@ body #ourservices .area {
   height: 100%;
   z-index: -9999;
 }
-body #nosotros dat {
-  color: lightpink;
-  font-size: xx-large;
-}
 body #nosotros .card-deck {
   margin-top: 2em !important;
   margin-bottom: 2em !important;
@@ -382,37 +382,57 @@ body #nosotros .card-deck {
 body #nosotros .img1 {
   background: url("../img/photo/expo1.jpg");
   background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
+}
+@media screen and (min-width: 736px) {
+  body #nosotros .img1 {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+  }
 }
 body #nosotros .img2 {
   background: url("../img/photo/computer1.jpg");
   background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
+}
+@media screen and (min-width: 736px) {
+  body #nosotros .img2 {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+  }
 }
 body #nosotros .img3 {
   background: url("../img/photo/notebook2.jpg");
   background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
+}
+@media screen and (min-width: 736px) {
+  body #nosotros .img3 {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+  }
 }
 body #nosotros .img4 {
   background: url("../img/photo/developer2.jpg");
   background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
+}
+@media screen and (min-width: 736px) {
+  body #nosotros .img4 {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+  }
 }
 body #nosotros .img5 {
   background: url("../img/photo/notebook3.jpg");
   background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
+}
+@media screen and (min-width: 736px) {
+  body #nosotros .img5 {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+  }
 }
 body #page-footer {
   background: radial-gradient(circle, #8c2649 0%, #4b1326 100%) !important;

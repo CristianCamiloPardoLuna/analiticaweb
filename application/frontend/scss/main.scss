@@ -28,7 +28,7 @@ $test_color: radial-gradient(circle, rgba(140,38,73,1) 0%, rgba(75,19,38,1) 100%
 body{
     font-weight: 400 !important;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    overflow-x: hidden;
+    overflow-x: hidden !important;
     p{
     }
     hr{
@@ -62,11 +62,19 @@ body{
         height: 10vh !important;
         font-size: 1.2em;        
         transition: all 1s ease-in-out;
+        .navbar-nav{
+            .nav-item{
+                .clientes-btn:hover{
+                    color: whitesmoke !important;
+                }
+            }
+        }
         .navbar-collapse{
             @media screen and(max-width: 736px) {
                 background: rgba(255,255,255,1) !important;
                 border-radius: 5px !important;
                 padding-top: 1em !important;
+                margin-top: 1em !important;
                 font-size: smaller !important;
                 font-weight: 600;
                 padding-left: 1em;               
@@ -77,7 +85,7 @@ body{
             }            
         }
         .navbar-toggler{
-            border: none;
+            border: none;            
             &:focus{
                 box-shadow: none !important;
             }
@@ -88,7 +96,7 @@ body{
         }
         .active{
             color: $test_color_plain;
-            font-weight: 600 !important;
+            font-weight: 600 !important;;
         }
         ul{
             li{
@@ -408,10 +416,6 @@ body{
         }
     }
     #nosotros{
-        dat{
-            color: lightpink;
-            font-size: xx-large;
-        }
         .card-deck{
             margin-top: 2em !important;
             margin-bottom: 2em !important;
@@ -430,37 +434,47 @@ body{
         .img1{
             background: url('../img/photo/expo1.jpg');
             background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
-            background-attachment: fixed;
+            @media  screen and(min-width: 736px) {                
+                background-repeat: no-repeat;
+                background-position: center;
+                background-attachment: fixed;
+            }
         }
         .img2{
             background: url('../img/photo/computer1.jpg');
             background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
-            background-attachment: fixed;
+            @media  screen and(min-width: 736px) {                
+                background-repeat: no-repeat;
+                background-position: center;
+                background-attachment: fixed;
+            }
         }
         .img3{
             background: url('../img/photo/notebook2.jpg');
             background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
-            background-attachment: fixed;
+            @media  screen and(min-width: 736px) {                
+                background-repeat: no-repeat;
+                background-position: center;
+                background-attachment: fixed;
+            }
         }
         .img4{
             background: url('../img/photo/developer2.jpg');
             background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
-            background-attachment: fixed;
+            @media  screen and(min-width: 736px) {                
+                background-repeat: no-repeat;
+                background-position: center;
+                background-attachment: fixed;
+            }
         }
         .img5{
             background: url('../img/photo/notebook3.jpg');
             background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
-            background-attachment: fixed;
+            @media  screen and(min-width: 736px) {                
+                background-repeat: no-repeat;
+                background-position: center;
+                background-attachment: fixed;
+            }
         }
     }
     #page-footer{

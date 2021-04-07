@@ -103,7 +103,5 @@ def terms():
     )
 
 if __name__ == '__main__':
-    """
-    APP.debug = True
-    """
+    APP.debug = False
     APP.run()
