@@ -4,87 +4,101 @@ Nuestros planes
 {% endblock %}
 {% block content %}
 <section id="ourplans" style="margin-top: 10vh;">
-    <div class="d-flex w-100">
-        <img 
-        class="img-fluid d-none d-md-block mx-auto" 
-        src="{{url_for('static', filename='img/svg/crown.svg')}}" 
-        style="height: 4em; z-index: 2 !important; transform: translateY(4vh) !important;" 
-        alt="">
-    </div>
-    <div class="mx-auto h-75 px-md-5 pb-5 mb-sm-5 mt-0 card-deck" style="width: 100%;">
-      <div class="card text-center" id="basic_pck">
-          <div class="card-header text-center text-light">
-            <p class="m-0">
-                Para equipos pequeños iniciando su transformación digital
-            </p>
-          </div>
-          <div class="card-body">
-            <h4 class="card-title font-weight-bold" >Básico</h4>
-            <div class="price d-flex justify-content-center align-items-center mb-3"><h4 class="font-weight-bold m-0 ml-1">$840.000 COP </h4><p class="m-0 pl-1"> / año</p></div>
-            <div class="price d-flex justify-content-center align-items-center mb-3"><p class="m-0"> Incluye hasta 5 usuarios básicos + 1 administrador.</p></div>
-            <a href="{{url_for('plans', _plan = 1)}}" class="btn btn-outline-warning shadow-none font-weight-bold">¡Quiero Este!</a>
-          </div>
-          <div class="card-footer text-muted">
-              <ul class="list-group p-0 list-group-flush">
-                <li class="list-group-item py-1">Modelos estadísticos descriptivos</li>
-                  <li class="list-group-item py-1">Módulo de administración <b>(1)</b></li>
-                  <li class="list-group-item py-1 m-0">Actualizaciones diarias automatizadas <b>(1)</b></li>
-                  <li class="list-group-item py-1">Formularios nativos <b>(1)</b></li>
-                  <li class="list-group-item py-1">Cambios visuales menores gratuitos <b>(2)</b></li>                  
-                </ul>
-          </div>
-      </div>
-  
-      <div class="card text-center" id="pro_pck">
-        <div class="card-header">
-            Para empresas que quieran una experiencia integral.
+  <div class="area w-100" >
+    <ul class="circles w-100 p-0">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+    </ul>
+  </div>
+  <div class="d-flex w-100">
+      <img 
+      class="img-fluid d-none d-md-block mx-auto" 
+      src="{{url_for('static', filename='img/svg/crown.svg')}}" 
+      style="height: 4em; z-index: 2 !important; transform: translateY(4vh) !important;" 
+      alt="">
+  </div>
+  <div class="mx-auto h-75 px-md-5 pb-5 mb-sm-5 mt-0 card-deck" style="width: 100%;">
+    <div class="card text-center" id="basic_pck">
+        <div class="card-header text-center text-light">
+          <p class="m-0">
+              Para equipos pequeños iniciando su transformación digital
+          </p>
         </div>
         <div class="card-body">
-            <h4 class="card-title font-weight-bold">Profesional</h4>
-            <div class="price d-flex justify-content-center align-items-center mb-3"><h4 class="font-weight-bold m-0">$1'800.000 COP </h4><p class="m-0 pl-1"> / año</p></div>
-            <div class="price d-flex justify-content-center align-items-center mb-3"><p class="m-0"> Incluye hasta 10 usuarios profesionales + 1 administradores.</p></div>
-            <a href="{{url_for('plans', _plan = 2)}}" class="btn btn-outline-warning shadow-none font-weight-bold">¡Quiero Este!</a>
+          <h4 class="card-title font-weight-bold" >Básico</h4>
+          <div class="price d-flex justify-content-center align-items-center mb-3"><h4 class="font-weight-bold m-0 ml-1">$840.000 COP </h4><p class="m-0 pl-1"> / año</p></div>
+          <div class="price d-flex justify-content-center align-items-center mb-3"><p class="m-0"> Incluye hasta 5 usuarios básicos + 1 administrador.</p></div>
+          <a href="{{url_for('plans', _plan = 1)}}" class="btn btn-outline-warning shadow-none font-weight-bold">¡Quiero Este!</a>
         </div>
         <div class="card-footer text-muted">
             <ul class="list-group p-0 list-group-flush">
-                <li class="list-group-item py-1 m-0">Analítica predictiva y ML <a href="{{url_for('packageinfo')}}"><i class="fas mx-1 fa-question-circle"></i></a></li>
-                <li class="list-group-item py-1">Procesamiento de lenguaje natural</li>
-                <li class="list-group-item py-1">Actualizaciones automáticas <b>(*)</b></li>
-                <li class="list-group-item py-1">Formularios nativos <b>(*)</b></li>
-                <li class="list-group-item py-1">Cambios visuales menores gratuitos <b>(10)</b></li>
-                </ul>
+              <li class="list-group-item py-1">Modelos estadísticos descriptivos</li>
+                <li class="list-group-item py-1">Módulo de administración <b>(1)</b></li>
+                <li class="list-group-item py-1 m-0">Actualizaciones diarias automatizadas <b>(1)</b></li>
+                <li class="list-group-item py-1">Formularios nativos <b>(1)</b></li>
+                <li class="list-group-item py-1">Cambios visuales menores gratuitos <b>(2)</b></li>                  
+              </ul>
         </div>
-      </div>
-  
-      <div class="card text-center" id="enter_pck">
-          <div class="card-header">
-              Conecte a sus clientes, aliados y proveedores.
-          </div>
-          <div class="card-body">
-              <h4 class="card-title font-weight-bold">Empresa</h4>
-              <div class="price d-flex justify-content-center align-items-center mb-3"><h4 class="font-weight-bold m-0">$3'000.000 COP </h4><p class="m-0 pl-1"> / año</p></div>
-              <div class="price d-flex justify-content-center align-items-center mb-3">Cubrimiento total.</div>
-              <a href="{{ url_for('plans', _plan=3) }}" class="btn btn-outline-warning shadow-none font-weight-bold">¡Quiero Este!</a>
-          </div>
-          <div class="card-footer text-muted">
-                <ul class="list-group p-0 list-group-flush">
-                  <li class="list-group-item py-1 m-0">Analítica prescriptiva <a href="{{url_for('packageinfo')}}"><i class="fas mx-1 fa-question-circle"></i></li>
-                  <li class="list-group-item py-1">Arquitectura completa en nube <a href="{{url_for('packageinfo')}}"><i class="fas mx-1 fa-question-circle"></i></li>
-                  <li class="list-group-item py-1">Analítica en tiempo real <a href="{{url_for('packageinfo')}}"><i class="fas mx-1 fa-question-circle"></i></li>
-                  <li class="list-group-item py-1">Desarrollo de microservicios <a href="{{url_for('packageinfo')}}"><i class="fas mx-1 fa-question-circle"></i></li>
-                  <li class="list-group-item py-1">Garantía permanente <a href="{{url_for('packageinfo')}}"><i class="fas mx-1 fa-question-circle"></i></li>
-                </ul>
-          </div>
-      </div>
-  
     </div>
-    <div class="row px-5">
-        <p class="text-muted">
-            <i>
-                *El costo del paquete seleccionado es adicional 
-                al costo de tu proyecto con Analítica.
-            </i>
-        </p>
+
+    <div class="card text-center" id="pro_pck">
+      <div class="card-header">
+          Para empresas que quieran una experiencia integral.
+      </div>
+      <div class="card-body">
+          <h4 class="card-title font-weight-bold">Profesional</h4>
+          <div class="price d-flex justify-content-center align-items-center mb-3"><h4 class="font-weight-bold m-0">$1'800.000 COP </h4><p class="m-0 pl-1"> / año</p></div>
+          <div class="price d-flex justify-content-center align-items-center mb-3"><p class="m-0"> Incluye hasta 10 usuarios profesionales + 1 administradores.</p></div>
+          <a href="{{url_for('plans', _plan = 2)}}" class="btn btn-outline-warning shadow-none font-weight-bold">¡Quiero Este!</a>
+      </div>
+      <div class="card-footer text-muted">
+          <ul class="list-group p-0 list-group-flush">
+              <li class="list-group-item py-1 m-0">Analítica predictiva y ML <a href="{{url_for('packageinfo')}}"><i class="fas mx-1 fa-question-circle"></i></a></li>
+              <li class="list-group-item py-1">Procesamiento de lenguaje natural</li>
+              <li class="list-group-item py-1">Actualizaciones automáticas <b>(*)</b></li>
+              <li class="list-group-item py-1">Formularios nativos <b>(*)</b></li>
+              <li class="list-group-item py-1">Cambios visuales menores gratuitos <b>(10)</b></li>
+              </ul>
+      </div>
     </div>
+
+    <div class="card text-center" id="enter_pck">
+        <div class="card-header">
+            Conecte a sus clientes, aliados y proveedores.
+        </div>
+        <div class="card-body">
+            <h4 class="card-title font-weight-bold">Empresa</h4>
+            <div class="price d-flex justify-content-center align-items-center mb-3"><h4 class="font-weight-bold m-0">$3'000.000 COP </h4><p class="m-0 pl-1"> / año</p></div>
+            <div class="price d-flex justify-content-center align-items-center mb-3">Cubrimiento total.</div>
+            <a href="{{ url_for('plans', _plan=3) }}" class="btn btn-outline-warning shadow-none font-weight-bold">¡Quiero Este!</a>
+        </div>
+        <div class="card-footer text-muted">
+              <ul class="list-group p-0 list-group-flush">
+                <li class="list-group-item py-1 m-0">Analítica prescriptiva <a href="{{url_for('packageinfo')}}"><i class="fas mx-1 fa-question-circle"></i></li>
+                <li class="list-group-item py-1">Arquitectura completa en nube <a href="{{url_for('packageinfo')}}"><i class="fas mx-1 fa-question-circle"></i></li>
+                <li class="list-group-item py-1">Analítica en tiempo real <a href="{{url_for('packageinfo')}}"><i class="fas mx-1 fa-question-circle"></i></li>
+                <li class="list-group-item py-1">Desarrollo de microservicios <a href="{{url_for('packageinfo')}}"><i class="fas mx-1 fa-question-circle"></i></li>
+                <li class="list-group-item py-1">Garantía permanente <a href="{{url_for('packageinfo')}}"><i class="fas mx-1 fa-question-circle"></i></li>
+              </ul>
+        </div>
+    </div>
+
+  </div>
+  <div class="row px-5">
+      <p class="text-muted">
+          <i>
+              *El costo del paquete seleccionado es adicional 
+              al costo de tu proyecto con Analítica.
+          </i>
+      </p>
+  </div>
   </section>
 {% endblock %}

@@ -3,10 +3,26 @@
 ¡Estaremos en contacto!
 {% endblock %}
 {% block content %}
-<section style="margin-top: 10vh; height: 90vh;">
+<section style="margin-top: 10vh; height: 90vh;" id="thanks">
+    <div class="area w-100" >
+        <ul class="circles w-100 p-0">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+        </ul>
+    </div>
     <div 
-        class="flex-column d-flex h-100 align-items-center justify-content-center  mx-auto px-5 card"
-        style="border: none; background: none; animation: aol 500ms ease-in-out; animation-fill-mode: forwards;">
+        class="flex-column d-flex h-100 align-items-center justify-content-center mx-auto px-5 card"
+        style="border: none; background: none; animation: aol 500ms ease-in-out; animation-fill-mode: forwards;"
+        id="md-thanks"
+        >        
         <div 
             class="card-body d-flex justify-content-center"            
         >
@@ -34,5 +50,32 @@
               </div>
         </div>
     </div>
+    <div 
+    class="d-flex h-100 flex-column align-items-center justify-content-center p-0"
+    style="border: none; background: none; animation: aol 500ms ease-in-out; animation-fill-mode: forwards;"
+    id="sm-thanks"
+    >        
+    <img
+        class="img-fluid w-50"
+        src="{{ url_for('static', filename='img/svg/robot.svg') }}" 
+        alt=""
+    >
+    <div class="text-center px-3">
+        <h1 
+            style="font-weight: 600;"
+            class="display text-center">¡Recibido!</h1>
+        <p class="lead">
+            Estaremos en contacto lo antes posible, mientras tanto
+            puedes seguir conociendo 
+            <img
+                class="img-fluid"
+                style="width: 6em;" 
+                src="{{url_for('static',filename='img/company/md/uva.png')}}" 
+                alt=""
+            >
+            tocando <a href="{{url_for('index')}}">aquí.</a>
+        </p>
+    </div>
+</div>
 </section>
 {% endblock %}

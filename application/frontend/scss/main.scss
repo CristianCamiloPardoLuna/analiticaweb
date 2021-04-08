@@ -492,6 +492,139 @@ body{
         }
     }
     #contact{      
+        h1{
+            color: $test_color_plain !important;
+            font-weight: 600 !important;
+        }
+        a{
+            color: $test_color_plain;
+        }
+        a:hover{
+            color: $test_color_hover !important;
+        }
+
+        #contact-form{
+            color: black;
+            animation: upper-show 500ms ease-in-out;
+            animation-fill-mode: forwards;
+            
+            label{
+                padding: 0;
+                text-align: end;
+                margin-right: 1em;
+                margin-bottom: 0;
+            }
+            .col{
+                padding: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+
+    }
+    #ourplans{
+        background: url('../img/bg2-bw.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+        @media screen and(min-width: 736px) {
+            height: 100vh !important;            
+        }
+        @media screen and(max-width: 736px) {
+            margin-top: 5em !important;
+            height: auto !important;
+        }
+        a{
+            color: whitesmoke !important;
+        }
+        .card-header{
+            color: whitesmoke !important;
+            font-weight: 600 !important;
+        }
+        ul{
+            li{
+                background: none;
+                color: whitesmoke;
+                padding: 0.2em 0 0.2em 0 !important;
+            }            
+        }
+        @media screen and(max-width: 736px) {
+            .card-deck{
+                .card{
+                    margin: 1em 1em 1em 1em !important;         
+                }
+            }            
+        }
+        #basic_pck{
+            animation: aol 500ms ease-in-out;
+            animation-fill-mode: forwards;
+            .card-header,
+            .card-footer{
+                background: radial-gradient(circle, rgba(82,143,40,1) 0%, rgba(52,94,23,1) 100%);
+            }
+            .card-title{
+                color: radial-gradient(circle, rgba(82,143,40,1) 0%, rgba(52,94,23,1) 100%);
+            }
+        }
+        #pro_pck{
+            animation: aol 500ms ease-in-out;
+            animation-fill-mode: forwards;
+            .card-header,
+            .card-footer{
+                background: $test_color;
+            }
+            .card-title{
+                color: $test_color;
+            }
+        }
+        #enter_pck{
+            animation: aol 500ms ease-in-out;
+            animation-fill-mode: forwards;
+            .card-header,
+            .card-footer{
+                background: radial-gradient(circle, rgba(40,52,143,1) 0%, rgba(21,26,71,1) 100%);
+            }
+            .card-title{
+                color: black;
+            }
+        }
+    }
+    #thanks{
+        @media screen and(max-width: 736px) {
+            #md-thanks{
+                display: none !important;
+            }            
+        }
+        @media screen and(min-width: 736px) {
+            #sm-thanks{
+                display: none !important;
+            }            
+        }
+    }
+    #underconstruction{
+        @media screen and(max-width: 736px) {
+            #uc-md{
+                display: none !important;
+            }            
+        }
+        @media screen and(min-width: 736px) {
+            #uc-sm{
+                display: none !important;
+            }            
+        }
+    }
+    #terms{
+        p{
+            text-align: justify;
+            text-justify: inter-word;
+        }
+    }
+    #contact,
+    #thanks,
+    #underconstruction,
+    #ourplans{
         .area{
             position: fixed;
             background: whitesmoke;  
@@ -610,111 +743,6 @@ body{
                 border-radius: 50%;
             }
 
-        }
-
-        h1{
-            color: $test_color_plain !important;
-            font-weight: 600 !important;
-        }
-        a{
-            color: $test_color_plain;
-        }
-        a:hover{
-            color: $test_color_hover !important;
-        }
-
-        #contact-form{
-            color: black;
-            animation: upper-show 500ms ease-in-out;
-            animation-fill-mode: forwards;
-            
-            label{
-                padding: 0;
-                text-align: end;
-                margin-right: 1em;
-                margin-bottom: 0;
-            }
-            .col{
-                padding: 0;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-        }
-
-    }
-    #ourplans{
-        background: url('../img/bg2-bw.png');
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-attachment: fixed;
-        @media screen and(min-width: 736px) {
-            height: 100vh !important;            
-        }
-        @media screen and(max-width: 736px) {
-            margin-top: 5em !important;
-            height: auto !important;
-        }
-        a{
-            color: whitesmoke !important;
-        }
-        .card-header{
-            color: whitesmoke !important;
-            font-weight: 600 !important;
-        }
-        ul{
-            li{
-                background: none;
-                color: whitesmoke;
-                padding: 0.2em 0 0.2em 0 !important;
-            }            
-        }
-        @media screen and(max-width: 736px) {
-            .card-deck{
-                .card{
-                    margin: 1em 1em 1em 1em !important;         
-                }
-            }            
-        }
-        #basic_pck{
-            animation: aol 500ms ease-in-out;
-            animation-fill-mode: forwards;
-            .card-header,
-            .card-footer{
-                background: radial-gradient(circle, rgba(82,143,40,1) 0%, rgba(52,94,23,1) 100%);
-            }
-            .card-title{
-                color: radial-gradient(circle, rgba(82,143,40,1) 0%, rgba(52,94,23,1) 100%);
-            }
-        }
-        #pro_pck{
-            animation: aol 500ms ease-in-out;
-            animation-fill-mode: forwards;
-            .card-header,
-            .card-footer{
-                background: $test_color;
-            }
-            .card-title{
-                color: $test_color;
-            }
-        }
-        #enter_pck{
-            animation: aol 500ms ease-in-out;
-            animation-fill-mode: forwards;
-            .card-header,
-            .card-footer{
-                background: radial-gradient(circle, rgba(40,52,143,1) 0%, rgba(21,26,71,1) 100%);
-            }
-            .card-title{
-                color: black;
-            }
-        }
-    }
-    #terms{
-        p{
-            text-align: justify;
-            text-justify: inter-word;
         }
     }
 }

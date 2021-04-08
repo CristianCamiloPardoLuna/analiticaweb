@@ -3,10 +3,25 @@
 ¡En construcción!
 {% endblock %}
 {% block content %}
-<section style="margin-top: 10vh; height: 90vh;">
+<section style="margin-top: 10vh; height: 90vh;" id="underconstruction">
+    <div class="area w-100">
+        <ul class="circles w-100 p-0">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+        </ul>
+    </div>
     <div 
         class="flex-column d-flex h-100 align-items-center justify-content-center  mx-auto px-5 card"
-        style="border: none; background: none; animation: aol 500ms ease-in-out; animation-fill-mode: forwards;">
+        style="border: none; background: none; animation: aol 500ms ease-in-out; animation-fill-mode: forwards;"
+        id="uc-md">
         <div 
             class="card-body d-flex justify-content-center"            
         >
@@ -33,6 +48,32 @@
                 alt=""
             >
         </div>
+    </div>
+    <div 
+    class="d-flex h-100 flex-column align-items-center justify-content-center p-0"
+    style="border: none; background: none; animation: aol 500ms ease-in-out; animation-fill-mode: forwards;"
+    id="uc-sm"
+    >        
+    <img
+        class="img-fluid w-50"
+        src="{{ url_for('static', filename='img/svg/programmer.svg') }}" 
+        alt=""
+    >
+    <div class="text-center px-3">
+        <h1 
+            style="font-weight: 600;"
+            class="display text-center">¡Ya casi estamos allá!</h1>
+        <p class="lead">
+            Todavía estamos en construcción, pero si llegaste hasta aquí
+            bien puedes seguir conociendo
+            <img
+                class="img-fluid"
+                style="width: 6em;" 
+                src="{{url_for('static',filename='img/company/md/uva.png')}}" 
+                alt=""
+            >
+            tocando <a href="{{url_for('index')}}">aquí.</a>
+        </p>
     </div>
 </section>
 {% endblock %}

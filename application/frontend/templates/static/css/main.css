@@ -448,108 +448,6 @@ body #page-footer a {
 body #page-footer a:hover {
   color: whitesmoke !important;
 }
-body #contact .area {
-  position: fixed;
-  background: whitesmoke;
-  width: 100%;
-  height: 100vh;
-  z-index: -9999;
-}
-body #contact .circles {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-body #contact .circles li {
-  position: fixed;
-  display: block;
-  list-style: none;
-  width: 20px;
-  height: 20px;
-  background: rgba(245, 156, 156, 0.7);
-  animation: animate 10s linear infinite;
-  bottom: -150px;
-}
-body #contact .circles li:nth-child(1) {
-  left: 25%;
-  width: 80px;
-  height: 80px;
-  animation-delay: 0s;
-}
-body #contact .circles li:nth-child(2) {
-  left: 10%;
-  width: 20px;
-  height: 20px;
-  animation-delay: 2s;
-  animation-duration: 12s;
-}
-body #contact .circles li:nth-child(3) {
-  left: 70%;
-  width: 20px;
-  height: 20px;
-  animation-delay: 4s;
-}
-body #contact .circles li:nth-child(4) {
-  left: 40%;
-  width: 60px;
-  height: 60px;
-  animation-delay: 0s;
-  animation-duration: 18s;
-}
-body #contact .circles li:nth-child(5) {
-  left: 65%;
-  width: 20px;
-  height: 20px;
-  animation-delay: 0s;
-}
-body #contact .circles li:nth-child(6) {
-  left: 75%;
-  width: 110px;
-  height: 110px;
-  animation-delay: 3s;
-}
-body #contact .circles li:nth-child(7) {
-  left: 35%;
-  width: 150px;
-  height: 150px;
-  animation-delay: 7s;
-}
-body #contact .circles li:nth-child(8) {
-  left: 50%;
-  width: 25px;
-  height: 25px;
-  animation-delay: 15s;
-  animation-duration: 45s;
-}
-body #contact .circles li:nth-child(9) {
-  left: 20%;
-  width: 15px;
-  height: 15px;
-  animation-delay: 2s;
-  animation-duration: 35s;
-}
-body #contact .circles li:nth-child(10) {
-  left: 85%;
-  width: 150px;
-  height: 150px;
-  animation-delay: 0s;
-  animation-duration: 11s;
-}
-@keyframes animate {
-  0% {
-    transform: translateY(0) rotate(0deg);
-    opacity: 1;
-    border-radius: 0;
-  }
-  100% {
-    transform: translateY(-1000px) rotate(720deg);
-    opacity: 0;
-    border-radius: 50%;
-  }
-}
 body #contact h1 {
   color: #5e2639 !important;
   font-weight: 600 !important;
@@ -645,9 +543,170 @@ body #ourplans #enter_pck .card-footer {
 body #ourplans #enter_pck .card-title {
   color: black;
 }
+@media screen and (max-width: 736px) {
+  body #thanks #md-thanks {
+    display: none !important;
+  }
+}
+@media screen and (min-width: 736px) {
+  body #thanks #sm-thanks {
+    display: none !important;
+  }
+}
+@media screen and (max-width: 736px) {
+  body #underconstruction #uc-md {
+    display: none !important;
+  }
+}
+@media screen and (min-width: 736px) {
+  body #underconstruction #uc-sm {
+    display: none !important;
+  }
+}
 body #terms p {
   text-align: justify;
   text-justify: inter-word;
+}
+body #contact .area,
+body #thanks .area,
+body #underconstruction .area,
+body #ourplans .area {
+  position: fixed;
+  background: whitesmoke;
+  width: 100%;
+  height: 100vh;
+  z-index: -9999;
+}
+body #contact .circles,
+body #thanks .circles,
+body #underconstruction .circles,
+body #ourplans .circles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+body #contact .circles li,
+body #thanks .circles li,
+body #underconstruction .circles li,
+body #ourplans .circles li {
+  position: fixed;
+  display: block;
+  list-style: none;
+  width: 20px;
+  height: 20px;
+  background: rgba(245, 156, 156, 0.7);
+  animation: animate 10s linear infinite;
+  bottom: -150px;
+}
+body #contact .circles li:nth-child(1),
+body #thanks .circles li:nth-child(1),
+body #underconstruction .circles li:nth-child(1),
+body #ourplans .circles li:nth-child(1) {
+  left: 25%;
+  width: 80px;
+  height: 80px;
+  animation-delay: 0s;
+}
+body #contact .circles li:nth-child(2),
+body #thanks .circles li:nth-child(2),
+body #underconstruction .circles li:nth-child(2),
+body #ourplans .circles li:nth-child(2) {
+  left: 10%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 2s;
+  animation-duration: 12s;
+}
+body #contact .circles li:nth-child(3),
+body #thanks .circles li:nth-child(3),
+body #underconstruction .circles li:nth-child(3),
+body #ourplans .circles li:nth-child(3) {
+  left: 70%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 4s;
+}
+body #contact .circles li:nth-child(4),
+body #thanks .circles li:nth-child(4),
+body #underconstruction .circles li:nth-child(4),
+body #ourplans .circles li:nth-child(4) {
+  left: 40%;
+  width: 60px;
+  height: 60px;
+  animation-delay: 0s;
+  animation-duration: 18s;
+}
+body #contact .circles li:nth-child(5),
+body #thanks .circles li:nth-child(5),
+body #underconstruction .circles li:nth-child(5),
+body #ourplans .circles li:nth-child(5) {
+  left: 65%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 0s;
+}
+body #contact .circles li:nth-child(6),
+body #thanks .circles li:nth-child(6),
+body #underconstruction .circles li:nth-child(6),
+body #ourplans .circles li:nth-child(6) {
+  left: 75%;
+  width: 110px;
+  height: 110px;
+  animation-delay: 3s;
+}
+body #contact .circles li:nth-child(7),
+body #thanks .circles li:nth-child(7),
+body #underconstruction .circles li:nth-child(7),
+body #ourplans .circles li:nth-child(7) {
+  left: 35%;
+  width: 150px;
+  height: 150px;
+  animation-delay: 7s;
+}
+body #contact .circles li:nth-child(8),
+body #thanks .circles li:nth-child(8),
+body #underconstruction .circles li:nth-child(8),
+body #ourplans .circles li:nth-child(8) {
+  left: 50%;
+  width: 25px;
+  height: 25px;
+  animation-delay: 15s;
+  animation-duration: 45s;
+}
+body #contact .circles li:nth-child(9),
+body #thanks .circles li:nth-child(9),
+body #underconstruction .circles li:nth-child(9),
+body #ourplans .circles li:nth-child(9) {
+  left: 20%;
+  width: 15px;
+  height: 15px;
+  animation-delay: 2s;
+  animation-duration: 35s;
+}
+body #contact .circles li:nth-child(10),
+body #thanks .circles li:nth-child(10),
+body #underconstruction .circles li:nth-child(10),
+body #ourplans .circles li:nth-child(10) {
+  left: 85%;
+  width: 150px;
+  height: 150px;
+  animation-delay: 0s;
+  animation-duration: 11s;
+}
+@keyframes animate {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+    border-radius: 0;
+  }
+  100% {
+    transform: translateY(-1000px) rotate(720deg);
+    opacity: 0;
+    border-radius: 50%;
+  }
 }
 
 @keyframes aol {

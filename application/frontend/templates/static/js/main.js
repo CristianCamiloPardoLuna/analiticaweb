@@ -1,5 +1,6 @@
 try{
-  var btnContainer = document.getElementById("navbar");
+  var navbar1 = document.getElementById("navbar-1-ul");
+  var btnContainer = navbar2.getElementById("navbar");
   var btns = btnContainer.getElementsByClassName("nav-item");
   for (var i = 0; i < btns.length; i++) {
     btns[i].addEventListener("click", function() {
