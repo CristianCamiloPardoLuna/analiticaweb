@@ -242,17 +242,13 @@ body{
             }
         }
         #inicia-sm{
-            .pointer:not(*:root){
-                display: none !important;
-            }
             #pilar{
                 background: #53182C;
-                height: 75%;
+                height: 100%;
                 width: 5%;
                 border-radius: 25px !important;
-                margin-left: 45vw !important;
+                margin-left: 45vw;
             }
-
             .circle{                
                 background: #53182C;
                 border-radius: 5px;
@@ -272,10 +268,10 @@ body{
             }
             .flex-column{
                 .d-flex{
-                    height: 15vh;
+                    height: 20vh;
                     .d-flex{
                         width: 33% !important;
-                        margin: 0.3em 0 0.3em 0;
+                        margin: 1em 0 1em 0;
                         p{
                             padding: 0;                            
                         }
