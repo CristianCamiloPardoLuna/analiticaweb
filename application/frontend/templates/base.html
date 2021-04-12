@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
   <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/main.css') }}"/>
   <link rel="icon" sizes="32X32" href="{{url_for('static', filename='img/company/icon.svg')}}">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <title> ANALITICA - {% block header %}{% endblock %} </title>  
 </head>
 <body class="bg-light">
@@ -34,10 +35,13 @@
               <a class="dropdown-item" href="#ciencia_de_datos">Ciencia de datos</a>
             </div>
           </li>
-          <div class="nav-item">
-            <a class="nav-link" href="#nosotros">Qué hacemos</a>
+          <div class="nav-item d-block d-md-none">
+            <a class="nav-link" href="#nuestroservicio">Qué hacemos</a>
           </div>
-          <div class="nav-item d-none d-md-block">
+          <div class="nav-item">
+            <a class="nav-link" href="#quienessomos">Quiénes somos</a>
+          </div>
+          <div class="nav-item">
             <a class="nav-link" href="#inicia">Cómo trabajamos</a>
           </div>
         </ul>
@@ -97,7 +101,7 @@
             </div>
           </li>
           <div class="nav-item">
-            <a class="nav-link" href="https://analiticaco.com/#nosotros">Qué hacemos</a>
+            <a class="nav-link" href="https://analiticaco.com/#quienessomos">Quiénes somos</a>
           </div>
           <div class="nav-item d-none d-md-block">
             <a class="nav-link" href="https://analiticaco.com/#inicia">Cómo trabajamos</a>
@@ -152,6 +156,16 @@
   </div>
     {% block content %}
     {% endblock %}
+    <a 
+      id="whatsapp"
+      class="d-none"
+      target="_blank"
+      rel="noopener noreferrer"
+      href="https://wa.link/fkk2xr">
+      <img 
+        class="img-fluid" 
+        src="{{ url_for('static', filename='img/svg/whatsapp.svg') }}">
+    </a>
     <section class="d-flex flex-column align-items-center justify-content-center w-100" id="page-footer"> <!--cambiar-->
       <div class="row pt-5 mb-2 w-100 h-100 align-items-start text-center justify-content-around">
         <div class="col-md-5 flex-column p-0">
@@ -207,11 +221,16 @@
     <script src="{{ url_for('static',filename='js/main.js')}}"></script>    
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>  
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
     <script>
             try{
               document.addEventListener('DOMContentLoaded', function(event){
                 var navbar = document.getElementById('navbar-effect');        
+                var whatsapp = document.getElementById('whatsapp');
                 var section = document.getElementById('service-gd');        
                 function navbar_trans(){         
                   let scroll = window.scrollY; 
@@ -219,9 +238,11 @@
                    * agregar o quitar fondo de navbar
                   */
                   if ((scroll>100) && (!navbar.classList.contains('trans-effect'))){
-                    navbar.classList.add('bg-light');            
+                    navbar.classList.add('bg-light');
+                    whatsapp.classList.replace('d-none', 'animate');
                   } else {
                     navbar.classList.remove('bg-light');
+                    whatsapp.classList.replace('animate', 'd-none');
                   };
                 }
                 document.addEventListener('scroll', function(e){

@@ -37,7 +37,7 @@ Expertos en ciencia de datos
               <button type="submit" class="btn btn-outline-warning shadow-none ml-md-1 my-2 col-sm col-md-3">¡Inicia!</button>
             </form>
 
-            <p class="text-center"><i>Comienza desde $40.000 COP, la hora más barata del mercado.</i></p>
+            <p class="text-sm-center text-md-left"><i>Comienza desde $40.000 COP, la hora más barata del mercado.</i></p>
           </div>
         </div>
     </div>
@@ -45,37 +45,53 @@ Expertos en ciencia de datos
       <img class="img-fluid" style="margin-top: 25vh; border-radius: 5px;" src="{{url_for('static', filename='img/gif/4.gif')}}" alt="">
     </div>
 </section>
-<section id="portfolio" style="height: 100vh;">
-  <div class="card-deck mx-auto px-5 w-100 h-100">
+<section id="portfolio">
+  <div class="card-deck mx-auto px-md-5 w-100 h-100">
     <div class="card">
       <div class="d-flex flex-column justify-content-center card-body text-md-right text-center">
-        <h4 class="display-4 d-none d-md-block">Transforma tus datos en acciones.</h4>
-        <h1 class="d-block d-md-none">Transforma tus datos en acciones.</h1>
-        <h5 class="display-5 text-muted">Tu propio equipo de expertos desarrolladores por la hora más barata del mercado.</h5>
+        <h4 class="display-4 d-none d-md-block" style="font-weight: 600;">Transforma tus datos en acciones</h4>
+        <h1 class="d-block d-md-none" style="font-weight: 600;">Transforma tus datos en acciones</h1>
+        <h3 class="lead">Tu propio equipo de expertos desarrolladores por la hora más barata del mercado</h3>
       </div>
     </div>
-    <div class="card px-md-5">
+    <div class="card px-md-5 d-none d-md-block">
       <div class="d-flex flex-column h-100 justify-content-center">
         <a href="#automatizacion" class="btn h-25 d-flex align-items-center btn-outline-dark btn-block text-left" style="background: white;">
-          <img class="mr-3 p-0 col-2" src="{{url_for('static', filename='img/svg/process.svg')}}" alt="">
-          <div class="d-flex col-md-8 col-sm-10 p-0 flex-column">
-            <h4 class="display-5">Automatización de procesos</h4>
-            <p class="m-0 d-none d-md-block">Diseñamos, desarrollamos y desplegamos flujos de trabajo automatizados totalmente personalizados.</p>
+          <img class="mr-3 p-0 col-md-1" src="{{url_for('static', filename='img/svg/process.svg')}}" alt="">
+          <div class="d-flex col-md-9 p-0 flex-column">
+            <h4 class="display-5" style="font-weight: 600;">Automatización de procesos</h4>
+            <p class="m-0">Diseñamos, desarrollamos y desplegamos flujos de trabajo automatizados totalmente personalizados.</p>
           </div>
           <div class="flex-column d-none d-md-block col-2 p-0 align-items-center justify-content-center">
             <img class="img-fluid arrow" src="{{url_for('static', filename='img/svg/arrow-left.svg')}}" alt="">
           </div>
         </a>
         <a href="#ciencia_de_datos" class="btn h-25 d-flex align-items-center btn-outline-dark btn-block h-25 text-left" id="dt-btn" style="background: white;">
-          <img class="mr-3 p-0 col-2" src="{{url_for('static', filename='img/svg/data-analysis.svg')}}" alt="">
-          <div class="d-flex col-md-8 col-sm-10 p-0 flex-column">
-            <h4 class="display-5">Ciencia de datos</h4>
-            <p class="m-0 d-none d-md-block">Explota al máximo tus datos a través de nuestras avanzadas técnicas de análisis de datos y poderosas visualizaciones.</p>
+          <img class="mr-3 p-0 col-md-1" src="{{url_for('static', filename='img/svg/data-analysis.svg')}}" alt="">
+          <div class="d-flex col-md-9 p-0 flex-column">
+            <h4 class="display-5" style="font-weight: 600;">Ciencia de datos</h4>
+            <p class="m-0">Explota al máximo tus datos a través de nuestras avanzadas técnicas de análisis de datos y poderosas visualizaciones.</p>
           </div>
           <div class="flex-column d-none d-md-block col-2 p-0 align-items-center justify-content-center">
             <img class="img-fluid arrow" src="{{url_for('static', filename='img/svg/arrow-left.svg')}}" alt="">
           </div>
         </a>
+      </div>
+    </div>
+    <div class="card px-3 d-block d-md-none">
+      <div class="card-body">
+        <a href="#automatizacion" class="d-flex btn btn-outline-dark align-items-center" style="background: white;">
+          <img class="img-fluid w-25 pr-2" src="{{url_for('static', filename='img/svg/process.svg')}}" alt="">
+          <div class="d-flex flex-column text-left w-75 ml-2">
+            <h5 class="display-5 m-0" style="font-weight: 600;">Automatización de procesos</h5>
+          </div>          
+        </a>
+        <a href="#ciencia_de_datos" class="d-flex btn btn-outline-dark align-items-center text-center" id="dt-btn" style="background: white;">
+          <img class="img-fluid w-25 pr-2" src="{{url_for('static', filename='img/svg/data-analysis.svg')}}" alt="">
+          <div class="d-flex flex-column text-left w-75 ml-2">
+            <h5 class="display-5 m-0" style="font-weight: 600;">Ciencia de datos</h5>
+          </div>          
+        </a>        
       </div>
     </div>
   </div>  
@@ -83,8 +99,8 @@ Expertos en ciencia de datos
 {% endblock %}
 {% block content %}
 
-<section class="text-center d-none d-md-block" id="inicia" style="height: 100vh; margin-top: 10vh;">
-  <div class="flex-column px-5 h-100 justify-content-center align-items-center text-center">
+<section class="text-center" id="inicia" style=" margin-top: 10vh;">
+  <div class="flex-column px-5 h-100 justify-content-center align-items-center text-center d-none d-md-block">
     <h5 class="display-5 text-left text-muted" style="font-weight: 600 !important;">Inicia con Analítica</h5>
     <h2 class="display-5 text-left" style="margin-bottom: 30vh;  font-weight: 600 !important;">Este es nuestro proceso de creación</h2>
     <div id="carousel1" class="carousel mx-auto w-75 slide" data-ride="carousel">
@@ -221,10 +237,103 @@ Expertos en ciencia de datos
       </div>
     </div>
   </div>
+  <div class="flex-column px-2 h-100 justify-content-center align-items-center text-center d-block d-md-none" id="inicia-sm">
+    <h5 class="display-5 text-left text-muted" style="font-weight: 600 !important;">Inicia con Analítica</h5>
+    <h2 class="display-5 text-left" style="font-weight: 600 !important;">Este es nuestro proceso de creación</h2>
+
+    <div class="flex-column mt-5">
+      <div class="d-flex position-absolute" id="pilar"></div>
+      <div class="d-flex align-items-center justify-content-around">
+        <div class="d-flex flex-column align-items-center justify-content-center">
+          <div class="comment" data-aos="fade-left" data-os-easing="linear" data-aos-duration="1500">
+            <p class="m-0"><small>Estaremos en contacto contigo</small></p>
+          </div>
+        </div>
+        <img class="img-fluid position-absolute" style="width: 2em; z-index: 3; margin-right: 6.8em; transform: rotate(180deg);" src="{{url_for('static', filename='img/svg/pointer-arrow.svg')}}">
+        <div class="d-flex flex-column align-items-center justify-content-center mx-1">          
+          <div class="circle">            
+            <img class="img-fluid w-50" src="{{url_for('static', filename='img/svg/trust.svg')}}" alt="">          
+            <p class="m-0"><b>¡Bienvenido!</b></p>  
+          </div>          
+        </div>
+        <div class="d-flex">
+        </div>
+      </div>
+      <div class="d-flex align-items-center justify-content-around">
+        <div class="d-flex flex-column">
+        </div>
+        <img class="img-fluid position-absolute" style="width: 2em; z-index: 3; margin-right: -6.8em;" src="{{url_for('static', filename='img/svg/pointer-arrow.svg')}}">
+        <div class="d-flex flex-column align-items-center justify-content-center mx-1">
+          <div class="circle">
+            <img class="img-fluid w-50" src="{{url_for('static', filename='img/svg/purpose.svg')}}" alt="">
+            <p class="m-0"><b>Planea</b></p>
+          </div>
+        </div>
+        <div class="d-flex flex-column align-items-center justify-content-center" data-aos="fade-right" data-os-easing="linear" data-aos-duration="1500">          
+          <div class="comment">
+            <p class="m-0"><small>Recibirás el plan de trabajo de tu proyecto</small></p>
+          </div>          
+        </div>
+      </div>  
+      <div class="d-flex align-items-center justify-content-around">
+        <div class="d-flex flex-column align-items-center justify-content-center" data-aos="fade-left" data-os-easing="linear" data-aos-duration="1500">
+          <div class="comment">
+            <p class="m-0"><small>Pondremos manos a la obra</small></p>
+          </div>          
+        </div>
+        <img class="img-fluid position-absolute" style="width: 2em; z-index: 3; margin-right: 6.8em; transform: rotate(180deg);" src="{{url_for('static', filename='img/svg/pointer-arrow.svg')}}">
+        <div class="d-flex flex-column align-items-center justify-content-center mx-1">
+          <div class="circle">
+            <img class="img-fluid w-50" src="{{url_for('static', filename='img/svg/advice.svg')}}" alt="">
+            <p class="m-0"><b>Aprueba</b></p>
+          </div>
+        </div>
+        <div class="d-flex">
+          
+        </div>
+      </div>
+      <div class="d-flex align-items-center justify-content-around">
+        <div class="d-flex flex-column">
+        </div>
+        <img class="img-fluid position-absolute" style="width: 2em; z-index: 3; margin-right: -6.8em;" src="{{url_for('static', filename='img/svg/pointer-arrow.svg')}}">
+        <div class="d-flex flex-column align-items-center justify-content-center mx-1">
+          <div class="circle">
+            <img class="img-fluid w-50" src="{{url_for('static', filename='img/svg/success.svg')}}" alt="">
+            <p class="m-0"><b>Controla</b></p>          
+          </div>
+        </div>
+        <div class="d-flex flex-column align-items-center justify-content-center" data-aos="fade-right" data-os-easing="linear" data-aos-duration="1500">
+          <div class="comment">
+            <p class="m-0"><small>Controla tu proyecto desde nuestro <a target="_blank" rel="noopener noreferrer" href="https://clientes.analiticaco.com">Portal Clientes</a></small></p>
+          </div>          
+        </div>
+      </div>  
+      <div class="d-flex align-items-center justify-content-around">
+        <div class="d-flex flex-column align-items-center justify-content-center" data-aos="fade-left" data-os-easing="linear" data-aos-duration="1500">
+          <div class="comment">
+            <p class="m-0"><small>Fortalece tu negocio</small></p>
+          </div>          
+        </div>
+        <img class="img-fluid position-absolute" style="width: 2em; z-index: 3; margin-right: 6.8em; transform: rotate(180deg);" src="{{url_for('static', filename='img/svg/pointer-arrow.svg')}}">
+        <div class="d-flex flex-column align-items-center justify-content-center mx-1">
+          <div class="circle">
+            <img class="img-fluid w-50" src="{{url_for('static', filename='img/svg/strong.svg')}}" alt="">
+            <p class="m-0"><b>Decide</b></p>
+          </div>
+        </div>
+        <div class="d-flex">
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr class="mx-3 d-block d-md-none">
 </section>
 
-<section class id="prices">
-  <div class="card-deck align-items-center h-100 pb-5 px-4 pt-1">
+<h5 class="display-5 pl-5 mt-5 text-left text-muted" style="font-weight: 600 !important;">La hora más barata del mercado</h5>
+<h2 class="display-5 pl-5 text-left mb-5" style="font-weight: 600 !important;">Compara el costo de una hora de desarrollo</h2>
+<section class="my-5" id="prices">
+  <div class="card-deck align-items-center h-100 pb-0 px-4">
     <div class="card align-items-center justify-content-center h-100 w-100" id="price_1">
       <div class="card-header bg-dark text-light font-weight-bold text-center w-100">
         Promedio mercado laboral
@@ -313,17 +422,64 @@ Expertos en ciencia de datos
         <h4 class="display-5">¡Ahorra más del 80% cada hora!</h4>
       </div>
       <div class="card-footer text-center text-light w-100">
-        <h1 class="display-5 d-none d-md-block">$40.000 COP / Hora</h1>
-        <h5 class="display-5 d-block d-md-none">$40.000 COP / Hora</h5>
+        <h1 class="display-5 d-none d-md-block">$40.000 COP / Hora*</h1>
+        <h5 class="display-5 d-block d-md-none">$40.000 COP / Hora*</h5>
       </div>
     </div>
   </div>
+  <p class="px-3 mt-5 text-muted">
+    *El costo de tu proyecto es adicional al costo de uso de nuestro Portal Clientes,
+    para conocer las tarifas, haz click <a href="{{url_for('pricing')}}">aquí.</a>
+  </p>
 </section>
 
-<section id="ourservices">
+<section class="d-flex align-items-center justify-content-center mb-5" id="nuestroportal">
+  <div class="card d-block d-md-none mx-2" style="background: none !important; border: none !important;">
+    <div class="card-header text-center mx-3">
+      <h4 class="m-0" style="font-weight: 600 !important;">Conoce nuestro Portal Clientes</h4>
+      <hr>
+      <p class="m-0">
+        Al iniciar un proyecto con <b>Analítica</b> puedes obtener acceso a nuestro Portal Clientes, donde podrás
+        visualizar tus reportes, acceder a tus formularios o controlar tu aplicativo desarrollado por <b>Analítica</b>.
+        Consulta las tarifas <a style="font-weight: 600; color: whitesmoke;" href="{{url_for('pricing')}}">aquí</a>.
+      </p>
+    </div>
+    <div class="card-body p-0">
+      <img class="img-fluid w-100" src="{{url_for('static', filename='img/gif/4.gif')}}" alt="">
+    </div>
+    <div class="card-footer text-center mx-3">
+      <h4 style="font-weight: 600;">¡Solicita un demo totalmente gratis!</h4>
+    </div>
+  </div>
+  <div class="card-deck d-none d-md-block w-75">
+    <div class="card mx-auto" style="background: none !important; border: none !important;">
+      <div class="card-header text-center mx-3 p-5" style="border-radius: 20px;">
+        <h3 class="m-0" style="font-weight: 600 !important;">¿Ya conoces nuestro Portal Clientes?</h3>
+        <hr>
+        <p class="lead">
+          Analítica ha desarrollado un aplicativo en donde cada uno de nuestros clientes 
+          puede visualizar sus reportes, acceder a sus formularios o controlar su aplicativo desarrollado por <b>Analítica</b>.
+          <br>
+          Este potente servicio cuenta con encriptación E2E (de extremo a extremo) y soporta complejos
+          modelos de recolección de datos y optimización de procesos sin ningún problema gracias a su 
+          arquitectura desplegada totalmente en la nube.
+          <br>
+          ¡Es la forma más fácil de obtener los resultados que quieres, sin invertir en niveles de seguridad y desarrollo extra!  
+          Consulta las tarifas <a style="font-weight: 600; color: whitesmoke;" href="{{url_for('pricing')}}">aquí</a>.
+        </p>
+        <a class="btn btn-light mt-4" href="{{url_for('contactInfo', tellusmore='Quiero un demo gratuito para el Portal Clientes de Analítica.')}}">
+          <h4 class="m-0" style="font-weight: 600;">¡Solicita un demo gratuito!</h4>
+        </a>        
+      </div>
+    </div>
+  </div>  
+</section>
+
+<section class="mt-5" id="nuestroservicio">
   <!--workflow-->
-  <hr class="d-block d-md-none my-5 mx-3">
-  <div class="card-deck px-5 mt-0 mb-5" id="automatizacion">
+  <h5 class="display-5 text-left ml-3 ml-md-5 text-muted" style="font-weight: 600 !important;">Nuestra especialidad</h5>
+  <h2 class="display-5 text-left ml-3 ml-md-5" style="font-weight: 600 !important;">Conoce lo que tenemos para ofrecer</h2>
+  <div class="card-deck px-5 my-5" id="automatizacion">
     <div class="card m-0 mb-5 justify-content-center">
       <div class="d-flex flex-column p-3" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5); border-radius: 5px;">
         <p class="lead m-0" style="font-weight: 600; text-transform: uppercase;">Automatización de procesos</h3>
@@ -356,7 +512,7 @@ Expertos en ciencia de datos
         <li class="list-group-item">
           <img class="img-fluid w-25" src="{{url_for('static', filename='img/svg/cloud-computing-1.svg')}}" alt="">
           <p class="lead m-0" style="font-weight: 600; text-transform: uppercase;">Arquitectura expandible</p>
-          <p class="text-muted">Todo nuestros servicios se encuentran desplegados en la nube.</p>
+          <p class="text-muted">Todos nuestros servicios se encuentran desplegados en la nube.</p>
         </li>
         <li class="list-group-item">
           <img class="img-fluid w-25" src="{{url_for('static', filename='img/svg/search.svg')}}" alt="">
@@ -432,11 +588,52 @@ Expertos en ciencia de datos
       </div>      
     </div>
   </div>
-  <hr class="d-block d-md-none my-5 mx-3">
 </section>
 
-<section id="nosotros">
-  <h5 class="display-5 text-left ml-3 ml-md-5 text-muted" style="font-weight: 600 !important;">Qué hacemos por tu negocio.</h5>
+<section class="mt-5" id="quienessomos">
+  <div class="card d-block d-md-none">
+    <div class="card-body">
+      <div class="text-body">
+        <h4 style="font-weight: 600;">Quiénes somos</h4>
+        <p>
+          <b>Analítica</b> es una firma de desarrollo de aplicaciones web fundada y localizada en Colombia.
+          Nos especializamos en el desarrollo de aplicaciones basadas en análisis y transformación de datos,
+          construimos modelos analíticos que se soportan en metodologías avanzadas como <i>Machine learning</i> y <i>Data mining</i>                
+        </p>
+        <p style="font-weight: 600;">
+          Nuestro trabajo se caracteriza por ser veloz, simple y potente.
+        </p>
+        <a target="_blank" rel="noopener noreferrer" href="https://wa.link/fkk2xr" class="btn btn-light">
+          ¡Hablemos sobre tu proyecto!
+        </a>
+      </div>      
+    </div>    
+  </div>
+  <div class="card-deck d-none d-md-block">
+    <div class="card">
+      <div class="card-body p-5">
+        <div class="text-body p-5">
+          <h3 class="text-center" style="font-weight: 600;">Quiénes somos</h3>
+          <p class="lead">
+            <b>Analítica</b> es una firma de desarrollo de aplicaciones web fundada y localizada en Colombia.
+            Nos especializamos en el desarrollo de aplicaciones basadas en análisis y transformación de datos,
+            construimos modelos analíticos que se soportan en metodologías de optimización avanzadas 
+            y diseñamos flujos de trabajo automatizados totalmente personalizados.
+          </p>
+          <h4 style="font-weight: 600;">
+            Nuestro resultado es simple, veloz y potente.
+          </h4>
+          <a target="_blank" rel="noopener noreferrer" href="https://wa.link/fkk2xr" class="btn btn-light mt-5">
+            <h4 style="font-weight: 600;">¡Hablemos sobre tu proyecto!</h4>
+          </a>
+        </div>      
+      </div>    
+    </div>
+  </div>
+</section>
+
+<section class="my-5" id="nosotros">
+  <h5 class="display-5 text-left ml-3 ml-md-5 text-muted" style="font-weight: 600 !important;">Qué hacemos por tu negocio</h5>
   <h2 class="display-5 text-left ml-3 ml-md-5" style="font-weight: 600 !important;">¿Todavía lo estás dudando? </h2>
   <p class="text-muted d-none d-md-block ml-5"><i>Haz click en cada recuadro para dirigirte al artículo original.</i></p>
   <p class="text-muted d-block d-md-none ml-3"><i>Toca cada recuadro para dirigirte al artículo original.</i></p>

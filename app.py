@@ -45,7 +45,15 @@ def plans(_plan):
 @APP.route('/contact')
 def contact():
     return render_template(
-        'contactus.html'
+        'contactus.html',
+    )
+
+@APP.route('/contact/<tellusmore>')
+def contactInfo(tellusmore):
+    print(tellusmore)
+    return render_template(
+        'contactus.html',
+        tellusmore = tellusmore
     )
 
 @APP.route('/contact/contactme', methods=['POST'])
