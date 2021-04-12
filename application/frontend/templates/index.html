@@ -249,7 +249,11 @@ Expertos en ciencia de datos
             <p class="m-0"><small>Estaremos en contacto contigo</small></p>
           </div>
         </div>
-        <img class="img-fluid position-absolute" style="width: 2em; z-index: 3; margin-right: 6.8em; transform: rotate(180deg);" src="{{url_for('static', filename='img/svg/pointer-arrow.svg')}}">
+        <img 
+          class="img-fluid position-absolute pointer"
+          ng-show="isDirSupp" 
+          style="width: 2em; z-index: 3; margin-right: 6.8em; transform: rotate(180deg);" 
+          src="{{url_for('static', filename='img/svg/pointer-arrow.svg')}}">
         <div class="d-flex flex-column align-items-center justify-content-center mx-1">          
           <div class="circle">            
             <img class="img-fluid w-50" src="{{url_for('static', filename='img/svg/trust.svg')}}" alt="">          
@@ -262,7 +266,11 @@ Expertos en ciencia de datos
       <div class="d-flex align-items-center justify-content-around">
         <div class="d-flex flex-column">
         </div>
-        <img class="img-fluid position-absolute" style="width: 2em; z-index: 3; margin-right: -6.8em;" src="{{url_for('static', filename='img/svg/pointer-arrow.svg')}}">
+        <img 
+          class="img-fluid position-absolute pointer" 
+          ng-show="isDirSupp"
+          style="width: 2em; z-index: 3; margin-right: -6.8em;" 
+          src="{{url_for('static', filename='img/svg/pointer-arrow.svg')}}">
         <div class="d-flex flex-column align-items-center justify-content-center mx-1">
           <div class="circle">
             <img class="img-fluid w-50" src="{{url_for('static', filename='img/svg/purpose.svg')}}" alt="">
@@ -281,7 +289,11 @@ Expertos en ciencia de datos
             <p class="m-0"><small>Pondremos manos a la obra</small></p>
           </div>          
         </div>
-        <img class="img-fluid position-absolute" style="width: 2em; z-index: 3; margin-right: 6.8em; transform: rotate(180deg);" src="{{url_for('static', filename='img/svg/pointer-arrow.svg')}}">
+        <img 
+          class="img-fluid position-absolute pointer"
+          ng-show="isDirSupp" 
+          style="width: 2em; z-index: 3; margin-right: 6.8em; transform: rotate(180deg);" 
+          src="{{url_for('static', filename='img/svg/pointer-arrow.svg')}}">
         <div class="d-flex flex-column align-items-center justify-content-center mx-1">
           <div class="circle">
             <img class="img-fluid w-50" src="{{url_for('static', filename='img/svg/advice.svg')}}" alt="">
@@ -295,7 +307,11 @@ Expertos en ciencia de datos
       <div class="d-flex align-items-center justify-content-around">
         <div class="d-flex flex-column">
         </div>
-        <img class="img-fluid position-absolute" style="width: 2em; z-index: 3; margin-right: -6.8em;" src="{{url_for('static', filename='img/svg/pointer-arrow.svg')}}">
+        <img 
+          class="img-fluid position-absolute pointer"
+          ng-show="isDirSupp" 
+          style="width: 2em; z-index: 3; margin-right: -6.8em;" 
+          src="{{url_for('static', filename='img/svg/pointer-arrow.svg')}}">
         <div class="d-flex flex-column align-items-center justify-content-center mx-1">
           <div class="circle">
             <img class="img-fluid w-50" src="{{url_for('static', filename='img/svg/success.svg')}}" alt="">
@@ -314,7 +330,11 @@ Expertos en ciencia de datos
             <p class="m-0"><small>Fortalece tu negocio</small></p>
           </div>          
         </div>
-        <img class="img-fluid position-absolute" style="width: 2em; z-index: 3; margin-right: 6.8em; transform: rotate(180deg);" src="{{url_for('static', filename='img/svg/pointer-arrow.svg')}}">
+        <img 
+          class="img-fluid position-absolute pointer" 
+          ng-show="isDirSupp"
+          style="width: 2em; z-index: 3; margin-right: 6.8em; transform: rotate(180deg);" 
+          src="{{url_for('static', filename='img/svg/pointer-arrow.svg')}}">
         <div class="d-flex flex-column align-items-center justify-content-center mx-1">
           <div class="circle">
             <img class="img-fluid w-50" src="{{url_for('static', filename='img/svg/strong.svg')}}" alt="">
@@ -330,8 +350,8 @@ Expertos en ciencia de datos
   <hr class="mx-3 d-block d-md-none">
 </section>
 
-<h5 class="display-5 pl-5 mt-5 text-left text-muted" style="font-weight: 600 !important;">La hora más barata del mercado</h5>
-<h2 class="display-5 pl-5 text-left mb-5" style="font-weight: 600 !important;">Compara el costo de una hora de desarrollo</h2>
+<h5 class="display-5 pl-md-5 pl-2 mt-5 text-left text-muted" style="font-weight: 600 !important;">La hora más barata del mercado</h5>
+<h2 class="display-5 pl-md-5 pl-2 text-left mb-5" style="font-weight: 600 !important;">Compara el costo de una hora de desarrollo</h2>
 <section class="my-5" id="prices">
   <div class="card-deck align-items-center h-100 pb-0 px-4">
     <div class="card align-items-center justify-content-center h-100 w-100" id="price_1">

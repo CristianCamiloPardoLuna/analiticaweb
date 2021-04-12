@@ -208,12 +208,15 @@ body #inicia .carousel-inner .carousel-item .card-deck .card .card-body img {
   height: 100% !important;
   width: 100% !important;
 }
+body #inicia #inicia-sm .pointer:not(*:root) {
+  display: none !important;
+}
 body #inicia #inicia-sm #pilar {
   background: #53182C;
-  height: 100%;
+  height: 75%;
   width: 5%;
   border-radius: 25px !important;
-  margin-left: 45vw;
+  margin-left: 45vw !important;
 }
 body #inicia #inicia-sm .circle {
   background: #53182C;
@@ -233,11 +236,11 @@ body #inicia #inicia-sm .comment {
   padding: 0.5em;
 }
 body #inicia #inicia-sm .flex-column .d-flex {
-  height: 20vh;
+  height: 15vh;
 }
 body #inicia #inicia-sm .flex-column .d-flex .d-flex {
   width: 33% !important;
-  margin: 1em 0 1em 0;
+  margin: 0.3em 0 0.3em 0;
 }
 body #inicia #inicia-sm .flex-column .d-flex .d-flex p {
   padding: 0;
