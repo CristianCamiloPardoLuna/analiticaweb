@@ -15,6 +15,10 @@ sass --watch C:\Users\crist\Documents\GitHub\analiticaweb\application\frontend\s
   outline: none !important;
 }
 
+html {
+  width: 100vw !important;
+}
+
 body {
   font-weight: 400 !important;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
