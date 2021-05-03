@@ -99,7 +99,7 @@ body #navbar .dropdown-menu .dropdown-item:active {
 }
 body #initial-effect {
   background: #f8f9fa;
-  background: linear-gradient(0deg, #f8f9fa 0%, rgba(177, 99, 144, 0.5914565655) 100%);
+  background: linear-gradient(0deg, #f8f9fa 0%, rgba(106, 34, 59, 0.25) 100%);
 }
 body #initial-effect .bg-light {
   box-shadow: 0 4px 8px 3px rgba(0, 0, 0, 0.2) !important;
@@ -115,32 +115,33 @@ body #home {
   body #home {
     height: 90vh !important;
   }
-  body #home #col-mt {
-    margin-top: 20vh !important;
-  }
 }
 @media screen and (min-width: 736px) {
-  body #home #col-mt {
-    margin-top: 35vh !important;
+  body #home #companydesc {
+    margin-top: 10vh !important;
   }
 }
 body #home #slogan {
   color: #5e2639;
 }
-body #home #companylogo {
-  animation: upper-show 0.8s ease-in-out;
-  animation-fill-mode: forwards;
-}
 body #home #companydesc {
   animation: upper-show 1s ease-in-out;
   animation-fill-mode: forwards;
 }
-body #home #startnow {
-  animation: upper-show 1.2s ease-in-out;
-  animation-fill-mode: forwards;
-}
 body #home #startnow input {
-  border: 1px solid #5e2639;
+  padding: 0.3rem !important;
+}
+body #home #startnow input::placeholder {
+  font-size: large !important;
+  font-weight: 600 !important;
+  color: #6c757d !important;
+  opacity: 1;
+}
+body #home #startnow input:-ms-input-placeholder {
+  color: #6c757d !important;
+}
+body #home #startnow input::-ms-input-placeholder {
+  color: #6c757d !important;
 }
 body #inicia ol {
   transform: translateY(-50vh);
@@ -282,7 +283,7 @@ body #portfolio .card-deck .card .btn-outline-dark:hover {
 @media screen and (min-width: 736px) {
   body #portfolio .card-deck .card .btn-outline-dark:hover {
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.5);
-    background: rgba(245, 156, 156, 0.7) !important;
+    background: rgba(70, 16, 34, 0.2) !important;
   }
 }
 body #portfolio .card-deck .card .btn-outline-dark:hover .arrow {
@@ -493,13 +494,33 @@ body #nosotros .img5 {
     background-attachment: fixed;
   }
 }
-body #nuestroportal .card hr {
-  border: 2px solid whitesmoke !important;
+body #nuestroportal .banner {
+  background: rgba(70, 16, 34, 0.2) !important;
+  border: 0 !important;
+}
+body #nuestroportal .line-through {
+  text-align: center;
+  position: relative;
+}
+body #nuestroportal .line-through:before, body #nuestroportal .line-through:after {
+  content: "";
+  display: block;
+  width: 40%;
+  height: 3px;
+  border-radius: 5px;
+  background: #5e2639;
+  top: 50%;
+  position: absolute;
+}
+body #nuestroportal .line-through:after {
+  right: 0;
+}
+body #nuestroportal .line-through:before {
+  left: 0;
 }
 body #nuestroportal .card .card-header,
 body #nuestroportal .card .card-footer {
-  background: radial-gradient(circle, #8c2649 0%, #4b1326 100%) !important;
-  color: whitesmoke;
+  background: rgba(70, 16, 34, 0.2) !important;
   border: 0 !important;
 }
 body #nuestroportal .card .card-body {
@@ -510,7 +531,7 @@ body #nuestroportal .card .card-body img {
   border-radius: 5px;
 }
 body #quienessomos {
-  background: linear-gradient(-45deg, #53182C, #96445f, #552c33, #422f32);
+  background: linear-gradient(-45deg, #e2cfd6, #b3a1a7, #836c70, #948083);
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
 }
@@ -524,20 +545,6 @@ body #quienessomos {
   100% {
     background-position: 0% 50%;
   }
-}
-body #quienessomos .card {
-  background: none !important;
-}
-body #quienessomos .card .card-body .text-body {
-  padding: 0.5em;
-  color: whitesmoke !important;
-  text-align: center;
-  border: 2px solid whitesmoke;
-  border-radius: 5px;
-}
-body #quienessomos .card .card-body .btn {
-  font-weight: 600;
-  color: #461022;
 }
 body #page-footer {
   background: radial-gradient(circle, #8c2649 0%, #4b1326 100%) !important;

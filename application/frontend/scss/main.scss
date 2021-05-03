@@ -126,7 +126,7 @@ body{
     }
     #initial-effect{
         background: rgb(248,249,250);
-        background: linear-gradient(0deg, rgba(248,249,250,1) 0%, rgba(177,99,144,0.5914565655363708) 100%); 
+        background: linear-gradient(0deg, rgba(248,249,250,1) 0%, rgba(106,34,59,0.25) 100%);
         .bg-light{
             box-shadow: 0 4px 8px 3px rgba(0,0,0,0.2) !important;
         }
@@ -139,31 +139,34 @@ body{
         height: 100vh;
         @media screen and (max-width: 736px) {
             height: 90vh !important;
-            #col-mt{
-                margin-top: 20vh !important;
-            }            
         };
         @media screen and (min-width: 736px){
-            #col-mt{
-                margin-top: 35vh !important;
+            #companydesc{
+                margin-top: 10vh !important;
             }
         }
         #slogan{
             color: $test_color_plain;
         }
-        #companylogo{
-            animation: upper-show 0.8s ease-in-out;
-            animation-fill-mode: forwards;
-        }
         #companydesc{
             animation: upper-show 1s ease-in-out;
             animation-fill-mode: forwards;
         }
-        #startnow{
-            animation: upper-show 1.2s ease-in-out;
-            animation-fill-mode: forwards;            
+        #startnow{            
             input{
-                border: 1px solid $test_color_plain;                
+                padding: 0.3rem !important;
+            }
+            input::placeholder {
+                font-size: large !important;
+                font-weight: 600 !important;
+                color: #6c757d !important;
+                opacity: 1;
+            }              
+            input:-ms-input-placeholder {
+                color: #6c757d !important;
+            }              
+            input::-ms-input-placeholder {
+                color: #6c757d !important;
             }
         }
     }
@@ -313,7 +316,7 @@ body{
                 .btn-outline-dark:hover{
                     @media screen and(min-width: 736px) {
                         box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5);
-                        background: $glow !important;                       
+                        background: rgb(70, 16, 34, 0.2) !important;                       
                     }
                     color: #343a40;
                     .arrow{
@@ -535,14 +538,37 @@ body{
         }
     }
     #nuestroportal{
+        .banner{
+            background: rgb(70, 16, 34, 0.2) !important;
+            border: 0 !important;
+        }
+        .line-through{
+            text-align: center;
+            position: relative;
+            &:before,
+            &:after {
+                content: "";
+                display: block;
+                width: 40%;
+                height: 3px;
+                border-radius: 5px;
+                background: $test_color_plain;
+                top: 50%;
+                position: absolute;
+              }
+              &:after {
+                right: 0;
+              }
+              &:before {
+                left: 0;
+              }
+        }
         .card{
             hr{
-                border: 2px solid whitesmoke !important;
             }
             .card-header,
             .card-footer{
-                background: $test_color !important;
-                color: whitesmoke;
+                background: rgb(70, 16, 34, 0.2) !important;
                 border: 0 !important;
             }
             .card-body{
@@ -555,7 +581,7 @@ body{
         }        
     }
     #quienessomos{
-        background: linear-gradient(-45deg, #53182C, #96445f, #552c33, #422f32);
+        background: linear-gradient(-45deg, #e2cfd6, #b3a1a7, #836c70, #948083);
         background-size: 400% 400%;
         animation: gradient 15s ease infinite;
         
@@ -568,22 +594,6 @@ body{
             }
             100% {
                 background-position: 0% 50%;
-            }
-        }
-        .card{
-            background: none !important;
-            .card-body{
-                .text-body{
-                    padding: 0.5em;
-                    color: whitesmoke !important;
-                    text-align: center;  
-                    border: 2px solid whitesmoke;
-                    border-radius: 5px;
-                }
-                .btn{
-                    font-weight: 600;
-                    color: $test_color_hover;
-                }
             }
         }
     }

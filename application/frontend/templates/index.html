@@ -18,27 +18,43 @@ Expertos en ciencia de datos
 {% endwith %}
 
 <section id="home">
-    <div class="d-flex col-md-5 h-100 pr-md-0 align-items-center text-center justify-content-center cover">
-        <div class="d-flex flex-column" id="col-mt" style="">          
-          <div class="mx-auto text-md-left align-items-start flex-column w-75" id="companydesc">
-            <img class="img-fluid col-sm-9 p-0" src="{{url_for('static', filename='img/company/md/uva.png')}}" alt="" id="companylogo">
-            <h3 class="display-5" id="slogan" style="font-weight: 600; transform: translateY(-3vh);">Expertos en ciencia de datos</h3>
-          </div>          
-          <div class="col-md-9 p-md-0 mt-md-0 mx-auto form-inline" id="startnow">
-            
-            <p class="text-md-left text-sm-center m-0 lead">
-              Conecta todas tus fuentes, visualiza tus indicadores e impulsa tu negocio.
-            </p>
-            <form 
-              class="d-md-flex w-100 p-0 align-items-center justify-content-around"
-              action="/startnow"
-              method="POST">
-              <input type="email" class="form-control col-lg my-2" name="email" placeholder="Ingresa tu correo electrónico">
-              <button type="submit" class="btn btn-outline-warning shadow-none ml-md-1 my-2 col-sm col-md-3">¡Inicia!</button>
-            </form>
-
-            <p class="text-sm-center text-md-left"><i>Comienza desde $40.000 COP, la hora más barata del mercado.</i></p>
-          </div>
+    <div 
+      class="d-flex col-md-6 h-100 pr-md-0 align-items-center text-center justify-content-center px-3"
+      style="height: 90vh;">
+        <div 
+          class="mx-auto text-md-left align-items-start flex-column px-md-5" 
+          id="companydesc">
+          <img 
+          style="border-bottom-right-radius: 50%;"
+          class="img-fluid p-0 m-0 w-25" 
+          src="{{url_for('static', filename='img/company/logo-md/uva.png')}}">
+          <h1
+          id="slogan"
+          class="m-0" 
+          style="font-weight: 600;">
+          Expertos en ciencia de datos
+          </h1>
+          <h4
+          class="text-md-left text-sm-left m-0 mt-1"
+          >
+          Conecta todas tus fuentes, visualiza tus indicadores e impulsa tu negocio con Analítica
+          </h4>
+          <form 
+            class="d-md-flex w-100 p-0 align-items-center justify-content-around"
+            action="/startnow"
+            id="startnow"
+            method="POST">
+            <input type="email" class="form-control col-lg my-2" name="email" placeholder="Ingresa tu correo electrónico">
+            <button 
+              type="submit" 
+              class="btn btn-outline-warning shadow-none ml-md-3 my-2 col-sm col-md-3">
+                Inicia
+            </button>
+          </form>            
+          <h5
+            class="text-sm-center text-md-left m-0 mt-1">
+            Inicia ahora desde $40.000 COP, el mejor precio del mercado*
+          </h5>
         </div>
     </div>
     <div class="d-none pr-5 d-sm-block w-100">
@@ -51,29 +67,36 @@ Expertos en ciencia de datos
       <div class="d-flex flex-column justify-content-center card-body text-md-right text-center">
         <h4 class="display-4 d-none d-md-block" style="font-weight: 600;">Transforma tus datos en acciones</h4>
         <h1 class="d-block d-md-none" style="font-weight: 600;">Transforma tus datos en acciones</h1>
-        <h3 class="lead">Tu propio equipo de expertos desarrolladores por la hora más barata del mercado</h3>
+        <h3>Reduce costos y optimiza los procesos de tu empresa a través de las últimas tendencias en tecnología</h3>
       </div>
     </div>
-    <div class="card px-md-5 d-none d-md-block">
-      <div class="d-flex flex-column h-100 justify-content-center">
-        <a href="#automatizacion" class="btn h-25 d-flex align-items-center btn-outline-dark btn-block text-left" style="background: white;">
-          <img class="mr-3 p-0 col-md-1" src="{{url_for('static', filename='img/svg/process.svg')}}" alt="">
+    <div class="card d-flex align-items-center justify-content-center px-md-5">
+      <div class="d-flex flex-column py-5 justify-content-center align-items-center">
+        <a href="#apps" class="btn h-25 d-flex align-items-center btn-outline-dark btn-block text-left" style="background: white;">
+          <img class="mr-3 p-0 col-md-1" src="{{url_for('static', filename='img/svg/smartphone.svg')}}" alt="">
           <div class="d-flex col-md-9 p-0 flex-column">
-            <h4 class="display-5" style="font-weight: 600;">Automatización de procesos</h4>
-            <p class="m-0">Diseñamos, desarrollamos y desplegamos flujos de trabajo automatizados totalmente personalizados.</p>
+            <h4 class="display-5 m-0" style="font-weight: 600;">Desarrollo de aplicaciones</h4>
           </div>
           <div class="flex-column d-none d-md-block col-2 p-0 align-items-center justify-content-center">
-            <img class="img-fluid arrow" src="{{url_for('static', filename='img/svg/arrow-left.svg')}}" alt="">
+            <img class="img-fluid arrow" src="{{url_for('static', filename='img/svg/arrow-left.svg')}}">
+          </div>
+        </a>
+        <a href="#automatizacion" class="btn h-25 d-flex align-items-center btn-outline-dark btn-block text-left" style="background: white;">
+          <img class="mr-3 p-0 col-md-1" src="{{url_for('static', filename='img/svg/system.svg')}}">
+          <div class="d-flex col-md-9 p-0 flex-column">
+            <h4 class="display-5 m-0" style="font-weight: 600;">Automatización de procesos</h4>
+          </div>
+          <div class="flex-column d-none d-md-block col-2 p-0 align-items-center justify-content-center">
+            <img class="img-fluid arrow" src="{{url_for('static', filename='img/svg/arrow-left.svg')}}">
           </div>
         </a>
         <a href="#ciencia_de_datos" class="btn h-25 d-flex align-items-center btn-outline-dark btn-block h-25 text-left" id="dt-btn" style="background: white;">
-          <img class="mr-3 p-0 col-md-1" src="{{url_for('static', filename='img/svg/data-analysis.svg')}}" alt="">
+          <img class="mr-3 p-0 col-md-1" src="{{url_for('static', filename='img/svg/brain1.svg')}}">
           <div class="d-flex col-md-9 p-0 flex-column">
-            <h4 class="display-5" style="font-weight: 600;">Ciencia de datos</h4>
-            <p class="m-0">Explota al máximo tus datos a través de nuestras avanzadas técnicas de análisis de datos y poderosas visualizaciones.</p>
+            <h4 class="display-5 m-0" style="font-weight: 600;">Ciencia de datos e inteligencia artificial</h4>
           </div>
           <div class="flex-column d-none d-md-block col-2 p-0 align-items-center justify-content-center">
-            <img class="img-fluid arrow" src="{{url_for('static', filename='img/svg/arrow-left.svg')}}" alt="">
+            <img class="img-fluid arrow" src="{{url_for('static', filename='img/svg/arrow-left.svg')}}">
           </div>
         </a>
       </div>
@@ -208,12 +231,11 @@ Expertos en ciencia de datos
             <div class="card" style="border: 0 !important; background: none !important;">
               <div class="card-body text-left">
                 <h4 class="display-5">
-                  Podrás ver los resultados de nuestro trabajo.
+                  Todo bajo tu control
                 </h4>
                 <p class="lead text-muted">
-                  Durante la ejecución de tu proyecto y sin necesidad culminar este,
-                  podrás empezar a visualizar desde nuestro <a href="https://clientes.analiticaco.com"><dat>Portal Clientes</dat></a> (totalmente gratis)
-                  los resultados de nuestro trabajo.
+                  Durante la ejecución de tu proyecto,
+                  podrás visualizar y controlar tu aplicación desde nuestro <a href="https://clientes.analiticaco.com"><dat>Portal Clientes</dat></a>.
                 </p>
               </div>
             </div>
@@ -451,34 +473,114 @@ Expertos en ciencia de datos
       <h4 style="font-weight: 600;">¡Solicita un demo totalmente gratis!</h4>
     </div>
   </div>
-  <div class="card-deck d-none d-md-block w-75">
-    <div class="card mx-auto" style="background: none !important; border: none !important;">
-      <div class="card-header text-center mx-3 p-5" style="border-radius: 20px;">
-        <h3 class="m-0" style="font-weight: 600 !important;">¿Ya conoces nuestro Portal Clientes?</h3>
-        <hr>
-        <p class="lead">
-          Analítica ha desarrollado un aplicativo en donde cada uno de nuestros clientes 
-          puede visualizar sus reportes, acceder a sus formularios o controlar su aplicativo desarrollado por <b>Analítica</b>.
-          <br>
-          Este potente servicio cuenta con encriptación E2E (de extremo a extremo) y soporta complejos
-          modelos de recolección de datos y optimización de procesos sin ningún problema gracias a su 
-          arquitectura desplegada totalmente en la nube.
-          <br>
-          ¡Es la forma más fácil de obtener los resultados que quieres, sin invertir en niveles de seguridad y desarrollo extra!  
-          Consulta las tarifas <a style="font-weight: 600; color: whitesmoke;" href="{{url_for('pricing')}}">aquí</a>.
-        </p>
-        <a class="btn btn-light mt-4" href="{{url_for('contactInfo', tellusmore='Quiero un demo gratuito para el Portal Clientes de Analítica.')}}">
-          <h4 class="m-0" style="font-weight: 600;">¡Solicita un demo gratuito!</h4>
-        </a>        
+  <div class="d-none d-md-block">
+    <div
+    class="d-flex w-100 p-2 px-5 banner">
+    <div class="d-flex flex-column col-6 justify-content-center">
+      <h2
+        style="font-weight: 600;">
+        ¿Ya conoces nuestro Portal Clientes?
+      </h2>
+      <p class="lead m-0">
+        Controla tu aplicación, administra tu plan, vigila tus datos, consulta tus reportes totalmente personalizados
+        y mucho más.
+        <br> 
+        Analítica ha desarrollado un aplicativo desde donde puedes tomar el control de tu proyecto,
+        sin tiquetes ni tiempos de atención.
+      </p>
+      <p class="lead my-2 line-through">
+        ¿Te interesa? 
+      </p> 
+      <div class="d-flex align-items-center justify-content-center">               
+        <button class="btn btn-outline-warning">
+          <h5
+            class="m-0"
+            style="font-weight: 600;">
+            Solicita un demo totalmente gratis
+          </h5>          
+        </button>
       </div>
     </div>
-  </div>  
+    <div class="d-flex px-5 mx-1">
+      <img
+        style="transform: scale(1.15); border-radius: 15px; "        
+        class="img-fluid" 
+        src="{{url_for('static', filename='img/photo/analitica1.png')}}">
+    </div>    
+  </div>
+  </div>
 </section>
 
-<section class="mt-5" id="nuestroservicio">
-  <!--workflow-->
+<section class="mt-5" id="nuestroservicio">  
   <h5 class="display-5 text-left ml-3 ml-md-5 text-muted" style="font-weight: 600 !important;">Nuestra especialidad</h5>
   <h2 class="display-5 text-left ml-3 ml-md-5" style="font-weight: 600 !important;">Conoce lo que tenemos para ofrecer</h2>
+    <!-- desarrollo de apps -->
+  <div class="card-deck px-5 my-5" id="apps">
+    <div class="card mb-5 d-block d-md-none m-0 justify-content-center">
+      <div class="d-flex flex-column p-3" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5); border-radius: 5px;">
+        <p class="lead m-0" style="font-weight: 600; text-transform: uppercase;">Ciencia de datos</h3>
+          <p class="text-muted m-0">Explota al máximo tus datos a través de nuestras avanzadas técnicas de análisis de datos y poderosas visualizaciones.</p>
+      </div>
+    </div>
+    <div class="card m-0">
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+          <img class="img-fluid w-25" src="{{url_for('static', filename='img/svg/graphic.svg')}}" alt="">
+          <p style="text-transform: uppercase; font-weight: 600;" class="lead m-0">Pronósticos y analítica predictiva</p>
+          <p class="text-muted">
+            Desarrollaremos todos los procesos estadísiticos para estimar 
+            las relaciones entre las variables que pueden afectar la salud de tu negocio.
+          </p>
+        </li>
+        <li class="list-group-item">
+          <img class="img-fluid w-25" src="{{url_for('static', filename='img/svg/cloud-computing.svg')}}" alt="">
+          <p style="text-transform: uppercase; font-weight: 600;" class="lead m-0">Procesamiento de lenguaje natural</p>
+          <p class="text-muted">
+            Desde chatbots hasta análisis de sentimientos, nuestro equipo identifica, extrae, cuantifica y estudia
+            patrones linguísticos para obtener las mejores y más confiables conclusiones. 
+          </p>
+        </li>
+        <li class="list-group-item">
+          <img class="img-fluid w-25" src="{{url_for('static', filename='img/svg/document.svg')}}" alt="">
+          <p style="font-weight: 600; text-transform: uppercase;" class="lead m-0">Reportes totalmente personalizados</p>
+          <p class="text-muted">
+            Materializa tu estrategia en reportes totalmente personalizados para determinar
+            el comportamiento histórico, actual y futuro de tu negocio.
+          </p>
+        </li>
+      </ul>
+    </div>
+    <div class="card m-0 justify-content-center">
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+          <img class="img-fluid w-25" src="{{url_for('static', filename='img/svg/brainstorming.svg')}}" alt="">
+          <p class="lead m-0" style="font-weight: 600; text-transform: uppercase;">Tus datos seguros</p>
+          <p class="text-muted">
+            Protege tus datos mediante encriptación de extremo a extremo <i>(End-to-end)</i>
+            desde nuestro aplicativo web para clientes.
+          </p>
+        </li>
+        <li class="list-group-item">
+          <img class="img-fluid w-25" src="{{url_for('static', filename='img/svg/brain.svg')}}" alt="">
+          <p class="lead m-0" style="font-weight: 600; text-transform: uppercase;">Inteligencia artificial</p>
+          <p class="text-muted">
+            Optimizamos los procesos de aprendizaje y análisis de datos que requiera tu proyecto con 
+            metodologías avanzadas para asegurar la confiabilidad de tus resultados.
+          </p>
+        </li>
+      </ul>
+    </div>
+    <div class="card d-none d-md-block m-0">
+      <div class="d-flex w-100 h-100 align-items-center justify-content-center">
+        <div class="d-flex flex-column p-3" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5); border-radius: 5px;">
+          <p class="lead m-0" style="font-weight: 600; text-transform: uppercase;">Desarrollo de apps</h3>
+            <p class="text-muted m-0">Explota al máximo tus datos a través de nuestras avanzadas técnicas de análisis de datos y poderosas visualizaciones.</p>
+        </div>
+      </div>      
+    </div>
+  </div>
+  <hr class="my-0 mx-5">
+  <!--workflow-->
   <div class="card-deck px-5 my-5" id="automatizacion">
     <div class="card m-0 mb-5 justify-content-center">
       <div class="d-flex flex-column p-3" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5); border-radius: 5px;">
@@ -591,43 +693,19 @@ Expertos en ciencia de datos
 </section>
 
 <section class="mt-5" id="quienessomos">
-  <div class="card d-block d-md-none">
-    <div class="card-body">
-      <div class="text-body">
-        <h4 style="font-weight: 600;">Quiénes somos</h4>
-        <p>
-          <b>Analítica</b> es una firma de desarrollo de aplicaciones web fundada y localizada en Colombia.
-          Nos especializamos en el desarrollo de aplicaciones basadas en análisis y transformación de datos,
-          construimos modelos analíticos que se soportan en metodologías avanzadas como <i>Machine learning</i> y <i>Data mining</i>                
-        </p>
-        <p style="font-weight: 600;">
-          Nuestro trabajo se caracteriza por ser veloz, simple y potente.
-        </p>
-        <a target="_blank" rel="noopener noreferrer" href="https://wa.link/fkk2xr" class="btn btn-light">
-          ¡Hablemos sobre tu proyecto!
-        </a>
-      </div>      
-    </div>    
-  </div>
-  <div class="card-deck d-none d-md-block">
-    <div class="card">
-      <div class="card-body p-5">
-        <div class="text-body p-5">
-          <h3 class="text-center" style="font-weight: 600;">Quiénes somos</h3>
-          <p class="lead">
-            <b>Analítica</b> es una firma de desarrollo de aplicaciones web fundada y localizada en Colombia.
-            Nos especializamos en el desarrollo de aplicaciones basadas en análisis y transformación de datos,
-            construimos modelos analíticos que se soportan en metodologías de optimización avanzadas 
-            y diseñamos flujos de trabajo automatizados totalmente personalizados.
-          </p>
-          <h4 style="font-weight: 600;">
-            Nuestro resultado es simple, veloz y potente.
-          </h4>
-          <a target="_blank" rel="noopener noreferrer" href="https://wa.link/fkk2xr" class="btn btn-light mt-5">
-            <h4 style="font-weight: 600;">¡Hablemos sobre tu proyecto!</h4>
-          </a>
-        </div>      
-      </div>    
+  <div class="d-flex w-100 p-5">
+    <div class="d-flex flex-column col h-100 px-5">
+      <img 
+      class="img-fluid"
+      style="border-radius: 50%; height: 20em; width: 20em;"
+      src="{{url_for('static', filename='img/photo/analitica2.png')}}">
+      <p>
+        Iván Aponte - Líder comercial
+      </p>
+    </div>
+    <div class="d-flex flex-column h-100 align-items-center justify-content-center col" style="height: 100% !important;">
+      <h2>¿Quienes somos?</h2>
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas blanditiis obcaecati temporibus id odit asperiores vitae tenetur, cupiditate molestiae cum."
     </div>
   </div>
 </section>
