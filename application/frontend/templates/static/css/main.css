@@ -19,6 +19,7 @@ body {
   font-weight: 400 !important;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   overflow-x: hidden !important;
+  /*animation*/
 }
 body hr {
   border: 2px solid #5e2639;
@@ -86,6 +87,13 @@ body nav .active {
 }
 body nav ul li {
   color: black !important;
+}
+body #navbar #navbar-1-ul li a,
+body #navbar #navbar-1-ul a,
+body #navbar #-navbar-1-ul li a,
+body #navbar #-navbar-1-ul a {
+  color: #5e2639;
+  font-weight: 600;
 }
 body #navbar .dropdown-menu .dropdown-item {
   transition: all 200ms ease-in-out;
@@ -397,12 +405,15 @@ body #prices #price_2 {
 body #prices #price_2 .card-body {
   border-top-left-radius: 5px !important;
   border-top-right-radius: 5px !important;
-  background: rgba(95, 24, 48, 0.1);
+  background: rgba(70, 16, 34, 0.1) !important;
 }
 body #prices #price_2 .card-footer {
   background: radial-gradient(circle, #8c2649 0%, #4b1326 100%);
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
+}
+body #nuestroservicio .service-header {
+  background: rgba(70, 16, 34, 0.1) !important;
 }
 body #nuestroservicio .card {
   background: none;
@@ -419,83 +430,8 @@ body #nuestroservicio .area {
   height: 100%;
   z-index: -9999;
 }
-body #nosotros .card-deck {
-  margin-top: 2em !important;
-  margin-bottom: 2em !important;
-}
-@media screen and (min-width: 736px) {
-  body #nosotros .card-deck {
-    height: 60vh !important;
-  }
-}
-@media screen and (max-width: 736px) {
-  body #nosotros .card {
-    height: 70vh !important;
-  }
-  body #nosotros .card hr {
-    margin-bottom: 1em !important;
-  }
-}
-body #nosotros img {
-  border-radius: 15px !important;
-}
-body #nosotros .img1 {
-  background: url("../img/photo/expo1.jpg");
-  background-size: cover;
-}
-@media screen and (min-width: 736px) {
-  body #nosotros .img1 {
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-  }
-}
-body #nosotros .img2 {
-  background: url("../img/photo/computer1.jpg");
-  background-size: cover;
-}
-@media screen and (min-width: 736px) {
-  body #nosotros .img2 {
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-  }
-}
-body #nosotros .img3 {
-  background: url("../img/photo/notebook2.jpg");
-  background-size: cover;
-}
-@media screen and (min-width: 736px) {
-  body #nosotros .img3 {
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-  }
-}
-body #nosotros .img4 {
-  background: url("../img/photo/developer2.jpg");
-  background-size: cover;
-}
-@media screen and (min-width: 736px) {
-  body #nosotros .img4 {
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-  }
-}
-body #nosotros .img5 {
-  background: url("../img/photo/notebook3.jpg");
-  background-size: cover;
-}
-@media screen and (min-width: 736px) {
-  body #nosotros .img5 {
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-  }
-}
 body #nuestroportal .banner {
-  background: rgba(70, 16, 34, 0.2) !important;
+  background: rgba(70, 16, 34, 0.1) !important;
   border: 0 !important;
 }
 body #nuestroportal .line-through {
@@ -530,21 +466,30 @@ body #nuestroportal .card .card-body {
 body #nuestroportal .card .card-body img {
   border-radius: 5px;
 }
-body #quienessomos {
-  background: linear-gradient(-45deg, #e2cfd6, #b3a1a7, #836c70, #948083);
-  background-size: 400% 400%;
-  animation: gradient 15s ease infinite;
+body #quienessomos .cover {
+  background: rgba(70, 16, 34, 0.1) !important;
 }
-@keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+body #nosotros .accordion {
+  box-shadow: 0 4px 8px 3px rgba(0, 0, 0, 0.2) !important;
+  border-radius: 5px;
+}
+body #nosotros .accordion .card .card-header {
+  background: rgba(70, 16, 34, 0.1) !important;
+}
+body #nosotros .accordion .card .card-header .btn {
+  text-decoration: none;
+  color: black;
+}
+body #nosotros .accordion .card .card-header .btn img {
+  transition: all 300ms ease-in-out;
+  transform: rotate(-90deg);
+}
+body #nosotros .accordion .card .card-header .collapsed img {
+  transform: rotate(90deg);
+}
+body #nosotros .accordion .card .card-body a {
+  text-decoration: none;
+  color: black;
 }
 body #page-footer {
   background: radial-gradient(circle, #8c2649 0%, #4b1326 100%) !important;
@@ -676,7 +621,7 @@ body #whatsapp {
   z-index: 4;
   position: fixed;
   bottom: 20px;
-  right: 10px;
+  right: 0 !important;
 }
 body #whatsapp.animate {
   animation: side-appear 1500ms ease-in-out;
@@ -688,9 +633,16 @@ body #whatsapp.animate {
   }
 }
 @media screen and (min-width: 736px) {
-  body #whatsapp {
-    width: 4em;
+  body #whatsapp img {
+    height: 5em !important;
   }
+}
+body #whatsapp #banner {
+  background-color: #461022 !important;
+  color: whitesmoke;
+  text-decoration: none;
+  border-radius: 15px;
+  font-weight: 600 !important;
 }
 body #contact .area,
 body #thanks .area,
@@ -699,8 +651,8 @@ body #ourplans .area {
   position: fixed;
   background: whitesmoke;
   width: 100%;
-  height: 100vh;
-  z-index: -9999;
+  height: 100%;
+  z-index: -1;
 }
 body #contact .circles,
 body #thanks .circles,

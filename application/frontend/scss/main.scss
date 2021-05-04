@@ -111,6 +111,14 @@ body{
         }
     }
     #navbar{
+        #navbar-1-ul,
+        #-navbar-1-ul{
+            li a,
+            a{
+                color: $test_color_plain;
+                font-weight: 600;
+            }            
+        }
         .dropdown-menu{
             .dropdown-item{
                 transition: all 200ms ease-in-out;
@@ -442,7 +450,7 @@ body{
             .card-body{
                 border-top-left-radius: 5px !important;
                 border-top-right-radius: 5px !important;
-                background: $background-sec;
+                background: rgb(70, 16, 34, 0.1) !important;                            
             }
             .card-footer{
                 background: $test_color;
@@ -452,6 +460,9 @@ body{
         }
     }
     #nuestroservicio{
+        .service-header{
+            background: rgb(70, 16, 34, 0.1) !important;
+        }
         .card{
             background: none;
             border: 0;            
@@ -472,74 +483,10 @@ body{
             z-index: -9999;
         }
     }
-    #nosotros{
-        .card-deck{
-            margin-top: 2em !important;
-            margin-bottom: 2em !important;
-            @media screen and(min-width: 736px) {
-                height: 60vh !important;                
-            }                        
-        }
-        .card{
-            @media  screen and(max-width: 736px) {
-                height: 70vh !important;
-                hr{
-                    margin-bottom: 1em !important;
-                }            
-            }
-        }
-        img{
-            border-radius: 15px !important;
-        }
-        .img1{
-            background: url('../img/photo/expo1.jpg');
-            background-size: cover;
-            @media  screen and(min-width: 736px) {                
-                background-repeat: no-repeat;
-                background-position: center;
-                background-attachment: fixed;
-            }
-        }
-        .img2{
-            background: url('../img/photo/computer1.jpg');
-            background-size: cover;
-            @media  screen and(min-width: 736px) {                
-                background-repeat: no-repeat;
-                background-position: center;
-                background-attachment: fixed;
-            }
-        }
-        .img3{
-            background: url('../img/photo/notebook2.jpg');
-            background-size: cover;
-            @media  screen and(min-width: 736px) {                
-                background-repeat: no-repeat;
-                background-position: center;
-                background-attachment: fixed;
-            }
-        }
-        .img4{
-            background: url('../img/photo/developer2.jpg');
-            background-size: cover;
-            @media  screen and(min-width: 736px) {                
-                background-repeat: no-repeat;
-                background-position: center;
-                background-attachment: fixed;
-            }
-        }
-        .img5{
-            background: url('../img/photo/notebook3.jpg');
-            background-size: cover;
-            @media  screen and(min-width: 736px) {                
-                background-repeat: no-repeat;
-                background-position: center;
-                background-attachment: fixed;
-            }
-        }
-    }
+
     #nuestroportal{
         .banner{
-            background: rgb(70, 16, 34, 0.2) !important;
+            background: rgb(70, 16, 34, 0.1) !important;
             border: 0 !important;
         }
         .line-through{
@@ -581,19 +528,37 @@ body{
         }        
     }
     #quienessomos{
-        background: linear-gradient(-45deg, #e2cfd6, #b3a1a7, #836c70, #948083);
-        background-size: 400% 400%;
-        animation: gradient 15s ease infinite;
-        
-        @keyframes gradient {
-            0% {
-                background-position: 0% 50%;
-            }
-            50% {
-                background-position: 100% 50%;
-            }
-            100% {
-                background-position: 0% 50%;
+        .cover{
+            background: rgb(70, 16, 34, 0.1) !important;
+        }
+    }
+    #nosotros{
+        .accordion{
+            box-shadow: 0 4px 8px 3px rgba(0,0,0,0.2) !important;
+            border-radius: 5px;
+            .card{
+                .card-header{
+                    background: rgb(70, 16, 34, 0.1) !important;
+                    .btn{
+                        text-decoration: none;
+                        color: black;
+                        img{
+                            transition: all 300ms ease-in-out;
+                            transform: rotate(-90deg);
+                        }
+                    }
+                    .collapsed{                  
+                        img{
+                            transform: rotate(90deg);
+                        }
+                    }
+                }
+                .card-body{
+                    a{
+                        text-decoration: none;
+                        color: black;
+                    }
+                }
             }
         }
     }
@@ -737,21 +702,31 @@ body{
         }
     }
     #whatsapp{
+        z-index: 4;
+        position:fixed;
+        bottom:20px;
+        right: 0 !important;
         &.animate{
             animation: side-appear 1500ms ease-in-out;
             animation-fill-mode: forwards;
         }
-        z-index: 4;
-        position:fixed;
         @media screen and(max-width: 736px) {
             width:3em;           
         }        
         @media screen and(min-width: 736px) {
-            width:4em;           
+            img{
+                height: 5em !important;
+            }           
+        }
+        #banner{
+            background-color: $test_color_hover !important;
+            color: whitesmoke;
+            text-decoration: none;
+            border-radius: 15px;
+            font-weight: 600 !important;
         }        
-        bottom:20px;
-        right:10px;
     }
+    /*animation*/
     #contact,
     #thanks,
     #underconstruction,
@@ -760,8 +735,8 @@ body{
             position: fixed;
             background: whitesmoke;  
             width: 100%;
-            height:100vh;
-            z-index: -9999;
+            height:100%;
+            z-index: -1;
         }
 
         .circles{

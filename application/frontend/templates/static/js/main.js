@@ -12,3 +12,15 @@ try{
 }catch{
   //
 };
+
+var whatsApp = document.getElementById('whatsapp');
+window.onscroll = () =>{
+  if(! whatsApp.classList.contains('banner-active')){
+    setTimeout(
+      ()=>{
+        whatsApp.classList.add('banner-active');        
+      }, 
+      3000
+    );
+  }
+}

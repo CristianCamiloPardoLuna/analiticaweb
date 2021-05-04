@@ -45,7 +45,7 @@
             <a class="nav-link" href="#inicia">Cómo trabajamos</a>
           </div>
         </ul>
-        <ul class="navbar-nav">
+        <ul class="navbar-nav" id="-navbar-1-ul">
           <li class="nav-item">
             <a class="nav-link" href="{{ url_for('pricing') }}"> Precios </a>
           </li>
@@ -158,12 +158,17 @@
     {% endblock %}
     <a 
       id="whatsapp"
-      class="d-none"
+      class="d-flex"
       target="_blank"
       rel="noopener noreferrer"
       href="https://wa.link/fkk2xr">
+      <div class="d-flex align-items-center justify-content-center px-0 mx-1">
+        <p class="m-0 lead p-2" id="banner">
+          ¡Contáctanos!
+        </p>        
+      </div>
       <img 
-        class="img-fluid" 
+        class="img-fluid mr-2" 
         src="{{ url_for('static', filename='img/svg/whatsapp.svg') }}">
     </a>
     <section class="d-flex flex-column align-items-center justify-content-center w-100" id="page-footer"> <!--cambiar-->
@@ -180,7 +185,7 @@
             Todos los derechos reservados.
           </p>
         </div>
-        <div class="col-5 text-center d-none d-sm-block text-light">
+        <div class="col-6 px-1 text-center d-none d-sm-block text-light">
           <div class="d-flex mx-auto justify-content-around">
             <div class="flex-column col">          
               <ul class="list-group" style="background: none !important;">            
@@ -225,7 +230,6 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init();
-      window.scrollTo(0,5400)
     </script>
     <script>
             try{
