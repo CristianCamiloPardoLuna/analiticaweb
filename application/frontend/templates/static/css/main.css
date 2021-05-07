@@ -91,9 +91,23 @@ body nav ul li {
 body #navbar #navbar-1-ul li a,
 body #navbar #navbar-1-ul a,
 body #navbar #-navbar-1-ul li a,
-body #navbar #-navbar-1-ul a {
+body #navbar #-navbar-1-ul a,
+body #navbar #navbar-2-ul li a,
+body #navbar #navbar-2-ul a,
+body #navbar #-navbar-2-ul li a,
+body #navbar #-navbar-2-ul a {
   color: #5e2639;
   font-weight: 600;
+}
+body #navbar #navbar-1-ul li a:hover,
+body #navbar #navbar-1-ul a:hover,
+body #navbar #-navbar-1-ul li a:hover,
+body #navbar #-navbar-1-ul a:hover,
+body #navbar #navbar-2-ul li a:hover,
+body #navbar #navbar-2-ul a:hover,
+body #navbar #-navbar-2-ul li a:hover,
+body #navbar #-navbar-2-ul a:hover {
+  text-decoration: underline !important;
 }
 body #navbar .dropdown-menu .dropdown-item {
   transition: all 200ms ease-in-out;
@@ -107,7 +121,7 @@ body #navbar .dropdown-menu .dropdown-item:active {
 }
 body #initial-effect {
   background: #f8f9fa;
-  background: linear-gradient(0deg, #f8f9fa 0%, rgba(106, 34, 59, 0.25) 100%);
+  background: linear-gradient(0deg, #f8f9fa 0%, rgba(106, 34, 59, 0.2) 100%);
 }
 body #initial-effect .bg-light {
   box-shadow: 0 4px 8px 3px rgba(0, 0, 0, 0.2) !important;
@@ -128,6 +142,47 @@ body #home {
   body #home #companydesc {
     margin-top: 10vh !important;
   }
+  body #home #appsgif {
+    margin-top: 10vh !important;
+    margin-left: 1vw;
+    width: 500px;
+    height: 500px;
+  }
+  body #home #appsgif .wrapper {
+    padding: 0;
+  }
+  body #home #appsgif .wrapper > * {
+    position: absolute;
+  }
+  body #home #appsgif .wrapper#laptop-wrapper {
+    margin-top: 15vh;
+  }
+  body #home #appsgif .wrapper#laptop-wrapper #laptop-image {
+    filter: drop-shadow(2px 7px 4px rgba(0, 0, 0, 0.2));
+  }
+  body #home #appsgif .wrapper#laptop-wrapper #laptop-content {
+    border-radius: 5px;
+    width: 385px;
+    height: 240px;
+    top: 15px;
+    left: 11.5%;
+  }
+  body #home #appsgif .wrapper#phone-wrapper {
+    top: 20px;
+    left: 60%;
+  }
+  body #home #appsgif .wrapper#phone-wrapper #phone-image {
+    width: 350px;
+    filter: drop-shadow(2px 7px 3px rgba(0, 0, 0, 0.2));
+    height: 350px;
+  }
+  body #home #appsgif .wrapper#phone-wrapper #phone-content {
+    border-radius: 5px;
+    left: 22.2%;
+    top: 40px;
+    height: 265px;
+    width: 127px;
+  }
 }
 body #home #slogan {
   color: #5e2639;
@@ -138,6 +193,11 @@ body #home #companydesc {
 }
 body #home #startnow input {
   padding: 0.3rem !important;
+  border: 0;
+}
+body #home #startnow input:focus,
+body #home #startnow input:active {
+  border: 1.5px solid #5e2639;
 }
 body #home #startnow input::placeholder {
   font-size: large !important;
@@ -405,7 +465,8 @@ body #prices #price_2 {
 body #prices #price_2 .card-body {
   border-top-left-radius: 5px !important;
   border-top-right-radius: 5px !important;
-  background: rgba(70, 16, 34, 0.1) !important;
+  background: #461022;
+  background: radial-gradient(circle, rgba(70, 16, 34, 0.1) 0%, rgba(70, 16, 34, 0.2) 100%);
 }
 body #prices #price_2 .card-footer {
   background: radial-gradient(circle, #8c2649 0%, #4b1326 100%);
@@ -413,7 +474,8 @@ body #prices #price_2 .card-footer {
   border-bottom-right-radius: 5px;
 }
 body #nuestroservicio .service-header {
-  background: rgba(70, 16, 34, 0.1) !important;
+  background: #461022;
+  background: radial-gradient(circle, rgba(70, 16, 34, 0.1) 0%, rgba(70, 16, 34, 0.2) 100%);
 }
 body #nuestroservicio .card {
   background: none;
@@ -431,7 +493,8 @@ body #nuestroservicio .area {
   z-index: -9999;
 }
 body #nuestroportal .banner {
-  background: rgba(70, 16, 34, 0.1) !important;
+  background: #461022;
+  background: radial-gradient(circle, rgba(70, 16, 34, 0.1) 0%, rgba(70, 16, 34, 0.2) 100%);
   border: 0 !important;
 }
 body #nuestroportal .line-through {
@@ -467,14 +530,27 @@ body #nuestroportal .card .card-body img {
   border-radius: 5px;
 }
 body #quienessomos .cover {
-  background: rgba(70, 16, 34, 0.1) !important;
+  background: #461022;
+  background: radial-gradient(circle, rgba(70, 16, 34, 0.1) 0%, rgba(70, 16, 34, 0.2) 100%);
+}
+body #quienessomos #ivan {
+  box-shadow: 0 4px 8px 3px rgba(0, 0, 0, 0.2) !important;
+  border: 2px solid #5e2639;
+  background-image: url("../img/photo/ivan.jpg");
+  background-size: cover;
+  background-position: 65% 75%;
+  background-repeat: no-repeat;
+  height: 15em;
+  width: 15em;
+  border-radius: 50%;
 }
 body #nosotros .accordion {
   box-shadow: 0 4px 8px 3px rgba(0, 0, 0, 0.2) !important;
   border-radius: 5px;
 }
 body #nosotros .accordion .card .card-header {
-  background: rgba(70, 16, 34, 0.1) !important;
+  background: #461022;
+  background: radial-gradient(circle, rgba(70, 16, 34, 0.1) 0%, rgba(70, 16, 34, 0.2) 100%);
 }
 body #nosotros .accordion .card .card-header .btn {
   text-decoration: none;
@@ -531,11 +607,6 @@ body #contact #contact-form .col {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-@media screen and (min-width: 736px) {
-  body #ourplans {
-    height: 100vh !important;
-  }
 }
 @media screen and (max-width: 736px) {
   body #ourplans {
@@ -634,7 +705,7 @@ body #whatsapp.animate {
 }
 @media screen and (min-width: 736px) {
   body #whatsapp img {
-    height: 5em !important;
+    height: 4em !important;
   }
 }
 body #whatsapp #banner {
@@ -643,6 +714,12 @@ body #whatsapp #banner {
   text-decoration: none;
   border-radius: 15px;
   font-weight: 600 !important;
+  display: none;
+}
+body #whatsapp.banner-active #banner {
+  display: block;
+  animation: 350ms side-appear ease-in-out;
+  animation-fill-mode: forwards;
 }
 body #contact .area,
 body #thanks .area,
@@ -674,7 +751,7 @@ body #ourplans .circles li {
   list-style: none;
   width: 20px;
   height: 20px;
-  background: rgba(245, 156, 156, 0.7);
+  background: rgba(70, 16, 34, 0.1);
   animation: animate 10s linear infinite;
   bottom: -150px;
 }

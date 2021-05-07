@@ -16,7 +16,10 @@
     {% if var_1 %}
     <nav class="navbar navbar-expand-lg w-100 fixed-top px-4" id="navbar-effect">
       <a class="navbar-brand d-flex" href="{{url_for('index')}}">
-        <img class="img-fluid d-none d-md-block" src="{{url_for('static', filename='img/company/sm/uva.png')}}" style="height: 1.5em;">
+        <img 
+          class="img-fluid d-none d-md-block" 
+          src="{{url_for('static', filename='img/company/logo-md/uva.png')}}" 
+          style="width: 2.5em; border-radius: 50%;">
         <img class="img-fluid d-block d-md-none" src="{{url_for('static', filename='img/company/sm/uva.png')}}" style="height: 1em;" alt="">
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -108,7 +111,7 @@
           </div>
         </ul>
 
-        <ul class="navbar-nav">
+        <ul class="navbar-nav" id="-navbar-2-ul">
           {% if var == 'pricing.html' %}            
           <li class="nav-item active">
             <a class="nav-link" href="{{ url_for('pricing') }}"> Precios </a>
@@ -206,8 +209,8 @@
             <div class="flex-column col">
               <ul class="list-group" style="background: none !important;">
                 <div class="list-group-item p-1" style="background: none !important; border: none !important;">Recursos:</div>
-                <div class="list-group-item p-1" style="background: none !important; border: none !important;"><a href="{{url_for('uc')}}">&diams; Términos y condiciones</a></div>
-                <div class="list-group-item p-1" style="background: none !important; border: none !important;"><a href="{{url_for('uc')}}">&diams; Política de privacidad</a></div>
+                <div class="list-group-item p-1" style="background: none !important; border: none !important;"><a href="{{url_for('terms')}}">&diams; Términos y condiciones</a></div>
+                <div class="list-group-item p-1" style="background: none !important; border: none !important;"><a href="{{url_for('privacypolicy')}}">&diams; Política de privacidad</a></div>
                 <div class="list-group-item p-1" style="background: none !important; border: none !important;"><a href="{{url_for('uc')}}">&diams; Manual de usuario</a></div>
               </ul>
             </div>
@@ -234,9 +237,8 @@
     <script>
             try{
               document.addEventListener('DOMContentLoaded', function(event){
-                var navbar = document.getElementById('navbar-effect');        
-                var whatsapp = document.getElementById('whatsapp');
-                var section = document.getElementById('service-gd');        
+                var navbar = document.getElementById('navbar-effect');
+                var section = document.getElementById('service-gd');
                 function navbar_trans(){         
                   let scroll = window.scrollY; 
                   /**
@@ -244,10 +246,8 @@
                   */
                   if ((scroll>100) && (!navbar.classList.contains('trans-effect'))){
                     navbar.classList.add('bg-light');
-                    whatsapp.classList.replace('d-none', 'animate');
                   } else {
                     navbar.classList.remove('bg-light');
-                    whatsapp.classList.replace('animate', 'd-none');
                   };
                 }
                 document.addEventListener('scroll', function(e){

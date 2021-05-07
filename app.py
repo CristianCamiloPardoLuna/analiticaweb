@@ -10,16 +10,27 @@ def index():
         'index.html'
         )
 
+@APP.route('/returnContacts/<_id>/')
+def returnContacts(_id):
+    if str(_id) == '1020813231':
+        return jsonify([[i.name, i.email, i.company, i.service, i.tellusmore, i.datetime] for i in Contact.query.all()])
+    else:
+        return Response('Invalid request', status=404) 
+"""Returns contact in model
+"""
+
 @APP.route('/startnow', methods=['POST'])
 def startnow():
     email = request.form.get('email')
     tellusmore = str('¡Quiero iniciar mi primer proyecto con Analítica por $40.000 COP la hora!')
-    newContact = Stage1(
-        email = email,
-        datetime = datetime.now()
-    )
-    db.session.add(newContact)
-    db.session.commit()
+    if len(email)>0:        
+        newContact = Stage1(
+            email = email,
+            datetime = datetime.now()
+        )
+        db.session.add(newContact)
+        db.session.commit()
+
     return render_template(
         'contactus.html',
         email = email,

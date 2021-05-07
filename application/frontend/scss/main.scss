@@ -112,11 +112,17 @@ body{
     }
     #navbar{
         #navbar-1-ul,
-        #-navbar-1-ul{
+        #-navbar-1-ul,
+        #navbar-2-ul,
+        #-navbar-2-ul{
             li a,
             a{
                 color: $test_color_plain;
                 font-weight: 600;
+            }
+            li a:hover,
+            a:hover{
+                text-decoration: underline !important;
             }            
         }
         .dropdown-menu{
@@ -134,7 +140,7 @@ body{
     }
     #initial-effect{
         background: rgb(248,249,250);
-        background: linear-gradient(0deg, rgba(248,249,250,1) 0%, rgba(106,34,59,0.25) 100%);
+        background: linear-gradient(0deg, rgba(248,249,250,1) 0%, rgba(106,34,59,0.2) 100%);
         .bg-light{
             box-shadow: 0 4px 8px 3px rgba(0,0,0,0.2) !important;
         }
@@ -152,6 +158,47 @@ body{
             #companydesc{
                 margin-top: 10vh !important;
             }
+            #appsgif{
+                margin-top: 10vh !important;
+                margin-left: 1vw;
+                width: 500px;
+                height: 500px;          
+                .wrapper{
+                    padding: 0;
+                    &>*{
+                        position:absolute;
+                    }
+                    &#laptop-wrapper{
+                        margin-top: 15vh;                        
+                        #laptop-image{
+                            filter: drop-shadow(2px 7px 4px rgba(0,0,0,0.2));
+                        }
+                        #laptop-content{
+                            border-radius: 5px;
+                            width: 385px;
+                            height: 240px;
+                            top: 15px;
+                            left: 11.5%;
+                        }                                                
+                    }
+                    &#phone-wrapper{
+                        top: 20px;
+                        left: 60%;
+                        #phone-image{
+                            width: 350px;
+                            filter: drop-shadow(2px 7px 3px rgba(0,0,0,0.2));
+                            height: 350px;
+                        }
+                        #phone-content{
+                            border-radius: 5px;
+                            left: 22.2%;
+                            top: 40px;
+                            height: 265px;
+                            width: 127px;
+                        }
+                    }
+                }                                                
+            }
         }
         #slogan{
             color: $test_color_plain;
@@ -163,6 +210,11 @@ body{
         #startnow{            
             input{
                 padding: 0.3rem !important;
+                border: 0;
+            }
+            input:focus,
+            input:active{
+                border: 1.5px solid $test_color_plain;
             }
             input::placeholder {
                 font-size: large !important;
@@ -403,6 +455,7 @@ body{
         }
 
         #vsicon{
+            
         }
     
         &:hover #price_1 .badge a:before{
@@ -450,7 +503,8 @@ body{
             .card-body{
                 border-top-left-radius: 5px !important;
                 border-top-right-radius: 5px !important;
-                background: rgb(70, 16, 34, 0.1) !important;                            
+                background: rgb(70,16,34);
+                background: radial-gradient(circle, rgba(70,16,34,0.1) 0%, rgba(70,16,34,0.2) 100%);
             }
             .card-footer{
                 background: $test_color;
@@ -461,7 +515,8 @@ body{
     }
     #nuestroservicio{
         .service-header{
-            background: rgb(70, 16, 34, 0.1) !important;
+            background: rgb(70,16,34);
+            background: radial-gradient(circle, rgba(70,16,34,0.1) 0%, rgba(70,16,34,0.2) 100%);
         }
         .card{
             background: none;
@@ -486,7 +541,8 @@ body{
 
     #nuestroportal{
         .banner{
-            background: rgb(70, 16, 34, 0.1) !important;
+            background: rgb(70,16,34);
+            background: radial-gradient(circle, rgba(70,16,34,0.1) 0%, rgba(70,16,34,0.2) 100%);
             border: 0 !important;
         }
         .line-through{
@@ -529,7 +585,19 @@ body{
     }
     #quienessomos{
         .cover{
-            background: rgb(70, 16, 34, 0.1) !important;
+            background: rgb(70,16,34);
+            background: radial-gradient(circle, rgba(70,16,34,0.1) 0%, rgba(70,16,34,0.2) 100%);
+        }
+        #ivan{
+            box-shadow: 0 4px 8px 3px rgba(0,0,0,0.2) !important;
+            border: 2px solid $test_color_plain;
+            background-image: url('../img/photo/ivan.jpg');
+            background-size: cover;
+            background-position: 65% 75%;
+            background-repeat: no-repeat;
+            height: 15em;
+            width: 15em;
+            border-radius: 50%;
         }
     }
     #nosotros{
@@ -538,7 +606,8 @@ body{
             border-radius: 5px;
             .card{
                 .card-header{
-                    background: rgb(70, 16, 34, 0.1) !important;
+                    background: rgb(70,16,34);
+                    background: radial-gradient(circle, rgba(70,16,34,0.1) 0%, rgba(70,16,34,0.2) 100%);
                     .btn{
                         text-decoration: none;
                         color: black;
@@ -610,7 +679,6 @@ body{
     }
     #ourplans{
         @media screen and(min-width: 736px) {
-            height: 100vh !important;            
         }
         @media screen and(max-width: 736px) {
             margin-top: 5em !important;
@@ -715,7 +783,7 @@ body{
         }        
         @media screen and(min-width: 736px) {
             img{
-                height: 5em !important;
+                height: 4em !important;
             }           
         }
         #banner{
@@ -724,7 +792,15 @@ body{
             text-decoration: none;
             border-radius: 15px;
             font-weight: 600 !important;
-        }        
+            display: none;
+        }
+        &.banner-active{
+            #banner{
+                display: block;
+                animation: 350ms side-appear ease-in-out ;
+                animation-fill-mode: forwards;                
+            }
+        }       
     }
     /*animation*/
     #contact,
@@ -754,7 +830,7 @@ body{
             list-style: none;
             width: 20px;
             height: 20px;
-            background: $glow;
+            background: rgb(70, 16, 34, 0.1);
             animation: animate 10s linear infinite;
             bottom: -150px;
             
