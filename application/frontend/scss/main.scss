@@ -10,8 +10,8 @@ $glow: rgb(245, 156, 156, 0.7);
 $_background_grad: radial-gradient(circle, rgba(255,218,213,1) 0%, rgba(255,255,255,1) 100%);
 //$test_color: rgb(95, 24, 48);
 // hex test #53182C
-$test_color_plain: rgb(94, 38, 57);
 $test_color_hover: rgb(70, 16, 34);
+$test_color_plain: rgb(92, 20, 44);
 $test_color_trans: rgb(70, 16, 34, 0.6);
 $test_color: radial-gradient(circle, rgba(140,38,73,1) 0%, rgba(75,19,38,1) 100%); 
 
@@ -31,13 +31,9 @@ $test_color: radial-gradient(circle, rgba(140,38,73,1) 0%, rgba(75,19,38,1) 100%
     outline: none !important;
 }
 
-<<<<<<< HEAD
 html{
     width: 100vw !important;
 }
-=======
->>>>>>> test
-
 body{
     font-weight: 400 !important;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -375,51 +371,6 @@ body{
                 }
             }
         }
-<<<<<<< HEAD
-        #inicia-sm{
-            .pointer:not(*:root){
-                display: none !important;
-            }
-            #pilar{
-                background: #53182C;
-                height: 75%;
-                width: 5%;
-                border-radius: 25px !important;
-                margin-left: 45vw !important;
-            }
-
-            .circle{                
-                background: #53182C;
-                border-radius: 5px;
-                color: whitesmoke !important;
-                padding: 0.5em;
-                z-index: 2 !important;
-                width: 100%;
-            }
-            .comment{
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                border: 2px solid $test_color_hover;
-                background-color: rgb(70, 16, 34, 0.15);
-                border-radius: 5px;
-                padding: 0.5em;
-            }
-            .flex-column{
-                .d-flex{
-                    height: 15vh;
-                    .d-flex{
-                        width: 33% !important;
-                        margin: 0.3em 0 0.3em 0;
-                        p{
-                            padding: 0;                            
-                        }
-                    }
-                }
-            }
-        }
-=======
->>>>>>> test
     }
 
     #portfolio{
@@ -1016,7 +967,6 @@ body{
         }
     }
 }
-
 @keyframes aol{
     0%{
         opacity: 0;
