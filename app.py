@@ -72,6 +72,7 @@ def contactme():
     name = request.form.get('name')
     email = request.form.get('email')
     company = request.form.get('company')
+    phone = request.form.get('phone')
     service = request.form.get('service')
     tellusmore = request.form.get('tellusmore')
 
@@ -80,6 +81,7 @@ def contactme():
         email = email,
         company = company,
         service = service,
+        phone = phone,
         tellusmore = tellusmore,
         datetime = datetime.now()
     )

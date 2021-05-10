@@ -14,13 +14,16 @@
     {% set var = self._TemplateReference__context.name %}
     {% set var_1 = True if var == 'index.html' else False %}
     {% if var_1 %}
-    <nav class="navbar navbar-expand-lg w-100 fixed-top px-4" id="navbar-effect">
+    <nav class="navbar navbar-expand-lg w-100 fixed-top px-4 py-md-0" id="navbar-effect">
       <a class="navbar-brand d-flex" href="{{url_for('index')}}">
         <img 
           class="img-fluid d-none d-md-block" 
           src="{{url_for('static', filename='img/company/logo-md/uva.png')}}" 
           style="width: 2.5em; border-radius: 50%;">
-        <img class="img-fluid d-block d-md-none" src="{{url_for('static', filename='img/company/sm/uva.png')}}" style="height: 1em;" alt="">
+        <img 
+          class="img-fluid d-block d-md-none" 
+          src="{{url_for('static', filename='img/company/logo-md/uva.png')}}"       
+          style="width: 2em; border-radius: 50%;">
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -33,8 +36,8 @@
               Servicios
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#apps">Desarrollo de aplicaciones</a>
               <a class="dropdown-item" href="#automatizacion">Automatización de procesos</a>
-              <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="#ciencia_de_datos">Ciencia de datos</a>
             </div>
           </li>

@@ -25,19 +25,51 @@ Expertos en ciencia de datos
           class="mx-auto text-md-left align-items-start flex-column px-md-5" 
           id="companydesc">
           <img 
-          class="img-fluid p-0 m-0 w-75" 
+          class="img-fluid p-0 mx-auto w-75" 
           src="{{url_for('static', filename='img/company/md/uva.png')}}"
           >
+          <div id="slogan">
           <h1
-          id="slogan"
-          class="m-0" 
+          class="m-0 d-none d-md-block" 
           style="font-weight: 600;">
-          Expertos en ciencia de datos
+            Expertos en ciencia de datos
           </h1>
           <h4
-          class="text-md-left text-sm-left m-0 mt-1"
-          >
-          Conecta todas tus fuentes, visualiza tus indicadores e impulsa tu negocio con Analítica
+          class="m-0 mx-5 mb-2 d-block d-md-none" 
+          style="font-weight: 600;">
+            Expertos en ciencia de datos
+          </h4>
+          </div>         
+          <div class="d-block d-md-none my-2" id="appsgifcelcontainer">
+            <div id="appsgifcel">
+              <div class="col wrapper" id="laptop-wrapper-cel">
+                <img 
+                class="img-fluid"
+                src="{{url_for('static', filename='img/photo/laptop-mockup.png')}}"
+                id="laptop-image-cel"
+                >
+                <img 
+                class="img-fluid"
+                src="{{url_for('static', filename='img/gif/pc.gif')}}"
+                id="laptop-content-cel"
+                >
+              </div>
+              <div class="col wrapper" id="phone-wrapper-cel">
+                <img 
+                class="img-fluid"
+                src="{{url_for('static', filename='img/photo/phone-mockup.png')}}"
+                id="phone-image-cel"
+                >
+                <img 
+                class="img-fluid"
+                src="{{url_for('static', filename='img/gif/cel.gif')}}"
+                id="phone-content-cel"
+                >
+              </div>
+            </div>
+          </div> 
+          <h4 class="d-none d-md-block text-left m-0 mt-1">
+            Conecta todas tus fuentes, visualiza tus indicadores e impulsa tu negocio con Analítica
           </h4>
           <form 
             class="d-md-flex w-100 p-0 align-items-center justify-content-around"
@@ -57,7 +89,7 @@ Expertos en ciencia de datos
           </h5>
         </div>
     </div>
-    <div id="appsgif">
+    <div class="d-none d-md-block" id="appsgif">
       <div class="col wrapper" id="laptop-wrapper">
         <img 
         class="img-fluid"
@@ -82,63 +114,49 @@ Expertos en ciencia de datos
         id="phone-content"
         >
       </div>
-    </div>    
+    </div>
   </div>
 </section>
 <section id="portfolio">
   <div class="card-deck mx-auto px-md-5 w-100 h-100">
     <div class="card">
-      <div class="d-flex flex-column justify-content-center card-body text-md-right text-center">
+      <div class="d-flex flex-column p-0 px-4 p-md-3 justify-content-center card-body text-md-right text-center">
         <h4 class="display-4 d-none d-md-block" style="font-weight: 600;">Transforma tus datos en acciones</h4>
-        <h1 class="d-block d-md-none" style="font-weight: 600;">Transforma tus datos en acciones</h1>
-        <h3>Reduce costos y optimiza los procesos de tu empresa a través de las últimas tendencias en tecnología</h3>
+        <h2 class="d-block d-md-none" style="font-weight: 600;">Transforma tus datos en acciones</h2>
+        <h3 class="d-none d-md-block">Reduce costos y optimiza los procesos de tu empresa a través de las últimas tendencias en tecnología</h3>
+        <p class="d-block d-md-none lead">Reduce costos y optimiza los procesos de tu empresa a través de las últimas tendencias en tecnología</p>
       </div>
     </div>
-    <div class="card d-flex align-items-center justify-content-center px-md-5">
-      <div class="d-flex flex-column py-5 justify-content-center align-items-center">
-        <a href="#apps" class="btn h-25 d-flex align-items-center btn-outline-dark btn-block text-left" style="background: white;">
-          <img class="mr-3 p-0 col-md-1" src="{{url_for('static', filename='img/svg/smartphone.svg')}}" alt="">
-          <div class="d-flex col-md-9 p-0 flex-column">
+    <div class="card d-flex align-items-center justify-content-center px-5">
+      <div class="d-flex flex-column p-0 py-md-5 justify-content-center align-items-center">
+        <a href="#apps" class="btn h-25 p-3 d-flex align-items-center btn-outline-dark btn-block text-left" style="background: white;">
+          <img class="mr-3 img-fluid p-0 col-2 col-md-1 " src="{{url_for('static', filename='img/svg/smartphone.svg')}}">
+          <div class="d-flex col col-md-9 p-0 flex-column">
             <h4 class="display-5 m-0" style="font-weight: 600;">Desarrollo de aplicaciones</h4>
           </div>
           <div class="flex-column d-none d-md-block col-2 p-0 align-items-center justify-content-center">
             <img class="img-fluid arrow" src="{{url_for('static', filename='img/svg/right-arrow.svg')}}">
           </div>
         </a>
-        <a href="#automatizacion" class="btn h-25 d-flex align-items-center btn-outline-dark btn-block text-left" style="background: white;">
-          <img class="mr-3 p-0 col-md-1" src="{{url_for('static', filename='img/svg/system.svg')}}">
-          <div class="d-flex col-md-9 p-0 flex-column">
+        <a href="#automatizacion" class="btn h-25 p-3 d-flex align-items-center btn-outline-dark btn-block text-left" style="background: white;">
+          <img class="mr-3 p-0 col-2 col-md-1" src="{{url_for('static', filename='img/svg/system.svg')}}">
+          <div class="d-flex col col-md-9 p-0 flex-column">
             <h4 class="display-5 m-0" style="font-weight: 600;">Automatización de procesos</h4>
           </div>
           <div class="flex-column d-none d-md-block col-2 p-0 align-items-center justify-content-center">
             <img class="img-fluid arrow" src="{{url_for('static', filename='img/svg/right-arrow.svg')}}">
           </div>
         </a>
-        <a href="#ciencia_de_datos" class="btn h-25 d-flex align-items-center btn-outline-dark btn-block h-25 text-left" id="dt-btn" style="background: white;">
-          <img class="mr-3 p-0 col-md-1" src="{{url_for('static', filename='img/svg/brain1.svg')}}">
-          <div class="d-flex col-md-9 p-0 flex-column">
-            <h4 class="display-5 m-0" style="font-weight: 600;">Ciencia de datos e inteligencia artificial</h4>
+        <a href="#ciencia_de_datos" class="btn h-25 p-3 d-flex align-items-center btn-outline-dark btn-block h-25 text-left" id="dt-btn" style="background: white;">
+          <img class="mr-3 p-0 col-2 col-md-1" src="{{url_for('static', filename='img/svg/brain1.svg')}}">
+          <div class="d-flex col col-md-9 p-0 flex-column">
+            <h4 class="display-5 d-none d-md-block m-0" style="font-weight: 600;">Ciencia de datos e inteligencia artificial</h4>
+            <h4 class="display-5 m-0 d-block d-md-none" style="font-weight: 600;">Ciencia de datos y AI</h4>
           </div>
           <div class="flex-column d-none d-md-block col-2 p-0 align-items-center justify-content-center">
             <img class="img-fluid arrow" src="{{url_for('static', filename='img/svg/right-arrow.svg')}}">
           </div>
         </a>
-      </div>
-    </div>
-    <div class="card px-3 d-block d-md-none">
-      <div class="card-body">
-        <a href="#automatizacion" class="d-flex btn btn-outline-dark align-items-center" style="background: white;">
-          <img class="img-fluid w-25 pr-2" src="{{url_for('static', filename='img/svg/process.svg')}}" alt="">
-          <div class="d-flex flex-column text-left w-75 ml-2">
-            <h5 class="display-5 m-0" style="font-weight: 600;">Automatización de procesos</h5>
-          </div>          
-        </a>
-        <a href="#ciencia_de_datos" class="d-flex btn btn-outline-dark align-items-center text-center" id="dt-btn" style="background: white;">
-          <img class="img-fluid w-25 pr-2" src="{{url_for('static', filename='img/svg/data-analysis.svg')}}" alt="">
-          <div class="d-flex flex-column text-left w-75 ml-2">
-            <h5 class="display-5 m-0" style="font-weight: 600;">Ciencia de datos</h5>
-          </div>          
-        </a>        
       </div>
     </div>
   </div>  
@@ -283,101 +301,11 @@ Expertos en ciencia de datos
       </div>
     </div>
   </div>
-  <div class="flex-column px-2 h-100 justify-content-center align-items-center text-center d-block d-md-none" id="inicia-sm">
-    <h5 class="display-5 text-left text-muted" style="font-weight: 600 !important;">Inicia con Analítica</h5>
-    <h2 class="display-5 text-left" style="font-weight: 600 !important;">Este es nuestro proceso de creación</h2>
-
-    <div class="flex-column mt-5">
-      <div class="d-flex position-absolute" id="pilar"></div>
-      <div class="d-flex align-items-center justify-content-around">
-        <div class="d-flex flex-column align-items-center justify-content-center">
-          <div class="comment" data-aos="fade-left" data-os-easing="linear" data-aos-duration="1500">
-            <p class="m-0"><small>Estaremos en contacto contigo</small></p>
-          </div>
-        </div>
-        <img class="img-fluid position-absolute" style="width: 2em; z-index: 3; margin-right: 6.8em; transform: rotate(180deg);" src="{{url_for('static', filename='img/svg/pointer-arrow.svg')}}">
-        <div class="d-flex flex-column align-items-center justify-content-center mx-1">          
-          <div class="circle">            
-            <img class="img-fluid w-50" src="{{url_for('static', filename='img/svg/trust.svg')}}" alt="">          
-            <p class="m-0"><b>¡Bienvenido!</b></p>  
-          </div>          
-        </div>
-        <div class="d-flex">
-        </div>
-      </div>
-      <div class="d-flex align-items-center justify-content-around">
-        <div class="d-flex flex-column">
-        </div>
-        <img class="img-fluid position-absolute" style="width: 2em; z-index: 3; margin-right: -6.8em;" src="{{url_for('static', filename='img/svg/pointer-arrow.svg')}}">
-        <div class="d-flex flex-column align-items-center justify-content-center mx-1">
-          <div class="circle">
-            <img class="img-fluid w-50" src="{{url_for('static', filename='img/svg/purpose.svg')}}" alt="">
-            <p class="m-0"><b>Planea</b></p>
-          </div>
-        </div>
-        <div class="d-flex flex-column align-items-center justify-content-center" data-aos="fade-right" data-os-easing="linear" data-aos-duration="1500">          
-          <div class="comment">
-            <p class="m-0"><small>Recibirás el plan de trabajo de tu proyecto</small></p>
-          </div>          
-        </div>
-      </div>  
-      <div class="d-flex align-items-center justify-content-around">
-        <div class="d-flex flex-column align-items-center justify-content-center" data-aos="fade-left" data-os-easing="linear" data-aos-duration="1500">
-          <div class="comment">
-            <p class="m-0"><small>Pondremos manos a la obra</small></p>
-          </div>          
-        </div>
-        <img class="img-fluid position-absolute" style="width: 2em; z-index: 3; margin-right: 6.8em; transform: rotate(180deg);" src="{{url_for('static', filename='img/svg/pointer-arrow.svg')}}">
-        <div class="d-flex flex-column align-items-center justify-content-center mx-1">
-          <div class="circle">
-            <img class="img-fluid w-50" src="{{url_for('static', filename='img/svg/advice.svg')}}" alt="">
-            <p class="m-0"><b>Aprueba</b></p>
-          </div>
-        </div>
-        <div class="d-flex">
-          
-        </div>
-      </div>
-      <div class="d-flex align-items-center justify-content-around">
-        <div class="d-flex flex-column">
-        </div>
-        <img class="img-fluid position-absolute" style="width: 2em; z-index: 3; margin-right: -6.8em;" src="{{url_for('static', filename='img/svg/pointer-arrow.svg')}}">
-        <div class="d-flex flex-column align-items-center justify-content-center mx-1">
-          <div class="circle">
-            <img class="img-fluid w-50" src="{{url_for('static', filename='img/svg/success.svg')}}" alt="">
-            <p class="m-0"><b>Controla</b></p>          
-          </div>
-        </div>
-        <div class="d-flex flex-column align-items-center justify-content-center" data-aos="fade-right" data-os-easing="linear" data-aos-duration="1500">
-          <div class="comment">
-            <p class="m-0"><small>Controla tu proyecto desde nuestro <a target="_blank" rel="noopener noreferrer" href="https://clientes.analiticaco.com">Portal Clientes</a></small></p>
-          </div>          
-        </div>
-      </div>  
-      <div class="d-flex align-items-center justify-content-around">
-        <div class="d-flex flex-column align-items-center justify-content-center" data-aos="fade-left" data-os-easing="linear" data-aos-duration="1500">
-          <div class="comment">
-            <p class="m-0"><small>Fortalece tu negocio</small></p>
-          </div>          
-        </div>
-        <img class="img-fluid position-absolute" style="width: 2em; z-index: 3; margin-right: 6.8em; transform: rotate(180deg);" src="{{url_for('static', filename='img/svg/pointer-arrow.svg')}}">
-        <div class="d-flex flex-column align-items-center justify-content-center mx-1">
-          <div class="circle">
-            <img class="img-fluid w-50" src="{{url_for('static', filename='img/svg/strong.svg')}}" alt="">
-            <p class="m-0"><b>Decide</b></p>
-          </div>
-        </div>
-        <div class="d-flex">
-          
-        </div>
-      </div>
-    </div>
-  </div>
   <hr class="mx-3 d-block d-md-none">
 </section>
 
-<h5 class="display-5 pl-5 mt-5 text-left text-muted" style="font-weight: 600 !important;">La hora más barata del mercado</h5>
-<h2 class="display-5 pl-5 text-left mb-5" style="font-weight: 600 !important;">Compara el costo de una hora de desarrollo</h2>
+<h5 class="display-5 pl-3 pl-md-5 mt-5 text-left text-muted" style="font-weight: 600 !important;">La hora más barata del mercado</h5>
+<h2 class="display-5 pl-3 pl-md-5 text-left mb-5" style="font-weight: 600 !important;">Compara el costo de una hora de desarrollo</h2>
 <section class="my-5" id="prices">
   <div class="card-deck align-items-center h-100 pb-0 px-4">
     <div class="card align-items-center justify-content-center h-100 w-100" id="price_1">
@@ -473,28 +401,37 @@ Expertos en ciencia de datos
       </div>
     </div>
   </div>
-  <p class="px-3 mt-5 text-muted">
+  <p class="px-3 mt-md-5 text-muted">
     *El costo de tu proyecto es adicional al costo de uso de nuestro Portal Clientes,
     para conocer las tarifas, haz click <a href="{{url_for('pricing')}}">aquí.</a>
   </p>
 </section>
 
-<section class="d-flex align-items-center justify-content-center" id="nuestroportal">
+<hr class="mx-3 d-block d-md-none">
+
+<section class="d-flex align-items-center justify-content-center my-5 my-md-0" id="nuestroportal">
   <div class="card d-block d-md-none mx-2" style="background: none !important; border: none !important;">
     <div class="card-header text-center mx-3">
-      <h4 class="m-0" style="font-weight: 600 !important;">Conoce nuestro Portal Clientes</h4>
+      <h4 class="m-0" style="font-weight: 600 !important;">¿Ya conoces nuestro Portal Clientes?</h4>
       <hr>
       <p class="m-0">
-        Al iniciar un proyecto con <b>Analítica</b> puedes obtener acceso a nuestro Portal Clientes, donde podrás
-        visualizar tus reportes, acceder a tus formularios o controlar tu aplicativo desarrollado por <b>Analítica</b>.
-        Consulta las tarifas <a style="font-weight: 600; color: whitesmoke;" href="{{url_for('pricing')}}">aquí</a>.
+        Controla tu aplicación, administra tu plan, vigila tus datos, consulta tus reportes totalmente personalizados
+        y mucho más.
+        <br> 
+        Analítica ha desarrollado un aplicativo desde donde puedes tomar el control de tu proyecto,
+        sin tiquetes ni tiempos de atención.
       </p>
+      <p class="lead my-2 line-through">
+        ¿Te interesa? 
+      </p> 
     </div>
     <div class="card-body p-0">
       <img class="img-fluid w-100" src="{{url_for('static', filename='img/gif/4.gif')}}" alt="">
     </div>
     <div class="card-footer text-center mx-3">
-      <h4 style="font-weight: 600;">¡Solicita un demo totalmente gratis!</h4>
+      <a href="{{url_for('contact')}}" class="btn btn-outline-warning">
+        <h4 class="m-0" style="font-weight: 600;">¡Solicita un demo totalmente gratis!</h4>
+      </a>      
     </div>
   </div>
   <div class="d-none d-md-block my-5">
@@ -536,6 +473,8 @@ Expertos en ciencia de datos
   </div>
   </div>
 </section>
+
+<hr class="mx-3 d-block d-md-none">
 
 <section class="mt-5" id="nuestroservicio">  
   <h5 class="display-5 text-left ml-3 ml-md-5 text-muted" style="font-weight: 600 !important;">Nuestra especialidad</h5>
@@ -728,44 +667,87 @@ Expertos en ciencia de datos
 </section>
 
 <section class="mt-5" id="quienessomos">    
-  <div class="d-flex justify-content-around align-items-center w-100 px-5 py-2 cover">
-    <div class="d-flex flex-column text-center align-items-center justify-content-center col h-100 px-5">
-      <div class="" id="ivan">
-      </div>
-      <h4 
-        class="mt-4 m-0"
-        style="font-weight: 600; text-decoration: underline;">
-        Iván D. Aponte
-      </h4>
-      <p
-        class="m-0 lead">
-        <i>
-          Líder comercial
-        </i>        
-      </p>
-    </div>
-    <div class="d-flex flex-column text-center col px-5">
-      <h3 
-        class="m-0"
-        style="font-weight: 600;">
-        ¿Quiénes somos?
-      </h3>
-      <p class="lead">
-        "Analítica nace como un emprendimiento colombiano con la intención de impulsar la economía regional a través de expertos desarrolladores. Implementamos tecnología y herramientas de punta al alcance de startups, pequeñas y medianas empresas, dejando así a su disposición los recursos necesarios para estimular los resultados esperados"
-      </p>
-      <a
-        href="https://wa.link/fkk2xr"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="btn btn-outline-warning d-flex align-items-center justify-content-center">
-        <img 
-        class="img-fluid mx-2"
-        style="height: 2em;" 
-        src="{{ url_for('static', filename='img/svg/whatsapp.svg') }}">
-        <p class="lead m-0">
-          Agendemos una cita
+  <div class="d-flex justify-content-around align-items-center w-100 px-md-5 py-4 py-md-2 cover">
+    <div class="d-flex" id="md-container">
+      <div class="d-flex flex-column text-center align-items-center justify-content-center col h-100 px-5">
+        <div class="" id="ivan">
+        </div>
+        <h4 
+          class="mt-4 m-0"
+          style="font-weight: 600; text-decoration: underline;">
+          Iván D. Aponte
+        </h4>
+        <p
+          class="m-0 lead">
+          <i>
+            Líder comercial
+          </i>        
         </p>
-      </a>      
+      </div>
+      <div class="d-flex flex-column text-center col px-5">
+        <h3 
+          class="m-0"
+          style="font-weight: 600;">
+          ¿Quiénes somos?
+        </h3>
+        <p class="lead">
+          "Analítica nace como un emprendimiento colombiano con la intención de impulsar la economía regional a través de expertos desarrolladores. Implementamos tecnología y herramientas de punta al alcance de startups, pequeñas y medianas empresas, dejando así a su disposición los recursos necesarios para estimular los resultados esperados"
+        </p>
+        <a
+          href="https://wa.link/fkk2xr"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn-outline-warning d-flex align-items-center justify-content-center">
+          <img 
+          class="img-fluid mx-2"
+          style="height: 2em;" 
+          src="{{ url_for('static', filename='img/svg/whatsapp.svg') }}">
+          <p class="lead m-0">
+            Agendemos una cita
+          </p>
+        </a>      
+      </div>
+    </div>
+    <div class="d-block d-md-none">
+      <div class="d-flex flex-column text-center align-items-center justify-content-center px-3">
+        <h4 
+          class="m-0"
+          style="font-weight: 600;">
+          ¿Quiénes somos?
+        </h4>
+        <hr class="w-75">
+        <p>
+          <i>
+            "Analítica nace como un emprendimiento colombiano con la intención de impulsar la economía regional a través de expertos desarrolladores. Implementamos tecnología y herramientas de punta al alcance de startups, pequeñas y medianas empresas, dejando así a su disposición los recursos necesarios para estimular los resultados esperados"            
+          </i>
+        </p>
+        <div id="ivan">
+        </div>
+        <h4 
+          class="mt-4 m-0"
+          style="font-weight: 600; text-decoration: underline;">
+          Iván D. Aponte
+        </h4>
+        <p
+          class="m-0 lead">
+          <i>
+            Líder comercial
+          </i>        
+        </p>
+        <a
+          href="https://wa.link/fkk2xr"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn-outline-warning d-flex align-items-center justify-content-center">
+          <img 
+          class="img-fluid mx-2"
+          style="height: 2em;" 
+          src="{{ url_for('static', filename='img/svg/whatsapp.svg') }}">
+          <p class="lead m-0">
+            Agendemos una cita
+          </p>
+        </a>      
+      </div>
     </div>
   </div>
 </section>
@@ -773,12 +755,13 @@ Expertos en ciencia de datos
   <h2 class="display-5 text-left ml-3 ml-md-5" style="font-weight: 600 !important;">¿Todavía lo estás dudando? </h2>
   <p class="text-muted d-none d-md-block ml-5"><i>Haz click en cada recuadro para dirigirte al artículo original.</i></p>
   <p class="text-muted d-block d-md-none ml-3"><i>Toca cada recuadro para dirigirte al artículo original.</i></p>
-  <div class="accordion w-75 mx-auto" id="accordion2">
-
+  <div class="accordion mx-auto" id="accordion2">
     <div class="card">
       <div class="card-header" id="header1-2">
         <button class="btn btn-link btn-block text-left d-flex justify-content-between align-items-center p-0" type="button" data-toggle="collapse" data-target="#collapse1-2" aria-expanded="false" aria-controls="collapse1-2">          
-          <h4 class="m-0" style="font-weight: 600;">Reduce costos y optimiza procesos</h4> <img class="img-fluid" style="width: 3rem;" src="{{url_for('static', filename='img/svg/right-arrow.svg')}}">
+          <h4 class="d-none d-md-block m-0" style="font-weight: 600;">Reduce costos y optimiza procesos</h4>
+          <p class="d-block d-md-none lead m-0" style="font-weight: 600;">Reduce costos y optimiza procesos</p>
+          <img class="img-fluid" src="{{url_for('static', filename='img/svg/right-arrow.svg')}}">
         </button>
       </div>
       <div id="collapse1-2" class="collapse show" aria-labelledby="header1-2" data-parent="#accordion2">
@@ -808,7 +791,9 @@ Expertos en ciencia de datos
     <div class="card">
       <div class="card-header" id="header2-2">
         <button class="btn btn-link btn-block text-left d-flex justify-content-between align-items-center p-0 collapsed" type="button" data-toggle="collapse" data-target="#collapse2-2" aria-expanded="false" aria-controls="collapse2-2">
-          <h4 class="m-0" style="font-weight: 600;">Inteligencia artifical enfocada al servicio al cliente</h4><img class="img-fluid" style="width: 3rem;" src="{{url_for('static', filename='img/svg/right-arrow.svg')}}">
+          <h4 class="d-none d-md-block m-0" style="font-weight: 600;">Inteligencia artifical enfocada al servicio al cliente</h4>
+          <p class="d-block d-md-none lead m-0" style="font-weight: 600;">Inteligencia artifical enfocada al servicio al cliente</p>
+          <img class="img-fluid" src="{{url_for('static', filename='img/svg/right-arrow.svg')}}">
         </button>
       </div>
       <div id="collapse2-2" class="collapse" aria-labelledby="header2-2" data-parent="#accordion2">
@@ -835,7 +820,9 @@ Expertos en ciencia de datos
     <div class="card">
       <div class="card-header" id="header3-2">
         <button class="btn btn-link btn-block text-left d-flex justify-content-between align-items-center p-0 collapsed" type="button" data-toggle="collapse" data-target="#collapse3-2" aria-expanded="false" aria-controls="collapse3-2">
-          <h4 class="m-0" style="font-weight: 600;">La mejor hora del mercado</h4><img class="img-fluid" style="width: 3rem;" src="{{url_for('static', filename='img/svg/right-arrow.svg')}}">
+          <h4 class="d-none d-md-block m-0" style="font-weight: 600;">La mejor hora del mercado</h4>
+          <p class="d-block d-md-none lead m-0" style="font-weight: 600;">La mejor hora del mercado</p>
+          <img class="img-fluid" src="{{url_for('static', filename='img/svg/right-arrow.svg')}}">
         </button>
       </div>
       <div id="collapse3-2" class="collapse" aria-labelledby="header3-2" data-parent="#accordion2">
@@ -862,7 +849,9 @@ Expertos en ciencia de datos
     <div class="card">
       <div class="card-header" id="header4-2">
         <button class="btn btn-link btn-block text-left d-flex justify-content-between align-items-center p-0 collapsed" type="button" data-toggle="collapse" data-target="#collapse4-2" aria-expanded="false" aria-controls="collapse4-2">
-          <h4 class="m-0" style="font-weight: 600;">Todo en la nube, como debería ser</h4><img class="img-fluid" style="width: 3rem;" src="{{url_for('static', filename='img/svg/right-arrow.svg')}}">
+          <h4 class="d-none d-md-block m-0" style="font-weight: 600;">Todo en la nube, como debería ser</h4>
+          <p class="d-block d-md-none lead m-0" style="font-weight: 600;">Todo en la nube, como debería ser</p>
+          <img class="img-fluid" src="{{url_for('static', filename='img/svg/right-arrow.svg')}}">
         </button>
       </div>
       <div id="collapse4-2" class="collapse" aria-labelledby="header4-2" data-parent="#accordion2">
@@ -892,7 +881,9 @@ Expertos en ciencia de datos
     <div class="card">
       <div class="card-header" id="header5-2">
         <button class="btn btn-link btn-block text-left d-flex justify-content-between align-items-center p-0 collapsed" type="button" data-toggle="collapse" data-target="#collapse5-2" aria-expanded="false" aria-controls="collapse5-2">
-          <h4 class="m-0" style="font-weight: 600;">Enséñale a tu equipo por dónde es el camino</h4><img class="img-fluid" style="width: 3rem;" src="{{url_for('static', filename='img/svg/right-arrow.svg')}}">
+          <h4 class="d-none d-md-block m-0" style="font-weight: 600;">Enséñale a tu equipo por dónde es el camino</h4>
+          <p class="d-block d-md-none lead m-0" style="font-weight: 600;">Enséñale a tu equipo por dónde es el camino</p>
+          <img class="img-fluid" src="{{url_for('static', filename='img/svg/right-arrow.svg')}}">
         </button>
       </div>
       <div id="collapse5-2" class="collapse" aria-labelledby="header5-2" data-parent="#accordion2">

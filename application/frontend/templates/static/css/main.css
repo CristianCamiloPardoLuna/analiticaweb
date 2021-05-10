@@ -19,6 +19,7 @@ body {
   font-weight: 400 !important;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   overflow-x: hidden !important;
+  /*appsgif para cel*/
   /*animation*/
 }
 body hr {
@@ -49,9 +50,13 @@ body .btn-outline-dark {
   border: 0 !important;
 }
 body nav {
-  height: 10vh !important;
   font-size: 1.2em;
   transition: all 1s ease-in-out;
+}
+@media screen and (max-width: 736px) {
+  body nav {
+    height: 8vh !important;
+  }
 }
 body nav .navbar-nav .nav-item .clientes-btn:hover {
   color: whitesmoke !important;
@@ -109,15 +114,24 @@ body #navbar #-navbar-2-ul li a:hover,
 body #navbar #-navbar-2-ul a:hover {
   text-decoration: underline !important;
 }
+body #navbar .dropdown-menu {
+  padding: 0;
+  background: whitesmoke !important;
+}
 body #navbar .dropdown-menu .dropdown-item {
   transition: all 200ms ease-in-out;
 }
 body #navbar .dropdown-menu .dropdown-item:hover {
-  background: rgba(245, 156, 156, 0.7);
+  color: white !important;
+  background: rgba(70, 16, 34, 0.6);
 }
 body #navbar .dropdown-menu .dropdown-item:focus,
 body #navbar .dropdown-menu .dropdown-item:active {
-  background: rgba(245, 156, 156, 0.7) !important;
+  background: #461022 !important;
+}
+body #navbar .dropdown-menu.show {
+  animation: side-appear 200ms ease-in-out;
+  animation-fill-mode: forwards;
 }
 body #initial-effect {
   background: #f8f9fa;
@@ -129,14 +143,48 @@ body #initial-effect .bg-light {
 body .trans-effect {
   background: white !important;
 }
+body #appsgifcelcontainer {
+  height: 27vh;
+}
+body #appsgifcelcontainer #appsgifcel .wrapper {
+  padding: 0;
+}
+body #appsgifcelcontainer #appsgifcel .wrapper > * {
+  position: absolute;
+}
+body #appsgifcelcontainer #appsgifcel .wrapper#laptop-wrapper-cel #laptop-image-cel {
+  top: 0;
+  left: 0;
+  filter: drop-shadow(2px 7px 4px rgba(0, 0, 0, 0.2));
+  width: 85%;
+}
+body #appsgifcelcontainer #appsgifcel .wrapper#laptop-wrapper-cel #laptop-content-cel {
+  top: 1vh;
+  left: 10%;
+  width: 65%;
+  height: 135px;
+  border-radius: 5px;
+}
+body #appsgifcelcontainer #appsgifcel .wrapper#phone-wrapper-cel {
+  transform: translateY(-7vh);
+  left: 5%;
+}
+body #appsgifcelcontainer #appsgifcel .wrapper#phone-wrapper-cel #phone-image-cel {
+  left: 45%;
+  top: 5vh;
+  width: 70%;
+  filter: drop-shadow(2px 7px 3px rgba(0, 0, 0, 0.2));
+}
+body #appsgifcelcontainer #appsgifcel .wrapper#phone-wrapper-cel #phone-content-cel {
+  top: 8.5vh;
+  left: 67.3%;
+  height: 175px;
+  width: 25.3%;
+  border-radius: 5px;
+}
 body #home {
   display: flex;
   height: 100vh;
-}
-@media screen and (max-width: 736px) {
-  body #home {
-    height: 90vh !important;
-  }
 }
 @media screen and (min-width: 736px) {
   body #home #companydesc {
@@ -201,9 +249,13 @@ body #home #startnow input:active {
 }
 body #home #startnow input::placeholder {
   font-size: large !important;
-  font-weight: 600 !important;
   color: #6c757d !important;
   opacity: 1;
+}
+@media screen and (min-width: 736px) {
+  body #home #startnow input::placeholder {
+    font-weight: 600 !important;
+  }
 }
 body #home #startnow input:-ms-input-placeholder {
   color: #6c757d !important;
@@ -277,50 +329,6 @@ body #inicia .carousel-inner .carousel-item .card-deck .card .card-body img {
   height: 100% !important;
   width: 100% !important;
 }
-body #inicia #inicia-sm #pilar {
-  background: #53182C;
-  height: 100%;
-  width: 5%;
-  border-radius: 25px !important;
-  margin-left: 45vw;
-}
-body #inicia #inicia-sm .circle {
-  background: #53182C;
-  border-radius: 5px;
-  color: whitesmoke !important;
-  padding: 0.5em;
-  z-index: 2 !important;
-  width: 100%;
-}
-body #inicia #inicia-sm .comment {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 2px solid #461022;
-  background-color: rgba(70, 16, 34, 0.15);
-  border-radius: 5px;
-  padding: 0.5em;
-}
-body #inicia #inicia-sm .flex-column .d-flex {
-  height: 20vh;
-}
-body #inicia #inicia-sm .flex-column .d-flex .d-flex {
-  width: 33% !important;
-  margin: 1em 0 1em 0;
-}
-body #inicia #inicia-sm .flex-column .d-flex .d-flex p {
-  padding: 0;
-}
-@media screen and (max-width: 736px) {
-  body #portfolio {
-    height: 80vh !important;
-  }
-}
-@media screen and (min-width: 736px) {
-  body #portfolio {
-    height: 90vh !important;
-  }
-}
 body #portfolio .card-deck .card {
   background: none;
   border: none;
@@ -361,11 +369,6 @@ body #portfolio .card-deck .card .btn-outline-dark:hover .arrow {
 body #portfolio .card-deck .card .arrow {
   transform: scaley(-1);
   opacity: 0;
-}
-@media screen and (max-width: 736px) {
-  body #portfolio #dt-btn {
-    margin-top: 2em !important;
-  }
 }
 body #prices {
   transition: all 200ms ease-in-out;
@@ -504,12 +507,21 @@ body #nuestroportal .line-through {
 body #nuestroportal .line-through:before, body #nuestroportal .line-through:after {
   content: "";
   display: block;
-  width: 40%;
   height: 3px;
   border-radius: 5px;
   background: #5e2639;
   top: 50%;
   position: absolute;
+}
+@media screen and (max-width: 736px) {
+  body #nuestroportal .line-through:before, body #nuestroportal .line-through:after {
+    width: 30%;
+  }
+}
+@media screen and (min-width: 736px) {
+  body #nuestroportal .line-through:before, body #nuestroportal .line-through:after {
+    width: 40%;
+  }
 }
 body #nuestroportal .line-through:after {
   right: 0;
@@ -519,7 +531,8 @@ body #nuestroportal .line-through:before {
 }
 body #nuestroportal .card .card-header,
 body #nuestroportal .card .card-footer {
-  background: rgba(70, 16, 34, 0.2) !important;
+  background: #461022;
+  background: radial-gradient(circle, rgba(70, 16, 34, 0.1) 0%, rgba(70, 16, 34, 0.2) 100%);
   border: 0 !important;
 }
 body #nuestroportal .card .card-body {
@@ -544,9 +557,24 @@ body #quienessomos #ivan {
   width: 15em;
   border-radius: 50%;
 }
+@media screen and (max-width: 736px) {
+  body #quienessomos #md-container {
+    display: none !important;
+  }
+}
 body #nosotros .accordion {
   box-shadow: 0 4px 8px 3px rgba(0, 0, 0, 0.2) !important;
   border-radius: 5px;
+}
+@media screen and (max-width: 736px) {
+  body #nosotros .accordion {
+    width: 90%;
+  }
+}
+@media screen and (min-width: 736px) {
+  body #nosotros .accordion {
+    width: 85%;
+  }
 }
 body #nosotros .accordion .card .card-header {
   background: #461022;
@@ -554,9 +582,10 @@ body #nosotros .accordion .card .card-header {
 }
 body #nosotros .accordion .card .card-header .btn {
   text-decoration: none;
-  color: black;
+  color: #343a40;
 }
 body #nosotros .accordion .card .card-header .btn img {
+  width: 2em;
   transition: all 300ms ease-in-out;
   transform: rotate(-90deg);
 }
