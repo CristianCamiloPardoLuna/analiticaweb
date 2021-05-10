@@ -28,6 +28,7 @@ body {
 }
 body hr {
   border: 2px solid #5c142c;
+  background-color: #5c142c !important;
   border-radius: 5px;
 }
 body a {
@@ -237,7 +238,7 @@ body #appsgifcelcontainer #appsgifcel .wrapper#laptop-wrapper-cel #laptop-conten
   top: 1vh;
   left: 10%;
   width: 65%;
-  height: 135px;
+  height: 18.5vh;
   border-radius: 5px;
 }
 body #appsgifcelcontainer #appsgifcel .wrapper#phone-wrapper-cel {
@@ -253,7 +254,7 @@ body #appsgifcelcontainer #appsgifcel .wrapper#phone-wrapper-cel #phone-image-ce
 body #appsgifcelcontainer #appsgifcel .wrapper#phone-wrapper-cel #phone-content-cel {
   top: 8.5vh;
   left: 67.3%;
-  height: 175px;
+  height: 23.5vh;
   width: 25.3%;
   border-radius: 5px;
 }
