@@ -15,6 +15,10 @@ sass --watch C:\Users\crist\Documents\GitHub\analiticaweb\application\frontend\s
   outline: none !important;
 }
 
+html {
+  width: 100vw !important;
+}
+
 body {
   font-weight: 400 !important;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
@@ -23,23 +27,23 @@ body {
   /*animation*/
 }
 body hr {
-  border: 2px solid #5e2639;
+  border: 2px solid #5c142c;
   border-radius: 5px;
 }
 body a {
-  color: #5e2639;
+  color: #5c142c;
 }
 body a:hover {
   color: #461022;
 }
 body input:focus {
-  border: 1px solid #5e2639 !important;
+  border: 1px solid #5c142c !important;
   box-shadow: none !important;
 }
 body .btn-outline-warning {
   color: white;
   border: 0;
-  background: #5e2639 !important;
+  background: #5c142c !important;
 }
 body .btn-outline-warning:hover {
   background: #461022 !important;
@@ -92,7 +96,7 @@ body nav .navbar-toggler .navbar-toggler-icon {
   background-size: cover !important;
 }
 body nav .active {
-  color: #5e2639;
+  color: #5c142c;
   font-weight: 600 !important;
 }
 body nav ul li {
@@ -130,7 +134,7 @@ body #navbar-effect-2 #navbar-2 #navbar-2-ul li a,
 body #navbar-effect-2 #navbar-2 #navbar-2-ul a,
 body #navbar-effect-2 #navbar-2 #-navbar-2-ul li a,
 body #navbar-effect-2 #navbar-2 #-navbar-2-ul a {
-  color: #5e2639;
+  color: #5c142c;
   font-weight: 600;
 }
 body #navbar-effect #navbar #navbar-1-ul li a:hover,
@@ -310,7 +314,7 @@ body #home {
   }
 }
 body #home #slogan {
-  color: #5e2639;
+  color: #5c142c;
 }
 body #home #companydesc {
   animation: upper-show 1s ease-in-out;
@@ -322,7 +326,7 @@ body #home #startnow input {
 }
 body #home #startnow input:focus,
 body #home #startnow input:active {
-  border: 1.5px solid #5e2639;
+  border: 1.5px solid #5c142c;
 }
 body #home #startnow input::placeholder {
   font-size: large !important;
@@ -384,7 +388,7 @@ body #inicia ol .active .icon_item img {
   height: 3em;
 }
 body #inicia ol .active span {
-  background: #5e2639 !important;
+  background: #5c142c !important;
   color: white !important;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.5);
 }
@@ -586,7 +590,7 @@ body #nuestroportal .line-through:before, body #nuestroportal .line-through:afte
   display: block;
   height: 3px;
   border-radius: 5px;
-  background: #5e2639;
+  background: #5c142c;
   top: 50%;
   position: absolute;
 }
@@ -625,7 +629,7 @@ body #quienessomos .cover {
 }
 body #quienessomos #ivan {
   box-shadow: 0 4px 8px 3px rgba(0, 0, 0, 0.2) !important;
-  border: 2px solid #5e2639;
+  border: 2px solid #5c142c;
   background-image: url("../img/photo/ivan.jpg");
   background-size: cover;
   background-position: 65% 75%;
@@ -688,11 +692,11 @@ body #page-footer a:hover {
   color: whitesmoke !important;
 }
 body #contact h1 {
-  color: #5e2639 !important;
+  color: #5c142c !important;
   font-weight: 600 !important;
 }
 body #contact a {
-  color: #5e2639;
+  color: #5c142c;
 }
 body #contact a:hover {
   color: #461022 !important;
