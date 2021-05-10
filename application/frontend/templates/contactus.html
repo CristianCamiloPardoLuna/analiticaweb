@@ -29,7 +29,7 @@ Contáctanos
           <p style="font-weight: 600;">¡Nos estaremos comunicando contigo lo antes posible!</p>
         </div>
       </div>
-      <form method="POST" action="/contact/contactme" class="w-100 mt-2 text-left px-5 py-3">
+      <form method="POST" action="/contact/contactme" class="w-100 text-left px-4 py-2">
           <div class="form-group row">
             <label for="name" class="col-sm-4 col-form-label">Nombre:</label>
             <div class="col">
@@ -58,6 +58,17 @@ Contáctanos
                 </select>
               </div>
           </div>
+          <div class="form-group row">
+            <label for="phone" class="col-sm-4 col-form-label">Número telefónico:</label>
+            <div class="col">
+              <div class="input-group mb-2 input-group-sm">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">+57</div>
+                </div>
+                <input type="text" class="form-control form-control-sm" id="phone" name="phone" oninput="validateInput(this.value);">
+              </div>
+            </div>                  
+          </div>
           <div class="form-group row" >
               <label for="tellusmore" class="col-sm-4 col-form-label">Cuéntanos un poco más:</label>
               <div class="col">
@@ -68,7 +79,7 @@ Contáctanos
             <div class="form-check">
               <input class="form-check-input" type="checkbox" value="" id="defaultCheck2" required>
               <label class="form-check-label text-left" for="defaultCheck2">
-                Acepto los <a href="">términos de servicio</a> y <a href="">política de protección de datos</a> de Analítica Company S.A.S.
+                Acepto los <a href="{{url_for('terms')}}">términos de servicio</a> y <a href="{{url_for('privacypolicy')}}">política de protección de datos</a> de Analítica Company S.A.S.
               </label>
             </div>
           </div>
@@ -153,7 +164,7 @@ Contáctanos
                       <i class="fas fa-paper-plane mr-1"></i>Enviar
                     </button>
                 </div>
-              </form>
+            </form>
         </div>
       </div>
     </div>

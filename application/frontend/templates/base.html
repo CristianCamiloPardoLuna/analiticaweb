@@ -14,7 +14,7 @@
     {% set var = self._TemplateReference__context.name %}
     {% set var_1 = True if var == 'index.html' else False %}
     {% if var_1 %}
-    <nav class="navbar navbar-expand-lg w-100 fixed-top px-4 py-md-0" id="navbar-effect">
+    <nav class="navbar navbar-expand-lg w-100 fixed-top px-4 py-md-2" id="navbar-effect">
       <a class="navbar-brand d-flex" href="{{url_for('index')}}">
         <img 
           class="img-fluid d-none d-md-block" 
@@ -82,35 +82,28 @@
       </div>
     </nav>  
     {% else %}
-    <nav class="navbar navbar-expand-lg fixed-top w-100 navbar-light bg-light px-4" style="height: 10vh !important; box-shadow: 0 4px 8px 3px rgba(0,0,0,0.2) !important;">
+    <nav class="navbar navbar-expand-lg w-100 fixed-top px-4 py-md-2 bg-light" id="navbar-effect-2">
 
       <a class="navbar-brand d-flex" href="{{url_for('index')}}">
-        <img class="img-fluid d-none d-md-block" src="{{url_for('static', filename='img/company/sm/uva.png')}}" style="height: 1.5em;">
-        <img class="img-fluid d-block d-md-none" src="{{url_for('static', filename='img/company/sm/uva.png')}}" style="height: 1em;" alt="">
+        <img 
+        class="img-fluid d-none d-md-block" 
+        src="{{url_for('static', filename='img/company/logo-md/uva.png')}}" 
+        style="width: 2.5em; border-radius: 50%;">
+      <img 
+        class="img-fluid d-block d-md-none" 
+        src="{{url_for('static', filename='img/company/logo-md/uva.png')}}"       
+        style="width: 2em; border-radius: 50%;">      
       </a>
 
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-2" aria-controls="navbar-2" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
     
-      <div class="collapse navbar-collapse" id="navbar">
+      <div class="collapse navbar-collapse" id="navbar-2">
 
         <ul class="nav navbar-nav mr-auto" id="navbar-2-ul">
-          <li class="nav-item d-none d-md-block dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Servicios
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="https://analiticaco.com/#automatizacion">Automatización de procesos</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="https://analiticaco.com/#ciencia_de_datos">Ciencia de datos</a>
-            </div>
-          </li>
           <div class="nav-item">
-            <a class="nav-link" href="https://analiticaco.com/#quienessomos">Quiénes somos</a>
-          </div>
-          <div class="nav-item d-none d-md-block">
-            <a class="nav-link" href="https://analiticaco.com/#inicia">Cómo trabajamos</a>
+            <a class="nav-link" href="{{ url_for('index') }}">Inicio</a>
           </div>
         </ul>
 
@@ -168,13 +161,14 @@
       target="_blank"
       rel="noopener noreferrer"
       href="https://wa.link/fkk2xr">
-      <div class="d-flex align-items-center justify-content-center px-0 mx-1">
+      <div class="d-flex align-items-center justify-content-center px-0 mr-4 col-7 p-0 m-0">
         <p class="m-0 lead p-2" id="banner">
           ¡Contáctanos!
         </p>        
       </div>
       <img 
-        class="img-fluid mr-2" 
+        class="img-fluid col-3 p-0 m-0" 
+        id="whatsappimg"
         src="{{ url_for('static', filename='img/svg/whatsapp.svg') }}">
     </a>
     <section class="d-flex flex-column align-items-center justify-content-center w-100" id="page-footer"> <!--cambiar-->

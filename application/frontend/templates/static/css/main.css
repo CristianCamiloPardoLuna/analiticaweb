@@ -55,7 +55,12 @@ body nav {
 }
 @media screen and (max-width: 736px) {
   body nav {
-    height: 8vh !important;
+    height: 8vh;
+  }
+}
+@media screen and (min-width: 736px) {
+  body nav {
+    height: 10vh;
   }
 }
 body nav .navbar-nav .nav-item .clientes-btn:hover {
@@ -93,43 +98,109 @@ body nav .active {
 body nav ul li {
   color: black !important;
 }
-body #navbar #navbar-1-ul li a,
-body #navbar #navbar-1-ul a,
-body #navbar #-navbar-1-ul li a,
-body #navbar #-navbar-1-ul a,
-body #navbar #navbar-2-ul li a,
-body #navbar #navbar-2-ul a,
-body #navbar #-navbar-2-ul li a,
-body #navbar #-navbar-2-ul a {
+body #navbar-effect #navbar #navbar-1-ul li a,
+body #navbar-effect #navbar #navbar-1-ul a,
+body #navbar-effect #navbar #-navbar-1-ul li a,
+body #navbar-effect #navbar #-navbar-1-ul a,
+body #navbar-effect #navbar #navbar-2-ul li a,
+body #navbar-effect #navbar #navbar-2-ul a,
+body #navbar-effect #navbar #-navbar-2-ul li a,
+body #navbar-effect #navbar #-navbar-2-ul a,
+body #navbar-effect #navbar-2 #navbar-1-ul li a,
+body #navbar-effect #navbar-2 #navbar-1-ul a,
+body #navbar-effect #navbar-2 #-navbar-1-ul li a,
+body #navbar-effect #navbar-2 #-navbar-1-ul a,
+body #navbar-effect #navbar-2 #navbar-2-ul li a,
+body #navbar-effect #navbar-2 #navbar-2-ul a,
+body #navbar-effect #navbar-2 #-navbar-2-ul li a,
+body #navbar-effect #navbar-2 #-navbar-2-ul a,
+body #navbar-effect-2 #navbar #navbar-1-ul li a,
+body #navbar-effect-2 #navbar #navbar-1-ul a,
+body #navbar-effect-2 #navbar #-navbar-1-ul li a,
+body #navbar-effect-2 #navbar #-navbar-1-ul a,
+body #navbar-effect-2 #navbar #navbar-2-ul li a,
+body #navbar-effect-2 #navbar #navbar-2-ul a,
+body #navbar-effect-2 #navbar #-navbar-2-ul li a,
+body #navbar-effect-2 #navbar #-navbar-2-ul a,
+body #navbar-effect-2 #navbar-2 #navbar-1-ul li a,
+body #navbar-effect-2 #navbar-2 #navbar-1-ul a,
+body #navbar-effect-2 #navbar-2 #-navbar-1-ul li a,
+body #navbar-effect-2 #navbar-2 #-navbar-1-ul a,
+body #navbar-effect-2 #navbar-2 #navbar-2-ul li a,
+body #navbar-effect-2 #navbar-2 #navbar-2-ul a,
+body #navbar-effect-2 #navbar-2 #-navbar-2-ul li a,
+body #navbar-effect-2 #navbar-2 #-navbar-2-ul a {
   color: #5e2639;
   font-weight: 600;
 }
-body #navbar #navbar-1-ul li a:hover,
-body #navbar #navbar-1-ul a:hover,
-body #navbar #-navbar-1-ul li a:hover,
-body #navbar #-navbar-1-ul a:hover,
-body #navbar #navbar-2-ul li a:hover,
-body #navbar #navbar-2-ul a:hover,
-body #navbar #-navbar-2-ul li a:hover,
-body #navbar #-navbar-2-ul a:hover {
+body #navbar-effect #navbar #navbar-1-ul li a:hover,
+body #navbar-effect #navbar #navbar-1-ul a:hover,
+body #navbar-effect #navbar #-navbar-1-ul li a:hover,
+body #navbar-effect #navbar #-navbar-1-ul a:hover,
+body #navbar-effect #navbar #navbar-2-ul li a:hover,
+body #navbar-effect #navbar #navbar-2-ul a:hover,
+body #navbar-effect #navbar #-navbar-2-ul li a:hover,
+body #navbar-effect #navbar #-navbar-2-ul a:hover,
+body #navbar-effect #navbar-2 #navbar-1-ul li a:hover,
+body #navbar-effect #navbar-2 #navbar-1-ul a:hover,
+body #navbar-effect #navbar-2 #-navbar-1-ul li a:hover,
+body #navbar-effect #navbar-2 #-navbar-1-ul a:hover,
+body #navbar-effect #navbar-2 #navbar-2-ul li a:hover,
+body #navbar-effect #navbar-2 #navbar-2-ul a:hover,
+body #navbar-effect #navbar-2 #-navbar-2-ul li a:hover,
+body #navbar-effect #navbar-2 #-navbar-2-ul a:hover,
+body #navbar-effect-2 #navbar #navbar-1-ul li a:hover,
+body #navbar-effect-2 #navbar #navbar-1-ul a:hover,
+body #navbar-effect-2 #navbar #-navbar-1-ul li a:hover,
+body #navbar-effect-2 #navbar #-navbar-1-ul a:hover,
+body #navbar-effect-2 #navbar #navbar-2-ul li a:hover,
+body #navbar-effect-2 #navbar #navbar-2-ul a:hover,
+body #navbar-effect-2 #navbar #-navbar-2-ul li a:hover,
+body #navbar-effect-2 #navbar #-navbar-2-ul a:hover,
+body #navbar-effect-2 #navbar-2 #navbar-1-ul li a:hover,
+body #navbar-effect-2 #navbar-2 #navbar-1-ul a:hover,
+body #navbar-effect-2 #navbar-2 #-navbar-1-ul li a:hover,
+body #navbar-effect-2 #navbar-2 #-navbar-1-ul a:hover,
+body #navbar-effect-2 #navbar-2 #navbar-2-ul li a:hover,
+body #navbar-effect-2 #navbar-2 #navbar-2-ul a:hover,
+body #navbar-effect-2 #navbar-2 #-navbar-2-ul li a:hover,
+body #navbar-effect-2 #navbar-2 #-navbar-2-ul a:hover {
   text-decoration: underline !important;
 }
-body #navbar .dropdown-menu {
+body #navbar-effect #navbar .dropdown-menu,
+body #navbar-effect #navbar-2 .dropdown-menu,
+body #navbar-effect-2 #navbar .dropdown-menu,
+body #navbar-effect-2 #navbar-2 .dropdown-menu {
   padding: 0;
   background: whitesmoke !important;
 }
-body #navbar .dropdown-menu .dropdown-item {
+body #navbar-effect #navbar .dropdown-menu .dropdown-item,
+body #navbar-effect #navbar-2 .dropdown-menu .dropdown-item,
+body #navbar-effect-2 #navbar .dropdown-menu .dropdown-item,
+body #navbar-effect-2 #navbar-2 .dropdown-menu .dropdown-item {
   transition: all 200ms ease-in-out;
 }
-body #navbar .dropdown-menu .dropdown-item:hover {
+body #navbar-effect #navbar .dropdown-menu .dropdown-item:hover,
+body #navbar-effect #navbar-2 .dropdown-menu .dropdown-item:hover,
+body #navbar-effect-2 #navbar .dropdown-menu .dropdown-item:hover,
+body #navbar-effect-2 #navbar-2 .dropdown-menu .dropdown-item:hover {
   color: white !important;
   background: rgba(70, 16, 34, 0.6);
 }
-body #navbar .dropdown-menu .dropdown-item:focus,
-body #navbar .dropdown-menu .dropdown-item:active {
+body #navbar-effect #navbar .dropdown-menu .dropdown-item:focus,
+body #navbar-effect #navbar .dropdown-menu .dropdown-item:active,
+body #navbar-effect #navbar-2 .dropdown-menu .dropdown-item:focus,
+body #navbar-effect #navbar-2 .dropdown-menu .dropdown-item:active,
+body #navbar-effect-2 #navbar .dropdown-menu .dropdown-item:focus,
+body #navbar-effect-2 #navbar .dropdown-menu .dropdown-item:active,
+body #navbar-effect-2 #navbar-2 .dropdown-menu .dropdown-item:focus,
+body #navbar-effect-2 #navbar-2 .dropdown-menu .dropdown-item:active {
   background: #461022 !important;
 }
-body #navbar .dropdown-menu.show {
+body #navbar-effect #navbar .dropdown-menu.show,
+body #navbar-effect #navbar-2 .dropdown-menu.show,
+body #navbar-effect-2 #navbar .dropdown-menu.show,
+body #navbar-effect-2 #navbar-2 .dropdown-menu.show {
   animation: side-appear 200ms ease-in-out;
   animation-fill-mode: forwards;
 }
@@ -185,6 +256,12 @@ body #appsgifcelcontainer #appsgifcel .wrapper#phone-wrapper-cel #phone-content-
 body #home {
   display: flex;
   height: 100vh;
+}
+@media screen and (max-width: 736px) {
+  body #home {
+    align-items: center;
+    justify-content: center;
+  }
 }
 @media screen and (min-width: 736px) {
   body #home #companydesc {
@@ -720,8 +797,7 @@ body #terms p {
 body #whatsapp {
   z-index: 4;
   position: fixed;
-  bottom: 20px;
-  right: 0 !important;
+  width: 200px;
 }
 body #whatsapp.animate {
   animation: side-appear 1500ms ease-in-out;
@@ -729,10 +805,15 @@ body #whatsapp.animate {
 }
 @media screen and (max-width: 736px) {
   body #whatsapp {
-    width: 3em;
+    bottom: 10px;
+    right: 0;
   }
 }
 @media screen and (min-width: 736px) {
+  body #whatsapp {
+    bottom: 20px;
+    right: 0 !important;
+  }
   body #whatsapp img {
     height: 4em !important;
   }

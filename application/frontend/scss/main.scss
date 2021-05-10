@@ -67,10 +67,13 @@ body{
     }
     nav{
         font-size: 1.2em;        
-        transition: all 1s ease-in-out;
-        @media screen and(max-width: 736px){
-            height: 8vh !important;
-        }    
+        transition: all 1s ease-in-out;        
+        @media screen and(max-width: 736px) {
+            height: 8vh;
+        }
+        @media screen and(min-width: 736px) {
+            height: 10vh;
+        }
         .navbar-nav{
             .nav-item{
                 .clientes-btn:hover{
@@ -113,40 +116,44 @@ body{
             }
         }
     }
-    #navbar{    
-        #navbar-1-ul,
-        #-navbar-1-ul,
-        #navbar-2-ul,
-        #-navbar-2-ul{
-            li a,
-            a{
-                color: $test_color_plain;
-                font-weight: 600;
-            }
-            li a:hover,
-            a:hover{
-                text-decoration: underline !important;
-            }            
-        }
-        .dropdown-menu{
-            padding: 0;
-            background: whitesmoke !important;
-            .dropdown-item{
-                transition: all 200ms ease-in-out;
-                &:hover{
-                    color: white !important;
-                    background: $test_color_trans;
+    #navbar-effect,
+    #navbar-effect-2{
+        #navbar,
+        #navbar-2{        
+            #navbar-1-ul,
+            #-navbar-1-ul,
+            #navbar-2-ul,
+            #-navbar-2-ul{
+                li a,
+                a{
+                    color: $test_color_plain;
+                    font-weight: 600;
                 }
+                li a:hover,
+                a:hover{
+                    text-decoration: underline !important;
+                }            
             }
-            .dropdown-item:focus,
-            .dropdown-item:active{
-                background: $test_color_hover !important;
-            }
-            &.show{
-                animation: side-appear 200ms ease-in-out;
-                animation-fill-mode: forwards;
-            }
-        }                
+            .dropdown-menu{
+                padding: 0;
+                background: whitesmoke !important;
+                .dropdown-item{
+                    transition: all 200ms ease-in-out;
+                    &:hover{
+                        color: white !important;
+                        background: $test_color_trans;
+                    }
+                }
+                .dropdown-item:focus,
+                .dropdown-item:active{
+                    background: $test_color_hover !important;
+                }
+                &.show{
+                    animation: side-appear 200ms ease-in-out;
+                    animation-fill-mode: forwards;
+                }
+            }                
+        }
     }
     #initial-effect{
         background: rgb(248,249,250);
@@ -202,14 +209,17 @@ body{
             }                                                
         }
     }
-    #home{        
+    #home{
         display: flex;
-        height: 100vh;
+        height: 100vh;        
         @media screen and (max-width: 736px) {
+            align-items: center;
+            justify-content: center;
         };
         @media screen and (min-width: 736px){
             #companydesc{
                 margin-top: 10vh !important;
+
             }
             #appsgif{
                 margin-top: 10vh !important;
@@ -796,16 +806,18 @@ body{
     #whatsapp{
         z-index: 4;
         position:fixed;
-        bottom:20px;
-        right: 0 !important;
+        width: 200px;
         &.animate{
             animation: side-appear 1500ms ease-in-out;
             animation-fill-mode: forwards;
         }
-        @media screen and(max-width: 736px) {
-            width:3em;           
+        @media screen and(max-width: 736px) {            
+            bottom: 10px;
+            right: 0;         
         }        
         @media screen and(min-width: 736px) {
+            bottom:20px;
+            right: 0 !important;
             img{
                 height: 4em !important;
             }           
