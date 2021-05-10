@@ -31,9 +31,12 @@ $test_color: radial-gradient(circle, rgba(140,38,73,1) 0%, rgba(75,19,38,1) 100%
     outline: none !important;
 }
 
+<<<<<<< HEAD
 html{
     width: 100vw !important;
 }
+=======
+>>>>>>> test
 
 body{
     font-weight: 400 !important;
@@ -69,9 +72,14 @@ body{
         border: 0 !important;
     }
     nav{
-        height: 10vh !important;
         font-size: 1.2em;        
-        transition: all 1s ease-in-out;
+        transition: all 1s ease-in-out;        
+        @media screen and(max-width: 736px) {
+            height: 8vh;
+        }
+        @media screen and(min-width: 736px) {
+            height: 10vh;
+        }
         .navbar-nav{
             .nav-item{
                 .clientes-btn:hover{
@@ -114,23 +122,48 @@ body{
             }
         }
     }
-    #navbar{
-        .dropdown-menu{
-            .dropdown-item{
-                transition: all 200ms ease-in-out;
-                &:hover{
-                    background: $glow;
+    #navbar-effect,
+    #navbar-effect-2{
+        #navbar,
+        #navbar-2{        
+            #navbar-1-ul,
+            #-navbar-1-ul,
+            #navbar-2-ul,
+            #-navbar-2-ul{
+                li a,
+                a{
+                    color: $test_color_plain;
+                    font-weight: 600;
                 }
+                li a:hover,
+                a:hover{
+                    text-decoration: underline !important;
+                }            
             }
-            .dropdown-item:focus,
-            .dropdown-item:active{
-                background: $glow !important;
-            }
-        }                
+            .dropdown-menu{
+                padding: 0;
+                background: whitesmoke !important;
+                .dropdown-item{
+                    transition: all 200ms ease-in-out;
+                    &:hover{
+                        color: white !important;
+                        background: $test_color_trans;
+                    }
+                }
+                .dropdown-item:focus,
+                .dropdown-item:active{
+                    background: $test_color_hover !important;
+                }
+                &.show{
+                    animation: side-appear 200ms ease-in-out;
+                    animation-fill-mode: forwards;
+                }
+            }                
+        }
     }
     #initial-effect{
         background: rgb(248,249,250);
-        background: linear-gradient(0deg, rgba(248,249,250,1) 0%, rgba(177,99,144,0.5914565655363708) 100%); 
+        background: linear-gradient(0deg, rgba(248,249,250,1) 0%, rgba(106,34,59,0.2) 100%);
         .bg-light{
             box-shadow: 0 4px 8px 3px rgba(0,0,0,0.2) !important;
         }
@@ -138,36 +171,133 @@ body{
     .trans-effect{        
         background: white !important;
     }
-    #home{        
+    /*appsgif para cel*/
+    #appsgifcelcontainer{
+        height: 27vh;            
+        #appsgifcel{
+            .wrapper{
+                padding: 0;
+                &>*{
+                    position:absolute;
+                }
+                &#laptop-wrapper-cel{
+                    #laptop-image-cel{
+                        top: 0;
+                        left: 0;
+                        filter: drop-shadow(2px 7px 4px rgba(0,0,0,0.2));
+                        width: 85%;
+                    }
+                    #laptop-content-cel{                        
+                        top: 1vh;
+                        left: 10%;
+                        width: 65%;
+                        height: 135px;
+                        border-radius: 5px;
+                    }                                                
+                }
+                &#phone-wrapper-cel{
+                    transform: translateY(-7vh);
+                    left: 5%;
+                    #phone-image-cel{
+                        left: 45%;
+                        top: 5vh;
+                        width: 70%;
+                        filter: drop-shadow(2px 7px 3px rgba(0,0,0,0.2));
+                    }
+                    #phone-content-cel{
+                        top: 8.5vh;
+                        left: 67.3%;
+                        height: 175px;
+                        width: 25.3%;
+                        border-radius: 5px;
+                    }
+                }
+            }                                                
+        }
+    }
+    #home{
         display: flex;
-        height: 100vh;
+        height: 100vh;        
         @media screen and (max-width: 736px) {
-            height: 90vh !important;
-            #col-mt{
-                margin-top: 20vh !important;
-            }            
+            align-items: center;
+            justify-content: center;
         };
         @media screen and (min-width: 736px){
-            #col-mt{
-                margin-top: 35vh !important;
+            #companydesc{
+                margin-top: 10vh !important;
+
+            }
+            #appsgif{
+                margin-top: 10vh !important;
+                margin-left: 1vw;
+                width: 500px;
+                height: 500px;          
+                .wrapper{
+                    padding: 0;
+                    &>*{
+                        position:absolute;
+                    }
+                    &#laptop-wrapper{
+                        margin-top: 15vh;                        
+                        #laptop-image{
+                            filter: drop-shadow(2px 7px 4px rgba(0,0,0,0.2));
+                        }
+                        #laptop-content{
+                            border-radius: 5px;
+                            width: 385px;
+                            height: 240px;
+                            top: 15px;
+                            left: 11.5%;
+                        }                                                
+                    }
+                    &#phone-wrapper{
+                        top: 20px;
+                        left: 60%;
+                        #phone-image{
+                            width: 350px;
+                            filter: drop-shadow(2px 7px 3px rgba(0,0,0,0.2));
+                            height: 350px;
+                        }
+                        #phone-content{
+                            border-radius: 5px;
+                            left: 22.2%;
+                            top: 40px;
+                            height: 265px;
+                            width: 127px;
+                        }
+                    }
+                }                                                
             }
         }
         #slogan{
             color: $test_color_plain;
         }
-        #companylogo{
-            animation: upper-show 0.8s ease-in-out;
-            animation-fill-mode: forwards;
-        }
         #companydesc{
             animation: upper-show 1s ease-in-out;
             animation-fill-mode: forwards;
         }
-        #startnow{
-            animation: upper-show 1.2s ease-in-out;
-            animation-fill-mode: forwards;            
+        #startnow{            
             input{
-                border: 1px solid $test_color_plain;                
+                padding: 0.3rem !important;
+                border: 0;
+            }
+            input:focus,
+            input:active{
+                border: 1.5px solid $test_color_plain;
+            }
+            input::placeholder {
+                font-size: large !important;
+                @media screen and(min-width: 736px) {
+                    font-weight: 600 !important;                   
+                }
+                color: #6c757d !important;
+                opacity: 1;
+            }              
+            input:-ms-input-placeholder {
+                color: #6c757d !important;
+            }              
+            input::-ms-input-placeholder {
+                color: #6c757d !important;
             }
         }
     }
@@ -245,6 +375,7 @@ body{
                 }
             }
         }
+<<<<<<< HEAD
         #inicia-sm{
             .pointer:not(*:root){
                 display: none !important;
@@ -287,15 +418,11 @@ body{
                 }
             }
         }
+=======
+>>>>>>> test
     }
 
     #portfolio{
-        @media screen and(max-width: 736px){
-            height: 80vh !important;
-        }
-        @media screen and(min-width: 736px){
-            height: 90vh !important;            
-        }
         .card-deck{
             .card{
                 background: none;
@@ -321,7 +448,7 @@ body{
                 .btn-outline-dark:hover{
                     @media screen and(min-width: 736px) {
                         box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5);
-                        background: $glow !important;                       
+                        background: rgb(70, 16, 34, 0.2) !important;                       
                     }
                     color: #343a40;
                     .arrow{
@@ -335,11 +462,6 @@ body{
                 }
             }
         }    
-        #dt-btn{
-            @media screen and(max-width: 736px) {
-                margin-top: 2em !important;                
-            }
-        }
     }
     #prices{
         transition: all 200ms ease-in-out;
@@ -400,6 +522,7 @@ body{
         }
 
         #vsicon{
+            
         }
     
         &:hover #price_1 .badge a:before{
@@ -447,7 +570,8 @@ body{
             .card-body{
                 border-top-left-radius: 5px !important;
                 border-top-right-radius: 5px !important;
-                background: $background-sec;
+                background: rgb(70,16,34);
+                background: radial-gradient(circle, rgba(70,16,34,0.1) 0%, rgba(70,16,34,0.2) 100%);
             }
             .card-footer{
                 background: $test_color;
@@ -457,6 +581,10 @@ body{
         }
     }
     #nuestroservicio{
+        .service-header{
+            background: rgb(70,16,34);
+            background: radial-gradient(circle, rgba(70,16,34,0.1) 0%, rgba(70,16,34,0.2) 100%);
+        }
         .card{
             background: none;
             border: 0;            
@@ -477,80 +605,46 @@ body{
             z-index: -9999;
         }
     }
-    #nosotros{
-        .card-deck{
-            margin-top: 2em !important;
-            margin-bottom: 2em !important;
-            @media screen and(min-width: 736px) {
-                height: 60vh !important;                
-            }                        
-        }
-        .card{
-            @media  screen and(max-width: 736px) {
-                height: 70vh !important;
-                hr{
-                    margin-bottom: 1em !important;
-                }            
-            }
-        }
-        img{
-            border-radius: 15px !important;
-        }
-        .img1{
-            background: url('../img/photo/expo1.jpg');
-            background-size: cover;
-            @media  screen and(min-width: 736px) {                
-                background-repeat: no-repeat;
-                background-position: center;
-                background-attachment: fixed;
-            }
-        }
-        .img2{
-            background: url('../img/photo/computer1.jpg');
-            background-size: cover;
-            @media  screen and(min-width: 736px) {                
-                background-repeat: no-repeat;
-                background-position: center;
-                background-attachment: fixed;
-            }
-        }
-        .img3{
-            background: url('../img/photo/notebook2.jpg');
-            background-size: cover;
-            @media  screen and(min-width: 736px) {                
-                background-repeat: no-repeat;
-                background-position: center;
-                background-attachment: fixed;
-            }
-        }
-        .img4{
-            background: url('../img/photo/developer2.jpg');
-            background-size: cover;
-            @media  screen and(min-width: 736px) {                
-                background-repeat: no-repeat;
-                background-position: center;
-                background-attachment: fixed;
-            }
-        }
-        .img5{
-            background: url('../img/photo/notebook3.jpg');
-            background-size: cover;
-            @media  screen and(min-width: 736px) {                
-                background-repeat: no-repeat;
-                background-position: center;
-                background-attachment: fixed;
-            }
-        }
-    }
+
     #nuestroportal{
+        .banner{
+            background: rgb(70,16,34);
+            background: radial-gradient(circle, rgba(70,16,34,0.1) 0%, rgba(70,16,34,0.2) 100%);
+            border: 0 !important;
+        }
+        .line-through{
+            text-align: center;
+            position: relative;
+            &:before,
+            &:after {
+                content: "";
+                display: block;
+                @media screen and(max-width: 736px){
+                    width: 30%;
+                }              
+                @media screen and(min-width: 736px){
+                    width: 40%;
+                }                
+                height: 3px;
+                border-radius: 5px;
+                background: $test_color_plain;
+                top: 50%;
+                position: absolute;
+              }
+              &:after {
+                right: 0;
+              }
+              &:before {
+                left: 0;
+              }
+        }
         .card{
             hr{
-                border: 2px solid whitesmoke !important;
             }
             .card-header,
             .card-footer{
-                background: $test_color !important;
-                color: whitesmoke;
+                background: rgb(70,16,34);
+                background: radial-gradient(circle, rgba(70,16,34,0.1) 0%, rgba(70,16,34,0.2) 100%);
                 border: 0 !important;
             }
             .card-body{
@@ -563,34 +657,61 @@ body{
         }        
     }
     #quienessomos{
-        background: linear-gradient(-45deg, #53182C, #96445f, #552c33, #422f32);
-        background-size: 400% 400%;
-        animation: gradient 15s ease infinite;
-        
-        @keyframes gradient {
-            0% {
-                background-position: 0% 50%;
-            }
-            50% {
-                background-position: 100% 50%;
-            }
-            100% {
-                background-position: 0% 50%;
+        .cover{
+            background: rgb(70,16,34);
+            background: radial-gradient(circle, rgba(70,16,34,0.1) 0%, rgba(70,16,34,0.2) 100%);
+        }
+        #ivan{
+            box-shadow: 0 4px 8px 3px rgba(0,0,0,0.2) !important;
+            border: 2px solid $test_color_plain;
+            background-image: url('../img/photo/ivan.jpg');
+            background-size: cover;
+            background-position: 65% 75%;
+            background-repeat: no-repeat;
+            height: 15em;
+            width: 15em;
+            border-radius: 50%;
+        }
+        #md-container{
+            @media screen and(max-width: 736px) {
+                display: none !important;
             }
         }
-        .card{
-            background: none !important;
-            .card-body{
-                .text-body{
-                    padding: 0.5em;
-                    color: whitesmoke !important;
-                    text-align: center;  
-                    border: 2px solid whitesmoke;
-                    border-radius: 5px;
+    }
+    #nosotros{
+        .accordion{
+            box-shadow: 0 4px 8px 3px rgba(0,0,0,0.2) !important;
+            border-radius: 5px;
+            @media screen and(max-width: 736px) {
+                width: 90%;
+            }
+            @media screen and(min-width: 736px) {
+                width: 85%;
+            }
+            .card{
+                .card-header{                    
+                    background: rgb(70,16,34);
+                    background: radial-gradient(circle, rgba(70,16,34,0.1) 0%, rgba(70,16,34,0.2) 100%);
+                    .btn{
+                        text-decoration: none;
+                        color: #343a40;
+                        img{
+                            width: 2em;
+                            transition: all 300ms ease-in-out;
+                            transform: rotate(-90deg);
+                        }
+                    }
+                    .collapsed{                  
+                        img{
+                            transform: rotate(90deg);
+                        }
+                    }
                 }
-                .btn{
-                    font-weight: 600;
-                    color: $test_color_hover;
+                .card-body{
+                    a{
+                        text-decoration: none;
+                        color: black;
+                    }
                 }
             }
         }
@@ -644,7 +765,6 @@ body{
     }
     #ourplans{
         @media screen and(min-width: 736px) {
-            height: 100vh !important;            
         }
         @media screen and(max-width: 736px) {
             margin-top: 5em !important;
@@ -736,21 +856,41 @@ body{
         }
     }
     #whatsapp{
+        z-index: 4;
+        position:fixed;
+        width: 200px;
         &.animate{
             animation: side-appear 1500ms ease-in-out;
             animation-fill-mode: forwards;
         }
-        z-index: 4;
-        position:fixed;
-        @media screen and(max-width: 736px) {
-            width:3em;           
+        @media screen and(max-width: 736px) {            
+            bottom: 10px;
+            right: 0;         
         }        
         @media screen and(min-width: 736px) {
-            width:4em;           
-        }        
-        bottom:20px;
-        right:10px;
+            bottom:20px;
+            right: 0 !important;
+            img{
+                height: 4em !important;
+            }           
+        }
+        #banner{
+            background-color: $test_color_hover !important;
+            color: whitesmoke;
+            text-decoration: none;
+            border-radius: 15px;
+            font-weight: 600 !important;
+            display: none;
+        }
+        &.banner-active{
+            #banner{
+                display: block;
+                animation: 350ms side-appear ease-in-out ;
+                animation-fill-mode: forwards;                
+            }
+        }       
     }
+    /*animation*/
     #contact,
     #thanks,
     #underconstruction,
@@ -759,8 +899,8 @@ body{
             position: fixed;
             background: whitesmoke;  
             width: 100%;
-            height:100vh;
-            z-index: -9999;
+            height:100%;
+            z-index: -1;
         }
 
         .circles{
@@ -778,7 +918,7 @@ body{
             list-style: none;
             width: 20px;
             height: 20px;
-            background: $glow;
+            background: rgb(70, 16, 34, 0.1);
             animation: animate 10s linear infinite;
             bottom: -150px;
             

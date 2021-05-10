@@ -18,13 +18,20 @@ Nuestros planes
             <li></li>
     </ul>
   </div>
-  <div class="d-flex w-100">
-      <img 
+  <div class="d-flex flex-column text-center w-100 px-5 py-3">
+    <h3 style="font-weight: 600;">
+      Recuerda:
+    </h3>
+    <h4 class="lead m-0">
+      El costo del paquete seleccionado es adicional al costo de tu proyecto con Analítica.
+    </h4>
+  </div>
+  <div class="d-flex">
+    <img 
       class="img-fluid d-none d-md-block mx-auto" 
       src="{{url_for('static', filename='img/svg/crown.svg')}}" 
-      style="height: 4em; z-index: 2 !important; transform: translateY(4vh) !important;" 
-      alt="">
-  </div>
+      style="height: 4em; z-index: 2 !important; transform: translateY(4vh) !important;">
+  </div>      
   <div class="mx-auto h-75 px-md-5 pb-5 mb-sm-5 mt-0 card-deck" style="width: 100%;">
     <div class="card text-center" id="basic_pck">
         <div class="card-header text-center text-light">
@@ -56,7 +63,7 @@ Nuestros planes
       <div class="card-body">
           <h4 class="card-title font-weight-bold">Profesional</h4>
           <div class="price d-flex justify-content-center align-items-center mb-3"><h4 class="font-weight-bold m-0">$1'800.000 COP </h4><p class="m-0 pl-1"> / año</p></div>
-          <div class="price d-flex justify-content-center align-items-center mb-3"><p class="m-0"> Incluye hasta 10 usuarios profesionales + 1 administradores.</p></div>
+          <div class="price d-flex justify-content-center align-items-center mb-3"><p class="m-0"> Incluye hasta 10 usuarios profesionales + 2 administradores.</p></div>
           <a href="{{url_for('plans', _plan = 2)}}" class="btn btn-outline-warning shadow-none font-weight-bold">¡Quiero Este!</a>
       </div>
       <div class="card-footer text-muted">
@@ -64,7 +71,7 @@ Nuestros planes
               <li class="list-group-item py-1 m-0">Analítica predictiva y ML <a href="{{url_for('packageinfo')}}"><i class="fas mx-1 fa-question-circle"></i></a></li>
               <li class="list-group-item py-1">Procesamiento de lenguaje natural</li>
               <li class="list-group-item py-1">Actualizaciones automáticas <b>(*)</b></li>
-              <li class="list-group-item py-1">Formularios nativos <b>(*)</b></li>
+              <li class="list-group-item py-1">Formularios nativos <b>(5)</b></li>
               <li class="list-group-item py-1">Cambios visuales menores gratuitos <b>(10)</b></li>
               </ul>
       </div>
@@ -82,23 +89,14 @@ Nuestros planes
         </div>
         <div class="card-footer text-muted">
               <ul class="list-group p-0 list-group-flush">
-                <li class="list-group-item py-1 m-0">Analítica prescriptiva <a href="{{url_for('packageinfo')}}"><i class="fas mx-1 fa-question-circle"></i></li>
-                <li class="list-group-item py-1">Arquitectura completa en nube <a href="{{url_for('packageinfo')}}"><i class="fas mx-1 fa-question-circle"></i></li>
-                <li class="list-group-item py-1">Analítica en tiempo real <a href="{{url_for('packageinfo')}}"><i class="fas mx-1 fa-question-circle"></i></li>
-                <li class="list-group-item py-1">Desarrollo de microservicios <a href="{{url_for('packageinfo')}}"><i class="fas mx-1 fa-question-circle"></i></li>
-                <li class="list-group-item py-1">Garantía permanente <a href="{{url_for('packageinfo')}}"><i class="fas mx-1 fa-question-circle"></i></li>
+                <li class="list-group-item py-1 m-0">Analítica prescriptiva <a href="{{url_for('packageinfo')}}"><i class="fas mx-1 fa-question-circle"></i></a></li>
+                <li class="list-group-item py-1">Arquitectura completa en nube <a href="{{url_for('packageinfo')}}"><i class="fas mx-1 fa-question-circle"></i></a></li>
+                <li class="list-group-item py-1">Analítica en tiempo real <a href="{{url_for('packageinfo')}}"><i class="fas mx-1 fa-question-circle"></i></a></li>
+                <li class="list-group-item py-1">Desarrollo de microservicios <a href="{{url_for('packageinfo')}}"><i class="fas mx-1 fa-question-circle"></i></a></li>
+                <li class="list-group-item py-1">Garantía permanente <a href="{{url_for('packageinfo')}}"><i class="fas mx-1 fa-question-circle"></i></a></li>
               </ul>
         </div>
     </div>
-
-  </div>
-  <div class="row px-5">
-      <p class="text-muted">
-          <i>
-              *El costo del paquete seleccionado es adicional 
-              al costo de tu proyecto con Analítica.
-          </i>
-      </p>
   </div>
   </section>
 {% endblock %}
