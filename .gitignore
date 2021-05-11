@@ -1,3 +1,4 @@
 *.css
 venv
 .vscode
+application/frontend/templates/static/css/main.css
