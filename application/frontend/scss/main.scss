@@ -39,6 +39,8 @@ body{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     overflow-x: hidden !important;
     p{
+        text-align: justify !important;  
+        text-justify: inter-word !important;
     }
     hr{
         border: 2px solid $test_color_plain;
@@ -177,34 +179,36 @@ body{
                 &>*{
                     position:absolute;
                 }
-                &#laptop-wrapper-cel{
+                &#laptop-wrapper-cel{                    
                     #laptop-image-cel{
                         top: 0;
                         left: 0;
                         filter: drop-shadow(2px 7px 4px rgba(0,0,0,0.2));
-                        width: 85%;
+                        width: 90%;
+                        height: 25vh;
                     }
                     #laptop-content-cel{                        
                         top: 1vh;
                         left: 10%;
-                        width: 65%;
-                        height: 18.5vh;
+                        width: 70%;
+                        height: 21.5vh;
                         border-radius: 5px;
                     }                                                
                 }
                 &#phone-wrapper-cel{
-                    transform: translateY(-7vh);
+                    transform: translateY(-6vh);
                     left: 5%;
                     #phone-image-cel{
                         left: 45%;
                         top: 5vh;
                         width: 70%;
+                        height: 30vh;
                         filter: drop-shadow(2px 7px 3px rgba(0,0,0,0.2));
                     }
                     #phone-content-cel{
-                        top: 8.5vh;
+                        top: 8.3vh;
                         left: 67.3%;
-                        height: 23.5vh;
+                        height: 23vh;
                         width: 25.3%;
                         border-radius: 5px;
                     }
@@ -533,6 +537,9 @@ body{
         }
     }
     #nuestroservicio{
+        .lead{
+            text-align: initial !important;
+        }
         .service-header{
             background: rgb(70,16,34);
             background: radial-gradient(circle, rgba(70,16,34,0.1) 0%, rgba(70,16,34,0.2) 100%);
@@ -560,6 +567,7 @@ body{
 
     #nuestroportal{
         .banner{
+            height: 60vh !important;
             background: rgb(70,16,34);
             background: radial-gradient(circle, rgba(70,16,34,0.1) 0%, rgba(70,16,34,0.2) 100%);
             border: 0 !important;
@@ -644,6 +652,9 @@ body{
                 .card-header{                    
                     background: rgb(70,16,34);
                     background: radial-gradient(circle, rgba(70,16,34,0.1) 0%, rgba(70,16,34,0.2) 100%);
+                    p{
+                        text-align: initial !important;
+                    }
                     .btn{
                         text-decoration: none;
                         color: #343a40;
@@ -670,6 +681,9 @@ body{
     }
     #page-footer{
         background: $test_color !important;
+        #copyright{
+            text-align: center !important;
+        }
         ul{
             font-size: 0.9em !important;
             text-align: start !important;
@@ -716,6 +730,11 @@ body{
 
     }
     #ourplans{
+        .card-deck{
+            p{
+                text-align: center !important;
+            }
+        }
         @media screen and(min-width: 736px) {
         }
         @media screen and(max-width: 736px) {

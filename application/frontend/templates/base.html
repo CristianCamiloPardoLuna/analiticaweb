@@ -19,11 +19,11 @@
         <img 
           class="img-fluid d-none d-md-block" 
           src="{{url_for('static', filename='img/company/logo-md/uva.png')}}" 
-          style="width: 2.5em; border-radius: 50%;">
+          style="width: 2.5em !important; height: 2em !important; border-radius: 50%;">
         <img 
           class="img-fluid d-block d-md-none" 
           src="{{url_for('static', filename='img/company/logo-md/uva.png')}}"       
-          style="width: 2em; border-radius: 50%;">
+          style="width: 2em !important; height: 1.5em !important; border-radius: 50%;">
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -88,11 +88,11 @@
         <img 
         class="img-fluid d-none d-md-block" 
         src="{{url_for('static', filename='img/company/logo-md/uva.png')}}" 
-        style="width: 2.5em; border-radius: 50%;">
+        style="width: 2.5em !important; height: 2em !important; border-radius: 50%;">
       <img 
         class="img-fluid d-block d-md-none" 
         src="{{url_for('static', filename='img/company/logo-md/uva.png')}}"       
-        style="width: 2em; border-radius: 50%;">      
+        style="width: 2em !important; height: 1.5em !important; border-radius: 50%;">      
       </a>
 
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-2" aria-controls="navbar-2" aria-expanded="false" aria-label="Toggle navigation">
@@ -158,9 +158,10 @@
     <a 
       id="whatsapp"
       class="d-flex"
+      style="height: 4rem !important;"
       target="_blank"
       rel="noopener noreferrer"
-      href="https://wa.link/fkk2xr">
+      href="https://wa.me/573028665787?text=¡Quiero%20iniciar%20mi%20proyecto%20con%20ANALITICA!">
       <div class="d-flex align-items-center justify-content-center px-0 mr-4 col-7 p-0 m-0">
         <p class="m-0 lead p-2" id="banner">
           ¡Contáctanos!
@@ -180,7 +181,7 @@
             <a target="_blank" rel="noopener noreferrer" href="https://github.com/analiticaco/"><i class="fab fa-github fa-2x mx-2"></i></a>
             <a href="#"><i class="fab fa-stack-overflow fa-2x mx-2"></i></a>
           </div>
-          <p class="text-light m-0">
+          <p class="copyright text-light m-0" id="copyright">
             Copyright &copy; 2021 Analítica Company S.A.S.,<br>
             Todos los derechos reservados.
           </p>

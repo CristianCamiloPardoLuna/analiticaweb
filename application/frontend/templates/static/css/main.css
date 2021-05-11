@@ -26,6 +26,10 @@ body {
   /*appsgif para cel*/
   /*animation*/
 }
+body p {
+  text-align: justify !important;
+  text-justify: inter-word !important;
+}
 body hr {
   border: 2px solid #5c142c;
   background-color: #5c142c !important;
@@ -232,29 +236,31 @@ body #appsgifcelcontainer #appsgifcel .wrapper#laptop-wrapper-cel #laptop-image-
   top: 0;
   left: 0;
   filter: drop-shadow(2px 7px 4px rgba(0, 0, 0, 0.2));
-  width: 85%;
+  width: 90%;
+  height: 25vh;
 }
 body #appsgifcelcontainer #appsgifcel .wrapper#laptop-wrapper-cel #laptop-content-cel {
   top: 1vh;
   left: 10%;
-  width: 65%;
-  height: 18.5vh;
+  width: 70%;
+  height: 21.5vh;
   border-radius: 5px;
 }
 body #appsgifcelcontainer #appsgifcel .wrapper#phone-wrapper-cel {
-  transform: translateY(-7vh);
+  transform: translateY(-6vh);
   left: 5%;
 }
 body #appsgifcelcontainer #appsgifcel .wrapper#phone-wrapper-cel #phone-image-cel {
   left: 45%;
   top: 5vh;
   width: 70%;
+  height: 30vh;
   filter: drop-shadow(2px 7px 3px rgba(0, 0, 0, 0.2));
 }
 body #appsgifcelcontainer #appsgifcel .wrapper#phone-wrapper-cel #phone-content-cel {
-  top: 8.5vh;
+  top: 8.3vh;
   left: 67.3%;
-  height: 23.5vh;
+  height: 23vh;
   width: 25.3%;
   border-radius: 5px;
 }
@@ -558,6 +564,9 @@ body #prices #price_2 .card-footer {
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
 }
+body #nuestroservicio .lead {
+  text-align: initial !important;
+}
 body #nuestroservicio .service-header {
   background: #461022;
   background: radial-gradient(circle, rgba(70, 16, 34, 0.1) 0%, rgba(70, 16, 34, 0.2) 100%);
@@ -578,6 +587,7 @@ body #nuestroservicio .area {
   z-index: -9999;
 }
 body #nuestroportal .banner {
+  height: 60vh !important;
   background: #461022;
   background: radial-gradient(circle, rgba(70, 16, 34, 0.1) 0%, rgba(70, 16, 34, 0.2) 100%);
   border: 0 !important;
@@ -662,6 +672,9 @@ body #nosotros .accordion .card .card-header {
   background: #461022;
   background: radial-gradient(circle, rgba(70, 16, 34, 0.1) 0%, rgba(70, 16, 34, 0.2) 100%);
 }
+body #nosotros .accordion .card .card-header p {
+  text-align: initial !important;
+}
 body #nosotros .accordion .card .card-header .btn {
   text-decoration: none;
   color: #343a40;
@@ -680,6 +693,9 @@ body #nosotros .accordion .card .card-body a {
 }
 body #page-footer {
   background: radial-gradient(circle, #8c2649 0%, #4b1326 100%) !important;
+}
+body #page-footer #copyright {
+  text-align: center !important;
 }
 body #page-footer ul {
   font-size: 0.9em !important;
@@ -718,6 +734,9 @@ body #contact #contact-form .col {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+body #ourplans .card-deck p {
+  text-align: center !important;
 }
 @media screen and (max-width: 736px) {
   body #ourplans {

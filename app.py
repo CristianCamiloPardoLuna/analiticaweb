@@ -124,5 +124,5 @@ def terms():
     )
 
 if __name__ == '__main__':
-    APP.debug = False
+    APP.debug = True
     APP.run()
