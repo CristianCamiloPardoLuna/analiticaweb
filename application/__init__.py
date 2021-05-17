@@ -5,7 +5,8 @@ from flask_login import LoginManager
 APP = Flask(
     __name__,
     template_folder='./frontend/templates',
-    static_folder='./frontend/templates/static'
+    static_folder='./frontend/templates/static',
+    static_url_path = ''
 )
 
 APP.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db.sqlite'

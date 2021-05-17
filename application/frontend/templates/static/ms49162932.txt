@@ -1,0 +1,5 @@
+﻿{
+  "Description": "Domain ownership verification file for Microsoft 365 - place in the website root",
+  "Domain": "analiticaco.com",
+  "Id": "2a183b5f-3c7c-42dd-95e0-7c39a73c16f2"
+}
