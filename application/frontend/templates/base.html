@@ -3,10 +3,8 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
   <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/main.css') }}"/>
   <link rel="icon" sizes="32X32" href="{{url_for('static', filename='img/company/icon.svg')}}">
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <title> ANALITICA - {% block header %}{% endblock %} </title>  
 </head>
 <body class="bg-light">
@@ -33,30 +31,106 @@
         <ul class="nav navbar-nav mr-auto" id="navbar-1-ul">
           <li class="nav-item d-none d-md-block dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Servicios
+              {% if lang == 'ESP' %}
+                Servicios
+              {% else %}
+                Services
+              {% endif %}              
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#apps">Desarrollo de aplicaciones</a>
-              <a class="dropdown-item" href="#automatizacion">Automatización de procesos</a>
-              <a class="dropdown-item" href="#ciencia_de_datos">Ciencia de datos</a>
+              <a class="dropdown-item" href="#apps">
+                {% if lang == 'ESP' %}
+                  Desarrollo de aplicaciones
+                {% else %}
+                  Application development
+                {% endif %}                
+              </a>
+              <a class="dropdown-item" href="#automatizacion">
+                {% if lang == 'ESP' %}
+                  Automatización de procesos
+                {% else %}
+                  Process automation
+                {% endif %}              
+              </a>
+              <a class="dropdown-item" href="#ciencia_de_datos">
+                {% if lang == 'ESP' %}
+                  Ciencia de datos y AI
+                {% else %}
+                  Data science and AI
+                {% endif %}                          
+              </a>
             </div>
           </li>
           <div class="nav-item d-block d-md-none">
-            <a class="nav-link" href="#nuestroservicio">Qué hacemos</a>
+            <a class="nav-link" href="#nuestroservicio">
+              {% if lang == 'ESP' %}
+                Qué hacemos
+              {% else %}
+                What we do
+              {% endif %}              
+            </a>
           </div>
           <div class="nav-item">
-            <a class="nav-link" href="#quienessomos">Quiénes somos</a>
+            <a class="nav-link" href="#quienessomos">
+              {% if lang == 'ESP' %}
+                Quiénes somos
+              {% else %}
+                Who we are
+              {% endif %}              
+            </a>
           </div>
           <div class="nav-item">
-            <a class="nav-link" href="#inicia">Cómo trabajamos</a>
+            <a class="nav-link" href="#inicia">
+              {% if lang == 'ESP' %}
+                Cómo trabajamos
+              {% else %}
+                How we work
+              {% endif %}              
+            </a>
           </div>
         </ul>
         <ul class="navbar-nav" id="-navbar-1-ul">
           <li class="nav-item">
-            <a class="nav-link" href="{{ url_for('pricing') }}"> Precios </a>
+            <form method="POST" action="/Changelang/">
+              <select name="lang" class="form-control" onchange="this.form.submit();" id="lang">
+                {% if lang == 'ESP' %}
+                  <option value="{{var}},ESP" selected>
+                    ESP
+                  </option>
+                  <option value="{{var}},ENG">
+                    ENG
+                  </option>
+                {% else %}
+                  <option value="{{var}},ESP">
+                    ESP
+                  </option>
+                  <option value="{{var}},ENG" selected>
+                    ENG
+                  </option>
+                {% endif %}
+              </select>
+            </form>
+          </li>
+          <li class="nav-item" id="lang">
+            <a href="{{ url_for('pricing') }}" class="nav-link"></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{ url_for('contact') }}">Contacto </a>
+            <a class="nav-link" href="{{ url_for('pricing') }}"> 
+              {% if lang == 'ESP' %}
+                Precios 
+              {% else %}
+                Pricing
+              {% endif %}              
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('contact') }}">
+            {% if lang == 'ESP' %}
+              Contacto
+            {% else %}
+              Contact
+            {% endif %}
+             </a>
           </li>
           <div class="nav-item d-none d-md-block">
             <a 
@@ -65,7 +139,11 @@
               rel="noopener noreferrer" 
               class="nav-link clientes-btn px-3 btn text-light btn-outline-warning shadow-none" 
             >
+            {% if lang == 'ESP' %}
               Ingresa
+            {% else %}
+              Log in
+            {% endif %}
             </a>
           </div>
           <div class="nav-item d-block d-md-none">
@@ -75,6 +153,11 @@
               href="https://clientes.analiticaco.com" 
               class="nav-link clientes-btn px-5 text-light btn-outline-warning btn shadow-none" 
               >
+              {% if lang == 'ESP' %}
+              Ingresa
+              {% else %}
+                Log in
+              {% endif %}
               Ingresa
             </a>
           </div>
@@ -103,27 +186,57 @@
 
         <ul class="nav navbar-nav mr-auto" id="navbar-2-ul">
           <div class="nav-item">
-            <a class="nav-link" href="{{ url_for('index') }}">Inicio</a>
+            <a class="nav-link" href="{{ url_for('index') }}">
+              {% if lang == 'ESP' %}
+                Inicio
+              {% else %}
+                Home
+              {% endif %}              
+            </a>
           </div>
         </ul>
 
         <ul class="navbar-nav" id="-navbar-2-ul">
           {% if var == 'pricing.html' %}            
           <li class="nav-item active">
-            <a class="nav-link" href="{{ url_for('pricing') }}"> Precios </a>
+            <a class="nav-link" href="{{ url_for('pricing') }}"> 
+              {% if lang == 'ESP' %}
+                Precios
+              {% else %}
+                Pricing
+              {% endif %}
+             </a>
           </li>
           {% else %}
           <li class="nav-item">
-            <a class="nav-link" href="{{ url_for('pricing') }}"> Precios </a>
+            <a class="nav-link" href="{{ url_for('pricing') }}">               
+              {% if lang == 'ESP' %}
+                Precios
+              {% else %}
+                Pricing
+              {% endif %} 
+            </a>
           </li>
           {% endif %}
           {% if var == 'contactus.html' %}
           <li class="nav-item active">
-            <a class="nav-link" href="{{ url_for('contact') }}">Contacto </a>
+            <a class="nav-link" href="{{ url_for('contact') }}">
+              {% if lang == 'ESP' %}
+                Contacto
+              {% else %}
+                Contact
+              {% endif %}
+            </a>
           </li>
           {% else %}
           <li class="nav-item">
-            <a class="nav-link" href="{{ url_for('contact') }}">Contacto </a>
+            <a class="nav-link" href="{{ url_for('contact') }}">
+              {% if lang == 'ESP' %}
+                Contacto
+              {% else %}
+                Contact
+              {% endif %}
+            </a>
           </li>
           {% endif %}
           <div class="nav-item d-none d-md-block">
@@ -133,7 +246,11 @@
               rel="noopener noreferrer" 
               class="nav-link clientes-btn px-3 btn text-light btn-outline-warning shadow-none" 
             >
+            {% if lang == 'ESP' %}
               Ingresa
+            {% else %}
+              Log in
+            {% endif %}
             </a>
           </div>
           <div class="nav-item d-block d-md-none">
@@ -143,7 +260,11 @@
               href="https://clientes.analiticaco.com" 
               class="nav-link clientes-btn px-5 text-light btn-outline-warning btn shadow-none" 
               >
-              Ingresa
+              {% if lang == 'ESP' %}
+                Ingresa
+              {% else %}
+                Log in
+              {% endif %}
             </a>
           </div>
         </ul>
@@ -162,9 +283,13 @@
       target="_blank"
       rel="noopener noreferrer"
       href="https://wa.me/573028665787?text=¡Quiero%20iniciar%20mi%20proyecto%20con%20ANALITICA!">
-      <div class="d-flex align-items-center justify-content-center px-0 mr-4 col-7 p-0 m-0">
+      <div class="d-flex align-items-center justify-content-center px-0 mr-2 col-7 p-0 m-0">
         <p class="m-0 lead p-2" id="banner">
-          ¡Contáctanos!
+          {% if lang == 'ESP' %}
+            ¡Contáctanos!
+          {% else %}
+            Contact us!
+          {% endif %}
         </p>        
       </div>
       <img 
@@ -181,35 +306,112 @@
             <a target="_blank" rel="noopener noreferrer" href="https://github.com/analiticaco/"><i class="fab fa-github fa-2x mx-2"></i></a>
             <a href="#"><i class="fab fa-stack-overflow fa-2x mx-2"></i></a>
           </div>
-          <p class="copyright text-light m-0" id="copyright">
-            Copyright &copy; 2021 Analítica Company S.A.S.,<br>
-            Todos los derechos reservados.
+          <p class="copyright text-light m-0" id="copyright">            
+            {% if lang == 'ESP' %}
+              Copyright &copy; 2021 Analítica Company S.A.S.,<br>
+              Todos los derechos reservados.
+            {% else %}
+              Copyright &copy; 2021 Analítica Company S.A.S.,<br>
+              All rights reserved.
+            {% endif %}
           </p>
         </div>
         <div class="col-6 px-1 text-center d-none d-sm-block text-light">
           <div class="d-flex mx-auto justify-content-around">
             <div class="flex-column col">          
               <ul class="list-group" style="background: none !important;">            
-                <div class="list-group-item p-1" style="background: none !important; border: none !important;">Desarrolladores: </div>
-                <div class="list-group-item p-1" style="background: none !important; border: none !important;"><a href="{{url_for('uc')}}">&diams; Repositorios</a></div>
-                <div class="list-group-item p-1" style="background: none !important; border: none !important;"><a href="{{url_for('uc')}}">&diams; Documentación</a></div>
-                <div class="list-group-item p-1" style="background: none !important; border: none !important;"><a href="{{url_for('uc')}}">&diams; Inteligencia Artificial</a></div>
+                <div class="list-group-item p-1" style="background: none !important; border: none !important;">                  
+                  {% if lang == 'ESP' %}
+                    Desarrolladores: 
+                  {% else %}
+                    Developers:
+                  {% endif %}                  
+                </div>
+                <div class="list-group-item p-1" style="background: none !important; border: none !important;"><a href="{{url_for('uc')}}">&diams;
+                  {% if lang == 'ESP' %}
+                    Repositorios 
+                  {% else %}
+                    Repositories
+                  {% endif %}
+                </a></div>
+                <div class="list-group-item p-1" style="background: none !important; border: none !important;"><a href="{{url_for('uc')}}">&diams;                   
+                  {% if lang == 'ESP' %}
+                    Documentación
+                  {% else %}
+                    Documentation
+                  {% endif %}
+                </a></div>
+                <div class="list-group-item p-1" style="background: none !important; border: none !important;"><a href="{{url_for('uc')}}">&diams; 
+                  {% if lang == 'ESP' %}
+                    Inteligencia Artificial
+                  {% else %}
+                    Artificial Intelligence
+                  {% endif %}                  
+                </a></div>
               </ul>
             </div>
             <div class="flex-column col">
               <ul class="list-group" style="background: none !important;">
-                <div class="list-group-item p-1" style="background: none !important; border: none !important;">Acerca de Analítica:</div>
-                <div class="list-group-item p-1" style="background: none !important; border: none !important;"><a href="{{url_for('contact')}}">&diams; Contacto</a></div>
-                <div class="list-group-item p-1" style="background: none !important; border: none !important;"><a href="{{url_for('uc')}}">&diams; FAQ</a></div>
-                <div class="list-group-item p-1" style="background: none !important; border: none !important;"><a href="{{url_for('uc')}}">&diams; Nuestra historia</a></div>
+                <div class="list-group-item p-1" style="background: none !important; border: none !important;">
+                  {% if lang == 'ESP' %}
+                    Acerca de Analítica:                    
+                  {% else %}
+                    About Analitica:
+                  {% endif %}
+                </div>
+                <div class="list-group-item p-1" style="background: none !important; border: none !important;"><a href="{{url_for('contact')}}">&diams; 
+                  {% if lang == 'ESP' %}
+                    Contacto                    
+                  {% else %}
+                    Contact
+                  {% endif %}
+                </a></div>
+                <div class="list-group-item p-1" style="background: none !important; border: none !important;"><a href="{{url_for('uc')}}">&diams; 
+                  {% if lang == 'ESP' %}
+                    FAQ                    
+                  {% else %}
+                    FAQ
+                  {% endif %}
+                </a></div>
+                <div class="list-group-item p-1" style="background: none !important; border: none !important;"><a href="{{url_for('uc')}}">&diams; 
+                  {% if lang == 'ESP' %}
+                    Nuestra historia                    
+                  {% else %}
+                    Our story
+                  {% endif %}
+                </a></div>
               </ul>
             </div>
             <div class="flex-column col">
               <ul class="list-group" style="background: none !important;">
-                <div class="list-group-item p-1" style="background: none !important; border: none !important;">Recursos:</div>
-                <div class="list-group-item p-1" style="background: none !important; border: none !important;"><a href="{{url_for('terms')}}">&diams; Términos y condiciones</a></div>
-                <div class="list-group-item p-1" style="background: none !important; border: none !important;"><a href="{{url_for('privacypolicy')}}">&diams; Política de privacidad</a></div>
-                <div class="list-group-item p-1" style="background: none !important; border: none !important;"><a href="{{url_for('uc')}}">&diams; Manual de usuario</a></div>
+                <div class="list-group-item p-1" style="background: none !important; border: none !important;">
+                  {% if lang == 'ESP' %}
+                    Recursos:                    
+                  {% else %}
+                    Resources:
+                  {% endif %}
+                </div>
+                <div class="list-group-item p-1" style="background: none !important; border: none !important;"><a href="{{url_for('terms')}}">&diams; 
+                  {% if lang == 'ESP' %}
+                    Términos y condiciones
+                  {% else %}
+                    Terms and conditions
+                  {% endif %}
+                </a></div>
+                <div class="list-group-item p-1" style="background: none !important; border: none !important;"><a href="{{url_for('privacypolicy')}}">&diams;                   
+                  {% if lang == 'ESP' %}
+                    Política de privacidad
+                  {% else %}
+                    Privacy policy
+                  {% endif %}
+                </a></div>
+                <div class="list-group-item p-1" style="background: none !important; border: none !important;"><a href="{{url_for('uc')}}">&diams; 
+                  {% if lang == 'ESP' %}
+                    Manual de usuario
+                  {% else %}
+                    Users manual
+                  {% endif %}
+                </a></div>
               </ul>
             </div>
           </div>
@@ -217,9 +419,15 @@
       </div>  
       <div class="row text-light text-center">        
         <p class="lead mx-auto px-5">
-          Hecho por Analítica Company S.A.S. con 
-          <img class="img-fluid" style ="width: 2em;" src="{{url_for('static', filename='img/svg/colombia.svg')}}" style="width: 3em;" alt=""> 
-          desde Colombia.
+          {% if lang == 'ESP' %}
+            Hecho por Analítica Company S.A.S. con 
+            <img class="img-fluid" style ="width: 2em;" src="{{url_for('static', filename='img/svg/colombia.svg')}}" style="width: 3em;" alt=""> 
+            desde Colombia.
+          {% else %}
+            Made by Analítica Company S.A.S. with 
+            <img class="img-fluid" style ="width: 2em;" src="{{url_for('static', filename='img/svg/colombia.svg')}}" style="width: 3em;" alt=""> 
+            from Colombia.
+          {% endif %}
         </p>            
       </div>
     </section>
@@ -228,7 +436,6 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>  
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init();
     </script>

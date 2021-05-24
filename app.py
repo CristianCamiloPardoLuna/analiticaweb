@@ -1,4 +1,4 @@
-from flask import Response, render_template, jsonify, request, flash, send_from_directory
+from flask import Response, redirect, url_for, render_template, jsonify, request, flash, send_from_directory
 from flask_login import current_user
 from datetime import datetime
 from application import APP
@@ -7,7 +7,15 @@ from application.backend.models import Contact, Stage1, db
 @APP.route('/')
 def index():
     return render_template(
-        'index.html'
+        'index.html',
+        lang = 'ESP'
+        )
+
+@APP.route('/eng/')
+def index_eng():
+    return render_template(
+        'index.html',
+        lang = 'ENG'        
         )
 
 @APP.route('/returnContacts/<_id>/')
@@ -123,6 +131,14 @@ def terms():
         'termsconditions.html'
     )
 
+@APP.route('/Changelang/', methods=['POST'])
+def lang():
+    lang = request.form.get('lang').split(',')[-1]
+    if lang == 'ESP':
+        return redirect(url_for('index'))
+    else:
+        return redirect(url_for('index_eng'))
+
 if __name__ == '__main__':
-    APP.debug = False
+    APP.debug = True
     APP.run()

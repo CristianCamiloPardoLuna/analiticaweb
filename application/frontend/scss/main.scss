@@ -84,6 +84,9 @@ body{
                 .clientes-btn:hover{
                     color: whitesmoke !important;
                 }
+                #lang{
+                    background: none !important;
+                }
             }
         }
         .navbar-collapse{
@@ -143,7 +146,6 @@ body{
                 padding: 0;
                 background: whitesmoke !important;
                 .dropdown-item{
-                    transition: all 200ms ease-in-out;
                     &:hover{
                         color: white !important;
                         background: $test_color_trans;
@@ -162,7 +164,7 @@ body{
     }
     #initial-effect{
         background: rgb(248,249,250);
-        background: linear-gradient(0deg, rgba(248,249,250,1) 0%, rgba(106,34,59,0.2) 100%);
+        background: linear-gradient(0deg, rgba(248,249,250,1) 0%, rgba(145, 19, 61, 0.10) 100%); 
         .bg-light{
             box-shadow: 0 4px 8px 3px rgba(0,0,0,0.2) !important;
         }
@@ -271,7 +273,6 @@ body{
             }
         }
         #slogan{
-            color: $test_color_plain;
         }
         #companydesc{
             animation: upper-show 1s ease-in-out;
@@ -279,7 +280,6 @@ body{
         }
         #startnow{            
             input{
-                padding: 0.3rem !important;
                 border: 0;
             }
             input:focus,
@@ -287,18 +287,18 @@ body{
                 border: 1.5px solid $test_color_plain;
             }
             input::placeholder {
-                font-size: large !important;
-                @media screen and(min-width: 736px) {
-                    font-weight: 600 !important;                   
-                }
                 color: #6c757d !important;
-                opacity: 1;
+                opacity: 0.7;
             }              
             input:-ms-input-placeholder {
                 color: #6c757d !important;
             }              
             input::-ms-input-placeholder {
                 color: #6c757d !important;
+            }
+            button,
+            input{
+                height: 5vh !important;
             }
         }
     }
@@ -829,7 +829,7 @@ body{
     #whatsapp{
         z-index: 4;
         position:fixed;
-        width: 200px;
+        width: 250px;
         &.animate{
             animation: side-appear 1500ms ease-in-out;
             animation-fill-mode: forwards;
