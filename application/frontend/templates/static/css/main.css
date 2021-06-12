@@ -74,6 +74,28 @@ body nav {
     height: 10vh;
   }
 }
+body nav #lang-mov {
+  border-radius: 5px;
+  color: #461022;
+  background: white;
+  padding: 0;
+}
+body nav #lang-mov #navbarDropdownLang {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body nav #lang-mov #navbarDropdownLang-mov img,
+body nav #lang-mov .dropdown-menu img {
+  width: 1.5em;
+  margin-right: 0.1em;
+}
+body nav #lang-mov:hover a {
+  text-decoration: none !important;
+}
+body nav #lang-mov #navbarDropdownLang-mov {
+  padding: 0 0.3em 0 0.3em;
+}
 body nav .navbar-nav .nav-item .clientes-btn:hover {
   color: whitesmoke !important;
 }
