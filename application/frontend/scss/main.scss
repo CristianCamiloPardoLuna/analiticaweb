@@ -8,9 +8,7 @@ $background-main: rgb(245, 156, 156);
 $background-sec: rgb(95, 24, 48, 0.1);
 $glow: rgb(245, 156, 156, 0.7);
 $_background_grad: radial-gradient(circle, rgba(255,218,213,1) 0%, rgba(255,255,255,1) 100%);
-//$test_color: rgb(95, 24, 48);
-// hex test #53182C
-$test_color_hover: rgb(70, 16, 34);
+$test_color_hover: rgb(70, 16, 34); // hex test #53182C
 $test_color_plain: rgb(92, 20, 44);
 $test_color_trans: rgb(70, 16, 34, 0.6);
 $test_color: radial-gradient(circle, rgba(140,38,73,1) 0%, rgba(75,19,38,1) 100%); 
@@ -26,7 +24,9 @@ $test_color: radial-gradient(circle, rgba(140,38,73,1) 0%, rgba(75,19,38,1) 100%
 }
 
 .btn:focus,
-.btn:active{
+.btn:active,
+select:focus,
+select:active{
     box-shadow: none !important;
     outline: none !important;
 }
@@ -84,6 +84,29 @@ body{
                 .clientes-btn:hover{
                     color: whitesmoke !important;
                 }
+                &#lang{              
+                    border-radius: 5px;
+                    font-size:smaller !important;                
+                    color: $test_color_hover;
+                    background: white;
+                    margin: 0 0.5em 0 0.5em !important;
+                    #navbarDropdownLang{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;                        
+                    }
+                    #navbarDropdownLang,
+                    .dropdown-menu{
+                        padding: 0.1 !important;
+                        img{
+                            width: 1.5em;
+                            margin-right: 0.3em;
+                        }
+                    }    
+                    &:hover a{
+                        text-decoration: none !important;
+                    }    
+                }
             }
         }
         .navbar-collapse{
@@ -136,14 +159,13 @@ body{
                 }
                 li a:hover,
                 a:hover{
-                    text-decoration: underline !important;
+                    text-decoration: underline;
                 }            
             }
             .dropdown-menu{
                 padding: 0;
                 background: whitesmoke !important;
                 .dropdown-item{
-                    transition: all 200ms ease-in-out;
                     &:hover{
                         color: white !important;
                         background: $test_color_trans;
@@ -162,7 +184,7 @@ body{
     }
     #initial-effect{
         background: rgb(248,249,250);
-        background: linear-gradient(0deg, rgba(248,249,250,1) 0%, rgba(106,34,59,0.2) 100%);
+        background: linear-gradient(0deg, rgba(248,249,250,1) 0%, rgba(145, 19, 61, 0.10) 100%); 
         .bg-light{
             box-shadow: 0 4px 8px 3px rgba(0,0,0,0.2) !important;
         }
@@ -271,7 +293,6 @@ body{
             }
         }
         #slogan{
-            color: $test_color_plain;
         }
         #companydesc{
             animation: upper-show 1s ease-in-out;
@@ -279,7 +300,6 @@ body{
         }
         #startnow{            
             input{
-                padding: 0.3rem !important;
                 border: 0;
             }
             input:focus,
@@ -287,18 +307,18 @@ body{
                 border: 1.5px solid $test_color_plain;
             }
             input::placeholder {
-                font-size: large !important;
-                @media screen and(min-width: 736px) {
-                    font-weight: 600 !important;                   
-                }
                 color: #6c757d !important;
-                opacity: 1;
+                opacity: 0.7;
             }              
             input:-ms-input-placeholder {
                 color: #6c757d !important;
             }              
             input::-ms-input-placeholder {
                 color: #6c757d !important;
+            }
+            button,
+            input{
+                height: 5vh !important;
             }
         }
     }
@@ -829,7 +849,7 @@ body{
     #whatsapp{
         z-index: 4;
         position:fixed;
-        width: 200px;
+        width: 250px;
         &.animate{
             animation: side-appear 1500ms ease-in-out;
             animation-fill-mode: forwards;

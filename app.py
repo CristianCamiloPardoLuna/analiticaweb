@@ -1,4 +1,4 @@
-from flask import Response, render_template, jsonify, request, flash, send_from_directory
+from flask import Response, redirect, url_for, render_template, jsonify, request, flash, send_from_directory
 from flask_login import current_user
 from datetime import datetime
 from application import APP
@@ -7,8 +7,13 @@ from application.backend.models import Contact, Stage1, db
 @APP.route('/')
 def index():
     return render_template(
-        'index.html'
+        'index.html',
+        lang = 'ESP'
         )
+
+@APP.route('/en/')
+def index_eng():
+    return render_template('index.html', lang = 'ENG')
 
 @APP.route('/returnContacts/<_id>/')
 def returnContacts(_id):
@@ -19,7 +24,7 @@ def returnContacts(_id):
 """Returns contact in model
 """
 
-@APP.route('/startnow', methods=['POST'])
+@APP.route('/startnow/', methods=['POST'])
 def startnow():
     email = request.form.get('email')
     tellusmore = str('¡Quiero iniciar mi primer proyecto con Analítica por $40.000 COP la hora!')
@@ -37,10 +42,18 @@ def startnow():
         tellusmore = tellusmore
     )
 
-@APP.route('/pricing')
+@APP.route('/pricing/')
 def pricing():
     return render_template(
-        'pricing.html'
+        'pricing.html',
+        lang='ESP'
+    )
+
+@APP.route('/pricing/en/')
+def pricing_en():
+    return render_template(
+        'pricing.html',
+        lang='ENG'
     )
 
 @APP.route('/get_your_plan/<_plan>')
@@ -57,6 +70,14 @@ def plans(_plan):
 def contact():
     return render_template(
         'contactus.html',
+        lang = 'ESP'
+    )
+
+@APP.route('/contact/en/')
+def contact_en():
+    return render_template(
+        'contactus.html',
+        lang = 'ENG'
     )
 
 @APP.route('/contact/<tellusmore>')

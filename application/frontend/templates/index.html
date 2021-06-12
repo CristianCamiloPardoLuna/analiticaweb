@@ -23,19 +23,28 @@ Expertos en ciencia de datos
           class="mx-auto text-md-left align-items-start flex-column px-md-5" 
           id="companydesc">
           <img 
-          class="img-fluid p-0 mx-auto w-75" 
+          class="img-fluid mx-auto"
+          style="width: 65%;" 
           src="{{url_for('static', filename='img/company/md/uva.png')}}"
           >
           <div id="slogan">
-          <h1
-          class="m-0 d-none d-md-block" 
+          <h2
+          class="m-0 mb-2 d-none d-md-block" 
           style="font-weight: 600;">
-            Expertos en ciencia de datos
-          </h1>
+          {% if lang == 'ESP' %}
+            Expertos en ciencia de datos y desarrollo de aplicaciones.
+          {% else %}
+            Data science and app development experts. 
+          {% endif %}
+          </h2>
           <h4
           class="m-0 mx-5 mb-2 d-block d-md-none" 
           style="font-weight: 600;">
-            Expertos en ciencia de datos
+          {% if lang == 'ESP' %}
+            Expertos en ciencia de datos y desarrollo de aplicaciones.
+          {% else %}
+            Data science and app development experts. 
+          {% endif %}
           </h4>
           </div>         
           <div class="d-block d-md-none my-4" id="appsgifcelcontainer">
@@ -66,25 +75,39 @@ Expertos en ciencia de datos
               </div>
             </div>
           </div> 
-          <h4 class="d-none d-md-block text-left m-0 mt-1">
+          <h5 class="d-none d-md-block text-left m-0 mb-4">
+            {% if lang == 'ESP' %}
             Conecta todas tus fuentes, visualiza tus indicadores e impulsa tu negocio con Analítica
-          </h4>
+            {% else %}
+            Connect all your data sources, visualize your indicators and boost your business with Analitica
+            {% endif %}            
+          </h5>
           <form 
             class="d-md-flex w-100 p-0 align-items-center justify-content-around"
             action="/startnow"
             id="startnow"
             method="POST">
-            <input type="email" class="form-control col-lg my-2" name="email" placeholder="Ingresa tu correo electrónico">
+            <input type="email" class="form-control form-control-sm col-lg my-2" name="email" placeholder="Ingresa tu correo electrónico">
             <button 
               type="submit" 
-              class="btn btn-outline-warning shadow-none ml-md-3 my-2 col-sm col-md-3">
-                Inicia
+              class="btn btn-outline-warning btn-sm shadow-none ml-md-3 my-2 col-sm col-md-5">
+              {% if lang == 'ESP' %}
+              ¡Obtén un demo gratuito!
+              {% else %}
+              Get a free demo!
+              {% endif %}                
             </button>
           </form>            
-          <h5
+          <h6
             class="text-sm-center text-md-left m-0 mt-1">
-            Inicia ahora desde $40.000 COP, el mejor precio del mercado*
-          </h5>
+            <i>
+              {% if lang == 'ESP' %}
+                Inicia ahora desde $40.000 COP/hora, el mejor precio del mercado*
+              {% else %}
+                Start now from $15 USD/hour*
+              {% endif %}              
+            </i>
+          </h6>
         </div>
     </div>
     <div class="d-none d-md-block" id="appsgif">
@@ -119,10 +142,34 @@ Expertos en ciencia de datos
   <div class="card-deck mx-auto px-md-5 w-100 h-100">
     <div class="card">
       <div class="d-flex flex-column p-0 px-4 p-md-3 justify-content-center card-body text-md-right text-center">
-        <h4 class="display-4 d-none d-md-block" style="font-weight: 600;">Transforma tus datos en acciones</h4>
-        <h2 class="d-block d-md-none" style="font-weight: 600;">Transforma tus datos en acciones</h2>
-        <h3 class="d-none d-md-block">Reduce costos y optimiza los procesos de tu empresa a través de las últimas tendencias en tecnología</h3>
-        <p class="d-block d-md-none lead">Reduce costos y optimiza los procesos de tu empresa a través de las últimas tendencias en tecnología</p>
+        <h4 class="display-4 d-none d-md-block" style="font-weight: 600;">
+          {% if lang == 'ESP' %}
+          Transforma tus datos en acciones
+          {% else %}
+          Transform your data into actions
+          {% endif %}          
+        </h4>
+        <h2 class="d-block d-md-none" style="font-weight: 600;">
+          {% if lang == 'ESP' %}
+          Transforma tus datos en acciones
+          {% else %}
+          Transform your data into actions
+          {% endif %}          
+        </h2>
+        <h3 class="d-none d-md-block">
+          {% if lang == 'ESP' %}
+          Reduce costos y optimiza los procesos de tu empresa a través de las últimas tendencias en tecnología
+          {% else %}
+          Reduce costs and optimize time through the last technology trends 
+          {% endif %}          
+        </h3>
+        <p class="d-block d-md-none lead">
+          {% if lang == 'ESP' %}
+          Reduce costos y optimiza los procesos de tu empresa a través de las últimas tendencias en tecnología
+          {% else %}
+          Reduce costs and optimize time through the last technology trends 
+          {% endif %}          
+        </p>
       </div>
     </div>
     <div class="card d-flex align-items-center justify-content-center px-5">
@@ -130,7 +177,13 @@ Expertos en ciencia de datos
         <a href="#apps" class="btn h-25 p-3 d-flex align-items-center btn-outline-dark btn-block text-left" style="background: white;">
           <img class="mr-3 img-fluid p-0 col-2 col-md-1 " src="{{url_for('static', filename='img/svg/smartphone.svg')}}">
           <div class="d-flex col col-md-9 p-0 flex-column">
-            <h4 class="display-5 m-0" style="font-weight: 600;">Desarrollo de aplicaciones</h4>
+            <h4 class="display-5 m-0" style="font-weight: 600;">
+              {% if lang == 'ESP' %}
+              Desarrolo de aplicaciones
+              {% else %}
+              App development
+              {% endif %}          
+            </h4>
           </div>
           <div class="flex-column d-none d-md-block col-2 p-0 align-items-center justify-content-center">
             <img class="img-fluid arrow" src="{{url_for('static', filename='img/svg/right-arrow.svg')}}">
@@ -139,7 +192,13 @@ Expertos en ciencia de datos
         <a href="#automatizacion" class="btn h-25 p-3 d-flex align-items-center btn-outline-dark btn-block text-left" style="background: white;">
           <img class="mr-3 p-0 col-2 col-md-1" src="{{url_for('static', filename='img/svg/system.svg')}}">
           <div class="d-flex col col-md-9 p-0 flex-column">
-            <h4 class="display-5 m-0" style="font-weight: 600;">Automatización de procesos</h4>
+            <h4 class="display-5 m-0" style="font-weight: 600;">
+              {% if lang == 'ESP' %}
+              Automatización de procesos
+              {% else %}
+              Process automation
+              {% endif %}          
+            </h4>
           </div>
           <div class="flex-column d-none d-md-block col-2 p-0 align-items-center justify-content-center">
             <img class="img-fluid arrow" src="{{url_for('static', filename='img/svg/right-arrow.svg')}}">
@@ -148,8 +207,20 @@ Expertos en ciencia de datos
         <a href="#ciencia_de_datos" class="btn h-25 p-3 d-flex align-items-center btn-outline-dark btn-block h-25 text-left" id="dt-btn" style="background: white;">
           <img class="mr-3 p-0 col-2 col-md-1" src="{{url_for('static', filename='img/svg/brain1.svg')}}">
           <div class="d-flex col col-md-9 p-0 flex-column">
-            <h4 class="display-5 d-none d-md-block m-0" style="font-weight: 600;">Ciencia de datos e inteligencia artificial</h4>
-            <h4 class="display-5 m-0 d-block d-md-none" style="font-weight: 600;">Ciencia de datos y AI</h4>
+            <h4 class="display-5 d-none d-md-block m-0" style="font-weight: 600;">
+              {% if lang == 'ESP' %}
+              Ciencia de datos e inteligencia artificial
+              {% else %}
+              Data science and AI
+              {% endif %}       
+            </h4>
+            <h4 class="display-5 m-0 d-block d-md-none" style="font-weight: 600;">
+              {% if lang == 'ESP' %}
+              Ciencia de datos y AI
+              {% else %}
+              Data science and AI
+              {% endif %}       
+            </h4>
           </div>
           <div class="flex-column d-none d-md-block col-2 p-0 align-items-center justify-content-center">
             <img class="img-fluid arrow" src="{{url_for('static', filename='img/svg/right-arrow.svg')}}">
@@ -164,38 +235,80 @@ Expertos en ciencia de datos
 
 <section class="text-center" id="inicia" style=" margin-top: 10vh;">
   <div class="flex-column px-5 h-100 justify-content-center align-items-center text-center d-none d-md-block">
-    <h5 class="display-5 text-left text-muted" style="font-weight: 600 !important;">Inicia con Analítica</h5>
-    <h2 class="display-5 text-left" style="margin-bottom: 30vh;  font-weight: 600 !important;">Este es nuestro proceso de creación</h2>
+    <h5 class="display-5 text-left text-muted" style="font-weight: 600 !important;">
+      {% if lang == 'ESP' %}
+        Inicia con Analítica
+      {% else %}
+        Start now with Analitica
+      {% endif %}       
+    </h5>
+    <h2 class="display-5 text-left" style="margin-bottom: 30vh;  font-weight: 600 !important;">
+      {% if lang == 'ESP' %}
+        Este es nuestro proceso de creación
+      {% else %}
+        This is our creation process
+      {% endif %}
+    </h2>
     <div id="carousel1" class="carousel mx-auto w-75 slide" data-ride="carousel">
       <ol class="carousel-indicators">
         <li data-target="#carousel1" data-slide-to="0" class="d-flex align-items-end active">
           <div class="flex-column justify-content-center align-items-center w-100 d-flex">
             <div class="icon_item"><img src="{{url_for('static', filename='img/svg/trust.svg')}}" alt=""></div>
-            <span class="bg-dark text-light">¡Bienvenido!</span>
+            <span class="bg-dark text-light">              
+              {% if lang == 'ESP' %}
+                ¡Bienvenido!
+              {% else %}
+                Welcome!
+              {% endif %}
+            </span>
           </div>
         </li>
         <li data-target="#carousel1" data-slide-to="1" class="d-flex align-items-end">
           <div class="flex-column justify-content-center align-items-center w-100 d-flex">
             <div class="icon_item"><img src="{{url_for('static', filename='img/svg/purpose.svg')}}" alt=""></div>
-            <span class="bg-dark text-light">Planea</span>
+            <span class="bg-dark text-light">
+              {% if lang == 'ESP' %}
+                Planea
+              {% else %}
+                Plan
+              {% endif %}
+            </span>
           </div>
         </li>
         <li data-target="#carousel1" data-slide-to="2" class="d-flex align-items-end">
           <div class="flex-column justify-content-center align-items-center w-100 d-flex">
             <div class="icon_item"><img src="{{url_for('static', filename='img/svg/advice.svg')}}" alt=""></div>
-            <span class="bg-dark text-light">Aprueba</span>
+            <span class="bg-dark text-light">              
+              {% if lang == 'ESP' %}
+                Aprueba
+              {% else %}
+                Approve
+              {% endif %}
+            </span>
           </div>
         </li>
         <li data-target="#carousel1" data-slide-to="3" class="d-flex align-items-end">
           <div class="flex-column justify-content-center align-items-center w-100 d-flex">
             <div class="icon_item"><img src="{{url_for('static', filename='img/svg/success.svg')}}" alt=""></div>
-            <span class="bg-dark text-light">Visualiza</span>
+            <span class="bg-dark text-light">
+              {% if lang == 'ESP' %}
+                Visualiza
+              {% else %}
+                Visualize
+              {% endif %}
+            </span>
           </div>
         </li>
         <li data-target="#carousel1" data-slide-to="4" class="d-flex align-items-end">
           <div class="flex-column justify-content-center align-items-center w-100 d-flex">
             <div class="icon_item"><img src="{{url_for('static', filename='img/svg/strong.svg')}}" alt=""></div>
-            <span class="bg-dark text-light">Decide</span>
+            <span class="bg-dark text-light">
+              {% if lang == 'ESP' %}
+              Decide
+            {% else %}
+              Decide
+            {% endif %}
+            </span>
           </div>
         </li>
       </ol>
@@ -205,10 +318,18 @@ Expertos en ciencia de datos
             <div class="card" style="border: 0 !important; background: none !important;">
               <div class="card-body p-0 text-right">
                 <h4 class="display-5 p-0">
-                  Analítica y tú se conocen
+                  {% if lang == 'ESP' %}
+                    Analítica y tú se conocen
+                  {% else %}
+                    Meet Analitica
+                  {% endif %}
                 </h4>
                 <p class="text-muted p-0"  style="font-size: larger !important;">
-                  Uno de nuestros agentes comerciales se encargará de ponerse en contacto contigo lo antes posible.
+                  {% if lang == 'ESP' %}
+                    Uno de nuestros agentes comerciales se encargará de ponerse en contacto contigo lo antes posible.                  
+                  {% else %}
+                    One of our agents will contact you ASAP.
+                  {% endif %}                  
                 </p>
               </div>
             </div>
@@ -229,12 +350,21 @@ Expertos en ciencia de datos
             <div class="card" style="border: 0 !important; background: none !important;">
               <div class="card-body p-0 text-left">
                 <h4 class="display-5">
-                  Te entregaremos el plan de trabajo
+                  {% if lang == 'ESP' %}
+                  Entregaremos una propuesta de proyecto
+                  {% else %}
+                  We'll create a project proposal
+                  {% endif %}
                 </h4>
                 <p class="text-muted" style="font-size: larger !important;">
+                  {% if lang == 'ESP' %}
                   Después de una rápida sesión de contexto, recibirás un documento
                   con la cantidad de horas necesarias para llevar a cabo tu proyecto,
                   ¡recuerda que cada hora es a sólo a $40.000 COP!
+                  {% else %}
+                  After a quick context session, you will receive a document with the number 
+                  of hours needed to carry out your project, remember: each development hour is only $15 USD!
+                  {% endif %}
                 </p>
               </div>
             </div>
@@ -245,12 +375,21 @@ Expertos en ciencia de datos
             <div class="card" style="border: 0 !important; background: none !important;">
               <div class="card-body p-0 text-right">
                 <h4 class="display-5">
+                  {% if lang == 'ESP' %}
                   Esperaremos tu aprobación
+                  {% else %}
+                  We'll wait for your approval
+                  {% endif %}
                 </h4>
                 <p class="text-muted" style="font-size: larger !important;">
+                  {% if lang == 'ESP' %}
                   Podrás revisar los últimos detalles del plan de trabajo,
                   hacer las preguntas y modificaciones que quieras y una vez aprobado,
                   ¡pondremos manos a la obra!
+                  {% else %}
+                  You will be able to review the final details of the work plan, ask any questions and make any 
+                  modifications you wish and once approved, we will get to work!
+                  {% endif %}
                 </p>
               </div>
             </div>
@@ -271,11 +410,20 @@ Expertos en ciencia de datos
             <div class="card" style="border: 0 !important; background: none !important;">
               <div class="card-body text-left">
                 <h4 class="display-5">
+                  {% if lang == 'ESP' %}
                   Todo bajo tu control
+                  {% else %}
+                  Everything under your control
+                  {% endif %}
                 </h4>
                 <p class="lead text-muted">
+                  {% if lang == 'ESP' %}
                   Durante la ejecución de tu proyecto,
                   podrás visualizar y controlar tu aplicación desde nuestro <a href="https://clientes.analiticaco.com"><dat>Portal Clientes</dat></a>.
+                  {% else %}
+                  You can visualize your data and control your application from our <a href="https://clientes.analiticaco.com"><dat>Clients App</dat></a>.
+                  {% endif %}
+
                 </p>
               </div>
             </div>
@@ -285,8 +433,20 @@ Expertos en ciencia de datos
           <div class="card-deck">
             <div class="card" style="border: 0 !important; background: none !important;">
               <div class="card-body text-right">
-                <h4 class="display-5">Toma las riendas de tu negocio y enfoca a tu equipo en la dirección correcta</h4>
-                <a href="{{url_for('contact')}}" class="btn mt-3 btn-outline-warning shadow-none font-weight-bold">¡Quiero ser parte del proceso!</a>
+                <h4 class="display-5">
+                  {% if lang == 'ESP' %}
+                  Toma las riendas de tu negocio y enfoca a tu equipo en la dirección correcta
+                  {% else %}
+                  Control your business and focus your team on the right direction
+                  {% endif %}
+                </h4>
+                <a href="{{url_for('contact')}}" class="btn mt-3 btn-outline-warning shadow-none font-weight-bold">
+                  {% if lang == 'ESP' %}
+                  ¡Quiero ser parte del proceso!
+                  {% else %}
+                  I want to be part of the process!
+                  {% endif %}
+                </a>
               </div>
             </div>
             <div class="card" style="border: 0 !important; background: none !important;">
@@ -302,13 +462,30 @@ Expertos en ciencia de datos
   <hr class="mx-3 d-block d-md-none">
 </section>
 
-<h5 class="display-5 pl-3 pl-md-5 mt-5 text-left text-muted" style="font-weight: 600 !important;">La mejor hora del mercado</h5>
-<h2 class="display-5 pl-3 pl-md-5 text-left mb-5" style="font-weight: 600 !important;">Compara el costo de una hora de desarrollo</h2>
+<h5 class="display-5 pl-3 pl-md-5 mt-5 text-left text-muted" style="font-weight: 600 !important;">
+  
+  {% if lang == 'ESP' %}
+  La mejor hora del mercado
+  {% else %}
+  Best price in the market
+  {% endif %}
+</h5>
+<h2 class="display-5 pl-3 pl-md-5 text-left mb-5" style="font-weight: 600 !important;">
+  {% if lang == 'ESP' %}
+  Compara el costo de una hora de desarrollo
+  {% else %}
+  Compare costs
+  {% endif %}
+</h2>
 <section class="my-5" id="prices">
   <div class="card-deck align-items-center h-100 pb-0 px-4">
     <div class="card align-items-center justify-content-center h-100 w-100" id="price_1">
       <div class="card-header bg-dark text-light font-weight-bold text-center w-100">
+        {% if lang == 'ESP' %}
         Promedio mercado laboral
+        {% else %}
+        Average labor market 
+        {% endif %}
       </div>
       <div class="card-body w-100 d-flex align-items-center px-md-5">
         <div class="accordion w-100" id="accordion1">
@@ -316,12 +493,29 @@ Expertos en ciencia de datos
           <div class="card">
             <div class="card-header" id="header1">
               <button class="btn btn-link btn-block text-left d-flex justify-content-between p-0 collapsed" type="button" data-toggle="collapse" data-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
-                Desarrollador Backend <span class="badge badge-pill badge-danger"><a href="" class="m-0 lead">$60.523 COP</a></span>
+                {% if lang == 'ESP' %}
+                Desarrollador Backend 
+                {% else %}
+                Backend developer
+                {% endif %}
+                <span class="badge badge-pill badge-danger">
+                  <a href="" class="m-0 lead">
+                    {% if lang == 'ESP' %}
+                    $60.523 COP
+                    {% else %}
+                    $20 USD
+                    {% endif %}
+                  </a>
+                </span>
               </button>
             </div>
             <div id="collapse1" class="collapse show" aria-labelledby="header1" data-parent="#accordion1" style="">
               <div class="card-body">
+                {% if lang == 'ESP' %}
                 Es responsable de diseñar, construir y mantener el servidor de tu aplicación.
+                {% else %}
+                Responsible for designing, building, and maintaining your application server.
+                {% endif %}
               </div>
             </div>
           </div>
@@ -329,12 +523,29 @@ Expertos en ciencia de datos
           <div class="card">
             <div class="card-header" id="header2">
               <button class="btn btn-link btn-block text-left d-flex justify-content-between collapsed p-0" type="button" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
-                Especialista BI <span class="badge badge-pill badge-danger"><a href="" class="m-0 lead">$31.250 COP</a></span>
+                {% if lang == 'ESP' %}
+                Especialista BI 
+                {% else %}
+                BI Developer
+                {% endif %}
+                <span class="badge badge-pill badge-danger">
+                  <a href="" class="m-0 lead">
+                    {% if lang == 'ESP' %}
+                    $31.250 COP
+                    {% else %}
+                    $10 USD
+                    {% endif %}
+                  </a>
+                </span>
               </button>
             </div>
             <div id="collapse2" class="collapse" aria-labelledby="header2" data-parent="#accordion1">
               <div class="card-body">
+                {% if lang == 'ESP' %}
                 A cargo de desarrollar, desplegar y mantener interfaces de Inteligencia de negocios.
+                {% else %}
+                In charge of developing, deploying and mantaining BI interaces.
+                {% endif %}
               </div>
             </div>
           </div>
@@ -342,12 +553,29 @@ Expertos en ciencia de datos
           <div class="card">
             <div class="card-header" id="header3">
               <button class="btn btn-link btn-block text-left d-flex justify-content-between collapsed p-0" type="button" data-toggle="collapse" data-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
-                Científico de datos <span class="badge badge-pill badge-danger"><a class="m-0 lead" href="">$56.070 COP</a></span>
+                {% if lang == 'ESP' %}
+                Científico de datos 
+                {% else %}
+                Data scientist
+                {% endif %}
+                <span class="badge badge-pill badge-danger">
+                  <a class="m-0 lead" href="">
+                    {% if lang == 'ESP' %}
+                    $56.070 COP
+                    {% else %}
+                    $20 USD
+                    {% endif %}
+                  </a>
+                </span>
               </button>
             </div>
             <div id="collapse3" class="collapse" aria-labelledby="header3" data-parent="#accordion1">
               <div class="card-body">
+                {% if lang == 'ESP' %}
                 Diseña y ejecuta todos los procesos necesarios para explotar la información.
+                {% else %}
+                Design and executes every needed process to exploit the data.
+                {% endif %}
               </div>
             </div>
           </div>
@@ -355,12 +583,25 @@ Expertos en ciencia de datos
           <div class="card">
             <div class="card-header" id="header4">
               <button class="btn btn-link btn-block text-left d-flex justify-content-between collapsed p-0" type="button" data-toggle="collapse" data-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
-                Tester <span class="badge badge-pill badge-danger"><a href="" class="m-0 lead">$21.605 COP</a></span>            
+                Tester
+                <span class="badge badge-pill badge-danger">
+                  <a href="" class="m-0 lead">
+                    {% if lang == 'ESP' %}
+                    $21.605 COP
+                    {% else %}
+                    $7 USD
+                    {% endif %}
+                  </a>
+                </span>            
               </button>
             </div>
             <div id="collapse4" class="collapse" aria-labelledby="header4" data-parent="#accordion1">
               <div class="card-body">
+                {% if lang == 'ESP' %}
                 Encuentra bugs, errores, defectos o cualquier problema del aplicativo.
+                {% else %}
+                Finds bugs, errors or any problem in the application.
+                {% endif %}
               </div>
             </div>
           </div>
@@ -368,12 +609,29 @@ Expertos en ciencia de datos
           <div class="card">
             <div class="card-header" id="header5">
                 <button class="btn btn-link btn-block text-left d-flex justify-content-between collapsed p-0" type="button" data-toggle="collapse" data-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
-                  Desarrollador Frontend <span class="badge badge-pill badge-danger"><a href="" class="m-0 lead">$38.650 COP</a></span>
+                  {% if lang == 'ESP' %}
+                  Desarrollador Frontend 
+                  {% else %}
+                  Frontend developer
+                  {% endif %}
+                  <span class="badge badge-pill badge-danger">
+                    <a href="" class="m-0 lead">
+                      {% if lang == 'ESP' %}
+                      $38.650 COP                    
+                      {% else %}
+                      $15 USD
+                      {% endif %}
+                    </a>
+                  </span>
                 </button>
             </div>
             <div id="collapse5" class="collapse" aria-labelledby="header5" data-parent="#accordion1">
               <div class="card-body">
+                {% if lang == 'ESP' %}
                 Diseña y desarrolla la interfaz del usuario o <i>front-end</i>.
+                {% else %}
+                Designs and develops the user interface (UI)
+                {% endif %}
               </div>
             </div>
           </div>
@@ -381,7 +639,13 @@ Expertos en ciencia de datos
         </div>
       </div>
       <div class="card-footer text-center text-light w-100">
-        <h5 class="display-5">Más de $200.000 COP / hora</h5> 
+        <h5 class="display-5">
+          {% if lang == 'ESP' %}
+          Más de $200.000 COP/hora
+          {% else %}
+          More than $75 USD/hour
+          {% endif %}
+        </h5> 
       </div>
     </div>
     <div class="d-flex justify-content-center align-items-center w-100 my-3 d-block d-md-none">
@@ -391,17 +655,40 @@ Expertos en ciencia de datos
     <div class="card h-100" id="price_2">
       <div class="card-body text-dark flex-column justify-content-center px-md-5 d-flex align-items-center text-center">
         <img class="img-fluid" src="{{ url_for('static', filename='img/company/md/uva.png') }}" style="height: 3em;" alt="">
-        <h4 class="display-5">¡Ahorra más del 80% cada hora!</h4>
+        <h4 class="display-5">
+          {% if lang == 'ESP' %}
+          ¡Ahorra más del 80% cada hora!
+          {% else %}
+          Save more than 80% every hour!
+          {% endif %}
+        </h4>
       </div>
       <div class="card-footer text-center text-light w-100">
-        <h1 class="display-5 d-none d-md-block">$40.000 COP / Hora*</h1>
-        <h5 class="display-5 d-block d-md-none">$40.000 COP / Hora*</h5>
+        <h1 class="display-5 d-none d-md-block">
+          {% if lang == 'ESP' %}
+          $40.000 COP / Hora*
+          {% else %}
+          $15 USD/hour*
+          {% endif %}
+        </h1>
+        <h5 class="display-5 d-block d-md-none">
+          {% if lang == 'ESP' %}
+          $40.000 COP / Hora*
+          {% else %}
+          $15 USD/hour*
+          {% endif %}
+        </h5>
       </div>
     </div>
   </div>
   <p class="px-3 mt-md-5 text-muted">
+    {% if lang == 'ESP' %}
     *El costo de tu proyecto es adicional al costo de uso de nuestro Portal Clientes,
     para conocer las tarifas, haz click <a href="{{url_for('pricing')}}">aquí.</a>
+    {% else %}
+    *The cost of your project is additional to the cost of using our Client Portal, 
+    to know the rates, click <a href="{{url_for('pricing')}}">here</a>.
+    {% endif %}
   </p>
 </section>
 
@@ -410,17 +697,35 @@ Expertos en ciencia de datos
 <section class="d-flex align-items-center justify-content-center my-5 my-md-0" id="nuestroportal">
   <div class="card d-block d-md-none mx-2" style="background: none !important; border: none !important;">
     <div class="card-header text-center mx-3">
-      <h4 class="m-0" style="font-weight: 600 !important;">¿Ya conoces nuestro Portal Clientes?</h4>
+      <h4 class="m-0" style="font-weight: 600 !important;">
+        {% if lang == 'ESP' %}
+        ¿Ya conoces nuestro Portal Clientes?
+        {% else %}
+        Do you already know our Clients App?
+        {% endif %}
+      </h4>
       <hr>
       <p class="m-0">
+        {% if lang == 'ESP' %}
         Controla tu aplicación, administra tu plan, vigila tus datos, consulta tus reportes totalmente personalizados
         y mucho más.
         <br> 
         Analítica ha desarrollado un aplicativo desde donde puedes tomar el control de tu proyecto,
         sin tiquetes ni tiempos de atención.
+        {% else %}
+        Control your application, manage your plan, monitor your data, consult your fully personalized reports
+        and much more.
+        <br>
+        Analitica has developed an application from where you can take control of your project,
+        without tickets or attention times.
+        {% endif %}
       </p>
       <h5 class="my-2 line-through">
+        {% if lang == 'ESP' %}
         ¿Te interesa? 
+        {% else %}
+        Interested?
+        {% endif %}
       </h5> 
     </div>
     <div class="card-body p-0">
@@ -428,7 +733,13 @@ Expertos en ciencia de datos
     </div>
     <div class="card-footer text-center mx-3">
       <a href="{{url_for('contact')}}" class="btn btn-outline-warning">
-        <h4 class="m-0" style="font-weight: 600;">¡Solicita un demo totalmente gratis!</h4>
+        <h4 class="m-0" style="font-weight: 600;">
+          {% if lang == 'ESP' %}
+          ¡Solicita un demo totalmente gratis!
+          {% else %}
+          Get a free demo!
+          {% endif %}
+        </h4>
       </a>      
     </div>
   </div>
@@ -438,17 +749,34 @@ Expertos en ciencia de datos
     <div class="d-flex flex-column col-6 justify-content-center">
       <h2
         style="font-weight: 600;">
+        
+        {% if lang == 'ESP' %}
         ¿Ya conoces nuestro Portal Clientes?
+        {% else %}
+        Meet our Clients Application
+        {% endif %}
       </h2>
       <p class="lead m-0" style="text-align: justify; text-justify: inter-word;">
+        {% if lang == 'ESP' %}
         Controla tu aplicación, administra tu plan, vigila tus datos, consulta tus reportes totalmente personalizados
         y mucho más.
         <br> 
         Analítica ha desarrollado un aplicativo desde donde puedes tomar el control de tu proyecto,
         sin tiquetes ni tiempos de atención.
+        {% else %}
+        Control your application, manage your plan, monitor your data, consult your fully personalized reports
+        and much more.
+        <br>
+        Analitica has developed an application from where you can take control of your project,
+        without tickets or attention times.
+        {% endif %}
       </p>
       <h5 class="my-2 line-through">
+        {% if lang == 'ESP' %}
         ¿Te interesa? 
+        {% else %}
+        Interested?
+        {% endif %}
       </h5> 
       <div class="d-flex align-items-center justify-content-center">               
         <a 
@@ -457,7 +785,11 @@ Expertos en ciencia de datos
           <h5
             class="m-0"
             style="font-weight: 600;">
-            Solicita un demo totalmente gratis
+            {% if lang == 'ESP' %}
+            ¡Solicita un demo totalmente gratis!
+            {% else %}
+            Get a free demo!
+            {% endif %}
           </h5>          
         </a>
       </div>
@@ -475,14 +807,38 @@ Expertos en ciencia de datos
 <hr class="mx-3 d-block d-md-none">
 
 <section class="mt-5" id="nuestroservicio">  
-  <h5 class="display-5 text-left ml-3 ml-md-5 text-muted" style="font-weight: 600 !important;">Nuestra especialidad</h5>
-  <h2 class="display-5 text-left ml-3 ml-md-5" style="font-weight: 600 !important;">Conoce lo que tenemos para ofrecer</h2>
+  <h5 class="display-5 text-left ml-3 ml-md-5 text-muted" style="font-weight: 600 !important;">
+    {% if lang == 'ESP' %}
+    Nuestra especialidad
+    {% else %}
+    Our specialty
+    {% endif %}
+  </h5>
+  <h2 class="display-5 text-left ml-3 ml-md-5" style="font-weight: 600 !important;">
+    {% if lang == 'ESP' %}
+    Conoce lo que tenemos para ofrecer
+    {% else %}
+    Know what we have to offer
+    {% endif %}
+  </h2>
     <!-- desarrollo de apps -->
   <div class="card-deck px-5 my-5" id="apps">
     <div class="card mb-5 d-block d-md-none m-0 justify-content-center">
       <div class="d-flex flex-column service-header p-3" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5); border-radius: 5px;">
-        <p class="lead m-0" style="font-weight: 600; text-transform: uppercase;">Desarrollo de apps</h3>
-          <p class="m-0">Desarrollaremos aplicaciones simples, potentes y compatibles con todos los dispositivos.</p>
+        <p class="lead m-0" style="font-weight: 600; text-transform: uppercase;">
+          {% if lang == 'ESP' %}
+          Desarrollo de apps
+          {% else %}
+          Application development
+          {% endif %}
+        </h3>
+        <p class="m-0">
+          {% if lang == 'ESP' %}
+          Desarrollaremos aplicaciones simples, potentes y compatibles con todos los dispositivos.
+          {% else %}
+          We will develop simple but powerful applications compatible with every device. 
+          {% endif %}
+        </p>
       </div>
     </div>
     <div class="card m-0">
@@ -490,28 +846,52 @@ Expertos en ciencia de datos
         <li class="list-group-item">
           <img class="img-fluid w-25" src="{{url_for('static', filename='img/svg/document2.svg')}}" alt="">
           <p style="text-transform: uppercase; font-weight: 600;" class="lead m-0">
+            {% if lang == 'ESP' %}
             Certificado de seguridad
+            {% else %}
+            Security certificate
+            {% endif %}
           </p>
           <p class="text-muted">
-            Para PWA (Aplicaciones web progresivas) tu certificado de seguridad es totalmente gratuito.
+            {% if lang == 'ESP' %}
+            Para PWA (Aplicaciones web progresivas) tu certificado de seguridad es totalmente gratuito. de seguridad
+            {% else %}
+            Get a free security certificate for your PWA (Progressive web application) with Analitica
+            {% endif %}            
           </p>
         </li>
         <li class="list-group-item">
           <img class="img-fluid w-25" src="{{url_for('static', filename='img/svg/voice-recognition.svg')}}" alt="">
           <p style="text-transform: uppercase; font-weight: 600;" class="lead m-0">
+            {% if lang == 'ESP' %}
             Canales de comunicación automáticos
+            {% else %}
+            Automatic communication channels
+            {% endif %}
           </p>
           <p class="text-muted">
+            {% if lang == 'ESP' %}
             Automatiza los canales de comunicación disponibles para tus clientes, desde robots hasta procesos automáticos están a tu disposición.
+            {% else %}
+            Automate the communication channels available to your customers, from robots to automatic processes are at your disposal.
+            {% endif %}
           </p>
         </li>
         <li class="list-group-item">
           <img class="img-fluid w-25" src="{{url_for('static', filename='img/svg/cloud-intelligence.svg')}}" alt="">
           <p style="font-weight: 600; text-transform: uppercase;" class="lead m-0">
+            {% if lang == 'ESP' %}
             MACHINE LEARNING E Inteligencia artificial
+            {% else %}
+            ML & AI
+            {% endif %}
           </p>
           <p class="text-muted">
-            Potencia y optimiza los procesos de tu aplicación con tecnología de última generación.
+            {% if lang == 'ESP' %}
+            Potencia y optimiza los procesos de tu aplicación con tecnología de última generación.            Certificado de seguridad
+            {% else %}
+            Power and optimize your application processes with state-of-the-art technology.
+            {% endif %}
           </p>
         </li>
       </ul>
@@ -521,19 +901,36 @@ Expertos en ciencia de datos
         <li class="list-group-item">
           <img class="img-fluid w-25" src="{{url_for('static', filename='img/svg/cloud-coding.svg')}}" alt="">
           <p class="lead m-0" style="font-weight: 600; text-transform: uppercase;">
+            {% if lang == 'ESP' %}
             Tu app en la nube    
+            {% else %}
+            Your app in the cloud
+            {% endif %}
           </p>
           <p class="text-muted">
+            {% if lang == 'ESP' %}
             Toda la arquitectura de tu aplicación en la nube para estar disponible para tus clientes 24/7.
+            {% else %}
+            All the architecture of your application in the cloud to be available to your customers 24/7.
+            {% endif %}
           </p>
         </li>
         <li class="list-group-item">
           <img class="img-fluid w-25" src="{{url_for('static', filename='img/svg/mobile-shopping.svg')}}" alt="">
           <p class="lead m-0" style="font-weight: 600; text-transform: uppercase;">
+            
+            {% if lang == 'ESP' %}
             E-SHOP/Comercio digital
+            {% else %}
+            E-SHOP
+            {% endif %}
           </p>
           <p class="text-muted">
+            {% if lang == 'ESP' %}
             Crea tu tienda virtual totalmente personalizada, con las integraciones y pasarelas de pago que prefieras.
+            {% else %}
+            Create your totally personalized virtual store, with the integrations and payment gateways that you prefer.
+            {% endif %}
           </p>
         </li>
       </ul>
@@ -542,10 +939,18 @@ Expertos en ciencia de datos
       <div class="d-flex w-100 h-100 align-items-center justify-content-center">
         <div class="d-flex flex-column service-header p-3" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5); border-radius: 5px;">
           <p class="lead m-0" style="font-weight: 600; text-transform: uppercase;">
+            {% if lang == 'ESP' %}
             Desarrollo de apps
+            {% else %}
+            App development
+            {% endif %}
           </h3>
             <p class="m-0">
+              {% if lang == 'ESP' %}
               Desarrollaremos aplicaciones simples, potentes y compatibles con todos los dispositivos.
+              {% else %}
+              We will develop simple but powerful applications compatible with every device. 
+              {% endif %}
             </p>
         </div>
       </div>      
@@ -556,23 +961,57 @@ Expertos en ciencia de datos
   <div class="card-deck px-5 my-5" id="automatizacion">
     <div class="card m-0 mb-5 justify-content-center">
       <div class="d-flex flex-column service-header p-3" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5); border-radius: 5px;">
-        <p class="lead m-0" style="font-weight: 600; text-transform: uppercase;">Automatización de procesos</h3>
-          <p class="m-0">Diseñamos, desarrollamos y desplegamos flujos de trabajo automatizados totalmente personalizados.</p>
+        <p class="lead m-0" style="font-weight: 600; text-transform: uppercase;">
+          {% if lang == 'ESP' %}
+          Automatización de procesos
+          {% else %}
+          Process automation
+          {% endif %}
+        </h3>
+          <p class="m-0">
+            {% if lang == 'ESP' %}
+            Diseñamos, desarrollamos y desplegamos flujos de trabajo automatizados totalmente personalizados.
+            {% else %}
+            We design, develop and deploy fully customized automated workflows.
+            {% endif %}
+          </p>
       </div>
     </div>
     <div class="card m-0 justify-content-center">
       <ul class="list-group list-group-flush">
         <li class="list-group-item">
           <img class="img-fluid w-25" src="{{url_for('static', filename='img/svg/coding.svg')}}" alt="">
-          <p class="lead m-0" style="text-transform: uppercase; font-weight: 600;">Sin código</p>
+          <p class="lead m-0" style="text-transform: uppercase; font-weight: 600;">
+            {% if lang == 'ESP' %}
+            Sin código
+            {% else %}
+            No code
+            {% endif %}
+          </p>
           <p class="text-muted">
+            {% if lang == 'ESP' %}
             Monitorea tus resultados sin escribir una sola línea de código.
+            {% else %}
+            Monitor your results without writing a single line of code.
+            {% endif %}
           </p>
         </li>
         <li class="list-group-item">
           <img class="img-fluid w-25" src="{{url_for('static', filename='img/svg/review.svg')}}" alt="">
-          <p class="lead m-0" style="text-transform: uppercase; font-weight: 600;">Formularios web</p>
-          <p class="text-muted">Crea formularios totalmente personalizados y úsalos desde nuestro <b>Portal Clientes</b>.</p>
+          <p class="lead m-0" style="text-transform: uppercase; font-weight: 600;">
+            {% if lang == 'ESP' %}
+            Formularios web
+            {% else %}
+            Web forms
+            {% endif %}
+          </p>
+          <p class="text-muted">
+            {% if lang == 'ESP' %}
+            Crea formularios totalmente personalizados y úsalos desde nuestro <b>Portal Clientes</b>.
+            {% else %}
+            Create fully customized forms and use them from our <b> Client Application </b>.
+            {% endif %}
+          </p>
         </li>
       </ul>
     </div>
@@ -580,18 +1019,54 @@ Expertos en ciencia de datos
       <ul class="list-group list-group-flush">
         <li class="list-group-item">
           <img class="img-fluid w-25" src="{{url_for('static', filename='img/svg/server.svg')}}" alt="">
-          <p class="lead m-0" style="font-weight: 600; text-transform: uppercase;">Variedad de integraciones</p>
-          <p class="text-muted">Sin importar la fuente de tus datos, crearemos la manera de integrarlo a tu nuevo proceso.</p>
+          <p class="lead m-0" style="font-weight: 600; text-transform: uppercase;">
+            {% if lang == 'ESP' %}
+            Variedad de integraciones
+            {% else %}
+            Variety of integrations
+            {% endif %}
+          </p>
+          <p class="text-muted">
+            {% if lang == 'ESP' %}
+            Sin importar la fuente de tus datos, crearemos la manera de integrarlo a tu nuevo proceso.
+            {% else %}
+            Regardless of the source of your data, we will create a way to integrate it into your new process.
+            {% endif %}
+          </p>
         </li>
         <li class="list-group-item">
           <img class="img-fluid w-25" src="{{url_for('static', filename='img/svg/cloud-computing-1.svg')}}" alt="">
-          <p class="lead m-0" style="font-weight: 600; text-transform: uppercase;">Arquitectura expandible</p>
-          <p class="text-muted">Todos nuestros servicios se encuentran desplegados en la nube.</p>
+          <p class="lead m-0" style="font-weight: 600; text-transform: uppercase;">
+            {% if lang == 'ESP' %}
+            Arquitectura expandible
+            {% else %}
+            EXPANDABLE ARCHITECTURE
+            {% endif %}
+          </p>
+          <p class="text-muted">
+            {% if lang == 'ESP' %}
+            Todos nuestros servicios se encuentran desplegados en la nube.
+            {% else %}
+            All our services are deployed in the cloud.
+            {% endif %}            
+          </p>
         </li>
         <li class="list-group-item">
           <img class="img-fluid w-25" src="{{url_for('static', filename='img/svg/search.svg')}}" alt="">
-          <p class="lead m-0" style="font-weight: 600; text-transform: uppercase;">Analítica en tiempo real</p>
-          <p class="text-muted">Obtén métricas rápidas en tiempo real totalmente gratis.</p>
+          <p class="lead m-0" style="font-weight: 600; text-transform: uppercase;">
+            {% if lang == 'ESP' %}
+            Analítica en tiempo real
+            {% else %}
+            Real-time analytics
+            {% endif %}
+          </p>
+          <p class="text-muted">
+            {% if lang == 'ESP' %}
+            Obtén métricas rápidas en tiempo real totalmente gratis.
+            {% else %}
+            Get fast metrics in real time totally free.
+            {% endif %}
+          </p>
         </li>
       </ul>
     </div>
@@ -601,34 +1076,79 @@ Expertos en ciencia de datos
   <div class="card-deck px-5 my-5" id="ciencia_de_datos">
     <div class="card mb-5 d-block d-md-none m-0 justify-content-center">
       <div class="d-flex flex-column service-header p-3" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5); border-radius: 5px;">
-        <p class="lead m-0" style="font-weight: 600; text-transform: uppercase;">Ciencia de datos</h3>
-          <p class="m-0">Explota al máximo tus datos a través de nuestras avanzadas técnicas de análisis de datos y poderosas visualizaciones.</p>
+        <p class="lead m-0" style="font-weight: 600; text-transform: uppercase;">          
+          {% if lang == 'ESP' %}
+          Ciencia de datos
+          {% else %}
+          Data science
+          {% endif %}
+        </h3>
+          <p class="m-0">
+            {% if lang == 'ESP' %}
+            Explota al máximo tus datos a través de nuestras avanzadas técnicas de análisis de datos y poderosas visualizaciones.
+            {% else %}
+            Make the most of your data through our advanced data analysis techniques and powerful visualizations.
+            {% endif %}
+          </p>
       </div>
     </div>
     <div class="card m-0">
       <ul class="list-group list-group-flush">
         <li class="list-group-item">
           <img class="img-fluid w-25" src="{{url_for('static', filename='img/svg/graphic.svg')}}" alt="">
-          <p style="text-transform: uppercase; font-weight: 600;" class="lead m-0">Pronósticos y analítica predictiva</p>
+          <p style="text-transform: uppercase; font-weight: 600;" class="lead m-0">
+            {% if lang == 'ESP' %}
+            Pronósticos y analítica predictiva
+            {% else %}
+            Forecasts and predictive analytics
+            {% endif %}
+          </p>
           <p class="text-muted">
+            {% if lang == 'ESP' %}
             Desarrollaremos todos los procesos estadísiticos para estimar 
             las relaciones entre las variables que pueden afectar la salud de tu negocio.
+            {% else %}
+            We will develop all the statistical processes to estimate
+            the relationships between the variables that can affect the health of your business.
+            {% endif %}
           </p>
         </li>
         <li class="list-group-item">
           <img class="img-fluid w-25" src="{{url_for('static', filename='img/svg/cloud-computing.svg')}}" alt="">
-          <p style="text-transform: uppercase; font-weight: 600;" class="lead m-0">Procesamiento de lenguaje natural</p>
+          <p style="text-transform: uppercase; font-weight: 600;" class="lead m-0">
+            {% if lang == 'ESP' %}
+            Procesamiento de lenguaje natural
+            {% else %}
+            Natural language processing
+            {% endif %}
+          </p>
           <p class="text-muted">
+            {% if lang == 'ESP' %}
             Desde chatbots hasta análisis de sentimientos, nuestro equipo identifica, extrae, cuantifica y estudia
             patrones linguísticos para obtener las mejores y más confiables conclusiones. 
+            {% else %}
+            From chatbots to sentiment analysis, our team identifies, extracts, quantifies and studies
+            linguistic patterns to obtain the best and most reliable conclusions.
+            {% endif %}
           </p>
         </li>
         <li class="list-group-item">
           <img class="img-fluid w-25" src="{{url_for('static', filename='img/svg/document.svg')}}" alt="">
-          <p style="font-weight: 600; text-transform: uppercase;" class="lead m-0">Reportes totalmente personalizados</p>
-          <p class="text-muted">
+          <p style="font-weight: 600; text-transform: uppercase;" class="lead m-0">
+            {% if lang == 'ESP' %}
+            Reportes totalmente personalizados
+            {% else %}
+            Fully customized reports
+            {% endif %}
+          </p>
+          <p class="text-muted">            
+            {% if lang == 'ESP' %}
             Materializa tu estrategia en reportes totalmente personalizados para determinar
             el comportamiento histórico, actual y futuro de tu negocio.
+            {% else %}
+            Materialize your strategy in fully customized reports to determine
+            the historical, current and future behavior of your business.
+            {% endif %}
           </p>
         </li>
       </ul>
@@ -637,18 +1157,40 @@ Expertos en ciencia de datos
       <ul class="list-group list-group-flush">
         <li class="list-group-item">
           <img class="img-fluid w-25" src="{{url_for('static', filename='img/svg/brainstorming.svg')}}" alt="">
-          <p class="lead m-0" style="font-weight: 600; text-transform: uppercase;">Tus datos seguros</p>
+          <p class="lead m-0" style="font-weight: 600; text-transform: uppercase;">
+            {% if lang == 'ESP' %}
+            Tus datos seguros
+            {% else %}
+            Your data safe
+            {% endif %}
+          </p>
           <p class="text-muted">
+            {% if lang == 'ESP' %}
             Protege tus datos mediante encriptación de extremo a extremo <i>(End-to-end)</i>
             desde nuestro aplicativo web para clientes.
+            {% else %}
+            Protect your data with end-to-end encryption
+            from our web application for clients.
+            {% endif %}
           </p>
         </li>
         <li class="list-group-item">
           <img class="img-fluid w-25" src="{{url_for('static', filename='img/svg/brain.svg')}}" alt="">
-          <p class="lead m-0" style="font-weight: 600; text-transform: uppercase;">Inteligencia artificial</p>
+          <p class="lead m-0" style="font-weight: 600; text-transform: uppercase;">
+            {% if lang == 'ESP' %}
+            Inteligencia artificial
+            {% else %}
+            Artificial Intelligence
+            {% endif %}
+          </p>
           <p class="text-muted">
+            {% if lang == 'ESP' %}
             Optimizamos los procesos de aprendizaje y análisis de datos que requiera tu proyecto con 
             metodologías avanzadas para asegurar la confiabilidad de tus resultados.
+            {% else %}
+            Optimize the learning and data analysis processes that your project requires with
+            advanced methodologies to ensure the reliability of your results.
+            {% endif %}
           </p>
         </li>
       </ul>
@@ -656,8 +1198,20 @@ Expertos en ciencia de datos
     <div class="card d-none d-md-block m-0">
       <div class="d-flex w-100 h-100 align-items-center justify-content-center">
         <div class="d-flex service-header flex-column p-3" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5); border-radius: 5px;">
-          <p class="lead m-0" style="font-weight: 600; text-transform: uppercase;">Ciencia de datos</h3>
-            <p class="m-0">Explota al máximo tus datos a través de nuestras avanzadas técnicas de análisis de datos y poderosas visualizaciones.</p>
+          <p class="lead m-0" style="font-weight: 600; text-transform: uppercase;">
+            {% if lang == 'ESP' %}
+            Ciencia de datos
+            {% else %}
+            Data science
+            {% endif %}
+          </h3>
+          <p class="m-0">
+            {% if lang == 'ESP' %}
+            Explota al máximo tus datos a través de nuestras avanzadas técnicas de análisis de datos y poderosas visualizaciones.
+            {% else %}
+            Make the most of your data through our advanced data analysis techniques and powerful visualizations.
+            {% endif %}
+          </p>
         </div>
       </div>      
     </div>
@@ -678,7 +1232,11 @@ Expertos en ciencia de datos
         <p
           class="m-0 lead">
           <i>
+            {% if lang == 'ESP' %}
             Líder comercial
+            {% else %}
+            Commercial leader
+            {% endif %}
           </i>        
         </p>
       </div>
@@ -686,10 +1244,24 @@ Expertos en ciencia de datos
         <h3 
           class="m-0"
           style="font-weight: 600;">
+          {% if lang == 'ESP' %}
           ¿Quiénes somos?
+          {% else %}
+          Who we are
+          {% endif %}
         </h3>
         <p class="lead">
-          "Analítica nace como un emprendimiento colombiano con la intención de impulsar la economía regional a través de expertos desarrolladores. Implementamos tecnología y herramientas de punta al alcance de startups, pequeñas y medianas empresas, dejando así a su disposición los recursos necesarios para estimular los resultados esperados"
+          {% if lang == 'ESP' %}
+          "Analítica nace como un emprendimiento colombiano con la intención de impulsar la economía regional a 
+          través de expertos desarrolladores. Implementamos tecnología y herramientas de punta al alcance de startups, 
+          pequeñas y medianas empresas, 
+          dejando así a su disposición los recursos necesarios para estimular los resultados esperados"
+          {% else %}
+          "Analítica was born as a Colombian venture with the intention of boosting the regional economy through
+          through expert developers. We implement state-of-the-art technology and tools available to startups,
+          small and medium businesses,
+          thus leaving at your disposal the necessary resources to stimulate the expected results "
+          {% endif %}
         </p>
         <a
           href="https://wa.me/573028665787?text=¡Quiero%20iniciar%20mi%20proyecto%20con%20ANALITICA!"
@@ -701,7 +1273,11 @@ Expertos en ciencia de datos
           style="height: 2em !important;" 
           src="{{ url_for('static', filename='img/svg/whatsapp.svg') }}">
           <p class="lead m-0">
+            {% if lang == 'ESP' %}
             Agendemos una cita
+            {% else %}
+            Let's book a demo!
+            {% endif %}
           </p>
         </a>      
       </div>
@@ -711,12 +1287,26 @@ Expertos en ciencia de datos
         <h4 
           class="m-0"
           style="font-weight: 600;">
+          {% if lang == 'ESP' %}
           ¿Quiénes somos?
+          {% else %}
+          Who we are
+          {% endif %}
         </h4>
         <hr class="w-75">
         <p>
           <i>
-            "Analítica nace como un emprendimiento colombiano con la intención de impulsar la economía regional a través de expertos desarrolladores. Implementamos tecnología y herramientas de punta al alcance de startups, pequeñas y medianas empresas, dejando así a su disposición los recursos necesarios para estimular los resultados esperados"            
+            {% if lang == 'ESP' %}
+            "Analítica nace como un emprendimiento colombiano con la intención de impulsar la economía regional a 
+            través de expertos desarrolladores. Implementamos tecnología y herramientas de punta al alcance de startups, 
+            pequeñas y medianas empresas, 
+            dejando así a su disposición los recursos necesarios para estimular los resultados esperados"
+            {% else %}
+            "Analítica was born as a Colombian venture with the intention of boosting the regional economy through
+            through expert developers. We implement state-of-the-art technology and tools available to startups,
+            small and medium businesses,
+            thus leaving at your disposal the necessary resources to stimulate the expected results "
+            {% endif %}
           </i>
         </p>
         <div id="ivan">
@@ -729,7 +1319,11 @@ Expertos en ciencia de datos
         <p
           class="m-0 lead">
           <i>
+            {% if lang == 'ESP' %}
             Líder comercial
+            {% else %}
+            Commercial leader
+            {% endif %}
           </i>        
         </p>
         <a
@@ -742,7 +1336,11 @@ Expertos en ciencia de datos
           style="height: 2em;" 
           src="{{ url_for('static', filename='img/svg/whatsapp.svg') }}">
           <p class="lead m-0">
+            {% if lang == 'ESP' %}
             Agendemos una cita
+            {% else %}
+            Let's book a demo!
+            {% endif %}
           </p>
         </a>      
       </div>
@@ -750,15 +1348,45 @@ Expertos en ciencia de datos
   </div>
 </section>
 <section class="my-5" id="nosotros">
-  <h2 class="display-5 text-left ml-3 ml-md-5" style="font-weight: 600 !important;">¿Todavía lo estás dudando? </h2>
-  <p class="text-muted d-none d-md-block ml-5"><i>Haz click en cada recuadro para dirigirte al artículo original.</i></p>
-  <p class="text-muted d-block d-md-none ml-3"><i>Toca cada recuadro para dirigirte al artículo original.</i></p>
+  <h2 class="display-5 text-left ml-3 ml-md-5" style="font-weight: 600 !important;">
+    {% if lang == 'ESP' %}
+    ¿Todavía lo estás dudando? 
+    {% else %}
+    Still thinking about it?
+    {% endif %}
+  </h2>
+  <p class="text-muted d-none d-md-block ml-5"><i>
+    {% if lang == 'ESP' %}
+    Toca cada recuadro para dirigirte al artículo original.
+    {% else %}
+    Click on each box to go to the original article.
+    {% endif %}
+  </i></p>
+  <p class="text-muted d-block d-md-none ml-3"><i>
+    {% if lang == 'ESP' %}
+    Toca cada recuadro para dirigirte al artículo original.
+    {% else %}
+    Click on each box to go to the original article.
+    {% endif %}
+  </i></p>
   <div class="accordion mx-auto" id="accordion2">
     <div class="card">
       <div class="card-header" id="header1-2">
         <button class="btn btn-link btn-block text-left d-flex justify-content-between align-items-center p-0" type="button" data-toggle="collapse" data-target="#collapse1-2" aria-expanded="false" aria-controls="collapse1-2">          
-          <h4 class="d-none d-md-block m-0" style="font-weight: 600;">Reduce costos y optimiza procesos</h4>
-          <p class="d-block d-md-none lead m-0" style="font-weight: 600;">Reduce costos y optimiza procesos</p>
+          <h4 class="d-none d-md-block m-0" style="font-weight: 600;">
+            {% if lang == 'ESP' %}
+            Reduce costos y optimiza procesos
+            {% else %}
+            Reduce costs and optimize processes
+            {% endif %}
+          </h4>
+          <p class="d-block d-md-none lead m-0" style="font-weight: 600;">
+            {% if lang == 'ESP' %}
+            Reduce costos y optimiza procesos
+            {% else %}
+            Reduce costs and optimize processes
+            {% endif %}
+          </p>
           <img class="img-fluid" src="{{url_for('static', filename='img/svg/right-arrow.svg')}}">
         </button>
       </div>
@@ -771,15 +1399,27 @@ Expertos en ciencia de datos
           rel="noopener noreferrer"
           >
           <p class="lead">
-            “…Eliminando fuentes sin usar, definiendo 
-            claramente los niveles de acceso a los datos y 
-            permitiendo que los datos sensibles puedan ser 
-            reutilizados por periodos más largos, la industria
-            logró recortar los costos en data hasta un <dat>20%</dat>.”
+            {% if lang == 'ESP' %}
+              “…Eliminando fuentes sin usar, definiendo 
+              claramente los niveles de acceso a los datos y 
+              permitiendo que los datos sensibles puedan ser 
+              reutilizados por periodos más largos, la industria
+              logró recortar los costos en data hasta un <dat>20%</dat>.”
+            {% else %}
+            “… Removing unused fonts, defining
+              clearly the levels of access to the data and
+              allowing sensitive data to be
+              reused for longer periods, the industry
+              managed to cut data costs by <dat> 20% </dat>. "
+            {% endif %}
           </p>
           <i>
-            <p class="text-left">
-              <b>Reducing data costs without jeopardizing growth</b> – McKinsey (31 de Julio, 2020)
+            <p class="text-left">              
+              {% if lang == 'ESP' %}
+              <b>Reducing data costs without jeopardizing growth</b> – McKinsey (July, 2020)
+              {% else %}
+              <b> Reducing data costs without jeopardizing growth </b> - McKinsey (July, 2020)
+              {% endif %}
             </p>
           </i>
           </a>
@@ -789,8 +1429,20 @@ Expertos en ciencia de datos
     <div class="card">
       <div class="card-header" id="header2-2">
         <button class="btn btn-link btn-block text-left d-flex justify-content-between align-items-center p-0 collapsed" type="button" data-toggle="collapse" data-target="#collapse2-2" aria-expanded="false" aria-controls="collapse2-2">
-          <h4 class="d-none d-md-block m-0" style="font-weight: 600;">Inteligencia artifical enfocada al servicio al cliente</h4>
-          <p class="d-block d-md-none lead m-0" style="font-weight: 600;">Inteligencia artifical enfocada al servicio al cliente</p>
+          <h4 class="d-none d-md-block m-0" style="font-weight: 600;">
+            {% if lang == 'ESP' %}
+            Inteligencia artifical enfocada al servicio al cliente
+            {% else %}
+            Artificial intelligence focused on customer service
+            {% endif %}
+          </h4>
+          <p class="d-block d-md-none lead m-0" style="font-weight: 600;">
+            {% if lang == 'ESP' %}
+            Inteligencia artifical enfocada al servicio al cliente
+            {% else %}
+            Artificial intelligence focused on customer service
+            {% endif %}
+          </p>
           <img class="img-fluid" src="{{url_for('static', filename='img/svg/right-arrow.svg')}}">
         </button>
       </div>
@@ -802,13 +1454,23 @@ Expertos en ciencia de datos
           rel="noopener noreferrer"
           >
             <p class="lead">
+              {% if lang == 'ESP' %}
               “…Antes de la pandemia, el uso de chatbots y tecnologías AI (enfocadas al servicio al cliente) era de menos del 10%, 
               para finales del 2021 podría alcanzar hasta un <dat id="second">35%</dat>.”
+              {% else %}
+              “… Before the pandemic, the use of chatbots and AI technologies (focused on customer service) was less than 10%,
+              By the end of 2021 it could reach up to <dat id = "second"> 35% </dat>. ”
+              {% endif %}
             </p>
             <p class="text-left">
               <i>
+                {% if lang == 'ESP' %}
                 <b>Empathetic Robots Are Killing Off the World’s Call-Center Industry </b>
-                – Bloomberg (16 de Marzo, 2021)
+                – Bloomberg (March, 2021)
+                {% else %}
+                <b> Empathetic Robots Are Killing Off the World’s Call-Center Industry </b>
+                - Bloomberg (March, 2021)
+                {% endif %}
               </i>
             </p>
           </a>
@@ -818,8 +1480,20 @@ Expertos en ciencia de datos
     <div class="card">
       <div class="card-header" id="header3-2">
         <button class="btn btn-link btn-block text-left d-flex justify-content-between align-items-center p-0 collapsed" type="button" data-toggle="collapse" data-target="#collapse3-2" aria-expanded="false" aria-controls="collapse3-2">
-          <h4 class="d-none d-md-block m-0" style="font-weight: 600;">La mejor hora del mercado</h4>
-          <p class="d-block d-md-none lead m-0" style="font-weight: 600;">La mejor hora del mercado</p>
+          <h4 class="d-none d-md-block m-0" style="font-weight: 600;">
+            {% if lang == 'ESP' %}
+            La mejor hora del mercado
+            {% else %}
+            Best hour price on the market 
+            {% endif %}
+          </h4>
+          <p class="d-block d-md-none lead m-0" style="font-weight: 600;">
+            {% if lang == 'ESP' %}
+            La mejor hora del mercado
+            {% else %}
+            Best hour price on the market 
+            {% endif %}
+          </p>
           <img class="img-fluid" src="{{url_for('static', filename='img/svg/right-arrow.svg')}}">
         </button>
       </div>
@@ -830,14 +1504,20 @@ Expertos en ciencia de datos
             target="_blank" 
             rel="noopener noreferrer">
               <p class="lead">
-                “Un científico de datos normalmente cuesta entre <dat id="third_1">$35</dat> USD a <dat id="third_2">$200</dat> USD, con una tarifa fija por proyecto de <dat id="third_3">$2000</dat> USD.”
+                {% if lang == 'ESP' %}
+                “Un científico de datos normalmente cuesta entre <dat id="third_1">$35</dat> USD a <dat id="third_2">$200</dat> USD, 
+                con una tarifa fija por proyecto de <dat id="third_3">$2000</dat> USD.”
+                {% else %}
+                “A data scientist usually costs between <dat id =" third_1 "> $ 35 </dat> USD to <dat id =" third_2 "> $ 200 </dat> USD,
+                with a flat fee per project of <dat id = "third_3"> $ 2000 </dat> USD. ”
+                {% endif %}
               </p>
               <p class="text-left">
                 <i>
                   <b>
-                    How to Hire a Data Scientist.
+                    How to Hire a Data Scientist.                    
                   </b>
-                  – Kolabtree (15 de Abril, 2019)
+                  – Kolabtree (April, 2019)                  
                 </i>
               </p>
             </a>
@@ -847,8 +1527,20 @@ Expertos en ciencia de datos
     <div class="card">
       <div class="card-header" id="header4-2">
         <button class="btn btn-link btn-block text-left d-flex justify-content-between align-items-center p-0 collapsed" type="button" data-toggle="collapse" data-target="#collapse4-2" aria-expanded="false" aria-controls="collapse4-2">
-          <h4 class="d-none d-md-block m-0" style="font-weight: 600;">Todo en la nube, como debería ser</h4>
-          <p class="d-block d-md-none lead m-0" style="font-weight: 600;">Todo en la nube, como debería ser</p>
+          <h4 class="d-none d-md-block m-0" style="font-weight: 600;">
+            {% if lang == 'ESP' %}
+            Todo en la nube, como debería ser
+            {% else %}
+            Everything in the cloud, as it should be
+            {% endif %}
+          </h4>
+          <p class="d-block d-md-none lead m-0" style="font-weight: 600;">
+            {% if lang == 'ESP' %}
+            Todo en la nube, como debería ser
+            {% else %}
+            Everything in the cloud, as it should be
+            {% endif %}
+          </p>
           <img class="img-fluid" src="{{url_for('static', filename='img/svg/right-arrow.svg')}}">
         </button>
       </div>
@@ -860,16 +1552,22 @@ Expertos en ciencia de datos
           rel="noopener noreferrer"
           >          
           <p class="lead">
+            {% if lang == 'ESP' %}
             “…Operadores pueden experimentar un promedio de <dat id="fourth">$49</dat> 
             millones de dólares anualmente en impactos financieros debido a tiempo 
             de caída de servicios tecnológicos…”
+            {% else %}
+            “… Operators may experience an average of <dat id =" fourth "> $ 49 </dat>
+            million dollars annually in financial impacts due to time
+            drop in technological services ... "
+            {% endif %}
           </p>
           <p class="text-left">
             <i>
               <b>
                 How Big Data is reducing costs and improving performance in the upstream industry.
               </b>
-              – World Oil (13 de Diciembre, 2016)
+              – World Oil (December, 2016)
             </i>              
           </p>
           </a> 
@@ -879,8 +1577,20 @@ Expertos en ciencia de datos
     <div class="card">
       <div class="card-header" id="header5-2">
         <button class="btn btn-link btn-block text-left d-flex justify-content-between align-items-center p-0 collapsed" type="button" data-toggle="collapse" data-target="#collapse5-2" aria-expanded="false" aria-controls="collapse5-2">
-          <h4 class="d-none d-md-block m-0" style="font-weight: 600;">Enséñale a tu equipo por dónde es el camino</h4>
-          <p class="d-block d-md-none lead m-0" style="font-weight: 600;">Enséñale a tu equipo por dónde es el camino</p>
+          <h4 class="d-none d-md-block m-0" style="font-weight: 600;">
+            {% if lang == 'ESP' %}
+            Enséñale a tu equipo por dónde es el camino
+            {% else %}
+            Show your team the way
+            {% endif %}
+          </h4>
+          <p class="d-block d-md-none lead m-0" style="font-weight: 600;">
+            {% if lang == 'ESP' %}
+            Enséñale a tu equipo por dónde es el camino
+            {% else %}
+            Show your team the way
+            {% endif %}
+          </p>
           <img class="img-fluid" src="{{url_for('static', filename='img/svg/right-arrow.svg')}}">
         </button>
       </div>
@@ -891,16 +1601,21 @@ Expertos en ciencia de datos
           target="_blank" 
           rel="noopener noreferrer"
           >
-            <p class="lead">
-              “…<dat id="fifth">67%</dat> de los empleados en empresas líderes en data indican que requieren datos para soportar
-              las recomendaciones y decisiones tomadas.”
+            <p class="lead">              
+              {% if lang == 'ESP' %}
+                “…<dat id="fifth">67%</dat> de los empleados en empresas líderes en data indican que requieren datos para soportar
+                las recomendaciones y decisiones tomadas.”
+              {% else %}
+                “… <Dat id =" fifth "> 67% </dat> of employees at leading data companies indicate that they require data to support
+                the recommendations and decisions made. "
+              {% endif %}
             </p>
             <p class="text-left">
               <i>
                 <b>
                   How Data Leaders Drive Recovery And Growth.
                 </b>
-                – Forbes (15 de Junio, 2020)
+                – Forbes (June, 2020)
               </i>              
             </p>
           </a>        

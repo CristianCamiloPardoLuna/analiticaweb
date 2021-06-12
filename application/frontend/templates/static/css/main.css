@@ -10,7 +10,9 @@ sass --watch C:\Users\crist\Documents\GitHub\analiticaweb\application\frontend\s
   }
 }
 .btn:focus,
-.btn:active {
+.btn:active,
+select:focus,
+select:active {
   box-shadow: none !important;
   outline: none !important;
 }
@@ -74,6 +76,30 @@ body nav {
 }
 body nav .navbar-nav .nav-item .clientes-btn:hover {
   color: whitesmoke !important;
+}
+body nav .navbar-nav .nav-item#lang {
+  border-radius: 5px;
+  font-size: smaller !important;
+  color: #461022;
+  background: white;
+  margin: 0 0.5em 0 0.5em !important;
+}
+body nav .navbar-nav .nav-item#lang #navbarDropdownLang {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body nav .navbar-nav .nav-item#lang #navbarDropdownLang,
+body nav .navbar-nav .nav-item#lang .dropdown-menu {
+  padding: 0.1 !important;
+}
+body nav .navbar-nav .nav-item#lang #navbarDropdownLang img,
+body nav .navbar-nav .nav-item#lang .dropdown-menu img {
+  width: 1.5em;
+  margin-right: 0.3em;
+}
+body nav .navbar-nav .nav-item#lang:hover a {
+  text-decoration: none !important;
 }
 @media screen and (max-width: 736px) {
   body nav .navbar-collapse {
@@ -174,7 +200,7 @@ body #navbar-effect-2 #navbar-2 #navbar-2-ul li a:hover,
 body #navbar-effect-2 #navbar-2 #navbar-2-ul a:hover,
 body #navbar-effect-2 #navbar-2 #-navbar-2-ul li a:hover,
 body #navbar-effect-2 #navbar-2 #-navbar-2-ul a:hover {
-  text-decoration: underline !important;
+  text-decoration: underline;
 }
 body #navbar-effect #navbar .dropdown-menu,
 body #navbar-effect #navbar-2 .dropdown-menu,
@@ -182,12 +208,6 @@ body #navbar-effect-2 #navbar .dropdown-menu,
 body #navbar-effect-2 #navbar-2 .dropdown-menu {
   padding: 0;
   background: whitesmoke !important;
-}
-body #navbar-effect #navbar .dropdown-menu .dropdown-item,
-body #navbar-effect #navbar-2 .dropdown-menu .dropdown-item,
-body #navbar-effect-2 #navbar .dropdown-menu .dropdown-item,
-body #navbar-effect-2 #navbar-2 .dropdown-menu .dropdown-item {
-  transition: all 200ms ease-in-out;
 }
 body #navbar-effect #navbar .dropdown-menu .dropdown-item:hover,
 body #navbar-effect #navbar-2 .dropdown-menu .dropdown-item:hover,
@@ -215,7 +235,7 @@ body #navbar-effect-2 #navbar-2 .dropdown-menu.show {
 }
 body #initial-effect {
   background: #f8f9fa;
-  background: linear-gradient(0deg, #f8f9fa 0%, rgba(106, 34, 59, 0.2) 100%);
+  background: linear-gradient(0deg, #f8f9fa 0%, rgba(145, 19, 61, 0.1) 100%);
 }
 body #initial-effect .bg-light {
   box-shadow: 0 4px 8px 3px rgba(0, 0, 0, 0.2) !important;
@@ -320,15 +340,11 @@ body #home {
     width: 127px;
   }
 }
-body #home #slogan {
-  color: #5c142c;
-}
 body #home #companydesc {
   animation: upper-show 1s ease-in-out;
   animation-fill-mode: forwards;
 }
 body #home #startnow input {
-  padding: 0.3rem !important;
   border: 0;
 }
 body #home #startnow input:focus,
@@ -336,20 +352,18 @@ body #home #startnow input:active {
   border: 1.5px solid #5c142c;
 }
 body #home #startnow input::placeholder {
-  font-size: large !important;
   color: #6c757d !important;
-  opacity: 1;
-}
-@media screen and (min-width: 736px) {
-  body #home #startnow input::placeholder {
-    font-weight: 600 !important;
-  }
+  opacity: 0.7;
 }
 body #home #startnow input:-ms-input-placeholder {
   color: #6c757d !important;
 }
 body #home #startnow input::-ms-input-placeholder {
   color: #6c757d !important;
+}
+body #home #startnow button,
+body #home #startnow input {
+  height: 5vh !important;
 }
 body #inicia ol {
   transform: translateY(-50vh);
@@ -821,7 +835,7 @@ body #terms p {
 body #whatsapp {
   z-index: 4;
   position: fixed;
-  width: 200px;
+  width: 250px;
 }
 body #whatsapp.animate {
   animation: side-appear 1500ms ease-in-out;
