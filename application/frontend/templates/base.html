@@ -2,6 +2,21 @@
 <html lang="en" style="overflow-x: hidden !important;">
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <!-- Google Analytics -->
+  <script>
+    console.log('analytics start');
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    
+    ga('create', 'UA-199280870-1', 'auto');
+    ga('send', 'pageview');
+    console.log('analytics end');
+
+  </script>
+  <!-- End Google Analytics -->
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/main.css') }}"/>
   <link rel="icon" sizes="32X32" href="{{url_for('static', filename='img/company/icon.svg')}}">
@@ -89,31 +104,7 @@
             </a>
           </div>
         </ul>
-        <ul class="navbar-nav" id="-navbar-1-ul">
-          <li class="nav-item">
-            <form method="POST" action="/Changelang/">
-              <select name="lang" class="form-control" onchange="this.form.submit();" id="lang">
-                {% if lang == 'ESP' %}
-                  <option value="{{var}},ESP" selected>
-                    ESP
-                  </option>
-                  <option value="{{var}},ENG">
-                    ENG
-                  </option>
-                {% else %}
-                  <option value="{{var}},ESP">
-                    ESP
-                  </option>
-                  <option value="{{var}},ENG" selected>
-                    ENG
-                  </option>
-                {% endif %}
-              </select>
-            </form>
-          </li>
-          <li class="nav-item" id="lang">
-            <a href="{{ url_for('pricing') }}" class="nav-link"></a>
-          </li>
+        <ul class="navbar-nav d-flex align-items-center justify-content-center" id="-navbar-1-ul">
           <li class="nav-item">
             <a class="nav-link" href="{{ url_for('pricing') }}"> 
               {% if lang == 'ESP' %}
@@ -131,6 +122,27 @@
               Contact
             {% endif %}
              </a>
+          </li>
+          <li class="nav-item d-none d-md-block dropdown" id="lang">
+            <a class="nav-link dropdown-toggle" id="navbarDropdownLang" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              {% if lang == 'ESP' %}
+                <img class="img-fluid" src="{{url_for('static', filename='img/svg/colombia-circle.svg')}}" >
+                Spanish
+              {% else %}
+                <img class="img-fluid" src="{{url_for('static', filename='img/svg/usa-circle.svg')}}" >
+                English
+              {% endif %}                      
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownLang">
+              <a class="dropdown-item" href="/">
+                <img class="img-fluid" src="{{url_for('static', filename='img/svg/colombia-circle.svg')}}" >
+                Spanish
+              </a>
+              <a class="dropdown-item" href="/en/">
+                <img class="img-fluid" src="{{url_for('static', filename='img/svg/usa-circle.svg')}}" >              
+                English
+              </a>
+            </div>
           </li>
           <div class="nav-item d-none d-md-block">
             <a 
@@ -239,6 +251,47 @@
             </a>
           </li>
           {% endif %}
+          <li class="nav-item d-none d-md-block dropdown" id="lang">
+            <a class="nav-link dropdown-toggle" id="navbarDropdownLang" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              {% if lang == 'ESP' %}
+                <img class="img-fluid" src="{{url_for('static', filename='img/svg/colombia-circle.svg')}}" >
+                Spanish
+              {% else %}
+                <img class="img-fluid" src="{{url_for('static', filename='img/svg/usa-circle.svg')}}" >
+                English
+              {% endif %}                      
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownLang">
+              {% if var == 'index.html' %}
+              <a class="dropdown-item" href="/">
+                <img class="img-fluid" src="{{url_for('static', filename='img/svg/colombia-circle.svg')}}" >
+                Spanish
+              </a>
+              <a class="dropdown-item" href="/en/">
+                <img class="img-fluid" src="{{url_for('static', filename='img/svg/usa-circle.svg')}}" >              
+                English
+              </a>
+              {% elif var == 'pricing.html' %}
+              <a class="dropdown-item" href="{{url_for('pricing')}}">
+                <img class="img-fluid" src="{{url_for('static', filename='img/svg/colombia-circle.svg')}}" >
+                Spanish
+              </a>
+              <a class="dropdown-item" href="{{url_for('pricing_en')}}">
+                <img class="img-fluid" src="{{url_for('static', filename='img/svg/usa-circle.svg')}}" >              
+                English
+              </a>
+              {% elif var == 'contactus.html' %}
+              <a class="dropdown-item" href="{{url_for('contact')}}">
+                <img class="img-fluid" src="{{url_for('static', filename='img/svg/colombia-circle.svg')}}" >
+                Spanish
+              </a>
+              <a class="dropdown-item" href="{{url_for('contact_en')}}">
+                <img class="img-fluid" src="{{url_for('static', filename='img/svg/usa-circle.svg')}}" >              
+                English
+              </a>
+              {% endif %}
+            </div>
+          </li>
           <div class="nav-item d-none d-md-block">
             <a 
               href="https://clientes.analiticaco.com" 
@@ -436,9 +489,6 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>  
-    <script>
-      AOS.init();
-    </script>
     <script>
             try{
               document.addEventListener('DOMContentLoaded', function(event){

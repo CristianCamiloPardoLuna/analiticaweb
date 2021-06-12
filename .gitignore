@@ -1,3 +1,5 @@
 *.css
 venv
 .vscode
+.sass-cache/
+*.css.map

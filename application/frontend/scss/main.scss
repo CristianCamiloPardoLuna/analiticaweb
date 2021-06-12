@@ -8,9 +8,7 @@ $background-main: rgb(245, 156, 156);
 $background-sec: rgb(95, 24, 48, 0.1);
 $glow: rgb(245, 156, 156, 0.7);
 $_background_grad: radial-gradient(circle, rgba(255,218,213,1) 0%, rgba(255,255,255,1) 100%);
-//$test_color: rgb(95, 24, 48);
-// hex test #53182C
-$test_color_hover: rgb(70, 16, 34);
+$test_color_hover: rgb(70, 16, 34); // hex test #53182C
 $test_color_plain: rgb(92, 20, 44);
 $test_color_trans: rgb(70, 16, 34, 0.6);
 $test_color: radial-gradient(circle, rgba(140,38,73,1) 0%, rgba(75,19,38,1) 100%); 
@@ -26,7 +24,9 @@ $test_color: radial-gradient(circle, rgba(140,38,73,1) 0%, rgba(75,19,38,1) 100%
 }
 
 .btn:focus,
-.btn:active{
+.btn:active,
+select:focus,
+select:active{
     box-shadow: none !important;
     outline: none !important;
 }
@@ -84,8 +84,28 @@ body{
                 .clientes-btn:hover{
                     color: whitesmoke !important;
                 }
-                #lang{
-                    background: none !important;
+                &#lang{              
+                    border-radius: 5px;
+                    font-size:smaller !important;                
+                    color: $test_color_hover;
+                    background: white;
+                    margin: 0 0.5em 0 0.5em !important;
+                    #navbarDropdownLang{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;                        
+                    }
+                    #navbarDropdownLang,
+                    .dropdown-menu{
+                        padding: 0.1 !important;
+                        img{
+                            width: 1.5em;
+                            margin-right: 0.3em;
+                        }
+                    }    
+                    &:hover a{
+                        text-decoration: none !important;
+                    }    
                 }
             }
         }
@@ -139,7 +159,7 @@ body{
                 }
                 li a:hover,
                 a:hover{
-                    text-decoration: underline !important;
+                    text-decoration: underline;
                 }            
             }
             .dropdown-menu{

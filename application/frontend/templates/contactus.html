@@ -23,15 +23,26 @@ Contáctanos
       <div class="d-flex align-items-start text-center justify-content-center m-0 px-3">
         <div>
           <p>
-            Estás a un paso de integrar tus fuentes,
-            visualizar tus resultados y tomar las decisiones correctas.
+            {% if lang == 'ESP' %}
+              Estás a un paso de integrar tus fuentes,
+              visualizar tus resultados y tomar las decisiones correctas.
+            {% else %}
+              You are one step away from integrating your sources,
+              visualize your results and make the right decisions.
+            {% endif %}
           </p>
-          <p style="font-weight: 600;">¡Nos estaremos comunicando contigo lo antes posible!</p>
+          <p style="font-weight: 600;">
+            {% if lang == 'ESP' %}
+              ¡Nos estaremos comunicando contigo lo antes posible!
+            {% else %}
+              We will be in touch with you as soon as possible!
+            {% endif %}
+          </p>
         </div>
       </div>
       <form method="POST" action="/contact/contactme" class="w-100 text-left px-4 py-2">
           <div class="form-group row">
-            <label for="name" class="col-sm-4 col-form-label">Nombre:</label>
+            <label for="name" class="col-sm-4 col-form-label">{% if lang =='ESP' %}Nombre:{% else %}Name:{% endif %}</label>
             <div class="col">
               <input type="text" class="form-control form-control-sm shadow-none" id="text" name="name" required>
             </div>
@@ -43,23 +54,32 @@ Contáctanos
             </div>
           </div>            
           <div class="form-group row">
-              <label for="company" class="col-sm-4 col-form-label">Empresa:</label>
+              <label for="company" class="col-sm-4 col-form-label">{% if lang =='ESP' %}Empresa:{% else %}Company:{% endif %}</label>
               <div class="col">
                 <input type="text" class="form-control form-control-sm shadow-none" id="company" name="company" required>
               </div>
           </div>
           <div class="form-group row" >
-              <label for="email" class="col-sm-4 col-form-label">Servicio en el que estás interesado:</label>
+              <label for="email" class="col-sm-4 col-form-label">{% if lang =='ESP' %}Servicio:{% else %}Service:{% endif %}</label>
               <div class="col">
                 <select class="form-control form-control-sm shadow-none" id="service" name="service" required>
-                    <option value="workflow">Automatización de procesos</option>
-                    <option value="analytics">Ciencia de datos</option>
-                    <option value="analitica">Ambos</option>
+                    <option value="workflow">
+                      {% if lang =='ESP' %}Automatización de procesos{% else %}Process automation{% endif %}                      
+                    </option>
+                    <option value="analytics">
+                      {% if lang =='ESP' %}Ciencia de datos{% else %}Data science{% endif %}                      
+                    </option>
+                    <option value="appdev">
+                      {% if lang =='ESP' %}Desarrollo de aplicaciones{% else %}App development{% endif %}
+                    </option>
+                    <option value="analitica">
+                      {% if lang =='ESP' %}¡Quiero un demo gratuito!{% else %}Get a free demo!{% endif %}
+                    </option>
                 </select>
               </div>
           </div>
           <div class="form-group row">
-            <label for="phone" class="col-sm-4 col-form-label">Número telefónico:</label>
+            <label for="phone" class="col-sm-4 col-form-label">{% if lang =='ESP' %}Número telefónico (opcional):{% else %}Phone (optional):{% endif %}</label>
             <div class="col">
               <div class="input-group mb-2 input-group-sm">
                 <div class="input-group-prepend">
@@ -70,7 +90,10 @@ Contáctanos
             </div>                  
           </div>
           <div class="form-group row" >
-              <label for="tellusmore" class="col-sm-4 col-form-label">Cuéntanos un poco más:</label>
+              <label for="tellusmore" class="col-sm-4 col-form-label">
+                {% if lang =='ESP' %}Cuéntanos un poco más:{% else %}Tell us more:{% endif %}
+                
+              </label>
               <div class="col">
                 <textarea type="text" class="form-control form-control-sm shadow-none" id="tellusmore" name="tellusmore">{{tellusmore}}</textarea>
               </div>
@@ -79,13 +102,18 @@ Contáctanos
             <div class="form-check">
               <input class="form-check-input" type="checkbox" value="" id="defaultCheck2" required>
               <label class="form-check-label text-left" for="defaultCheck2">
-                Acepto los <a href="{{url_for('terms')}}">términos de servicio</a> y <a href="{{url_for('privacypolicy')}}">política de protección de datos</a> de Analítica Company S.A.S.
+                {% if lang =='ESP' %}
+                  Acepto los <a href="{{url_for('terms')}}">términos de servicio</a> y <a href="{{url_for('privacypolicy')}}">política de protección de datos</a> de Analítica Company S.A.S.
+                {% else %}
+                  I agree with Analitica's <a href="{{url_for('terms')}}">terms</a> & <a href="{{url_for('privacypolicy')}}">privacy policy</a>
+                {% endif %}
+
               </label>
             </div>
           </div>
           <div class="form-group row">
               <button class="btn btn-outline-warning btn-block">
-                <i class="fas fa-paper-plane mr-1"></i>Enviar
+                <i class="fas fa-paper-plane mr-1"></i>
               </button>
           </div>
         </form>
@@ -93,32 +121,55 @@ Contáctanos
     <!-- md -->
     <div class="d-none d-md-block">
       <div class="d-flex px-md-5 px-0 mt-3 h-100 align-items-center justify-content-around" id="col1">
-        <div class="d-flex flex-column align-items-start text-left justify-content-center col-6">
+        <div class="d-flex flex-column align-items-start text-left justify-content-center col">
           <div class="d-none d-md-block">
-            <h1 class="display text-left">Contáctanos</h1>
+            <h1 class="display text-left">
+              {% if lang =='ESP' %}
+                Contáctanos
+              {% else %}
+                Contact us
+              {% endif %}
+            </h1>
             <p class="lead">
-              Estás a un paso de integrar tus fuentes,
-              visualizar tus resultados y tomar las decisiones correctas.
+              {% if lang == 'ESP' %}
+                Estás a un paso de integrar tus fuentes,
+                visualizar tus resultados y tomar las decisiones correctas.
+              {% else %}
+                You are one step away from integrating your sources,
+                visualize your results and make the right decisions.
+              {% endif %}
             </p>
-            <p class="lead" style="font-weight: 600;">¡Nos estaremos comunicando contigo lo antes posible!</p>
+            <p class="lead" style="font-weight: 600;">
+              {% if lang == 'ESP' %}
+                ¡Nos estaremos comunicando contigo lo antes posible!
+              {% else %}
+                We will be in touch with you as soon as possible!
+              {% endif %}
+            </p>
           </div>
         </div>
-        <div class="d-flex p-0 mt-5 h-100 align-items-center text-center justify-content-center col-md-6 col">
+        <div class="d-flex p-0 mt-5 h-100 align-items-center text-center justify-content-center col-7">
             <form method="POST" action="/contact/contactme" class="w-100 px-0 px-md-5 py-3" id="contact-form">
                 <div class="form-group row">
-                  <label for="name" class="col-sm-4 col-form-label">Nombre (*):</label>
+                  <label for="name" class="col-sm-4 col-form-label">
+                    {% if lang =='ESP' %}Nombre:{% else %}Name:{% endif %}
+                  </label>
                   <div class="col">
                     <input type="text" class="form-control form-control-sm shadow-none" id="text" name="name" required>
                   </div>
                 </div>
                 <div class="form-group row">
-                  <label for="email" class="col-sm-4 col-form-label">Email (*):</label>
+                  <label for="email" class="col-sm-4 col-form-label">
+                    Email:
+                  </label>
                   <div class="col">
                     <input type="email" class="form-control form-control-sm shadow-none" id="email" name="email" value="{{email}}" required>
                   </div>
                 </div>
                 <div class="form-group row">
-                  <label for="phone" class="col-sm-4 col-form-label">Número telefónico:</label>
+                  <label for="phone" class="col-sm-4 col-form-label">
+                    {% if lang =='ESP' %}Número telefónico (opcional):{% else %}Phone (optional):{% endif %}
+                  </label>
                   <div class="col">
                     <div class="input-group mb-2 input-group-sm">
                       <div class="input-group-prepend">
@@ -129,24 +180,38 @@ Contáctanos
                   </div>                  
                 </div>            
                 <div class="form-group row">
-                    <label for="company" class="col-sm-4 col-form-label">Empresa:</label>
+                    <label for="company" class="col-sm-4 col-form-label">
+                      {% if lang =='ESP' %}Empresa:{% else %}Company:{% endif %}
+                    </label>
                     <div class="col">
                       <input type="text" class="form-control form-control-sm shadow-none" id="company" name="company">
                     </div>
                 </div>
                 <div class="form-group row" >
-                    <label for="email" class="col-sm-4 col-form-label">Servicio en el que estás interesado (*):</label>
+                    <label for="email" class="col-sm-4 col-form-label">
+                      {% if lang =='ESP' %}Servicio:{% else %}Service:{% endif %}
+                    </label>
                     <div class="col">
                       <select class="form-control form-control-sm shadow-none" id="service" name="service" required>
-                          <option value="workflow">Automatización de procesos</option>
-                          <option value="analytics">Ciencia de datos</option>
-                          <option value="appdev">Desarrollo de apps</option>
-                          <option value="analitica">Analítica (todos los anteriores)</option>
+                        <option value="workflow">
+                          {% if lang =='ESP' %}Automatización de procesos{% else %}Process automation{% endif %}                      
+                        </option>
+                        <option value="analytics">
+                          {% if lang =='ESP' %}Ciencia de datos{% else %}Data science{% endif %}                      
+                        </option>
+                        <option value="appdev">
+                          {% if lang =='ESP' %}Desarrollo de aplicaciones{% else %}App development{% endif %}
+                        </option>
+                        <option value="analitica">
+                          {% if lang =='ESP' %}¡Quiero un demo gratuito!{% else %}Get a free demo!{% endif %}
+                        </option>
                       </select>
                     </div>
                 </div>
                 <div class="form-group row" >
-                    <label for="tellusmore" class="col-sm-4 col-form-label">Cuéntanos un poco más:</label>
+                    <label for="tellusmore" class="col-sm-4 col-form-label">
+                      {% if lang =='ESP' %}Cuéntanos un poco más:{% else %}Tell us more:{% endif %}
+                    </label>
                     <div class="col">
                       <textarea type="text" class="form-control form-control-sm shadow-none" id="tellusmore" name="tellusmore">{{tellusmore}}</textarea>
                     </div>
@@ -155,13 +220,18 @@ Contáctanos
                   <div class="form-check">
                     <input class="form-check-input" type="checkbox" value="" id="defaultCheck2" required>
                     <label class="form-check-label text-left" for="defaultCheck2">
-                      Acepto los <a href="{{url_for('terms')}}">términos de servicio</a> y <a href="{{url_for('privacypolicy')}}">política de protección de datos</a> de Analítica Company S.A.S.
+                      {% if lang =='ESP' %}
+                       Acepto los <a href="{{url_for('terms')}}">términos de servicio</a> y <a href="{{url_for('privacypolicy')}}">política de protección de datos</a> de Analítica Company S.A.S.
+                      {% else %}
+                        I agree with Analitica's <a href="{{url_for('terms')}}">terms</a> & <a href="{{url_for('privacypolicy')}}">privacy policy</a>
+                      {% endif %}
                     </label>
                   </div>
                 </div>
                 <div class="form-group row">
                     <button class="btn btn-outline-warning btn-block">
-                      <i class="fas fa-paper-plane mr-1"></i>Enviar
+                      <i class="fas fa-paper-plane mr-1"></i>
+                      {% if lang =='ESP' %}Enviar{% else %}Send:{% endif %}
                     </button>
                 </div>
             </form>

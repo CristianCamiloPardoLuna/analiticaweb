@@ -11,12 +11,9 @@ def index():
         lang = 'ESP'
         )
 
-@APP.route('/eng/')
+@APP.route('/en/')
 def index_eng():
-    return render_template(
-        'index.html',
-        lang = 'ENG'        
-        )
+    return render_template('index.html', lang = 'ENG')
 
 @APP.route('/returnContacts/<_id>/')
 def returnContacts(_id):
@@ -27,7 +24,7 @@ def returnContacts(_id):
 """Returns contact in model
 """
 
-@APP.route('/startnow', methods=['POST'])
+@APP.route('/startnow/', methods=['POST'])
 def startnow():
     email = request.form.get('email')
     tellusmore = str('¡Quiero iniciar mi primer proyecto con Analítica por $40.000 COP la hora!')
@@ -45,10 +42,18 @@ def startnow():
         tellusmore = tellusmore
     )
 
-@APP.route('/pricing')
+@APP.route('/pricing/')
 def pricing():
     return render_template(
-        'pricing.html'
+        'pricing.html',
+        lang='ESP'
+    )
+
+@APP.route('/pricing/en/')
+def pricing_en():
+    return render_template(
+        'pricing.html',
+        lang='ENG'
     )
 
 @APP.route('/get_your_plan/<_plan>')
@@ -65,6 +70,14 @@ def plans(_plan):
 def contact():
     return render_template(
         'contactus.html',
+        lang = 'ESP'
+    )
+
+@APP.route('/contact/en/')
+def contact_en():
+    return render_template(
+        'contactus.html',
+        lang = 'ENG'
     )
 
 @APP.route('/contact/<tellusmore>')
@@ -131,14 +144,6 @@ def terms():
         'termsconditions.html'
     )
 
-@APP.route('/Changelang/', methods=['POST'])
-def lang():
-    lang = request.form.get('lang').split(',')[-1]
-    if lang == 'ESP':
-        return redirect(url_for('index'))
-    else:
-        return redirect(url_for('index_eng'))
-
 if __name__ == '__main__':
-    APP.debug = True
+    APP.debug = False
     APP.run()
