@@ -78,6 +78,30 @@ body{
         @media screen and(min-width: 736px) {
             height: 10vh;
         }
+        #lang-mov{              
+            border-radius: 5px;
+            color: $test_color_hover;
+            background: white;
+            padding: 0;
+            #navbarDropdownLang{
+                display: flex;
+                align-items: center;
+                justify-content: center;                        
+            }
+            #navbarDropdownLang-mov,
+            .dropdown-menu{
+                img{
+                    width: 1.5em;
+                    margin-right: 0.1em;
+                }
+            }    
+            &:hover a{
+                text-decoration: none !important;
+            }
+            #navbarDropdownLang-mov{
+                padding: 0 0.3em 0 0.3em
+            }    
+        }
         .navbar-nav{
             .nav-item{
                 .clientes-btn:hover{

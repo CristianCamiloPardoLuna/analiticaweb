@@ -2,7 +2,6 @@
 <html lang="en" style="overflow-x: hidden !important;">
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <!-- Google Analytics -->
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -11,9 +10,7 @@
     
     ga('create', 'UA-199280870-1', 'auto');
     ga('send', 'pageview');
-
   </script>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-9FQB5V4MSX"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -22,7 +19,6 @@
 
     gtag('config', 'G-9FQB5V4MSX');
   </script>
-  <!-- End Google Analytics -->
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/main.css') }}"/>
@@ -35,7 +31,7 @@
     {% set var_1 = True if var == 'index.html' else False %}
     {% if var_1 %}
     <nav class="navbar navbar-expand-lg w-100 fixed-top px-4 py-md-2" id="navbar-effect">
-      <a class="navbar-brand d-flex" href="{{url_for('index')}}">
+      <a class="navbar-brand d-flex mr-2" href="{{url_for('index')}}">
         <img 
           class="img-fluid d-none d-md-block" 
           src="{{url_for('static', filename='img/company/logo-md/uva.png')}}" 
@@ -45,6 +41,43 @@
           src="{{url_for('static', filename='img/company/logo-md/uva.png')}}"       
           style="width: 2em !important; height: 1.5em !important; border-radius: 50%;">
       </a>
+      <div class="d-block d-md-none navbar-brand mr-auto dropdown" id="lang-mov">
+        <a class="nav-link dropdown-toggle" id="navbarDropdownLang-mov" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <small>
+              Language                      
+          </small>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownLang-mov">
+          {% if var == 'index.html' %}
+          <a class="dropdown-item" href="/">
+            <img class="img-fluid" src="{{url_for('static', filename='img/svg/colombia-circle.svg')}}" >
+            Spanish
+          </a>
+          <a class="dropdown-item" href="/en/">
+            <img class="img-fluid" src="{{url_for('static', filename='img/svg/usa-circle.svg')}}" >              
+            English
+          </a>
+          {% elif var == 'pricing.html' %}
+          <a class="dropdown-item" href="{{url_for('pricing')}}">
+            <img class="img-fluid" src="{{url_for('static', filename='img/svg/colombia-circle.svg')}}" >
+            Spanish
+          </a>
+          <a class="dropdown-item" href="{{url_for('pricing_en')}}">
+            <img class="img-fluid" src="{{url_for('static', filename='img/svg/usa-circle.svg')}}" >              
+            English
+          </a>
+          {% elif var == 'contactus.html' %}
+          <a class="dropdown-item" href="{{url_for('contact')}}">
+            <img class="img-fluid" src="{{url_for('static', filename='img/svg/colombia-circle.svg')}}" >
+            Spanish
+          </a>
+          <a class="dropdown-item" href="{{url_for('contact_en')}}">
+            <img class="img-fluid" src="{{url_for('static', filename='img/svg/usa-circle.svg')}}" >              
+            English
+          </a>
+          {% endif %}
+        </div>
+      </div>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -184,17 +217,54 @@
     </nav>  
     {% else %}
     <nav class="navbar navbar-expand-lg w-100 fixed-top px-4 py-md-2 bg-light" id="navbar-effect-2">
+        <a class="navbar-brand d-flex mr-2" href="{{url_for('index')}}">
+          <img 
+          class="img-fluid d-none d-md-block" 
+          src="{{url_for('static', filename='img/company/logo-md/uva.png')}}" 
+          style="width: 2.5em !important; height: 2em !important; border-radius: 50%;">
+          <img 
+            class="img-fluid d-block d-md-none" 
+            src="{{url_for('static', filename='img/company/logo-md/uva.png')}}"       
+            style="width: 2em !important; height: 1.5em !important; border-radius: 50%;">      
+        </a>
+        <div class="d-block d-md-none navbar-brand mr-auto dropdown" id="lang-mov">
+          <a class="nav-link dropdown-toggle" id="navbarDropdownLang-mov" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <small>
+                Language                      
+            </small>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownLang-mov">
+            {% if var == 'index.html' %}
+            <a class="dropdown-item" href="/">
+              <img class="img-fluid" src="{{url_for('static', filename='img/svg/colombia-circle.svg')}}" >
+              Spanish
+            </a>
+            <a class="dropdown-item" href="/en/">
+              <img class="img-fluid" src="{{url_for('static', filename='img/svg/usa-circle.svg')}}" >              
+              English
+            </a>
+            {% elif var == 'pricing.html' %}
+            <a class="dropdown-item" href="{{url_for('pricing')}}">
+              <img class="img-fluid" src="{{url_for('static', filename='img/svg/colombia-circle.svg')}}" >
+              Spanish
+            </a>
+            <a class="dropdown-item" href="{{url_for('pricing_en')}}">
+              <img class="img-fluid" src="{{url_for('static', filename='img/svg/usa-circle.svg')}}" >              
+              English
+            </a>
+            {% elif var == 'contactus.html' %}
+            <a class="dropdown-item" href="{{url_for('contact')}}">
+              <img class="img-fluid" src="{{url_for('static', filename='img/svg/colombia-circle.svg')}}" >
+              Spanish
+            </a>
+            <a class="dropdown-item" href="{{url_for('contact_en')}}">
+              <img class="img-fluid" src="{{url_for('static', filename='img/svg/usa-circle.svg')}}" >              
+              English
+            </a>
+            {% endif %}
+          </div>
+        </div>
 
-      <a class="navbar-brand d-flex" href="{{url_for('index')}}">
-        <img 
-        class="img-fluid d-none d-md-block" 
-        src="{{url_for('static', filename='img/company/logo-md/uva.png')}}" 
-        style="width: 2.5em !important; height: 2em !important; border-radius: 50%;">
-      <img 
-        class="img-fluid d-block d-md-none" 
-        src="{{url_for('static', filename='img/company/logo-md/uva.png')}}"       
-        style="width: 2em !important; height: 1.5em !important; border-radius: 50%;">      
-      </a>
 
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-2" aria-controls="navbar-2" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
