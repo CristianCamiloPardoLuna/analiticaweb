@@ -13,7 +13,6 @@ $test_color_plain: rgb(92, 20, 44);
 $test_color_trans: rgb(70, 16, 34, 0.6);
 $test_color: radial-gradient(circle, rgba(140,38,73,1) 0%, rgba(75,19,38,1) 100%); 
 
-
 @keyframes grow{
     from {
         transform: scale(1);
@@ -179,7 +178,14 @@ body{
                     animation: side-appear 200ms ease-in-out;
                     animation-fill-mode: forwards;
                 }
-            }                
+            }    
+            #-navbar-1-ul{
+                @media screen and(min-width: 736px) {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }            
         }
     }
     #initial-effect{

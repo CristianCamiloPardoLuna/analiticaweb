@@ -233,6 +233,16 @@ body #navbar-effect-2 #navbar-2 .dropdown-menu.show {
   animation: side-appear 200ms ease-in-out;
   animation-fill-mode: forwards;
 }
+@media screen and (min-width: 736px) {
+  body #navbar-effect #navbar #-navbar-1-ul,
+body #navbar-effect #navbar-2 #-navbar-1-ul,
+body #navbar-effect-2 #navbar #-navbar-1-ul,
+body #navbar-effect-2 #navbar-2 #-navbar-1-ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
 body #initial-effect {
   background: #f8f9fa;
   background: linear-gradient(0deg, #f8f9fa 0%, rgba(145, 19, 61, 0.1) 100%);
