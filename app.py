@@ -38,6 +38,7 @@ def startnow():
 
     return render_template(
         'contactus.html',
+        lang = 'ESP',
         email = email,
         tellusmore = tellusmore
     )
