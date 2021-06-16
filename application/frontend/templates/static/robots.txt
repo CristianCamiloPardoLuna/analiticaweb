@@ -1,0 +1,9 @@
+User-agent: googlebot
+Disallow: /returnContacts/
+Disallow: /startnow/
+Disallow: /contact/
+Disallow: /thanks/
+Disallow: /underconstruction/
+Disallow: /packageinfo/
+Disallow: /privacypolicy/
+Disallow: /terms/
